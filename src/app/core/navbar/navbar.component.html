@@ -1,20 +1,21 @@
-<nav class="navbar navbar-expand-lg py-3 sticky-top">
+<nav class="navbar navbar-expand-lg py-0 sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="./assets/img/logo.PNG" alt="logo">
-    </a> <!-- Zamykający tag dla linku navbar-brand -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto d-flex align-items-center ">
-        <a class="nav-link px-lg-3" href="index.html">Home</a>
-        <a class="nav-link px-lg-3 active" href="#">O nas</a>
+      <div class="navbar-nav ms-auto d-flex align-items-center p-1">
+        <a class="nav-link px-lg-3" routerLink="">Home</a>
+        <a class="nav-link px-lg-3 active" routerLink="aboutus">O nas</a>
         <a class="nav-link px-lg-3" href="services.html">Usługi</a>
         <a class="nav-link px-lg-3" href="projects.html">Projekty</a>
         <a class="nav-link px-lg-3" href="contact.html">Kontakt</a>
         <app-orange-button>Umów wizytę</app-orange-button>
       </div>
     </div>
-  </div> <!-- Dodany zamykający tag dla kontenera .container -->
+  </div>
 </nav>

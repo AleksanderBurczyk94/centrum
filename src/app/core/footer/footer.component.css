@@ -1,9 +1,12 @@
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding:15px 0 15px;
   font-size: 40px;
   font-family: "The Nautigal", cursive;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
-  background-color: #1672c4;: ;
+  background-color: #1672c4;
 }
-
