@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./white-button.component.css']
 })
 export class WhiteButtonComponent {
-
 }
