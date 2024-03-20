@@ -1,15 +1,15 @@
 <div>
   <section class='top-hero aboutus-hero text-containte'>
-  <div class='text-container'>
-    <p class='top-hero-text'>Psychoterapia i pomoc psychologiczna w Kaliszu </p>
-    <p class='top-hero-text-sm'>Kompleksowa pomoc psychologiczno-psychiatryczna w przypadku występowania zaburzeń
-      psychicznych, trudności emocjonalnych, kryzysów psychicznych.</p>
-    <app-white-button>umów wizytę
-      <mat-icon class="arrow ms-2 mb-1">
-        arrow_right_alt
-      </mat-icon>
-    </app-white-button>
-  </div>
+    <div class='text-container'>
+      <p class='top-hero-text'>Psychoterapia i pomoc psychologiczna w Kaliszu </p>
+      <p class='top-hero-text-sm'>Kompleksowa pomoc psychologiczno-psychiatryczna w przypadku występowania zaburzeń
+        psychicznych, trudności emocjonalnych, kryzysów psychicznych.</p>
+      <app-white-button (click)="redirectToAppointment()">umów wizytę
+        <mat-icon class="arrow ms-2 mb-1">
+          arrow_right_alt
+        </mat-icon>
+      </app-white-button>
+    </div>
   </section>
 
   <section>
@@ -78,6 +78,19 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="bg-box text-light">
+    <div class="text-box d-flex flex-column text-center">
+      <div class="container">
+        <p class='title'>Zakres oferowanej pomocy</p>
+        <p class="sm-text">Zapraszamy do skorzystania z terapii indywidualnej, par, grupowej oraz konsultacji z psychiatrą. Pomagamy
+          dorosłym, młodzieży i dzieciom. Pracujemy tylko w oparciu o metody o naukowo udowodnionej skuteczności.</p>
+      </div>
+
+    </div>
+
+
   </section>
 
 </div>
