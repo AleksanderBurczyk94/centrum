@@ -1,9 +1,13 @@
 <div>
-  <section class='top-hero aboutus-hero text-containte'>
+  <section class='top-hero'>
+    <video class="aboutus-hero" autoplay loop muted>
+      <source src="../../../assets/video/zabawa_z_terapeuta.mp4" type="video/mp4">
+      Twój przeglądarka nie wspiera elementu video.
+    </video>
     <div class='text-container'>
-      <p class='top-hero-text'>Psychoterapia i pomoc psychologiczna w Kaliszu </p>
-      <p class='top-hero-text-sm'>Kompleksowa pomoc psychologiczno-psychiatryczna w przypadku występowania zaburzeń
-        psychicznych, trudności emocjonalnych, kryzysów psychicznych.</p>
+      <h1 class='top-hero-text'>Psychoterapia i pomoc psychologiczna w Kaliszu </h1>
+      <h2 class='top-hero-text-sm'>Kompleksowa pomoc psychologiczno-psychiatryczna w przypadku występowania zaburzeń
+        psychicznych, trudności emocjonalnych, kryzysów psychicznych.</h2>
       <app-white-button (click)="redirectToAppointment()">umów wizytę
         <mat-icon class="arrow ms-2 mb-1">
           arrow_right_alt
@@ -11,86 +15,28 @@
       </app-white-button>
     </div>
   </section>
-
-  <section>
-    <div class="white-container">
-      <div class="container-title d-flex justify-content-center text-center">
-        <span>Jak możemy ci pomóc?</span>
-      </div>
-      <div class="container d-flex  justify-content-center align-items-stretch text-center py-5">
-        <div class="card-container row row-cols-md-2 row-cols-lg-3 ">
-
-          <div class="card p-4 mb-3 ">
-            <div class="card-body">
-              <img src="assets/img/autism.png" alt="head with puzzle pieces inside">
-              <h3 class="card-title fs-4">Psycholog</h3>
-              <p class="card-text fs-6">diagnoza, konsultacje i wsparcie psychologiczne, psychoedukacja, interwencja
-                kryzysowa, pomoc seksuologiczna – edukacja i terapia</p>
-            </div>
-          </div>
-
-          <div class="card p-4 mb-3">
-            <div class="card-body">
-              <img src="assets/img/research.png" alt="brain examin with a magnifying glass">
-              <h3 class="card-title fs-4">Psychoterapia</h3>
-              <p class="card-text fs-6">terapia poznawczo-behawioralna, terapia schematów, terapia
-                dialektyczno-behawioralna, terapia akceptacji i zaangażowania, mindfulness</p>
-            </div>
-          </div>
-
-          <div class="card p-4 mb-3">
-            <div class="card-body">
-              <img src="assets/img/mental-health.png" alt="ead with a pill inside">
-              <h3 class="card-title fs-4">Psychiatra</h3>
-              <p class="card-text fs-6">konsultacje, diagnoza psychiatryczna, leczenie lekami, psychoedukacja dla
-                pacjentów i bliskich oraz wizyty kontrolne w przyjaznej i profesjonalnej atmosferze</p>
-            </div>
-          </div>
-
-          <div class="card p-4 mb-3">
-            <div class="card-body">
-              <img src="assets/img/seminar.png" alt="graph and people learning">
-              <h3 class="card-title fs-4"> Szkolenia,treningi i mentoring
-              </h3>
-              <p class="card-text fs-6">treningi relaksacji, asertywności oraz mindfulness (uważność) umożliwiają
-                poszerzanie wiedzy, umiejętności oraz rozwój osobisty i zawodowy</p>
-            </div>
-          </div>
-
-          <div class="card p-4 mb-3">
-            <div class="card-body">
-              <img src="assets/img/online-learning.png" alt="monitor with a character on the screen">
-              <h3 class="card-title fs-4"> Pomoc psychologiczna on-line
-              </h3>
-              <p class="card-text fs-6">konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi
-                w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail</p>
-            </div>
-          </div>
-
-          <div class="card p-4 mb-3">
-            <div class="card-body">
-              <img src="assets/img/united-kingdom.png" alt="great britain flag">
-              <h3 class="card-title fs-4">Psychotherapy in english</h3>
-              <p class="card-text fs-6">We provide psychological diagnosis, psychoeducation, consultations, diagnosis,
-                counselling and psychotherapy in English also via internet (Skype)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <app-assistance-scope></app-assistance-scope>
+  <section class="text-box">
+    <h2 class="container-title text-center">Kiedy warto skorzystać z terapii?</h2>
+    <p>Psychoterapia jest dla każdej osoby, która doświadcza dyskomfortu natury psychicznej. Pomagamy osobom
+      cierpiącym z powodu trudności o podłożu emocjonalnym, doświadczających trudności w relacjach z innymi, w relacji
+      z samym z sobą, wspieramy w przejściu przez trudne wydarzenia życiowe i kryzysy, pogodzeniu się ze stratami,
+      wzmacniamy w budowaniu stabilnej przyszłości.
+    </p>
+    <p class="fw-bold">Terapia będzie dla Ciebie skutecznym rozwiązaniem jeśli chcesz:</p>
+    <ul>
+      <li>Towarzyszył Ci na co dzień zrównoważony nastrój</li>
+      <li>Tworzyć satysfakcjonujące relacje</li>
+      <li>Mieć poczucie sensu życia</li>
+      <li>Być zadowolonym z siebie</li>
+      <li>Mieć dobre myśli i nastawienie dotyczące swojej przyszłości</li>
+      <li>Posiadać poczucie własnej skuteczności i kontroli</li>
+      <li>Odzyskać wewnętrzną równowagę i spokój</li>
+      <li>Być bardziej świadomym tego, czego doświadczasz</li>
+      <li>Zmienić niesłużące schematy zachowań</li>
+      <li>Uporać się z przeszłością</li>
+    </ul>
   </section>
-
-  <section class="bg-box text-light">
-    <div class="text-box d-flex flex-column text-center">
-      <div class="container">
-        <p class='title'>Zakres oferowanej pomocy</p>
-        <p class="sm-text">Zapraszamy do skorzystania z terapii indywidualnej, par, grupowej oraz konsultacji z psychiatrą. Pomagamy
-          dorosłym, młodzieży i dzieciom. Pracujemy tylko w oparciu o metody o naukowo udowodnionej skuteczności.</p>
-      </div>
-
-    </div>
-
-
-  </section>
+  <app-therapists></app-therapists>
 
 </div>

@@ -7,7 +7,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {MatIconModule} from "@angular/material/icon";
 import {WhiteButtonComponent} from "./shered/white-button/white-button.component";
-import {OrangeButtonComponent} from "./shered/orange-button/orange-button.component";
+import {ColorButtonComponent} from "./shered/orange-button/color-button.component";
 import {NavbarComponent} from "./core/navbar/navbar.component";
 import {FooterComponent} from './core/footer/footer.component';
 import {HomeComponent} from './core/home/home.component';
@@ -18,12 +18,14 @@ import { ScopeOfAssistanceComponent } from './core/scope-of-assistance/scope-of-
 import { ContactComponent } from './core/contact/contact.component';
 import { PriceListComponent } from './core/price-list/price-list.component';
 import { AppointmentComponent } from './core/appointment/appointment.component';
+import { AssistanceScopeComponent } from './core/home/assistance-scope/assistance-scope.component';
+import { TherapistsComponent } from './core/home/therapists/therapists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    OrangeButtonComponent,
+    ColorButtonComponent,
     WhiteButtonComponent,
     FooterComponent,
     HomeComponent,
@@ -34,6 +36,8 @@ import { AppointmentComponent } from './core/appointment/appointment.component';
     ContactComponent,
     PriceListComponent,
     AppointmentComponent,
+    AssistanceScopeComponent,
+    TherapistsComponent,
   ],
   imports: [
     BrowserModule,
