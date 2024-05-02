@@ -1,7 +1,7 @@
 .white-container {
   position: relative;
   max-width: 1200px;
-  background-color: #FFFFFF;
+  background-color: var(--white-color);
   margin-top: -80px;
   margin-left: auto;
   margin-right: auto;

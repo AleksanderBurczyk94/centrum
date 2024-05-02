@@ -9,3 +9,11 @@ body{
   font-family: "Comfortaa", sans-serif;
 }
 
+:root {
+  --orange-color: rgb(241, 199, 87);
+  --dark-green-color: rgb(104, 148, 134);
+  --light-green-color: #a5cdbf;
+  --pink-color: #f1b8a8;
+  --pastel-color: #f3f0e9;
+  --white-color: #fff
+}

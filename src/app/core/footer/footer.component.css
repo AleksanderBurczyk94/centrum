@@ -1,13 +1,32 @@
 footer {
-  /*position: relative;*/
-  /*bottom: 0;*/
-  width: 100%;
-  padding:15px 0 15px;
-  font-size: 40px;
-  font-family: "The Nautigal", cursive;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1px;
-  background-color: rgb(104, 147, 128);
+  background-color: var(--dark-green-color);
 }
 
+.text-box {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.line {
+  height: 1px;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.social-media-box{
+  font-size: 40px;
+}
+
+.contact-box i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+img {
+  width: 250px;
+  cursor: pointer;
+}

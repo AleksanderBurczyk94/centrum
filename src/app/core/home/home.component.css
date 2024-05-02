@@ -18,7 +18,7 @@
   top: 40%; /* Centruje tekst w pionie */
   left: 50%; /* Centruje tekst w poziomie */
   transform: translate(-50%, -50%); /* Precyzyjne centrowanie */
-  color: white; /* Zapewnia, że tekst jest biały */
+  color: var(--white-color); /* Zapewnia, że tekst jest biały */
   text-align: center; /* Opcjonalnie, centruje tekst w kontenerze */
   max-width: 100%; /* Ogranicza szerokość tekstu do 80% szerokości kontenera */
   z-index: 1; /* Zapewnia, że tekst znajduje się nad filmem */
@@ -49,6 +49,9 @@ app-white-button {
 }
 
 /*section 2*/
+.welcome-box {
+  background-color: var(--pastel-color);
+}
 
 .text-box {
   max-width: 1180px;
@@ -65,15 +68,9 @@ app-white-button {
   font-family: "Comfortaa", sans-serif;
 }
 
-li {
-  margin-bottom: 10px; /* Dodanie marginesu poniżej każdego punktu listy */
+.welcome-box img {
+  height: 700px;
 }
-ul {
-  list-style: none; /* Usuwa domyślne punkty */
-}
-li:before {
-  content: '•'; /* Dodaje własny znak jako punkt */
-  color: #f1b8a8; /* Czerwony kolor punktów */
-  font-size: 20px; /* Większy rozmiar punktów */
-  padding-right: 8px; /* Odległość punktu od tekstu */
-}
+
+/*Section 3*/
+

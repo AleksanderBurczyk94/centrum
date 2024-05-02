@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #fff;
+  background-color: var(--white-color);
   font-size: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -16,7 +16,7 @@ img {
   margin-right: 8px;
 }
 
-app-orange-button {
+app-color-button {
   margin-left: 8px;
 }
 
