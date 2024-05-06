@@ -17,16 +17,18 @@ footer {
   margin: 0 auto;
 }
 
-.social-media-box{
-  font-size: 40px;
-}
-
-.contact-box i {
-  font-size: 20px;
+.contact-box img {
+  height: 40px;
+  width: 40px;
   margin-right: 10px;
 }
 
 img {
   width: 250px;
   cursor: pointer;
+}
+
+.social-media-box {
+  height: 40px;
+  width: 40px;
 }

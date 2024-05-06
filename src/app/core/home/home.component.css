@@ -50,7 +50,7 @@ app-white-button {
 
 /*section 2*/
 .welcome-box {
-  background-color: var(--pastel-color);
+  background-color: var(--pastel-bgc-color);
 }
 
 .text-box {
@@ -60,6 +60,10 @@ app-white-button {
   overflow: hidden;
 }
 
+.welcome-box img {
+  height: 700px;
+}
+
 .container-title {
   font-size: 40px;
   margin: 40px 0 20px 0;
@@ -67,10 +71,3 @@ app-white-button {
   line-height: 1.1;
   font-family: "Comfortaa", sans-serif;
 }
-
-.welcome-box img {
-  height: 700px;
-}
-
-/*Section 3*/
-
