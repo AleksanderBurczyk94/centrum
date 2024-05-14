@@ -48,7 +48,7 @@ form {
   padding: 20px;
   margin: 40px auto ;
   background-color: #679386;
-  width: 50%;
+  width: 90%;
   border-radius: 10px;
 }
 .form-control{
@@ -73,7 +73,7 @@ textarea::placeholder {
 .container-title {
   font-size: 40px;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: lighter;
   line-height: 1.1;
   font-family: "Comfortaa", sans-serif;
@@ -81,7 +81,7 @@ textarea::placeholder {
 
 button {
   width: 50%;
-  min-width: 150px;
+  min-width: 237px;
   padding: 16px 16px;
   text-transform: uppercase;
   color: var(--white-color);
@@ -104,11 +104,24 @@ button:hover {
 
 
 @media (min-width: 768px) {
-  .top-img {
-    height: 400px;
-    background-image: url("../../../assets/img/pineski-duze.jpg");
-    background-position: 0 60%;
-    background-size: cover;
-
+  p {
+    font-size: 20px;
   }
+}
+
+.contact-map iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
+.access-box{
+  background-color: var(--pastel-bgc-color);
+}
+
+i {
+  font-size: 24px
+}
+
+.info-box{
+  padding-left: 40px;
 }

@@ -13,14 +13,13 @@ import {FooterComponent} from './core/footer/footer.component';
 import {HomeComponent} from './core/home/home.component';
 import { AboutusComponent } from './core/aboutus/aboutus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OfferComponent } from './core/offer/offer.component';
-import { ScopeOfAssistanceComponent } from './core/scope-of-assistance/scope-of-assistance.component';
 import { ContactComponent } from './core/contact/contact.component';
 import { PriceListComponent } from './core/price-list/price-list.component';
 import { AppointmentComponent } from './core/appointment/appointment.component';
 import { AssistanceScopeComponent } from './core/home/assistance-scope/assistance-scope.component';
 import { TherapistsComponent } from './core/home/therapists/therapists.component';
 import {HttpClientModule} from "@angular/common/http";
+import { AssistanceComponent } from './core/assistance/assistance.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +31,12 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     AboutusComponent,
     PageNotFoundComponent,
-    OfferComponent,
-    ScopeOfAssistanceComponent,
     ContactComponent,
     PriceListComponent,
     AppointmentComponent,
     AssistanceScopeComponent,
     TherapistsComponent,
+    AssistanceComponent,
   ],
   imports: [
     BrowserModule,
