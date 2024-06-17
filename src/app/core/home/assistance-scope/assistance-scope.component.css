@@ -23,10 +23,10 @@
   transition: background-color 0.5s
 }
 
-.card:hover {
-  background-color: var(--light-green-color);
-  cursor: pointer;
-}
+  .card:hover {
+    background-color: var(--light-green-color);
+    cursor: pointer;
+  }
 
 .card-body img {
   width: 90px;

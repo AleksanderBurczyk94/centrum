@@ -11,15 +11,16 @@ import {ColorButtonComponent} from "./shered/color-button/color-button.component
 import {NavbarComponent} from "./core/navbar/navbar.component";
 import {FooterComponent} from './core/footer/footer.component';
 import {HomeComponent} from './core/home/home.component';
-import { AboutusComponent } from './core/aboutus/aboutus.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ContactComponent } from './core/contact/contact.component';
-import { PriceListComponent } from './core/price-list/price-list.component';
-import { AppointmentComponent } from './core/appointment/appointment.component';
-import { AssistanceScopeComponent } from './core/home/assistance-scope/assistance-scope.component';
-import { TherapistsComponent } from './core/home/therapists/therapists.component';
+import {AboutusComponent} from './core/aboutus/aboutus.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {ContactComponent} from './core/contact/contact.component';
+import {PriceListComponent} from './core/price-list/price-list.component';
+import {AppointmentComponent} from './core/appointment/appointment.component';
+import {AssistanceScopeComponent} from './core/home/assistance-scope/assistance-scope.component';
+import {TherapistsComponent} from './core/home/therapists/therapists.component';
 import {HttpClientModule} from "@angular/common/http";
-import { AssistanceComponent } from './core/assistance/assistance.component';
+import {AssistanceComponent} from './core/assistance/assistance.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -43,11 +44,13 @@ import { AssistanceComponent } from './core/assistance/assistance.component';
     AppRoutingModule,
     FontAwesomeModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

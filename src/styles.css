@@ -10,11 +10,11 @@ body{
 }
 
 :root {
-  --orange-color: rgb(241, 199, 87);
-  --dark-green-color: rgb(104, 148, 134);
-  --light-green-color:  rgba(165, 205, 191, 0.54);
-  --pink-color: #f1b8a8;
-  --pastel-bgc-color: #f3f0e9;
+  --orange-color: rgb(240, 207, 208);
+  --dark-green-color: #c4dae3;
+  --light-green-color: rgb(216, 232, 240);
+  --pink-color: #fde4e5;
+  --pastel-bgc-color: #f4f3f1;
   --white-color: #fff
 }
 
