@@ -18,39 +18,33 @@ import {PriceListComponent} from './core/price-list/price-list.component';
 import {AppointmentComponent} from './core/appointment/appointment.component';
 import {AssistanceScopeComponent} from './core/home/assistance-scope/assistance-scope.component';
 import {TherapistsComponent} from './core/home/therapists/therapists.component';
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {AssistanceComponent} from './core/assistance/assistance.component';
 import {ReactiveFormsModule} from "@angular/forms";
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    ColorButtonComponent,
-    WhiteButtonComponent,
-    FooterComponent,
-    HomeComponent,
-    AboutusComponent,
-    PageNotFoundComponent,
-    ContactComponent,
-    PriceListComponent,
-    AppointmentComponent,
-    AssistanceScopeComponent,
-    TherapistsComponent,
-    AssistanceComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    MatIconModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavbarComponent,
+        ColorButtonComponent,
+        WhiteButtonComponent,
+        FooterComponent,
+        HomeComponent,
+        AboutusComponent,
+        PageNotFoundComponent,
+        ContactComponent,
+        PriceListComponent,
+        AppointmentComponent,
+        AssistanceScopeComponent,
+        TherapistsComponent,
+        AssistanceComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        MatIconModule,
+        ReactiveFormsModule], providers: [
+        provideAnimationsAsync(),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {
 }
