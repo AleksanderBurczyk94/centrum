@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssistanceScopeComponent } from './assistance-scope.component';
+import { CardListComponent } from './card-list.component';
 
 describe('AssistanceScopeComponent', () => {
-  let component: AssistanceScopeComponent;
-  let fixture: ComponentFixture<AssistanceScopeComponent>;
+  let component: CardListComponent;
+  let fixture: ComponentFixture<CardListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AssistanceScopeComponent]
+      declarations: [CardListComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(AssistanceScopeComponent);
+
+    fixture = TestBed.createComponent(CardListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

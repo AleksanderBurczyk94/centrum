@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhiteButtonComponent } from './white-button.component';
+import { TransparentBtnComponent } from './transparent-btn.component';
 
 describe('WhiteButtonComponent', () => {
-  let component: WhiteButtonComponent;
-  let fixture: ComponentFixture<WhiteButtonComponent>;
+  let component: TransparentBtnComponent;
+  let fixture: ComponentFixture<TransparentBtnComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WhiteButtonComponent ]
+      declarations: [ TransparentBtnComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WhiteButtonComponent);
+    fixture = TestBed.createComponent(TransparentBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
