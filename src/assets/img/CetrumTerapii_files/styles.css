@@ -916,7 +916,7 @@ html {
   --mdc-switch-disabled-label-text-color: rgba(0, 0, 0, 0.38);
 }
 html .mat-mdc-slide-toggle {
-  --mdc-form-field-label-text-color:rgba(0, 0, 0, 0.87);
+  --mat-checkbox-label-text-color:rgba(0, 0, 0, 0.87);
 }
 html .mat-mdc-slide-toggle.mat-accent {
   --mdc-switch-selected-focus-state-layer-color:#ffb300;
@@ -948,11 +948,11 @@ html {
   --mdc-switch-state-layer-size:40px;
 }
 html .mat-mdc-slide-toggle {
-  --mdc-form-field-label-text-font:Roboto, sans-serif;
-  --mdc-form-field-label-text-line-height:20px;
-  --mdc-form-field-label-text-size:14px;
-  --mdc-form-field-label-text-tracking:0.0178571429em;
-  --mdc-form-field-label-text-weight:400;
+  --mat-checkbox-label-text-font:Roboto, sans-serif;
+  --mat-checkbox-label-text-line-height:20px;
+  --mat-checkbox-label-text-size:14px;
+  --mat-checkbox-label-text-tracking:0.0178571429em;
+  --mat-checkbox-label-text-weight:400;
 }
 html {
   --mdc-radio-disabled-selected-icon-opacity:0.38;
@@ -960,7 +960,7 @@ html {
   --mdc-radio-state-layer-size:40px;
 }
 .mat-mdc-radio-button {
-  --mdc-form-field-label-text-color:rgba(0, 0, 0, 0.87);
+  --mat-checkbox-label-text-color:rgba(0, 0, 0, 0.87);
 }
 .mat-mdc-radio-button.mat-primary {
   --mdc-radio-disabled-selected-icon-color:black;
@@ -1009,11 +1009,11 @@ html {
   --mat-radio-touch-target-display:block;
 }
 .mat-mdc-radio-button {
-  --mdc-form-field-label-text-font:Roboto, sans-serif;
-  --mdc-form-field-label-text-line-height:20px;
-  --mdc-form-field-label-text-size:14px;
-  --mdc-form-field-label-text-tracking:0.0178571429em;
-  --mdc-form-field-label-text-weight:400;
+  --mat-checkbox-label-text-font:Roboto, sans-serif;
+  --mat-checkbox-label-text-line-height:20px;
+  --mat-checkbox-label-text-size:14px;
+  --mat-checkbox-label-text-tracking:0.0178571429em;
+  --mat-checkbox-label-text-weight:400;
 }
 html {
   --mat-slider-value-indicator-width:auto;
@@ -1429,7 +1429,7 @@ html {
   --mat-checkbox-disabled-label-color:rgba(0, 0, 0, 0.38);
 }
 .mat-mdc-checkbox {
-  --mdc-form-field-label-text-color:rgba(0, 0, 0, 0.87);
+  --mat-checkbox-label-text-color:rgba(0, 0, 0, 0.87);
 }
 .mat-mdc-checkbox.mat-primary {
   --mdc-checkbox-disabled-selected-icon-color:rgba(0, 0, 0, 0.38);
@@ -1474,11 +1474,11 @@ html {
   --mat-checkbox-touch-target-display:block;
 }
 .mat-mdc-checkbox {
-  --mdc-form-field-label-text-font:Roboto, sans-serif;
-  --mdc-form-field-label-text-line-height:20px;
-  --mdc-form-field-label-text-size:14px;
-  --mdc-form-field-label-text-tracking:0.0178571429em;
-  --mdc-form-field-label-text-weight:400;
+  --mat-checkbox-label-text-font:Roboto, sans-serif;
+  --mat-checkbox-label-text-line-height:20px;
+  --mat-checkbox-label-text-size:14px;
+  --mat-checkbox-label-text-tracking:0.0178571429em;
+  --mat-checkbox-label-text-weight:400;
 }
 html {
   --mdc-text-button-container-shape:4px;

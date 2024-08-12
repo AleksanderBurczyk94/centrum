@@ -11,7 +11,6 @@ import {ColorButtonComponent} from "./shered/color-button/color-button.component
 import {NavbarComponent} from "./core/navbar/navbar.component";
 import {FooterComponent} from './core/footer/footer.component';
 import {HomeComponent} from './core/home/home.component';
-import {AboutusComponent} from './core/aboutus/aboutus.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ContactComponent} from './core/contact/contact.component';
 import {PriceListComponent} from './core/price-list/price-list.component';
@@ -21,6 +20,8 @@ import {TherapistsComponent} from './core/home/therapists/therapists.component';
 import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {AssistanceComponent} from './core/assistance/assistance.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { BlogComponent } from './core/blog/blog.component';
+import { OurCenterComponent } from './core/our-center/our-center.component';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -29,7 +30,6 @@ import {ReactiveFormsModule} from "@angular/forms";
         WhiteButtonComponent,
         FooterComponent,
         HomeComponent,
-        AboutusComponent,
         PageNotFoundComponent,
         ContactComponent,
         PriceListComponent,
@@ -37,6 +37,8 @@ import {ReactiveFormsModule} from "@angular/forms";
         AssistanceScopeComponent,
         TherapistsComponent,
         AssistanceComponent,
+        BlogComponent,
+        OurCenterComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

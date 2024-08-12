@@ -1,11 +1,16 @@
 .navbar {
-  background-color: var(--white-color);
+  background-color: var(--nav-color);
   font-size: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 img {
-  height: 90px;
+  height: 100px;
+  margin: 5px;
+}
+
+.nav-link{
+  color: var(--lethers-color);
 }
 
 .navbar-toggler {
@@ -20,3 +25,29 @@ app-color-button {
   margin-left: 8px;
 }
 
+
+
+.nav-link {
+  position: relative;
+  /*text-decoration: none; !* Usuń standardowe podkreślenie *!*/
+  color: inherit; /* Zachowaj oryginalny kolor tekstu */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px; /* Odległość linii od tekstu */
+  height: 3px; /* Grubość linii */
+  background-color: var(--action-btn-color); /* Kolor linii */
+  transform: scaleX(0); /* Ukrywa linię (skalowanie do zera) */
+  transition: transform 0.3s ease; /* Animacja */
+  transform-origin: right; /* Punkt początkowy animacji */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after  {
+  transform: scaleX(1); /* Wyświetla linię (pełne skalowanie) */
+  transform-origin: left; /* Punkt początkowy animacji przy najechaniu */
+}

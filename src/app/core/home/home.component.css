@@ -18,7 +18,7 @@
   top: 40%; /* Centruje tekst w pionie */
   left: 50%; /* Centruje tekst w poziomie */
   transform: translate(-50%, -50%); /* Precyzyjne centrowanie */
-  color: var(--white-color); /* Zapewnia, że tekst jest biały */
+  color: var(--nav-color); /* Zapewnia, że tekst jest biały */
   text-align: center; /* Opcjonalnie, centruje tekst w kontenerze */
   max-width: 100%; /* Ogranicza szerokość tekstu do 80% szerokości kontenera */
   z-index: 1; /* Zapewnia, że tekst znajduje się nad filmem */
@@ -51,7 +51,7 @@ app-white-button {
 /*section 2*/
 .welcome-box {
   padding-bottom: 40px;
-  background-color: var(--pastel-bgc-color);
+  background-color: var(--nav-color);
 }
 
 .content-box {

@@ -29,29 +29,29 @@
 
 
       <div class="col-md-7 cold-flex justify-content-center ">
-        <form  class="text-light text-center" [formGrop]="contactForm">
+        <form  class="text-light text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
           <div class="row">
             <div class="mb-3 col-lg-6">
-              <input type="text" class="m-0 form-control" placeholder="Imię">
+              <input type="text" class="m-0 form-control" placeholder="Imię" formControlName="firstName">
             </div>
             <div class="mb-3 col-lg-6">
-              <input type="text" class="form-control" placeholder="Nazwisko">
+              <input type="text" class="form-control" placeholder="Nazwisko" formControlName="lastName">
             </div>
             <div class="mb-3 col-lg-6">
-              <input type="text" class="form-control" placeholder="Telefon">
+              <input type="text" class="form-control" placeholder="Telefon" formControlName="phoneNummer">
             </div>
             <div class="mb-3 col-lg-6">
-              <input type="email" class="form-control" placeholder="E-mail">
+              <input type="email" class="form-control" placeholder="E-mail" formControlName="email">
             </div>
           </div>
           <div class="mb-3 me-0 form-check d-flex text-start">
-            <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1" formControlName="checkBox">
             <label class="form-check-label text-justify" for="exampleCheck1"> Wyrażam zgodę na przetwarzanie moich
               danych osobowych
               zgodnie z polityką prywatności.</label>
           </div>
           <div class="input-group mb-3">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość"></textarea>
+            <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość" formControlName="textMessage"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
         </form>

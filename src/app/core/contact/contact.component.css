@@ -21,7 +21,7 @@
 .white-container {
   position: relative;
   max-width: 1200px;
-  background-color: var(--white-color);
+  background-color: var(--nav-color);
   margin-top: -80px;
   margin-left: auto;
   margin-right: auto;
@@ -53,7 +53,7 @@ form {
 }
 .form-control{
   background-color: #679386;
-  color: var(--white-color);
+  color: var(--nav-color);
 }
 
 input::placeholder {
@@ -65,9 +65,9 @@ textarea::placeholder {
 
 .form-control:focus {
   outline: none;
-  box-shadow: 0 0 0 1px var(--white-color);
+  box-shadow: 0 0 0 1px var(--nav-color);
 
-  border-color: var(--white-color);
+  border-color: var(--nav-color);
 }
 
 .container-title {
@@ -84,7 +84,7 @@ button {
   min-width: 237px;
   padding: 16px 16px;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--nav-color);
   background-color: var(--pink-color);
   border: none;
   border-radius: 10px;
@@ -97,7 +97,7 @@ button {
 }
 
 button:hover {
-  color: var(--white-color);
+  color: var(--nav-color);
   background-color: var(--orange-color);
   transform: scale(1.05);
 }
@@ -115,7 +115,7 @@ button:hover {
 }
 
 .access-box{
-  background-color: var(--pastel-bgc-color);
+  background-color: var(--nav-color);
 }
 
 i {
