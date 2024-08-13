@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor(private router: Router) {
+  }
+  goToContact() {
+  this.router.navigate(['/contact'])
+  }
+
+  goToRodo() {
+    this.router.navigate(['/rodo'])
+  }
+
+  goToMinorsProtection() {
+    this.router.navigate(['/minorsProtection'])
+  }
 }

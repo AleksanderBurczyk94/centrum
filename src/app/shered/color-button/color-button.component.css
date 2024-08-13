@@ -2,18 +2,18 @@ button {
   padding: 16px 16px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.75);
-  background-color: var(--action-btn-color);
+  background-color: var(--light-pink-color);
   border: none;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: background-color 0.3s;
-
+  transition: background-color, transform 0.3s;
 }
 
 button:hover {
-  color: black;
-  background-color: var(--mint-color);
+  background-color: var(--pink-color);
+  transform: scale(1.05);
 }
+
 

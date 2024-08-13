@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AssistanceCard} from "../../../interfaces/assistanceCard";
 
 @Component({
@@ -10,43 +10,43 @@ export class CardListComponent {
 
   cards: AssistanceCard[] = [
     {
-      imgSrc: 'assets/img/repetitive.png',
-      imgAlt: 'head with puzzle pieces inside',
-      title: 'Integracja sensoryczna',
-      description: 'diagnoza, konsultacje i wsparcie psychologiczne, psychoedukacja, interwencja kryzysowa, pomoc seksuologiczna – edukacja i terapia'
-    },
-    {
-      imgSrc: 'assets/img/noise.png',
-      imgAlt: 'head with a pill inside',
-      title: 'Psycholog',
-      description: 'konsultacje, diagnoza psychiatryczna, leczenie lekami, psychoedukacja dla pacjentów i bliskich oraz wizyty kontrolne w przyjaznej i profesjonalnej atmosferze'
-    },
-    {
-      imgSrc: 'assets/img/heart.png',
+      imgSrc: 'assets/img/głowa_z_plusem.png',
       imgAlt: 'brain examin with a magnifying glass',
-      title: 'Terapia ręki',
+      title: 'Konsultacje psychologicze',
       description: 'terapia poznawczo-behawioralna, terapia schematów, terapia dialektyczno-behawioralna, terapia akceptacji i zaangażowania, mindfulness'
     },
     {
-      imgSrc: 'assets/img/adhd.png',
+      imgSrc: 'assets/img/huśtawka.png',
+      imgAlt: 'head with puzzle pieces inside',
+      title: 'Diagnoza i terapia integracji sensorycznej',
+      description: 'diagnoza, konsultacje i wsparcie psychologiczne, psychoedukacja, interwencja kryzysowa, pomoc seksuologiczna – edukacja i terapia'
+    },
+    {
+      imgSrc: 'assets/img/mózg.png',
       imgAlt: 'graph and people learning',
-      title: 'Terapia neurotaktylna',
+      title: 'Diagnoza i terapia neurorozwojowa odruchów INPP',
       description: 'treningi relaksacji, asertywności oraz mindfulness (uważność) umożliwiają poszerzanie wiedzy, umiejętności oraz rozwój osobisty i zawodowy'
     },
     {
-      imgSrc: 'assets/img/mind.png',
+      imgSrc: 'assets/img/masarz.png',
       imgAlt: 'great britain flag',
-      title: 'Terapia, diagnoza odruchów INPP',
+      title: 'Terapia NeuroTaktylna MNRI',
       description: 'We provide psychological diagnosis, psychoeducation, consultations, diagnosis, counselling and psychotherapy in English also via internet (Skype)'
     },
     {
-      imgSrc: 'assets/img/painted.png',
+      imgSrc: 'assets/img/ucho.png',
       imgAlt: 'monitor with a character on the screen',
-      title: 'Terapia słuchowa',
+      title: 'Diagnoza i terapia przetwarzania słuchowego Johansena',
       description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail'
     },
     {
-      imgSrc: 'assets/img/painted.png',
+      imgSrc: 'assets/img/dłoń.png',
+      imgAlt: 'monitor with a character on the screen',
+      title: 'Diagnoza i terapia ręki',
+      description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail'
+    },
+    {
+      imgSrc: 'assets/img/konsultacje.png',
       imgAlt: 'monitor with a character on the screen',
       title: 'Konsultacje specjalistyczne',
       description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail'

@@ -1,0 +1,36 @@
+.banner {
+  height: 300px;
+  background-color: var(--mint-color);
+}
+
+body { widows:0; orphans:0; font-size:12pt }
+p { margin:0pt }
+li { margin-top:0pt; margin-bottom:0pt }
+.Caption { margin-top:6pt; margin-bottom:6pt; widows:0; orphans:0; font-size:12pt; font-style:italic }
+.Heading { margin-top:12pt; margin-bottom:6pt; page-break-after:avoid; widows:0; orphans:0; font-family:Arial; font-size:14pt }
+.Index { widows:0; orphans:0; font-size:12pt }
+.List { margin-top:0pt; margin-bottom:7pt; line-height:115%; widows:0; orphans:0; font-size:12pt }
+.Standard { widows:0; orphans:0; font-size:12pt }
+.Textbody { margin-top:0pt; margin-bottom:7pt; line-height:115%; widows:0; orphans:0; font-size:12pt }
+@media (max-width: 900px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td, th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+}

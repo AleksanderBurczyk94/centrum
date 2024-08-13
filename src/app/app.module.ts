@@ -15,13 +15,17 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ContactComponent} from './core/contact/contact.component';
 import {PriceListComponent} from './core/price-list/price-list.component';
 import {AppointmentComponent} from './core/appointment/appointment.component';
-import {CardListComponent} from './core/home/assistance-scope/card-list.component';
+import {CardListComponent} from './core/home/card-list/card-list.component';
 import {TherapistsComponent} from './core/home/therapists/therapists.component';
 import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 import {AssistanceComponent} from './core/assistance/assistance.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BlogComponent} from './core/blog/blog.component';
 import {OurCenterComponent} from './core/our-center/our-center.component';
+import { MinorsProtectionComponent } from './core/footer/minors-protection/minors-protection.component';
+import { RodoComponent } from './core/footer/rodo/rodo.component';
+import {WhiteContainerComponent} from "./shered/white-container/white-container.component";
+import { BannerComponent } from './shered/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import {OurCenterComponent} from './core/our-center/our-center.component';
     AssistanceComponent,
     BlogComponent,
     OurCenterComponent,
+    MinorsProtectionComponent,
+    RodoComponent,
+    WhiteContainerComponent,
+    BannerComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

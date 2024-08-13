@@ -10,7 +10,7 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 
-  redirectToAppointment() {
+  goToAppointment() {
     this.router.navigate(['/appointment']);
   }
 }

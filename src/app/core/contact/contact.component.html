@@ -1,4 +1,4 @@
-<div class="top-img"></div>
+<app-banner title="Kontakt" ></app-banner>
 <div class="white-container ">
   <h2 class="container-title text-center">Skontaktuj się z nami</h2>
   <div class="contact-box container">
@@ -29,7 +29,7 @@
 
 
       <div class="col-md-7 cold-flex justify-content-center ">
-        <form  class="text-light text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <form class="text-dark text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
           <div class="row">
             <div class="mb-3 col-lg-6">
               <input type="text" class="m-0 form-control" placeholder="Imię" formControlName="firstName">
@@ -44,14 +44,15 @@
               <input type="email" class="form-control" placeholder="E-mail" formControlName="email">
             </div>
           </div>
+          <div class="input-group mb-3">
+            <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość"
+                      formControlName="textMessage"></textarea>
+          </div>
           <div class="mb-3 me-0 form-check d-flex text-start">
             <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1" formControlName="checkBox">
             <label class="form-check-label text-justify" for="exampleCheck1"> Wyrażam zgodę na przetwarzanie moich
               danych osobowych
               zgodnie z polityką prywatności.</label>
-          </div>
-          <div class="input-group mb-3">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość" formControlName="textMessage"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
         </form>
@@ -60,10 +61,10 @@
     </div>
   </div>
 </div>
-<section class="contact-map ">
+<section class="contact-map">
   <div class="d-flex flex-column align-items-center">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2472.4537863076525!2d18.135015012883333!3d51.72290057174571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ac69f97662771%3A0x8bb9bafe294fcb76!2sMiodowa%2C%2062-800%20Sza%C5%82e!5e0!3m2!1spl!2spl!4v1715187809440!5m2!1spl!2spl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.8034117003513!2d18.090701912214804!3d51.754918271753276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ac5820340d9ed%3A0x3eca73ebf7b5e3d1!2sPsycholog%2C%20terepeuta%20Kalisz%20-%20R%C3%B3wnowaga%20-%20Centrum%20Terapii%20i%20Wsparcia%20Rozwoju!5e0!3m2!1spl!2spl!4v1723549162638!5m2!1spl!2spl"
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>

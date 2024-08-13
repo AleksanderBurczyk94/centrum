@@ -1,7 +1,7 @@
 .white-container {
   position: relative;
   max-width: 1200px;
-  background-color: var(--nav-color);
+  background-color: var(--white-color);
   margin-top: -80px;
   margin-left: auto;
   margin-right: auto;
@@ -20,6 +20,7 @@
 
 .card {
   border: none;
+  background-color: var(--white-color);
   transition: background-color 0.5s
 }
 
@@ -29,7 +30,7 @@
   }
 
 .card-body img {
-  width: 90px;
+  width: 150px;
   padding-bottom: 20px;
 }
 

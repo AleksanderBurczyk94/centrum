@@ -8,6 +8,8 @@ import {AppointmentComponent} from "./core/appointment/appointment.component";
 import {AssistanceComponent} from "./core/assistance/assistance.component";
 import {OurCenterComponent} from "./core/our-center/our-center.component";
 import {BlogComponent} from "./core/blog/blog.component";
+import {MinorsProtectionComponent} from "./core/footer/minors-protection/minors-protection.component";
+import {RodoComponent} from "./core/footer/rodo/rodo.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'blog', component: BlogComponent, title:'Blog'},
   {path: 'contact', component: ContactComponent, title:'Kontakt'},
   {path: 'appointment', component: AppointmentComponent, title:'Umów wizytę'},
+  {path: 'minorsProtection', component: MinorsProtectionComponent, title:'Standardy ochrony małoletnich'},
+  {path: 'rodo', component: RodoComponent, title:'Rodo'},
   {path: '**', component: PageNotFoundComponent, title:'Page not found' }];
 
 @NgModule({
@@ -24,4 +28,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
+// <div class="fw-bold"></div>
 }

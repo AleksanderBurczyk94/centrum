@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--dark-green-color);
+  background-color: var(--mint-color);
 }
 
 .content-box {
@@ -11,24 +11,30 @@ footer {
 
 .line {
   height: 1px;
-  width: 95%;
-  background-color: #000001;
+  width: 97%;
+  background-color: var(--black-color);
   border-radius: 15px;
   margin: 0 auto;
 }
 
-i {
-  font-size: 24px
+.footer-icon-text{
+  font-size: 18px;
 }
+
+
 
 img {
-  width: 250px;
-  cursor: pointer;
+  width: 55px;
 }
 
-.social-media-box {
-  height: 40px;
+.social-media-box img {
   width: 40px;
 }
 
+.logo {
+  width: 170px;
+}
 
+.policy p {
+  cursor: pointer;
+}

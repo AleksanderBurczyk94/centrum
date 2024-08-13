@@ -7,14 +7,16 @@
 
 body{
   font-family: "Comfortaa", sans-serif;
+  background-color: var(--white-color);
+
 }
 
 :root {
-  --mint-color: rgb(181, 238, 227);
-  --blue-color: #e4eff6;
-  --action-btn-color: rgb(252, 216, 216);
-  --nav-color: #fdfcf9;
-  --lethers-color: #0e0e0e;
+  --pink-color: rgb(250, 192, 194);
+  --light-pink-color: rgb(252, 216, 216);
+  --white-color: #fdfcf9;
+  --black-color: #0e0e0e;
+  --mint-color: rgba(179, 222, 215, 0.86);
 }
 
 
