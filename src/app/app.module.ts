@@ -22,10 +22,10 @@ import {AssistanceComponent} from './core/assistance/assistance.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BlogComponent} from './core/blog/blog.component';
 import {OurCenterComponent} from './core/our-center/our-center.component';
-import { MinorsProtectionComponent } from './core/footer/minors-protection/minors-protection.component';
-import { RodoComponent } from './core/footer/rodo/rodo.component';
+import {MinorsProtectionComponent} from './core/footer/minors-protection/minors-protection.component';
+import {RodoComponent} from './core/footer/rodo/rodo.component';
 import {WhiteContainerComponent} from "./shered/white-container/white-container.component";
-import { BannerComponent } from './shered/banner/banner.component';
+import {BannerComponent} from './shered/banner/banner.component';
 
 @NgModule({
   declarations: [

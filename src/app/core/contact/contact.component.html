@@ -1,70 +1,130 @@
-<app-banner title="Kontakt" ></app-banner>
-<div class="white-container ">
-  <h2 class="container-title text-center">Skontaktuj się z nami</h2>
-  <div class="contact-box container">
+<app-banner title="Kontakt"></app-banner>
+<div class="white-container">
+  <h2 class="container-title text-center  mx-5">Masz pytania, chcesz umówić
+    się na wizytę? Skontaktuj się z nami!</h2>
+  <div class="contact-box row row-cols-lg-4  row-cols-md-2 d-flex me-5">
+    <div class="d-flex flex-column justify-content-center align-items-center p-0 mt-5">
+      <a href="https://maps.app.goo.gl/FRJNZisRV4fubFZd8" target="_blank"
+         class="d-flex flex-column align-items-center text-decoration-none text-dark">
+        <img src="assets/img/location.png" alt="Ikona miejsca położenia z serduszkiem" class="mb-2 contact-icon">
+        <p class="footer-icon-text text-center">
+          Częstochowska 21<br>62-800 Kalisz
+        </p>
+      </a>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center p-0 mt-5">
+      <img src="assets/img/phone.png" alt="Ikona telefonu" class="mb-2 no-pointer contact-icon">
+      <p class="footer-icon-text text-center">
+        +48 664 668 491
+      </p>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center p-0 mt-5">
+      <img src="assets/img/email.png" alt="Ikona listu" class="mb-2 no-pointer contact-icon">
+      <p class="footer-icon-text text-center">
+        kontakt&#64;rownowagacentrum.pl
+      </p>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center p-0 mt-5">
+      <img src="assets/img/open.png" alt="Ikona stabliczki z napisem open" class="mb-2 no-pointer contact-icon">
+      <p class="footer-icon-text text-center">
+        Pon. – Pt.: 8:00 – 21:00
+      </p>
+      <p class="footer-icon-text text-center">
+        Sobota: 8:00 – 20:00
+      </p>
+    </div>
+    <div class="d-none d-lg-block"></div>
+    <div class="d-flex flex-row justify-content-center social-media-box mt-5">
+      <a href="https://www.facebook.com/CentrumRownowagaKalisz" target="_blank" class="me-1">
+        <img src="assets/img/facebook.png" alt="Ikona Facebooka" class="contact-icon">
+      </a>
+    </div>
+    <div class="d-flex flex-row justify-content-center  social-media-box mt-5">
+      <a href="https://www.instagram.com/rownowaga_centrum/" target="_blank" class="">
+        <img src="assets/img/instagram.png" alt="Ikona Instagrama " class="contact-icon">
+      </a>
+    </div>
+  </div>
+  <div class="container">
     <div class="row">
-      <div class="info-box col-md-5 d-flex justify-content-center align-items-center">
-        <div class="icon-box">
-          <div><p>Gabinet znajduje się w żółtym blok obok biedronki. Przy gabinecie znajduje się <strong>bezpłatny
-            parking.</strong>
-          </div>
-          <div class="d-flex align-items-center">
-            <mat-icon class="me-2 ">call</mat-icon>
-            <p class="d-inline-block">+48 000 000 000</p>
-          </div>
-          <div class="d-flex align-items-center">
-            <mat-icon class="me-2 mb-3">mail</mat-icon>
-            <p class="d-inline-block ">
-              kontakt&#64;mail.pl
-            </p>
-          </div>
-          <div class="d-flex align-items-center">
-            <mat-icon class="mb-3 me-2">location_on</mat-icon>
-            <p>ul. Sezamkowa<br> 00-000 Kraków</p>
-          </div>
-          <div class="d-flex justify-content-start ms-3"><i class="fab fa-facebook-square mx-3"></i>
-            <i class="fab fa-instagram mx-3"></i></div>
-        </div>
+      <div class="info-box col-md-5 d-flex justify-content-center align-items-start mt-2">
+        <ul class="mt-4">
+          <li><p>Wejście do budynku centrum znajduje się za <strong>czarnym ogrodzeniem.</strong></p></li>
+          <li><p>Położony jest na <strong>parterze</strong>. Kod do domofonu otrzymają Państwo po umówieniu spotkania.
+          </p></li>
+          <li><p>Przy lokalu dostępny jest publiczny, <strong>bezpłatny parking.</strong></p></li>
+        </ul>
       </div>
+      <div class="col-md-7 cold-flex justify-content-center">
 
-
-      <div class="col-md-7 cold-flex justify-content-center ">
         <form class="text-dark text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+
+          <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">
+            <img class="me-2" src="assets/img/happy.png" alt="Wesoła minka">
+            <h4 class="alert-heading">Dobra robota!</h4>
+            <p>Wiadomosć poprawnie wysłana</p>
+          </div>
+
+          <div *ngIf="showFeilureAlert" class="alert alert-failed" role="alert">
+            <img class="me-2" src="assets/img/sad.png" alt="Smutna minka">
+            <h4 class="alert-heading">Bardzo nam przykro.</h4>
+            <p>Niestety, wiadomości nie udało się wysłać.</p>
+          </div>
+
           <div class="row">
             <div class="mb-3 col-lg-6">
-              <input type="text" class="m-0 form-control" placeholder="Imię" formControlName="firstName">
+              <input type="text" class="m-0 form-control" placeholder="Imię" formControlName="firstName"
+                     [ngClass]="{ 'redBorder': submitted && controls.firstName.invalid }">
+              <div *ngIf="submitted && controls.firstName.invalid" class="text-attention">
+                {{ getErrorMessage(controls.firstName) }}
+              </div>
             </div>
             <div class="mb-3 col-lg-6">
-              <input type="text" class="form-control" placeholder="Nazwisko" formControlName="lastName">
+              <input type="text" class="form-control" placeholder="Nazwisko" formControlName="lastName"
+                     [ngClass]="{ 'redBorder': submitted && controls.lastName.invalid }">
+              <div *ngIf="submitted && controls.lastName.invalid" class="text-attention ">
+                {{ getErrorMessage(controls.lastName) }}
+              </div>
             </div>
-            <div class="mb-3 col-lg-6">
-              <input type="text" class="form-control" placeholder="Telefon" formControlName="phoneNummer">
-            </div>
-            <div class="mb-3 col-lg-6">
-              <input type="email" class="form-control" placeholder="E-mail" formControlName="email">
+            <div class="mb-3 col-lg-12">
+              <input type="email" class="form-control" placeholder="E-mail" formControlName="email"
+                     [ngClass]="{ 'redBorder': submitted && controls.email.invalid }">
+              <div *ngIf="submitted && controls.email.invalid" class="text-attention">
+                {{ getErrorMessage(controls.email) }}
+              </div>
             </div>
           </div>
-          <div class="input-group mb-3">
+          <div class="input-group" [ngClass]="{ 'redBorder': submitted && controls.textMessage.invalid }">
             <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość"
                       formControlName="textMessage"></textarea>
           </div>
-          <div class="mb-3 me-0 form-check d-flex text-start">
-            <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1" formControlName="checkBox">
-            <label class="form-check-label text-justify" for="exampleCheck1"> Wyrażam zgodę na przetwarzanie moich
-              danych osobowych
-              zgodnie z polityką prywatności.</label>
+          <div *ngIf="submitted && controls.textMessage.invalid" class="text-attention">
+            {{ getErrorMessage(controls.textMessage) }}
           </div>
-          <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+          <div class="me-0 mt-3 form-check d-flex text-start">
+            <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1" formControlName="checkBox"
+                   [ngClass]="{ 'redBorderColor': submitted && controls.checkBox.invalid }">
+            <label class="form-check-label text-justify" for="exampleCheck1">Wyrażam zgodę na przetwarzanie moich
+              danych osobowych zgodnie z polityką prywatności.</label>
+          </div>
+          <div *ngIf="submitted && controls.checkBox.invalid" class="text-attention ms-4 ps-2">
+            {{ getErrorMessage(controls.checkBox)}}
+          </div>
+          <button type="submit" class="btn mt-3 "><img class="me-2" src="assets/img/send.png" alt="Ikona Instagrama">
+            Wyślij
+          </button>
         </form>
       </div>
-
     </div>
   </div>
 </div>
 <section class="contact-map">
   <div class="d-flex flex-column align-items-center">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.8034117003513!2d18.090701912214804!3d51.754918271753276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ac5820340d9ed%3A0x3eca73ebf7b5e3d1!2sPsycholog%2C%20terepeuta%20Kalisz%20-%20R%C3%B3wnowaga%20-%20Centrum%20Terapii%20i%20Wsparcia%20Rozwoju!5e0!3m2!1spl!2spl!4v1723549162638!5m2!1spl!2spl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.8034117003513!2d18.090701912214804!3d51.7549182717
+      53276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ac5820340d9ed%3A0x3eca73ebf7b5e3d1!2sPsycholog%2C%20t
+      erepeuta%20Kalisz%20-%20R%C3%B3wnowaga%20-%20Centrum%20Terapii%20i%20Wsparcia%20Rozwoju!5e0!3m2!1spl!2spl!4v172354
+      9162638!5m2!1spl!2spl"
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>

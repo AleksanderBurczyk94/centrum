@@ -21,8 +21,6 @@ footer {
   font-size: 18px;
 }
 
-
-
 img {
   width: 55px;
 }
@@ -33,8 +31,13 @@ img {
 
 .logo {
   width: 170px;
+  transition: transform 0.3s ease;
 }
 
 .policy p {
   cursor: pointer;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }

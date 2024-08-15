@@ -10,6 +10,7 @@ import {OurCenterComponent} from "./core/our-center/our-center.component";
 import {BlogComponent} from "./core/blog/blog.component";
 import {MinorsProtectionComponent} from "./core/footer/minors-protection/minors-protection.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
+import {contactFormUnsavedChangesGuard} from "./guards/contact-form-unsaved-changes.guard";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: 'priceList', component: PriceListComponent, title:'Cennik'},
   {path: 'ourCenter', component: OurCenterComponent, title:'Nasze Centrum'},
   {path: 'blog', component: BlogComponent, title:'Blog'},
-  {path: 'contact', component: ContactComponent, title:'Kontakt'},
+  {path: 'contact', component: ContactComponent, title:'Kontakt', canDeactivate: [contactFormUnsavedChangesGuard]},
   {path: 'appointment', component: AppointmentComponent, title:'Umów wizytę'},
   {path: 'minorsProtection', component: MinorsProtectionComponent, title:'Standardy ochrony małoletnich'},
   {path: 'rodo', component: RodoComponent, title:'Rodo'},

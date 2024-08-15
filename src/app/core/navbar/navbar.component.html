@@ -8,19 +8,48 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class=" navbar-nav ms-auto d-flex align-items-center">
-        <a class="text-nav-color nav-link px-lg-3" routerLink="" routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact:true}">Start</a>
-        <a class="text-nav-color nav-link px-lg-3" routerLink="assistance" routerLinkActive="active">Zakres pomoncy</a>
-        <a class="text-nav-color nav-link px-lg-3" routerLink="priceList" routerLinkActive="active">Cennik</a>
-        <a class="text-nav-color nav-link px-lg-3" routerLink="ourCenter" routerLinkActive="active">Nasze Centrum</a>
-        <a class="text-nav-color nav-link px-lg-3" routerLink="blog" routerLinkActive="active">Blog</a>
-        <a class="text-nav-color nav-link px-lg-3" routerLink="contact" routerLinkActive="active">Kontakt</a>
-        <app-color-button class="my-3 my-xxl-0 color-btn" routerLink="appointment"><img src="./assets/img/calendar.png"
-                                                                               alt="icona kalendarza">
-          Umów wizytę
-        </app-color-button>
-      </div>
+      <ul class="navbar-nav ms-auto d-flex align-items-center">
+        <li class="nav-item">
+          <a class="text-nav-color nav-link px-lg-3" routerLink="" routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact:true}" (click)="collapseNav()">Start</a>
+        </li>
+        <li class="nav-item dropdown text-center">
+          <a class="nav-link  text-nav-color px-lg-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Zakres Pomocy  <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png" alt="strzałka dropdwonu w dół">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Konsultacje psychologicze</a></li>
+            <li><a class="dropdown-item" href="#">Diagnoza i terapia integracji sensorycznej</a></li>
+            <li><a class="dropdown-item" href="#">Diagnoza i terapia neurorozwojowa odruchów INPP</a></li>
+            <li><a class="dropdown-item" href="#">Terapia NeuroTaktylna MNRI</a></li>
+            <li><a class="dropdown-item" href="#">Diagnoza i terapia przetwarzania słuchowego Johansena</a></li>
+            <li><a class="dropdown-item" href="#">Diagnoza i terapia ręki</a></li>
+            <li><a class="dropdown-item" href="#">Konsultacje specjalistyczne</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="text-nav-color nav-link px-lg-3" routerLink="priceList" routerLinkActive="active"
+             (click)="collapseNav()">Cennik</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nav-color nav-link px-lg-3" routerLink="ourCenter" routerLinkActive="active"
+             (click)="collapseNav()">Nasze Centrum</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nav-color nav-link px-lg-3" routerLink="blog" routerLinkActive="active"
+             (click)="collapseNav()">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nav-color nav-link px-lg-3" routerLink="contact" routerLinkActive="active"
+             (click)="collapseNav()">Kontakt</a>
+        </li>
+        <li class="nav-item my-3">
+          <app-color-button class=" my-xxl-0 color-btn" routerLink="appointment" (click)="collapseNav()">
+            <img src="./assets/img/calendar.png" alt="ikona kalendarza">
+            Umów wizytę
+          </app-color-button>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
