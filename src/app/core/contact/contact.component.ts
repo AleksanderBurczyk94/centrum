@@ -72,7 +72,6 @@ export class ContactComponent {
       this.showSuccessAlert = true;
       setTimeout(() => this.showSuccessAlert = false, 3000);
 
-
       this.contactForm.reset();
       this.submitted = false;
           },
