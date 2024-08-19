@@ -1,1 +1,16 @@
-table table
+.table > :not(caption) > * > * {
+  background-color: var(--white-color);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: rgba(246, 174, 179, 0.11);
+}
+
+.table-hover tbody tr:hover td {
+  background-color: rgba(183, 255, 243, 0.55);
+  cursor: pointer;
+}
+
+table{
+  font-size: 20px;
+}

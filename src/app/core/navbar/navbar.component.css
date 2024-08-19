@@ -81,3 +81,13 @@ img:hover {
 .arrow {
   height: 10px
 }
+
+.visit-btn{
+  width: 500px;
+}
+
+/*@media (max-width: 1199.98px) {*/
+/*  .color-btn {*/
+/*    margin-left: 50%*/
+/*  }*/
+/*}*/
