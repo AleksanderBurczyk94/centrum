@@ -59,14 +59,3 @@ img {
   opacity: 1;
 }
 
-.red{
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
-
-.blue{
-  width: 200px;
-  height: 2000px;
-  background-color: rgba(65, 140, 254, 0.63);
-}

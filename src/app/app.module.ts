@@ -26,6 +26,15 @@ import {MinorsProtectionComponent} from './core/footer/minors-protection/minors-
 import {RodoComponent} from './core/footer/rodo/rodo.component';
 import {WhiteContainerComponent} from "./shered/white-container/white-container.component";
 import {BannerComponent} from './shered/banner/banner.component';
+import { PsychologicalConsultationsComponent } from './core/assistance/psychological-consultations/psychological-consultations.component';
+import { SensoryIntegrationTherapyComponent } from './core/assistance/sensory-integration-therapy/sensory-integration-therapy.component';
+import { NeurodevelopmentalReflexTherapyComponent } from './core/assistance/neurodevelopmental-reflex-therapy/neurodevelopmental-reflex-therapy.component';
+import { NeuroTactileTherapyComponent } from './core/assistance/neuro-tactile-therapy/neuro-tactile-therapy.component';
+import { AuditoryProcessingTherapyComponent } from './core/assistance/auditory-processing-therapy/auditory-processing-therapy.component';
+import { HandTherapyComponent } from './core/assistance/hand-therapy/hand-therapy.component';
+import { SpecialistConsultationsComponent } from './core/assistance/specialist-consultations/specialist-consultations.component';
+import { WrittenOpinionComponent } from './core/assistance/written-opinion/written-opinion.component';
+import { SiDiagnosisDescriptionComponent } from './core/assistance/si-diagnosis-description/si-diagnosis-description.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +57,15 @@ import {BannerComponent} from './shered/banner/banner.component';
     RodoComponent,
     WhiteContainerComponent,
     BannerComponent,
+    PsychologicalConsultationsComponent,
+    SensoryIntegrationTherapyComponent,
+    NeurodevelopmentalReflexTherapyComponent,
+    NeuroTactileTherapyComponent,
+    AuditoryProcessingTherapyComponent,
+    HandTherapyComponent,
+    SpecialistConsultationsComponent,
+    WrittenOpinionComponent,
+    SiDiagnosisDescriptionComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

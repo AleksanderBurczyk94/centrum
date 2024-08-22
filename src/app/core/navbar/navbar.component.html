@@ -4,20 +4,18 @@
       <img src="./assets/img/logo_centrum_rowowaga_bez_tła.png" alt="logo">
     </a>
 
-    <!-- Toggler and button for smaller screens -->
     <div class="d-flex align-items-center">
       <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Visible only on screens smaller than XXL -->
+
       <app-color-button class="color-btn d-xxl-none" routerLink="appointment" (click)="collapseNav()">
         <img src="./assets/img/calendar.png" alt="ikona kalendarza">
         Umów wizytę
       </app-color-button>
     </div>
 
-    <!-- Navigation links -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav ms-auto d-flex align-items-center">
         <li class="nav-item">
@@ -30,13 +28,13 @@
             Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png" alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Konsultacje psychologiczne</a></li>
-            <li><a class="dropdown-item" href="#">Diagnoza i terapia integracji sensorycznej</a></li>
-            <li><a class="dropdown-item" href="#">Diagnoza i terapia neurorozwojowa odruchów INPP</a></li>
-            <li><a class="dropdown-item" href="#">Terapia NeuroTaktylna MNRI</a></li>
-            <li><a class="dropdown-item" href="#">Diagnoza i terapia przetwarzania słuchowego Johansena</a></li>
-            <li><a class="dropdown-item" href="#">Diagnoza i terapia ręki</a></li>
-            <li><a class="dropdown-item" href="#">Konsultacje specjalistyczne</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/psychologicalConsultations">Konsultacje psychologiczne</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/sensoryIntegrationTherapy">Diagnoza i terapia integracji sensorycznej</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/neurodevelopmentalReflexTherapy">Diagnoza i terapia neurorozwojowa odruchów INPP</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/neuroTactileTherapy">Terapia NeuroTaktylna MNRI</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/auditoryProcessingTherapy">Diagnoza i terapia przetwarzania słuchowego Johansena</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/handTherapy">Diagnoza i terapia ręki</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/specialistConsultations">Konsultacje specjalistyczne</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -54,7 +52,6 @@
       </ul>
     </div>
 
-    <!-- Button visible only on XXL screens -->
     <app-color-button class="color-btn d-none d-xxl-block" routerLink="appointment" (click)="collapseNav()">
       <img src="./assets/img/calendar.png" alt="ikona kalendarza">
       Umów wizytę
