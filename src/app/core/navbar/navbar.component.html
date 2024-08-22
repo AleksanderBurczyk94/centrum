@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xxl py-0 sticky-top">
-  <div class="container d-flex justify-content-between align-items-center ">
-    <a class="navbar-brand" routerLink="">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand me-5" routerLink="">
       <img src="./assets/img/logo_centrum_rowowaga_bez_tła.png" alt="logo">
     </a>
 
@@ -16,14 +16,14 @@
       </app-color-button>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse no-wrap" id="navbarNavAltMarkup">
       <ul class="navbar-nav ms-auto d-flex align-items-center">
         <li class="nav-item">
-          <a class="text-nav-color nav-link px-lg-3" routerLink="" routerLinkActive="active"
+          <a class="text-nav-color nav-link " routerLink="" routerLinkActive="active"
              [routerLinkActiveOptions]="{exact:true}" (click)="collapseNav()">Start</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link text-nav-color px-lg-3" href="#" id="navbarDropdown" role="button"
+        <li class="nav-item dropdown ">
+          <a class="nav-link text-nav-color " href="#" id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false">
             Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png" alt="strzałka dropdownu w dół">
           </a>
@@ -38,21 +38,24 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link px-lg-3" routerLink="priceList" routerLinkActive="active" (click)="collapseNav()">Cennik</a>
+          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Zespoł</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link px-lg-3" routerLink="ourCenter" routerLinkActive="active" (click)="collapseNav()">Nasze Centrum</a>
+          <a class="text-nav-color nav-link " routerLink="priceList" routerLinkActive="active" (click)="collapseNav()">Cennik</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link px-lg-3" routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Blog</a>
+          <a class="text-nav-color nav-link " routerLink="ourCenter" routerLinkActive="active" (click)="collapseNav()">Nasze Centrum</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link px-lg-3" routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
+          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Blog</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
         </li>
       </ul>
     </div>
 
-    <app-color-button class="color-btn d-none d-xxl-block" routerLink="appointment" (click)="collapseNav()">
+    <app-color-button class="color-btn d-none d-xxl-block no-wrap" routerLink="appointment" (click)="collapseNav()">
       <img src="./assets/img/calendar.png" alt="ikona kalendarza">
       Umów wizytę
     </app-color-button>

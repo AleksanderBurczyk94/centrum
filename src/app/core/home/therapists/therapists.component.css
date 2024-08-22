@@ -7,6 +7,8 @@
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
+  text-align: justify;
+  text-align-last: center;
   overflow: hidden;
 }
 
@@ -28,19 +30,49 @@
 }
 
 .active-users img {
-  height: 600px;
+  height: 400px;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.3s;
 }
 
-.active-users img:hover {
+.card:hover img{
   transform: scale(1.1);
 }
 
-.active-users .card-body,
-.active-users .btn {
-  font-size: 20px;
-  line-height: 1.2;
+.role-title {
+  /*text-transform: uppercase;*/
+  font-weight: lighter;
+  font-size: 14px;
+  color: rgb(140, 140, 140);
 }
 
+.card {
+  min-width: 200px;
+  border-radius: 15px; /* Zaokrąglenie wszystkich rogów karty */
+  overflow: hidden; /* Ukrycie części zaokrąglonych rogów obrazka */
+  cursor: pointer;
+}
 
+.card h4,.card p  {
+  transition: transform 0.3s;
+
+}
+
+.card-img {
+  border-radius: 15px 15px 0 0; /* Zaokrąglenie tylko górnych rogów obrazka */
+  overflow: hidden; /* Ukrycie nadmiaru obrazka */
+}
+
+.card-body {
+  border-radius: 0 0 15px 15px; /* Zaokrąglenie dolnych rogów karty, a nie obrazka */
+  border: 1px solid #d5d5d5;
+}
+
+.card .card-body {
+  transition: background-color 0.3s;
+}
+
+.card:hover .card-body{
+  background-color: rgba(214, 243, 239, 0.89);
+}
