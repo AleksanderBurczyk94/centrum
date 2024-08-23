@@ -6,7 +6,12 @@
 
 img {
   height: 120px;
-  /*margin: 5px;*/
+}
+
+@media (max-width: 555px) {
+  img {
+    height: 90px;
+  }
 }
 
 .nav-link {
@@ -56,11 +61,11 @@ app-color-button {
   height: 35px;
 }
 
-img {
+.logo {
   transition: transform 0.3s ease;
 }
 
-img:hover {
+.logo:hover {
   transform: scale(1.07);
 }
 

@@ -8,13 +8,13 @@ import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
 export class NavbarComponent {
 
 
-  @ViewChild('navbarNavAltMarkup') navbarNavAltMarkup!: ElementRef;
+  @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
   collapseNav() {
-    if (this.navbarNavAltMarkup && this.navbarNavAltMarkup.nativeElement.classList.contains('show')) {
-      this.renderer.removeClass(this.navbarNavAltMarkup.nativeElement, 'show');
-    }
-  }
+    const navbarCollapse = this.navbarNavAltMarkup.nativeElement;
+    if (navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }}
 }

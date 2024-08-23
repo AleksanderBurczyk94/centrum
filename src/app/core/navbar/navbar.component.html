@@ -1,22 +1,23 @@
-<nav class="navbar navbar-expand-xxl py-0 sticky-top">
+<nav class="navbar navbar-expand-xxl py-0 sticky-top ">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="navbar-brand me-5" routerLink="">
-      <img src="./assets/img/logo_centrum_rowowaga_bez_tła.png" alt="logo">
+      <img class="logo" src="./assets/img/logo_centrum_rowowaga_bez_tła.png" alt="logo">
     </a>
-
     <div class="d-flex align-items-center">
       <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <app-color-button class="color-btn d-xxl-none" routerLink="appointment" (click)="collapseNav()">
-        <img src="./assets/img/calendar.png" alt="ikona kalendarza">
-        Umów wizytę
+      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="appointment" (click)="collapseNav()">
+       <div class="d-flex justify-content-center align-items-center ">
+         <img src="./assets/img/calendar.png" alt="ikona kalendarza">
+         <p class="m-0">Umów wizytę</p>
+       </div>
       </app-color-button>
     </div>
 
-    <div class="collapse navbar-collapse no-wrap" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse no-wrap" id="navbarNavAltMarkup" #navbarNavAltMarkup>
       <ul class="navbar-nav ms-auto d-flex align-items-center">
         <li class="nav-item">
           <a class="text-nav-color nav-link " routerLink="" routerLinkActive="active"
@@ -49,15 +50,16 @@
         <li class="nav-item">
           <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Blog</a>
         </li>
-        <li class="nav-item me-3">
+        <li class="nav-item me-3 ">
           <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
         </li>
+        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-4" routerLink="appointment" (click)="collapseNav()">
+          <img src="./assets/img/calendar.png" alt="ikona kalendarza">
+          Umów wizytę
+        </app-color-button>
       </ul>
     </div>
 
-    <app-color-button class="color-btn d-none d-xxl-block no-wrap" routerLink="appointment" (click)="collapseNav()">
-      <img src="./assets/img/calendar.png" alt="ikona kalendarza">
-      Umów wizytę
-    </app-color-button>
+
   </div>
 </nav>
