@@ -5,8 +5,8 @@
 }
 
 img {
-  height: 100px;
-  margin: 5px;
+  height: 120px;
+  /*margin: 5px;*/
 }
 
 .nav-link {
@@ -61,7 +61,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 
