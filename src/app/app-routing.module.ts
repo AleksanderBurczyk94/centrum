@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {PriceListComponent} from "./core/price-list/price-list.component";
@@ -33,6 +33,12 @@ import {
 } from "./core/assistance/si-diagnosis-description/si-diagnosis-description.component";
 import {WrittenOpinionComponent} from "./core/assistance/written-opinion/written-opinion.component";
 
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
+  anchorScrolling: 'enabled',           // Włączenie przewijania do elementu z kotwicą
+  scrollOffset: [0, -100],              // Przesunięcie o 100px w górę
+};
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {
@@ -40,13 +46,33 @@ const routes: Routes = [
     component: AssistanceComponent,
     title: 'Zakres pomocy',
     children: [
-      {path: 'auditoryProcessingTherapy', component: AuditoryProcessingTherapyComponent, title: 'Diagnoza i terapia przetwarzania słuchowego Johansena'},
+      {
+        path: 'auditoryProcessingTherapy',
+        component: AuditoryProcessingTherapyComponent,
+        title: 'Diagnoza i terapia przetwarzania słuchowego Johansena'
+      },
       {path: 'handTherapy', component: HandTherapyComponent, title: 'Diagnoza i terapia ręki'},
       {path: 'neuroTactileTherapy', component: NeuroTactileTherapyComponent, title: 'Terapia NeuroTaktylna MNRI'},
-      {path: 'neurodevelopmentalReflexTherapy', component: NeurodevelopmentalReflexTherapyComponent, title: 'Diagnoza i terapia neurorozwojowa odruchów INPP'},
-      {path: 'psychologicalConsultations', component: PsychologicalConsultationsComponent, title: 'Konsultacje psychologiczne'},
-      {path: 'sensoryIntegrationTherapy', component: SensoryIntegrationTherapyComponent, title: 'Diagnoza i terapia integracji sensorycznej'},
-      {path: 'specialistConsultations', component: SpecialistConsultationsComponent, title: 'Konsultacje specjalistyczne'},
+      {
+        path: 'neurodevelopmentalReflexTherapy',
+        component: NeurodevelopmentalReflexTherapyComponent,
+        title: 'Diagnoza i terapia neurorozwojowa odruchów INPP'
+      },
+      {
+        path: 'psychologicalConsultations',
+        component: PsychologicalConsultationsComponent,
+        title: 'Konsultacje psychologiczne'
+      },
+      {
+        path: 'sensoryIntegrationTherapy',
+        component: SensoryIntegrationTherapyComponent,
+        title: 'Diagnoza i terapia integracji sensorycznej'
+      },
+      {
+        path: 'specialistConsultations',
+        component: SpecialistConsultationsComponent,
+        title: 'Konsultacje specjalistyczne'
+      },
       {path: 'siDiagnosisDescription', component: SiDiagnosisDescriptionComponent, title: 'Pisemny opis diagnozy SI'},
       {path: 'writtenOpinion', component: WrittenOpinionComponent, title: 'Pisemna opinia'},
     ]
@@ -63,9 +89,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-// <div class="fw-bold"></div>
 }

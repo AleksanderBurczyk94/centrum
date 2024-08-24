@@ -9,11 +9,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="appointment" (click)="collapseNav()">
-       <div class="d-flex justify-content-center align-items-center ">
-         <img src="./assets/img/calendar.png" alt="ikona kalendarza">
-         <p class="m-0">Umów wizytę</p>
-       </div>
+      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="appointment"
+                        (click)="collapseNav()">
+        <div class="d-flex justify-content-center align-items-center ">
+          <img src="./assets/img/calendar.png" alt="ikona kalendarza">
+          <p class="m-0">Umów wizytę</p>
+        </div>
       </app-color-button>
     </div>
 
@@ -26,40 +27,44 @@
         <li class="nav-item dropdown ">
           <a class="nav-link text-nav-color " href="#" id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false">
-            Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png" alt="strzałka dropdownu w dół">
+            Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
+                               alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="assistance/psychologicalConsultations">Konsultacje psychologiczne</a></li>
-            <li><a class="dropdown-item" routerLink="assistance/sensoryIntegrationTherapy">Diagnoza i terapia integracji sensorycznej</a></li>
-            <li><a class="dropdown-item" routerLink="assistance/neurodevelopmentalReflexTherapy">Diagnoza i terapia neurorozwojowa odruchów INPP</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/psychologicalConsultations">Konsultacje
+              psychologiczne</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/sensoryIntegrationTherapy">Diagnoza i terapia integracji
+              sensorycznej</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/neurodevelopmentalReflexTherapy">Diagnoza i terapia
+              neurorozwojowa odruchów INPP</a></li>
             <li><a class="dropdown-item" routerLink="assistance/neuroTactileTherapy">Terapia NeuroTaktylna MNRI</a></li>
-            <li><a class="dropdown-item" routerLink="assistance/auditoryProcessingTherapy">Diagnoza i terapia przetwarzania słuchowego Johansena</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/auditoryProcessingTherapy">Diagnoza i terapia
+              przetwarzania słuchowego Johansena</a></li>
             <li><a class="dropdown-item" routerLink="assistance/handTherapy">Diagnoza i terapia ręki</a></li>
-            <li><a class="dropdown-item" routerLink="assistance/specialistConsultations">Konsultacje specjalistyczne</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/specialistConsultations">Konsultacje specjalistyczne</a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Zespoł</a>
         </li>
         <li class="nav-item">
           <a class="text-nav-color nav-link " routerLink="priceList" routerLinkActive="active" (click)="collapseNav()">Cennik</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="ourCenter" routerLinkActive="active" (click)="collapseNav()">Nasze Centrum</a>
+          <a class="text-nav-color nav-link " routerLink="ourCenter" routerLinkActive="active" (click)="collapseNav()">Nasze
+            Centrum</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active" (click)="collapseNav()">Blog</a>
+          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active"
+             (click)="collapseNav()">Blog</a>
         </li>
         <li class="nav-item me-3 ">
           <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
         </li>
-        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-4" routerLink="appointment" (click)="collapseNav()">
+        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-4" routerLink="appointment"
+                          (click)="collapseNav()">
           <img src="./assets/img/calendar.png" alt="ikona kalendarza">
           Umów wizytę
         </app-color-button>
       </ul>
     </div>
-
-
   </div>
 </nav>

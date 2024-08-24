@@ -35,6 +35,7 @@ import { HandTherapyComponent } from './core/assistance/hand-therapy/hand-therap
 import { SpecialistConsultationsComponent } from './core/assistance/specialist-consultations/specialist-consultations.component';
 import { WrittenOpinionComponent } from './core/assistance/written-opinion/written-opinion.component';
 import { SiDiagnosisDescriptionComponent } from './core/assistance/si-diagnosis-description/si-diagnosis-description.component';
+import { PaulinaOkrasaComponent } from './core/home/therapists/paulina-okrasa/paulina-okrasa.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { SiDiagnosisDescriptionComponent } from './core/assistance/si-diagnosis-
     SpecialistConsultationsComponent,
     WrittenOpinionComponent,
     SiDiagnosisDescriptionComponent,
+    PaulinaOkrasaComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

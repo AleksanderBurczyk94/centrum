@@ -68,6 +68,15 @@
   border-radius: 0 0 15px 15px; /* Zaokrąglenie dolnych rogów karty, a nie obrazka */
   border: 1px solid #d5d5d5;
 }
+.card-img {
+  border-radius: 15px 15px 0 0;
+  box-shadow: 10px 0 8px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  border-radius: 0 0 15px 15px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+}
 
 .card .card-body {
   transition: background-color 0.3s;
