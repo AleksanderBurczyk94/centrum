@@ -25,6 +25,7 @@
   text-align: justify;
 }
 
+
 .active-users .card-img {
   overflow: hidden;
 }
@@ -41,7 +42,6 @@
 }
 
 .role-title {
-  /*text-transform: uppercase;*/
   font-weight: lighter;
   font-size: 14px;
   color: rgb(140, 140, 140);
@@ -49,8 +49,7 @@
 
 .card {
   min-width: 200px;
-  border-radius: 15px; /* Zaokrąglenie wszystkich rogów karty */
-  overflow: hidden; /* Ukrycie części zaokrąglonych rogów obrazka */
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -60,20 +59,13 @@
 }
 
 .card-img {
-  border-radius: 15px 15px 0 0; /* Zaokrąglenie tylko górnych rogów obrazka */
-  overflow: hidden; /* Ukrycie nadmiaru obrazka */
-}
-
-.card-body {
-  border-radius: 0 0 15px 15px; /* Zaokrąglenie dolnych rogów karty, a nie obrazka */
-  border: 1px solid #d5d5d5;
-}
-.card-img {
   border-radius: 15px 15px 0 0;
+  box-shadow: 10px 0 8px -5px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
   border-radius: 0 0 15px 15px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card .card-body {
@@ -83,3 +75,5 @@
 .card:hover .card-body{
   background-color: rgba(214, 243, 239, 0.89);
 }
+
+
