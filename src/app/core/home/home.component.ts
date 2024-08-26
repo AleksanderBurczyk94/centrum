@@ -1,19 +1,17 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
-import { Router } from '@angular/router';
+import {AfterViewInit, Component, OnInit, Renderer2, ViewChild, ElementRef} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   constructor(private router: Router,
-              private renderer: Renderer2) { }
-
-  goToAppointment() {
-    this.router.navigate(['/appointment']);
+              private renderer: Renderer2) {
   }
+
 
   ngOnInit(): void {
     const script = this.renderer.createElement('script');

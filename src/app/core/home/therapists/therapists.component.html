@@ -13,7 +13,7 @@
     </div>
     <div class="active-users p-5">
       <div class="card-group">
-        <div *ngFor="let therapist of therapists" class="card m-3 bg-transparent border-0">
+        <div *ngFor="let therapist of therapists;" class="card m-3 bg-transparent border-0" [routerLink]="[therapist.path]">
           <div class="card-img">
             <img [src]="therapist.image" [alt]="'Zdjęcie terapeuty: ' + therapist.name" class="card-img-top">
           </div>

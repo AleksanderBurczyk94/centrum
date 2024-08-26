@@ -26,16 +26,33 @@ import {MinorsProtectionComponent} from './core/footer/minors-protection/minors-
 import {RodoComponent} from './core/footer/rodo/rodo.component';
 import {WhiteContainerComponent} from "./shered/white-container/white-container.component";
 import {BannerComponent} from './shered/banner/banner.component';
-import { PsychologicalConsultationsComponent } from './core/assistance/psychological-consultations/psychological-consultations.component';
-import { SensoryIntegrationTherapyComponent } from './core/assistance/sensory-integration-therapy/sensory-integration-therapy.component';
-import { NeurodevelopmentalReflexTherapyComponent } from './core/assistance/neurodevelopmental-reflex-therapy/neurodevelopmental-reflex-therapy.component';
-import { NeuroTactileTherapyComponent } from './core/assistance/neuro-tactile-therapy/neuro-tactile-therapy.component';
-import { AuditoryProcessingTherapyComponent } from './core/assistance/auditory-processing-therapy/auditory-processing-therapy.component';
-import { HandTherapyComponent } from './core/assistance/hand-therapy/hand-therapy.component';
-import { SpecialistConsultationsComponent } from './core/assistance/specialist-consultations/specialist-consultations.component';
-import { WrittenOpinionComponent } from './core/assistance/written-opinion/written-opinion.component';
-import { SiDiagnosisDescriptionComponent } from './core/assistance/si-diagnosis-description/si-diagnosis-description.component';
-import { PaulinaOkrasaComponent } from './core/home/therapists/paulina-okrasa/paulina-okrasa.component';
+import {
+  PsychologicalConsultationsComponent
+} from './core/assistance/psychological-consultations/psychological-consultations.component';
+import {
+  SensoryIntegrationTherapyComponent
+} from './core/assistance/sensory-integration-therapy/sensory-integration-therapy.component';
+import {
+  NeurodevelopmentalReflexTherapyComponent
+} from './core/assistance/neurodevelopmental-reflex-therapy/neurodevelopmental-reflex-therapy.component';
+import {NeuroTactileTherapyComponent} from './core/assistance/neuro-tactile-therapy/neuro-tactile-therapy.component';
+import {
+  AuditoryProcessingTherapyComponent
+} from './core/assistance/auditory-processing-therapy/auditory-processing-therapy.component';
+import {HandTherapyComponent} from './core/assistance/hand-therapy/hand-therapy.component';
+import {
+  SpecialistConsultationsComponent
+} from './core/assistance/specialist-consultations/specialist-consultations.component';
+import {WrittenOpinionComponent} from './core/assistance/written-opinion/written-opinion.component';
+import {
+  SiDiagnosisDescriptionComponent
+} from './core/assistance/si-diagnosis-description/si-diagnosis-description.component';
+import {
+  PaulinaOkrasaBurczykComponent
+} from './core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component';
+import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy/pedagogical-therapy.component';
+import {NextBtnComponent} from './shered/next-btn/next-btn.component';
+import { BackBtnComponent } from './shered/back-btn/back-btn.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +84,10 @@ import { PaulinaOkrasaComponent } from './core/home/therapists/paulina-okrasa/pa
     SpecialistConsultationsComponent,
     WrittenOpinionComponent,
     SiDiagnosisDescriptionComponent,
-    PaulinaOkrasaComponent,
+    PaulinaOkrasaBurczykComponent,
+    PedagogicalTherapyComponent,
+    NextBtnComponent,
+    BackBtnComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

@@ -32,6 +32,10 @@ import {
   SiDiagnosisDescriptionComponent
 } from "./core/assistance/si-diagnosis-description/si-diagnosis-description.component";
 import {WrittenOpinionComponent} from "./core/assistance/written-opinion/written-opinion.component";
+import {
+  PaulinaOkrasaBurczykComponent
+} from "./core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component";
+import {PedagogicalTherapyComponent} from "./core/assistance/pedagogical-therapy/pedagogical-therapy.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -39,53 +43,107 @@ const routerOptions: ExtraOptions = {
   scrollOffset: [0, -100],              // Przesunięcie o 100px w górę
 };
 
+export const AppRoutes = {
+  //nav + main
+  HOME: '',
+  ASSISTANCE: 'assistance',
+  PRICE_LIST: 'priceList',
+  OUR_CENTER: 'ourCenter',
+  BLOG: 'blog',
+  CONTACT: 'contact',
+  APPOINTMENT: 'appointment',
+  MINORS_PROTECTION: 'minorsProtection',
+  RODO: 'rodo',
+  PAGE_NOT_FOUND: '**',
+
+  //asistance children
+  PSYCHOLOGICAL_CONSULTATIONS: 'psychologicalConsultations',
+  SENSORY_INTEGRATION_THERAPY: 'sensoryIntegrationTherapy',
+  NEURODEVELOPMENTAL_REFLEX_THERAPY: 'neurodevelopmentalReflexTherapy',
+  NEUROTACTILE_THERAPY: 'neuroTactileTherapy',
+  AUDITORY_PROCESSING_THERAPY: 'auditoryProcessingTherapy',
+  HAND_THERAPY: 'handTherapy',
+  SPECIALIST_CONSULTATIONS: 'specialistConsultations',
+  SI_DIAGNOSIS_DESCRIPTION: 'siDiagnosisDescription',
+  PEDAGOGICAL_THERAPY: 'pedagogicalTherapy',
+  WRITTEN_OPINION: 'writtenOpinion',
+
+  //therapists
+  PAULINA_OKRASA_BURCZYK: 'paulinaOkrasaBurczyk',
+};
+
+
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: AppRoutes.HOME, component: HomeComponent, title: 'start'},
   {
-    path: 'assistance',
+    path: AppRoutes.ASSISTANCE,
     component: AssistanceComponent,
     title: 'Zakres pomocy',
     children: [
       {
-        path: 'auditoryProcessingTherapy',
-        component: AuditoryProcessingTherapyComponent,
-        title: 'Diagnoza i terapia przetwarzania słuchowego Johansena'
+        path: AppRoutes.PSYCHOLOGICAL_CONSULTATIONS,
+        component: PsychologicalConsultationsComponent,
+        title: 'Konsultacje psychologiczne'
       },
-      {path: 'handTherapy', component: HandTherapyComponent, title: 'Diagnoza i terapia ręki'},
-      {path: 'neuroTactileTherapy', component: NeuroTactileTherapyComponent, title: 'Terapia NeuroTaktylna MNRI'},
+      {path: AppRoutes.HAND_THERAPY, component: HandTherapyComponent, title: 'Diagnoza i terapia ręki'},
       {
-        path: 'neurodevelopmentalReflexTherapy',
+        path: AppRoutes.NEUROTACTILE_THERAPY,
+        component: NeuroTactileTherapyComponent,
+        title: 'Terapia NeuroTaktylna MNRI'
+      },
+      {
+        path: AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY,
         component: NeurodevelopmentalReflexTherapyComponent,
         title: 'Diagnoza i terapia neurorozwojowa odruchów INPP'
       },
       {
-        path: 'psychologicalConsultations',
-        component: PsychologicalConsultationsComponent,
-        title: 'Konsultacje psychologiczne'
-      },
-      {
-        path: 'sensoryIntegrationTherapy',
+        path: AppRoutes.SENSORY_INTEGRATION_THERAPY,
         component: SensoryIntegrationTherapyComponent,
         title: 'Diagnoza i terapia integracji sensorycznej'
       },
       {
-        path: 'specialistConsultations',
+        path: AppRoutes.AUDITORY_PROCESSING_THERAPY,
+        component: AuditoryProcessingTherapyComponent,
+        title: 'Diagnoza i terapia Joansena'
+      },
+      {
+        path: AppRoutes.PEDAGOGICAL_THERAPY,
+        component: PedagogicalTherapyComponent,
+        title: 'Teapia Pedagogiczna'
+      },
+      {
+        path: AppRoutes.SPECIALIST_CONSULTATIONS,
         component: SpecialistConsultationsComponent,
         title: 'Konsultacje specjalistyczne'
       },
-      {path: 'siDiagnosisDescription', component: SiDiagnosisDescriptionComponent, title: 'Pisemny opis diagnozy SI'},
-      {path: 'writtenOpinion', component: WrittenOpinionComponent, title: 'Pisemna opinia'},
+      {
+        path: AppRoutes.SI_DIAGNOSIS_DESCRIPTION,
+        component: SiDiagnosisDescriptionComponent,
+        title: 'Pisemny opis diagnozy SI'
+      },
+      {
+        path: AppRoutes.WRITTEN_OPINION,
+        component: WrittenOpinionComponent,
+        title: 'Pisemna opinia'
+      },
     ]
   },
-  {path: 'priceList', component: PriceListComponent, title: 'Cennik'},
-  {path: 'ourCenter', component: OurCenterComponent, title: 'Nasze Centrum'},
-  {path: 'blog', component: BlogComponent, title: 'Blog'},
-  {path: 'contact', component: ContactComponent, title: 'Kontakt', canDeactivate: [contactFormUnsavedChangesGuard]},
-  {path: 'appointment', component: AppointmentComponent, title: 'Umów wizytę'},
-  {path: 'minorsProtection', component: MinorsProtectionComponent, title: 'Standardy ochrony małoletnich'},
-  {path: 'rodo', component: RodoComponent, title: 'Rodo'},
+  {path: AppRoutes.PRICE_LIST, component: PriceListComponent, title: 'Cennik'},
+  {path: AppRoutes.OUR_CENTER, component: OurCenterComponent, title: 'Nasze Centrum'},
+  {path: AppRoutes.BLOG, component: BlogComponent, title: 'Blog'},
+  {
+    path: AppRoutes.CONTACT,
+    component: ContactComponent,
+    title: 'Kontakt',
+    canDeactivate: [contactFormUnsavedChangesGuard]
+  },
+  {path: AppRoutes.APPOINTMENT, component: AppointmentComponent, title: 'Umów wizytę'},
+  {path: AppRoutes.MINORS_PROTECTION, component: MinorsProtectionComponent, title: 'Standardy ochrony małoletnich'},
+  {path: AppRoutes.RODO, component: RodoComponent, title: 'Rodo'},
 
-  {path: '**', component: PageNotFoundComponent, title: 'Page not found'}
+  {path: AppRoutes.PAULINA_OKRASA_BURCZYK, component: PaulinaOkrasaBurczykComponent, title: 'Paulina Okrasa-Burczyk'},
+
+  {path: AppRoutes.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'}
 ];
 
 @NgModule({

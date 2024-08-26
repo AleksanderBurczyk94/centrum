@@ -1,22 +1,21 @@
 button {
-  padding: 13px 16px;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.75);
+  height: 60px;
+  width: 60px;
   background-color: var(--light-pink-color);
+  border-radius: 15%;
   border: none;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
   transition: background-color, transform 0.3s;
+}
+
+img {
+  height: 30px;
+  width: 30px;
 }
 
 button:hover {
   background-color: var(--pink-color);
   transform: scale(1.05);
 }
-
-
 
 
 

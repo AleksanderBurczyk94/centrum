@@ -150,11 +150,17 @@ p {
   box-shadow: 0 0 0 2px #ff1a1a;
 }
 
-.alert-success{
+.alert-success {
   background-color: rgba(65, 140, 254, 0.32);
 }
 
-.alert-failed{
+.alert-failed {
   background-color: rgba(255, 36, 36, 0.32);
 
+}
+
+@media (max-width: 576px) {
+  .smaller-text-sm {
+    font-size: 30px;
+  }
 }

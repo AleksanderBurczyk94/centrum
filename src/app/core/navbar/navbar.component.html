@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="appointment"
+      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="contact"
                         (click)="collapseNav()">
         <div class="d-flex justify-content-center align-items-center ">
           <img src="./assets/img/calendar.png" alt="ikona kalendarza">
@@ -41,6 +41,7 @@
             <li><a class="dropdown-item" routerLink="assistance/auditoryProcessingTherapy">Diagnoza i terapia
               przetwarzania słuchowego Johansena</a></li>
             <li><a class="dropdown-item" routerLink="assistance/handTherapy">Diagnoza i terapia ręki</a></li>
+            <li><a class="dropdown-item" routerLink="assistance/pedagogicalTherapy">Terapia pedagogiczna</a></li>
             <li><a class="dropdown-item" routerLink="assistance/specialistConsultations">Konsultacje specjalistyczne</a>
             </li>
           </ul>
@@ -59,7 +60,7 @@
         <li class="nav-item me-3 ">
           <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
         </li>
-        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-2" routerLink="appointment"
+        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-2" routerLink="contact"
                           (click)="collapseNav()">
           <img src="./assets/img/calendar.png" alt="ikona kalendarza">
           Umów wizytę

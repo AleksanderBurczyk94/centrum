@@ -3,4 +3,5 @@ export interface AssistanceCard {
   imgAlt: string;
   title: string;
   description: string;
+  path: string;
 }
