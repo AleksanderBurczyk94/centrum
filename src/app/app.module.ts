@@ -53,6 +53,7 @@ import {
 import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy/pedagogical-therapy.component';
 import {NextBtnComponent} from './shered/next-btn/next-btn.component';
 import { BackBtnComponent } from './shered/back-btn/back-btn.component';
+import { FaqComponent } from './core/home/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { BackBtnComponent } from './shered/back-btn/back-btn.component';
     PedagogicalTherapyComponent,
     NextBtnComponent,
     BackBtnComponent,
+    FaqComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
