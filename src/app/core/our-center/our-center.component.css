@@ -8,6 +8,10 @@
 .gallery-item {
   position: relative;
 }
+.item0 {
+  grid-column:span 3; /* Film zajmuje całą szerokość siatki */
+  grid-row: span 1;
+}
 
 .item1 {
   grid-column: span 2;
@@ -42,8 +46,6 @@
   grid-column: span 1;
 }
 
-
-
 img {
   width: 100%;
   height: auto;
@@ -59,3 +61,15 @@ img {
   opacity: 1;
 }
 
+.top-hero {
+  position: relative;
+  width: 100%; /* Zapewnia, że kontener rozciąga się na całą szerokość */
+  z-index: 0;
+}
+
+.aboutus-hero {
+  width: 100%; /* 100% szerokości viewport */
+  height: 99vh; /* 100% wysokości viewport */
+
+  object-fit: cover; /* Zapewnia pokrycie całego kontenera, zachowując proporcje */
+}
