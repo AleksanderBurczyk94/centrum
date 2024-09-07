@@ -9,8 +9,8 @@
 .aboutus-hero {
   width: 100%; /* 100% szerokości viewport */
   height: 99vh; /* 100% wysokości viewport */
-
   object-fit: cover; /* Zapewnia pokrycie całego kontenera, zachowując proporcje */
+  filter: brightness(0.7) /* 70% jasności - wideo będzie ciemniejsze */
 }
 
 .text-container {

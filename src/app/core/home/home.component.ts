@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
               private renderer: Renderer2) {
   }
 
-
   ngOnInit(): void {
     const script = this.renderer.createElement('script');
     script.src = 'https://static.elfsight.com/platform/platform.js';

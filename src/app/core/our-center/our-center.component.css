@@ -1,75 +1,94 @@
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+  gap: 20px; /* Odstęp między elementami */
   padding: 20px;
+}
+
+.video-item {
+  max-height: 600px;
+}
+
+.aboutus-hero {
+  width: 100%; /* Szerokość na 100% kontenera */
+  height: 50vh; /* Wysokość zmniejszona do 50% wysokości ekranu */
+  object-fit: cover; /* Zapewnia, że wideo wypełnia kontener, zachowując proporcje */
+
 }
 
 .gallery-item {
   position: relative;
 }
-.item0 {
-  grid-column:span 3; /* Film zajmuje całą szerokość siatki */
-  grid-row: span 1;
-}
 
-.item1 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.item2 {
-  grid-column: span 1;
-  grid-row: span 2;
+.item0, .item1, item2 {
+  grid-column: span 1; /* Zajmuje 2 kolumny */
+  grid-row: span 1; /* Zajmuje 2 wiersze */
 }
 
 .item3 {
   grid-column: span 2;
-  grid-row: span 3;
+  grid-row: span 2;
 }
 
 .item4 {
   grid-column: span 1;
   grid-row: span 1;
-
 }
 
 .item5 {
   grid-column: span 1;
   grid-row: span 1;
+}
 
-}
 .item6 {
-  grid-column: span 3;
-}
-.item7 {
   grid-column: span 1;
+  grid-row: span 1; /* Większe zdjęcie */
+}
+
+.item7 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.item8 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item9 {
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 img {
   width: 100%;
-  height: auto;
-  display: block;
-}
-
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-}
-
-.aos-animate[data-aos] {
-  opacity: 1;
-}
-
-.top-hero {
-  position: relative;
-  width: 100%; /* Zapewnia, że kontener rozciąga się na całą szerokość */
-  z-index: 0;
+  height: 100%;
+  object-fit: cover; /* Zapewnia, że obraz dopasowuje się do kontenera */
 }
 
 .aboutus-hero {
-  width: 100%; /* 100% szerokości viewport */
-  height: 99vh; /* 100% wysokości viewport */
+  width: 100%; /* Wideo zajmuje całą szerokość kontenera */
+  height: 100%; /* Wideo zajmuje całą wysokość kontenera */
+  object-fit: cover; /* Dopasowanie wideo do kontenera */
+}
 
-  object-fit: cover; /* Zapewnia pokrycie całego kontenera, zachowując proporcje */
+@media (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* Zmieniamy na 2 kolumny dla tabletów */
+  }
+
+  .item0, .item9 {
+    grid-column: span 2; /* Dopasowanie większych elementów do 2 kolumn */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item0, .item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9 {
+    grid-column: span 1; /* Dopasowanie większych elementów do jednej kolumny */
+    grid-row: span 3;
+  }
 }

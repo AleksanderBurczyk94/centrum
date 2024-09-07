@@ -16,7 +16,7 @@ export class OurCenterComponent implements OnInit {
       duration: 800, // Czas trwania animacji
       easing: 'ease-in-out', // Styl animacji
       delay: 100, // Opóźnienie animacji
-      once: false, // Animacja uruchamia się za każdym razem, gdy element staje się widoczny
+      once: true, // Animacja uruchamia się za każdym razem, gdy element staje się widoczny
       mirror: false, // Animacja także przy przewijaniu do góry
       anchorPlacement: 'top-bottom' // Określa, gdzie animacja powinna się uruchamiać względem widocznego obszaru
     });
