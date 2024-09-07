@@ -1,4 +1,4 @@
-import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +7,7 @@ import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
 })
 export class NavbarComponent {
 
-
-  @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
+  @ViewChild('navbarNavAltMarkup', {static: true}) navbarNavAltMarkup!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
