@@ -9,7 +9,7 @@ import {AppRoutes} from "../../../app-routing.module";
 })
 export class TherapistsComponent {
 
-  therapists:  Therapists[]= [
+  therapists: Therapists[] = [
     {
       name: 'Paulina Okrasa-Burczyk',
       role: 'Założycielka centrum Równowaga, psycholog, terapeuta SI, logopegda',
@@ -17,17 +17,23 @@ export class TherapistsComponent {
       path: AppRoutes.PAULINA_OKRASA_BURCZYK
     },
     {
-      name: 'Bagniara Kowalsa',
-      role: 'Terapeuta SI',
-      image: 'assets/img/terapeuta1.webp',
+      name: 'Sylwia Szumska',
+      role: 'Terapeutka SI',
+      image: 'assets/img/awatar_damski.png',
       path: AppRoutes.PSYCHOLOGICAL_CONSULTATIONS
 
     },
     {
-      name: 'Nikola Nowak',
-      role: 'Psycholog',
-      image: 'assets/img/terapeuta2.jpg',
+      name: 'Magdalena Mokrzycka',
+      role: 'Terapeutka SI',
+      image: 'assets/img/awatar_damski.png',
       path: AppRoutes.PSYCHOLOGICAL_CONSULTATIONS
+    },
+    {
+      name: 'Karolina Okrasa-Staszak',
+      role: 'Psycholog',
+      image: 'assets/img/awatar_damski.png',
+      path: AppRoutes.KAROLINA_OKRASA_STASZAK
     }
   ];
 }

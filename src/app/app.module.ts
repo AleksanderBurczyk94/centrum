@@ -54,6 +54,7 @@ import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy
 import {NextBtnComponent} from './shered/next-btn/next-btn.component';
 import { BackBtnComponent } from './shered/back-btn/back-btn.component';
 import { FaqComponent } from './core/home/faq/faq.component';
+import { KarolinaOkrasaStaszakComponent } from './core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { FaqComponent } from './core/home/faq/faq.component';
     NextBtnComponent,
     BackBtnComponent,
     FaqComponent,
+    KarolinaOkrasaStaszakComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

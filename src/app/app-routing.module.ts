@@ -36,6 +36,9 @@ import {
   PaulinaOkrasaBurczykComponent
 } from "./core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component";
 import {PedagogicalTherapyComponent} from "./core/assistance/pedagogical-therapy/pedagogical-therapy.component";
+import {
+  KarolinaOkrasaStaszakComponent
+} from "./core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -70,6 +73,7 @@ export const AppRoutes = {
 
   //therapists
   PAULINA_OKRASA_BURCZYK: 'paulinaOkrasaBurczyk',
+  KAROLINA_OKRASA_STASZAK: 'KarolinaOkrasaStaszakComponent',
 };
 
 
@@ -142,6 +146,7 @@ const routes: Routes = [
   {path: AppRoutes.RODO, component: RodoComponent, title: 'Rodo'},
 
   {path: AppRoutes.PAULINA_OKRASA_BURCZYK, component: PaulinaOkrasaBurczykComponent, title: 'Paulina Okrasa-Burczyk'},
+  {path: AppRoutes.KAROLINA_OKRASA_STASZAK, component: KarolinaOkrasaStaszakComponent, title: 'Karolina Okrasa-Staszak'},
 
   {path: AppRoutes.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'}
 ];
