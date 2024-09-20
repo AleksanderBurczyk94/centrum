@@ -22,7 +22,7 @@ import {AssistanceComponent} from './core/assistance/assistance.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BlogComponent} from './core/blog/blog.component';
 import {OurCenterComponent} from './core/our-center/our-center.component';
-import {MinorsProtectionComponent} from './core/footer/minors-protection/minors-protection.component';
+import {MinorsProtectionComponent} from './core/documents/minors-protection/minors-protection.component';
 import {RodoComponent} from './core/footer/rodo/rodo.component';
 import {WhiteContainerComponent} from "./shered/white-container/white-container.component";
 import {BannerComponent} from './shered/banner/banner.component';
@@ -52,9 +52,13 @@ import {
 } from './core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component';
 import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy/pedagogical-therapy.component';
 import {NextBtnComponent} from './shered/next-btn/next-btn.component';
-import { BackBtnComponent } from './shered/back-btn/back-btn.component';
-import { FaqComponent } from './core/home/faq/faq.component';
-import { KarolinaOkrasaStaszakComponent } from './core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component';
+import {BackBtnComponent} from './shered/back-btn/back-btn.component';
+import {FaqComponent} from './core/home/faq/faq.component';
+import {
+  KarolinaOkrasaStaszakComponent
+} from './core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component';
+import {TherapyConsentComponent} from './core/documents/therapy-consent/therapy-consent.component';
+import { DocumentsComponent } from './core/documents/documents.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +96,8 @@ import { KarolinaOkrasaStaszakComponent } from './core/home/therapists/karolina-
     BackBtnComponent,
     FaqComponent,
     KarolinaOkrasaStaszakComponent,
+    TherapyConsentComponent,
+    DocumentsComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

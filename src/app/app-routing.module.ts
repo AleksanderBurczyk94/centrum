@@ -8,7 +8,7 @@ import {AppointmentComponent} from "./core/appointment/appointment.component";
 import {AssistanceComponent} from "./core/assistance/assistance.component";
 import {OurCenterComponent} from "./core/our-center/our-center.component";
 import {BlogComponent} from "./core/blog/blog.component";
-import {MinorsProtectionComponent} from "./core/footer/minors-protection/minors-protection.component";
+import {MinorsProtectionComponent} from "./core/documents/minors-protection/minors-protection.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {contactFormUnsavedChangesGuard} from "./guards/contact-form-unsaved-changes.guard";
 import {
@@ -39,6 +39,8 @@ import {PedagogicalTherapyComponent} from "./core/assistance/pedagogical-therapy
 import {
   KarolinaOkrasaStaszakComponent
 } from "./core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component";
+import {TherapyConsentComponent} from "./core/documents/therapy-consent/therapy-consent.component";
+import {DocumentsComponent} from "./core/documents/documents.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -46,8 +48,9 @@ const routerOptions: ExtraOptions = {
   scrollOffset: [0, -100],              // Przesunięcie o 100px w górę
 };
 
+//TODO Zrobić tak aby wszędzie użyte były linki poniżej a nie wpisywane ścieżki odręcznie
+
 export const AppRoutes = {
-  //nav + main
   HOME: '',
   ASSISTANCE: 'assistance',
   PRICE_LIST: 'priceList',
@@ -55,9 +58,13 @@ export const AppRoutes = {
   BLOG: 'blog',
   CONTACT: 'contact',
   APPOINTMENT: 'appointment',
-  MINORS_PROTECTION: 'minorsProtection',
+  DOCUMENTS: 'documents',
   RODO: 'rodo',
   PAGE_NOT_FOUND: '**',
+
+  //documents children
+  MINORS_PROTECTION: 'minorsProtection',
+  THERAPY_CONSENT: 'therapy-consent',
 
   //asistance children
   PSYCHOLOGICAL_CONSULTATIONS: 'psychologicalConsultations',
@@ -136,17 +143,33 @@ const routes: Routes = [
   {path: AppRoutes.OUR_CENTER, component: OurCenterComponent, title: 'Nasze Centrum'},
   {path: AppRoutes.BLOG, component: BlogComponent, title: 'Blog'},
   {
+    path: AppRoutes.DOCUMENTS,
+    component: DocumentsComponent,
+    title: 'Dokumenty',
+    children: [
+      {path: AppRoutes.THERAPY_CONSENT, component: TherapyConsentComponent, title: 'Zgoda na udział w terapii'},
+      {
+        path: AppRoutes.MINORS_PROTECTION,
+        component: MinorsProtectionComponent,
+        title: 'Standardy ochrony małoletnich'
+      },
+    ]
+  },
+  {
     path: AppRoutes.CONTACT,
     component: ContactComponent,
     title: 'Kontakt',
     canDeactivate: [contactFormUnsavedChangesGuard]
   },
   {path: AppRoutes.APPOINTMENT, component: AppointmentComponent, title: 'Umów wizytę'},
-  {path: AppRoutes.MINORS_PROTECTION, component: MinorsProtectionComponent, title: 'Standardy ochrony małoletnich'},
   {path: AppRoutes.RODO, component: RodoComponent, title: 'Rodo'},
 
   {path: AppRoutes.PAULINA_OKRASA_BURCZYK, component: PaulinaOkrasaBurczykComponent, title: 'Paulina Okrasa-Burczyk'},
-  {path: AppRoutes.KAROLINA_OKRASA_STASZAK, component: KarolinaOkrasaStaszakComponent, title: 'Karolina Okrasa-Staszak'},
+  {
+    path: AppRoutes.KAROLINA_OKRASA_STASZAK,
+    component: KarolinaOkrasaStaszakComponent,
+    title: 'Karolina Okrasa-Staszak'
+  },
 
   {path: AppRoutes.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'}
 ];

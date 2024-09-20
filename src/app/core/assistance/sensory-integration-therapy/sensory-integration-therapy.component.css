@@ -2,6 +2,9 @@ p, li {
   font-size: 18px;
 }
 
-.img-si {
+.si-img {
   border-radius: 15px;
+  min-width: 300px;
 }
+
+

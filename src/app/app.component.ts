@@ -7,5 +7,4 @@ import {faYoutube} from '@fortawesome/free-brands-svg-icons'
 })
 export class AppComponent {
   title = 'cetrum-terapii';
-  youtubeIcon = faYoutube;
 }

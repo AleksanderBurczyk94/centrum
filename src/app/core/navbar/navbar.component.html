@@ -57,6 +57,17 @@
           <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active"
              (click)="collapseNav()">Blog</a>
         </li>
+        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown" >
+          <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
+            Dokumenty <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
+                               alt="strzałka dropdownu w dół">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.THERAPY_CONSENT]" (click)="collapseNav()">Zgoda na udział w terapii</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.MINORS_PROTECTION]"  (click)="collapseNav()">Standardy ochrony małoletnich</a></li>
+          </ul>
+        </li>
         <li class="nav-item me-3 ">
           <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav()">Kontakt</a>
         </li>

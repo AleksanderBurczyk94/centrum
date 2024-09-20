@@ -4,4 +4,5 @@ p, li {
 
 img {
   min-width: 350px;
+  border-radius: 15px;
 }
