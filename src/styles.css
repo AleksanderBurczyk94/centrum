@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Comfortaa", sans-serif;
   background-color: var(--white-color);
 
@@ -21,4 +21,9 @@ body{
   --color-to-icon2: #fbd3d2
 }
 
-
+/*overided styl for poopover i price-list*/
+.popover {
+  --bs-popover-max-width: 850px;
+  font-size: 18px;
+  background-color: var(--white-color);
+}

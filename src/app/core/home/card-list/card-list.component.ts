@@ -66,13 +66,13 @@ export class CardListComponent {
       imgAlt: 'icona oka z długopisem i linijką na nim',
       title: 'Terapia widzenia',
       description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail',
-      path: AppRoutes.PEDAGOGICAL_THERAPY
+      path: AppRoutes.VISION_THERAPY
     },
     {
       imgSrc: 'assets/img/konsultacje.png',
       imgAlt: 'ikona kobiety za biurkiem',
       title: 'Konsultacje specjalistyczne',
-      description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail',
+      description: 'Konsultacje, diagnoza, procesy przetwarzania sensorycznego, ocena wzorców ruchowych, wsparcie rozwoju neuropsychologicznego, w formie spotkań osobistych',
       path: AppRoutes.SPECIALIST_CONSULTATIONS
     }
   ];

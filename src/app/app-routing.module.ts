@@ -78,7 +78,7 @@ export const AppRoutes = {
   SI_DIAGNOSIS_DESCRIPTION: 'siDiagnosisDescription',
   PEDAGOGICAL_THERAPY: 'pedagogicalTherapy',
   WRITTEN_OPINION: 'writtenOpinion',
-  VISIONTHERAPY: 'visionTherapy',
+  VISION_THERAPY: 'visionTherapy',
 
   //therapists
   PAULINA_OKRASA_BURCZYK: 'paulinaOkrasaBurczyk',
@@ -130,7 +130,7 @@ const routes: Routes = [
         title: 'Konsultacje specjalistyczne'
       },
       {
-        path: AppRoutes.SPECIALIST_CONSULTATIONS,
+        path: AppRoutes.VISION_THERAPY,
         component: VisionTherapyComponent,
         title: 'Terapia widzenia'
       },
