@@ -34,8 +34,7 @@ app-color-button {
 
 .nav-link {
   position: relative;
-  /*text-decoration: none; !* Usuń standardowe podkreślenie *!*/
-  color: inherit; /* Zachowaj oryginalny kolor tekstu */
+  color: inherit;
 }
 
 .nav-link::after {

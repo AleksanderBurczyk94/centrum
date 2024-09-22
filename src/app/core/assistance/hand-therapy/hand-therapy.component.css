@@ -1,3 +1,23 @@
+
+.hand-therapy-img {
+  border-radius: 15px;
+  min-width: 350px;
+}
+
 p, li {
   font-size: 18px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
 }

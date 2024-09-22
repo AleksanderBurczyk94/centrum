@@ -1,8 +1,9 @@
 <app-banner title="Cennik"></app-banner>
 <app-white-container>
+  <div></div>
   <h1 class="text-center my-5">W naszym gabinecie oferujemy</h1>
   <div class="container mb-5">
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover mb-5">
       <thead>
       <tr>
         <th>Usługa</th>
@@ -16,6 +17,22 @@
           <td>{{ service.name }}</td>
           <td>{{ service.price }}</td>
           <td>{{ service.time }}</td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th>Dokument</th>
+        <th class="padding-tab" >Cena</th>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let document of documents">
+        <tr [routerLink]="document.link" >
+          <td>{{ document.name }}</td>
+          <td class="padding-tab">{{ document.price }}</td>
         </tr>
       </ng-container>
       </tbody>

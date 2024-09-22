@@ -22,14 +22,14 @@ export class CardListComponent {
     {
       imgSrc: 'assets/img/huśtawka.png',
       imgAlt: 'ikona huśtawki',
-      title: 'Diagnoza i terapia integracji sensorycznej',
+      title: 'Terapia integracji sensorycznej',
       description: 'diagnoza, konsultacje i wsparcie psychologiczne, psychoedukacja, interwencja kryzysowa, pomoc seksuologiczna – edukacja i terapia',
       path: AppRoutes.SENSORY_INTEGRATION_THERAPY
     },
     {
       imgSrc: 'assets/img/mózg.png',
       imgAlt: 'ikona mózgu',
-      title: 'Diagnoza i terapia neurorozwojowa odruchów INPP',
+      title: 'Terapia neurorozwojowa odruchów INPP',
       description: 'treningi relaksacji, asertywności oraz mindfulness (uważność) umożliwiają poszerzanie wiedzy, umiejętności oraz rozwój osobisty i zawodowy',
       path: AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY
     },
@@ -58,6 +58,13 @@ export class CardListComponent {
       imgSrc: 'assets/img/puzzle.png',
       imgAlt: 'icona puzzli',
       title: 'Terapia pedagogiczna',
+      description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail',
+      path: AppRoutes.PEDAGOGICAL_THERAPY
+    },
+    {
+      imgSrc: 'assets/img/vision.png',
+      imgAlt: 'icona oka z długopisem i linijką na nim',
+      title: 'Terapia widzenia',
       description: 'konsultacje psychologiczne, diagnoza, terapia, interwencja kryzysowa, treningi w formie rozmowy wideo przez Skype oraz wsparcie psychologicze przez e-mail',
       path: AppRoutes.PEDAGOGICAL_THERAPY
     },

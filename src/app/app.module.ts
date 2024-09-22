@@ -59,6 +59,8 @@ import {
 } from './core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component';
 import {TherapyConsentComponent} from './core/documents/therapy-consent/therapy-consent.component';
 import { DocumentsComponent } from './core/documents/documents.component';
+import { ImageConsentComponent } from './core/documents/image-consent/image-consent.component';
+import { VisionTherapyComponent } from './core/assistance/vision-therapy/vision-therapy.component';
 
 @NgModule({
   declarations: [
@@ -98,6 +100,8 @@ import { DocumentsComponent } from './core/documents/documents.component';
     KarolinaOkrasaStaszakComponent,
     TherapyConsentComponent,
     DocumentsComponent,
+    ImageConsentComponent,
+    VisionTherapyComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

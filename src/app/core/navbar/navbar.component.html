@@ -33,15 +33,16 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/psychologicalConsultations" (click)="collapseNav()">Konsultacje
               psychologiczne</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/sensoryIntegrationTherapy"(click)="collapseNav()">Diagnoza i terapia integracji
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/sensoryIntegrationTherapy"(click)="collapseNav()">Terapia integracji
               sensorycznej</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neurodevelopmentalReflexTherapy" (click)="collapseNav()">Diagnoza i terapia
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neurodevelopmentalReflexTherapy" (click)="collapseNav()">Trapia
               neurorozwojowa odruchów INPP</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neuroTactileTherapy" (click)="collapseNav()">Terapia NeuroTaktylna MNRI</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/auditoryProcessingTherapy" (click)="collapseNav()">Diagnoza i terapia
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/auditoryProcessingTherapy" (click)="collapseNav()">Terapia
               przetwarzania słuchowego Johansena</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/handTherapy" (click)="collapseNav()">Diagnoza i terapia ręki</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/pedagogicalTherapy" (click)="collapseNav()">Terapia pedagogiczna</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/visionTherapy" (click)="collapseNav()">Terapia widzenia</a></li>
             <li><a class="dropdown-item" routerLinkActive="active"  routerLink="assistance/specialistConsultations" (click)="collapseNav()">Konsultacje specjalistyczne</a>
             </li>
           </ul>
@@ -57,14 +58,15 @@
           <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active"
              (click)="collapseNav()">Blog</a>
         </li>
-        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown" >
+        <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown" >
           <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
-             data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
+             data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla2.isActive">
             Dokumenty <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
                                alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.THERAPY_CONSENT]" (click)="collapseNav()">Zgoda na udział w terapii</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.IMAGE_CONSENT]"  (click)="collapseNav()">Zgoda na publikacje wizurunku</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.MINORS_PROTECTION]"  (click)="collapseNav()">Standardy ochrony małoletnich</a></li>
           </ul>
         </li>

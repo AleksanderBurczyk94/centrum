@@ -41,14 +41,14 @@ import {
 } from "./core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component";
 import {TherapyConsentComponent} from "./core/documents/therapy-consent/therapy-consent.component";
 import {DocumentsComponent} from "./core/documents/documents.component";
+import {ImageConsentComponent} from "./core/documents/image-consent/image-consent.component";
+import {VisionTherapyComponent} from "./core/assistance/vision-therapy/vision-therapy.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
   anchorScrolling: 'enabled',           // Włączenie przewijania do elementu z kotwicą
   scrollOffset: [0, -100],              // Przesunięcie o 100px w górę
 };
-
-//TODO Zrobić tak aby wszędzie użyte były linki poniżej a nie wpisywane ścieżki odręcznie
 
 export const AppRoutes = {
   HOME: '',
@@ -64,7 +64,8 @@ export const AppRoutes = {
 
   //documents children
   MINORS_PROTECTION: 'minorsProtection',
-  THERAPY_CONSENT: 'therapy-consent',
+  THERAPY_CONSENT: 'therapyConsent',
+  IMAGE_CONSENT: 'imageConsent',
 
   //asistance children
   PSYCHOLOGICAL_CONSULTATIONS: 'psychologicalConsultations',
@@ -77,6 +78,7 @@ export const AppRoutes = {
   SI_DIAGNOSIS_DESCRIPTION: 'siDiagnosisDescription',
   PEDAGOGICAL_THERAPY: 'pedagogicalTherapy',
   WRITTEN_OPINION: 'writtenOpinion',
+  VISIONTHERAPY: 'visionTherapy',
 
   //therapists
   PAULINA_OKRASA_BURCZYK: 'paulinaOkrasaBurczyk',
@@ -128,6 +130,11 @@ const routes: Routes = [
         title: 'Konsultacje specjalistyczne'
       },
       {
+        path: AppRoutes.SPECIALIST_CONSULTATIONS,
+        component: VisionTherapyComponent,
+        title: 'Terapia widzenia'
+      },
+      {
         path: AppRoutes.SI_DIAGNOSIS_DESCRIPTION,
         component: SiDiagnosisDescriptionComponent,
         title: 'Pisemny opis diagnozy SI'
@@ -148,6 +155,11 @@ const routes: Routes = [
     title: 'Dokumenty',
     children: [
       {path: AppRoutes.THERAPY_CONSENT, component: TherapyConsentComponent, title: 'Zgoda na udział w terapii'},
+      {
+        path: AppRoutes.IMAGE_CONSENT,
+        component: ImageConsentComponent,
+        title: 'Zgoda na publikacje wizerunku'
+      },
       {
         path: AppRoutes.MINORS_PROTECTION,
         component: MinorsProtectionComponent,

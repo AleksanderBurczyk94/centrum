@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AppRoutes} from "../../app-routing.module";
 
 @Component({
@@ -20,12 +20,6 @@ export class PriceListComponent {
       price: '150 zł',
       time: '50 min (zazwyczaj 3x 50 min)',
       link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.SENSORY_INTEGRATION_THERAPY}`
-    },
-    {
-      name: 'Pisemny opis diagnozy SI',
-      price: '150 zł',
-      time: '',
-      link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.SI_DIAGNOSIS_DESCRIPTION}`
     },
     {
       name: 'Terapia Integracji sensorycznej',
@@ -64,25 +58,39 @@ export class PriceListComponent {
       link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY}`
     },
     {
-      name: 'Pisemny opis diagnozy INPP',
-      price: '150 zł',
-      time: '',
-      link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY}`
-    },
-    {
       name: 'Konsultacje specjalistyczne',
       price: '150 zł',
       time: '50 min',
       link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.SPECIALIST_CONSULTATIONS}`
     },
     {
-      name: 'Pisemna opinia',
+      name: 'Terapia widzenia',
       price: '50 zł',
       time: '',
       link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.WRITTEN_OPINION}`
     }
   ];
 
+  documents = [
+    {
+      name: 'Pisemny opis diagnozy SI',
+      price: '150 zł',
+      time: '',
+      link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.SI_DIAGNOSIS_DESCRIPTION}`
+    },
 
+    {
+      name: 'Pisemny opis diagnozy INPP',
+      price: '150 zł',
+      time: '',
+      link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY}`
+    },
+    {
+      name: 'Pisemna opinia',
+      price: '50 zł',
+      time: '50 min (zazwyczaj 3x 50 min)',
+      link: `/${AppRoutes.ASSISTANCE}/${AppRoutes.WRITTEN_OPINION}`
+    }
+  ];
 
 }
