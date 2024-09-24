@@ -99,8 +99,8 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Terapia widzenia',
-      price: '75 zł/ 155zł',
-      time: '30 min/ 45 min',
+      price: '75zł/ 155zł',
+      time: '30min/ 45min',
       description: 'Terapia widzenia jest przeznaczona dla dzieci, które mają trudności z przetwarzaniem bodźców wzrokowych, koncentracją wzrokową, koordynacją wzrokowo-ruchową lub funkcjami wzroku, takimi jak śledzenie obiektów i skupienie. Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat sesje trwają 30 minut natomiast dla dzieci powyżej 6 roku życia 45min.'
     },
     {

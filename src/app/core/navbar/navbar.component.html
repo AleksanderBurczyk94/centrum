@@ -24,21 +24,24 @@
           <a class="text-nav-color nav-link " routerLink="" routerLinkActive="active"
              [routerLinkActiveOptions]="{exact:true}" (click)="collapseNav()">Start</a>
         </li>
-        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown" >
+        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown">
           <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
             Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
                                alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/psychologicalConsultations" (click)="collapseNav()">Konsultacje
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/psychologicalConsultations"
+                   (click)="collapseNav()">Konsultacje
               psychologiczne</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/sensoryIntegrationTherapy"(click)="collapseNav()">Terapia integracji
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/sensoryIntegrationTherapy"
+                   (click)="collapseNav()">Terapia integracji
               sensorycznej</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neurodevelopmentalReflexTherapy" (click)="collapseNav()">Trapia odruchów INPP</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neurodevelopmentalReflexTherapy" (click)="collapseNav()">Trapia
+              neurorozwojowa odruchów <br> INPP</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neuroTactileTherapy" (click)="collapseNav()">Terapia NeuroTaktylna MNRI</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/auditoryProcessingTherapy" (click)="collapseNav()">Diagnoza i Terapia
-              przetwarzania słuchowego Johansena</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/auditoryProcessingTherapy" (click)="collapseNav()">Terapia
+              przetwarzania <br> słuchowego Johansena</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/handTherapy" (click)="collapseNav()">Diagnoza i terapia ręki</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/pedagogicalTherapy" (click)="collapseNav()">Terapia pedagogiczna</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/visionTherapy" (click)="collapseNav()">Terapia widzenia</a></li>
@@ -57,7 +60,7 @@
           <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active"
              (click)="collapseNav()">Blog</a>
         </li>
-        <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown" >
+        <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown">
           <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla2.isActive">
             Dokumenty <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"

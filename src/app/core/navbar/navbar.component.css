@@ -16,6 +16,18 @@ img {
   }
 }
 
+@media (max-width: 450px) {
+  br {
+    display: block;
+  }
+}
+
+@media (min-width: 451px) {
+  br {
+    display: none;
+  }
+}
+
 .nav-link {
   color: var(--black-color);
 }
@@ -71,6 +83,14 @@ app-color-button {
   background-color: var(--light-pink-color);
   transform: scaleX(1);
   transition: transform 0.3s ease;
+}
+
+.dropdown-menu li a {
+  border-bottom: 1px solid #ccc; /* Szara kreska oddzielająca elementy */
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none; /* Usuwamy kreskę z ostatniego elementu, aby wyglądało estetycznie */
 }
 
 .color-btn img {

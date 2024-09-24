@@ -19,3 +19,8 @@ table{
   padding-right: 140px;
 }
 
+@media (max-width: 400px) {
+  td {
+    font-size: 16px;
+  }
+}

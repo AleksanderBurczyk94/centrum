@@ -14,8 +14,8 @@
       <tbody>
     <tr *ngFor="let service of services" #popoverElement [attr.data-content]="service.description">
           <td>{{ service.name }}</td>
-          <td class="text-nowrap">{{ service.price }}</td>
-          <td class="text-nowrap">{{ service.time }}</td>
+          <td class="">{{ service.price }}</td>
+          <td class="">{{ service.time }}</td>
         </tr>
       </tbody>
     </table>
