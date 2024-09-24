@@ -1,9 +1,14 @@
+.vision-img{
+  max-width: 500px;
+  min-width: 340px;
+}
+
 p, li {
   font-size: 18px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 h2 {
