@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NextBtnComponent } from './next-btn.component';
+import { SywiaSzumskaComponent } from './sywia-szumska.component';
 
-describe('NextBtnComponent', () => {
-  let component: NextBtnComponent;
-  let fixture: ComponentFixture<NextBtnComponent>;
+describe('SywiaSzumskaComponent', () => {
+  let component: SywiaSzumskaComponent;
+  let fixture: ComponentFixture<SywiaSzumskaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NextBtnComponent]
+      declarations: [SywiaSzumskaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NextBtnComponent);
+    fixture = TestBed.createComponent(SywiaSzumskaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

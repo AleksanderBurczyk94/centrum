@@ -18,7 +18,4 @@ export class FooterComponent {
     this.router.navigate(['/rodo'])
   }
 
-  goToMinorsProtection() {
-    this.router.navigate(['/minorsProtection'])
-  }
 }

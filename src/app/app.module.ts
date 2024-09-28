@@ -51,8 +51,7 @@ import {
   PaulinaOkrasaBurczykComponent
 } from './core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component';
 import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy/pedagogical-therapy.component';
-import {NextBtnComponent} from './shered/next-btn/next-btn.component';
-import {BackBtnComponent} from './shered/back-btn/back-btn.component';
+import {NextBackBtnComponent} from './shered/next-back-btn/next-back-btn.component';
 import {FaqComponent} from './core/home/faq/faq.component';
 import {
   KarolinaOkrasaStaszakComponent
@@ -61,6 +60,9 @@ import {TherapyConsentComponent} from './core/documents/therapy-consent/therapy-
 import { DocumentsComponent } from './core/documents/documents.component';
 import { ImageConsentComponent } from './core/documents/image-consent/image-consent.component';
 import { VisionTherapyComponent } from './core/assistance/vision-therapy/vision-therapy.component';
+import { SywiaSzumskaComponent } from './core/home/therapists/sywia-szumska/sywia-szumska.component';
+import { MagdalenaMokrzyckaComponent } from './core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component';
+import { AgataMagdzickaBanachComponent } from './core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component';
 
 @NgModule({
   declarations: [
@@ -94,14 +96,16 @@ import { VisionTherapyComponent } from './core/assistance/vision-therapy/vision-
     SiDiagnosisDescriptionComponent,
     PaulinaOkrasaBurczykComponent,
     PedagogicalTherapyComponent,
-    NextBtnComponent,
-    BackBtnComponent,
+    NextBackBtnComponent,
     FaqComponent,
     KarolinaOkrasaStaszakComponent,
     TherapyConsentComponent,
     DocumentsComponent,
     ImageConsentComponent,
     VisionTherapyComponent,
+    SywiaSzumskaComponent,
+    MagdalenaMokrzyckaComponent,
+    AgataMagdzickaBanachComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

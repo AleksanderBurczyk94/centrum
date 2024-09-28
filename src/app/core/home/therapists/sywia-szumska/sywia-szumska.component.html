@@ -1,0 +1,40 @@
+<div class="person-box">
+  <div class="row d-flex justify-content-center align-items-center name-box">
+    <div class="col-md text-center my-4">
+      <h2 class="card-title fw-bold mb-3 mx-2">{{therapist?.name}}</h2>
+      <p class="role-title px-4">{{therapist?.role}}</p>
+    </div>
+    <div class="col-md p-0 img-container">
+      <img [src]="'assets/img/awatar_damski.png'" [alt]="'Awatar'" class="">
+    </div>
+    <div class="col-md assistance-box">
+      <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2">Zakres wsparcia</h2>
+      <p class="ms-3 m-0"><strong>1) Pomoc dziecku:</strong></p>
+      <ul>
+        <li>Problemy w regulacją emocji (np. lęk, złość, smutek)</li>
+        <li>Stres i napięcie związane z codziennym funkcjonowaniem jak i trudnymi zdarzeniami</li>
+        <li>Obniżona samoocena</li>
+        <li>Psychosomatyczne dolegliwości (np. bóle brzucha bez przyczyn medycznych)</li>
+        <li>Trudności w nawiązywaniu i utrzymywaniu relacji rówieśniczych</li>
+      </ul>
+      <p class="ms-3 m-0"><strong>2) Pomoc dla rodzica:</strong></p>
+      <ul>
+        <li>Lepsze zrozumienie dziecka oraz jego potrzeb</li>
+        <li>Pomoc w przyjrzeniu się relacji z dzieckiem</li>
+        <li>Wsparcie w trudnościach rodzicielskich</li>
+        <li>Dobór odpowiedniej metody pomocy, z możliwością skierowania do innych specjalistów</li>
+      </ul>
+    </div>
+
+  </div>
+  <app-next-back-btn (click)="nextTherapist()" class="next-btn">
+    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
+  <app-next-back-btn (click)="prevTherapist()" class="back-btn">
+    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
+</div>
+
+
+
+

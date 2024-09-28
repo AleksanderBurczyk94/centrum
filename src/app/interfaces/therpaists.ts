@@ -1,4 +1,5 @@
-export interface Therapists {
+export interface Therapist {
+  id: number;
   name: string;
   role: string;
   image: string;

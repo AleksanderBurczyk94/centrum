@@ -43,6 +43,11 @@ import {TherapyConsentComponent} from "./core/documents/therapy-consent/therapy-
 import {DocumentsComponent} from "./core/documents/documents.component";
 import {ImageConsentComponent} from "./core/documents/image-consent/image-consent.component";
 import {VisionTherapyComponent} from "./core/assistance/vision-therapy/vision-therapy.component";
+import {SywiaSzumskaComponent} from "./core/home/therapists/sywia-szumska/sywia-szumska.component";
+import {MagdalenaMokrzyckaComponent} from "./core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component";
+import {
+  AgataMagdzickaBanachComponent
+} from "./core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -81,8 +86,11 @@ export const AppRoutes = {
   VISION_THERAPY: 'visionTherapy',
 
   //therapists
-  PAULINA_OKRASA_BURCZYK: 'paulinaOkrasaBurczyk',
-  KAROLINA_OKRASA_STASZAK: 'KarolinaOkrasaStaszakComponent',
+  PAULINA_OKRASA_BURCZYK: 'therapist/0',
+  KAROLINA_OKRASA_STASZAK: 'therapist/1',
+  SYLWIA_SZUMSKA: 'therapist/2',
+  MAGDALENA_MOKRZYCKA: 'therapist/3',
+  AGATA_MAGDZICKA_BANACH: 'therapist/4',
 };
 
 
@@ -176,11 +184,27 @@ const routes: Routes = [
   {path: AppRoutes.APPOINTMENT, component: AppointmentComponent, title: 'Umów wizytę'},
   {path: AppRoutes.RODO, component: RodoComponent, title: 'Rodo'},
 
-  {path: AppRoutes.PAULINA_OKRASA_BURCZYK, component: PaulinaOkrasaBurczykComponent, title: 'Paulina Okrasa-Burczyk'},
+  {
+    path: AppRoutes.PAULINA_OKRASA_BURCZYK,
+    component: PaulinaOkrasaBurczykComponent,
+    title: 'Paulina Okrasa-Burczyk'
+  },
   {
     path: AppRoutes.KAROLINA_OKRASA_STASZAK,
     component: KarolinaOkrasaStaszakComponent,
     title: 'Karolina Okrasa-Staszak'
+  }, {
+    path: AppRoutes.SYLWIA_SZUMSKA,
+    component: SywiaSzumskaComponent,
+    title: 'Sylwia Szumska'
+  }, {
+    path: AppRoutes.MAGDALENA_MOKRZYCKA,
+    component: MagdalenaMokrzyckaComponent,
+    title: 'Magdalena Mokrzycka'
+  }, {
+    path: AppRoutes.AGATA_MAGDZICKA_BANACH,
+    component: AgataMagdzickaBanachComponent,
+    title: 'Agata Magdzicka-Banach'
   },
 
   {path: AppRoutes.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'}

@@ -3,11 +3,11 @@ import {TherapistService} from "../../../../services/therapist.service";
 import {Therapist} from "../../../../interfaces/therpaists";
 
 @Component({
-  selector: 'app-karolina-okrasa-staszak',
-  templateUrl: './karolina-okrasa-staszak.component.html',
-  styleUrl: './karolina-okrasa-staszak.component.css'
+  selector: 'app-agata-magdzicka-banach',
+  templateUrl: './agata-magdzicka-banach.component.html',
+  styleUrl: './agata-magdzicka-banach.component.css'
 })
-export class KarolinaOkrasaStaszakComponent {
+export class AgataMagdzickaBanachComponent {
 
   therapist: Therapist | null = null;
 

@@ -1,9 +1,8 @@
 <div class="person-box">
   <div class="row d-flex justify-content-center align-items-center name-box">
     <div class="col-md text-center my-4">
-      <h2 class="card-title fw-bold mb-3 mx-2">Karolina Okrasa-Staszak</h2>
-      <p class="role-title px-4">Założycielka Centrum Terapii i Wsparcia Rozwoju Równowaga, psycholog, terapeuta SI,
-        logopegda</p>
+      <h2 class="card-title fw-bold mb-3 mx-2">{{therapist?.name}}</h2>
+      <p class="role-title px-4">{{therapist?.role}}</p>
     </div>
     <div class="col-md p-0 img-container">
       <img [src]="'assets/img/awatar_damski.png'" [alt]="'Awatar'" class="">
@@ -28,32 +27,58 @@
     </div>
 
   </div>
-  <app-next-btn class="next-btn"><img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'"
-                                      class="arrow-btn">
-  </app-next-btn>
-  <app-back-btn class="back-btn"></app-back-btn>
+  <app-next-back-btn (click)="nextTherapist()" class="next-btn">
+    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
+  <app-next-back-btn (click)="prevTherapist()" class="back-btn">
+    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
 </div>
 
 
-  <div class="about-me-section">
-    <div class="px-3">
-      <h2 class="title underline-title">O mnie</h2>
-      <p class="about-text">
-        Każdy etap w życiu człowieka, począwszy od narodzin, wiąże się z różnymi wyzwaniami, które są kluczowe dla dalszego rozwoju i nabywania nowych umiejętności, również w zakresie rozwoju psychicznego. Wierzę, że każde dziecko ma swoje unikalne możliwości – zarówno indywidualne (np. temperament i specyficzne strategie radzenia sobie w trudnych sytuacjach), jak i te związane z wpływem otoczenia (np. metody wychowawcze czy jakość relacji z ważnymi dorosłymi).
+<div class="about-me-section">
+  <div class="px-3">
+    <h2 class="title underline-title">O mnie</h2>
+    <p class="about-text">
+      Każdy etap życia człowieka, począwszy od narodzin, wiąże się z różnorodnymi wyzwaniami, które są istotne z
+      perspektywy przejścia na kolejny poziom rozwoju. Wyzwania te pozwalają na rozwój oraz nabycie nowych umiejętności
+      – w tym także w zakresie zdrowia psychicznego. Każde dziecko posiada swoje unikalne możliwości – zarówno
+      indywidualne, jak i te związane z wpływem otoczenia. Wspieram dzieci i młodzież w radzeniu sobie z tymi
+      wyzwaniami, rozumiejąc, że każdy przypadek jest inny.
+    </p>
+    <p class="about-text">
+      W dzisiejszym dynamicznym świecie dzieci i młodzież mierzą się nie tylko z naturalnymi wyzwaniami rozwojowymi, ale
+      także z trudnościami, które mogą dodatkowo obciążać ich zdrowie psychiczne. Jeśli zauważasz jakiekolwiek
+      niepokojące objawy w funkcjonowaniu psychicznym swojego dziecka lub nastolatka, serdecznie zapraszam na
+      konsultację w naszym centrum.
+    </p>
+
+
+    <h2>Zakres pracy</h2>
+    <p class="about-text">
+      Moja praca obejmuje poradnictwo psychologiczne oraz wsparcie psychologiczne w formie spotkań terapeutycznych z
+      dziećmi i nastolatkami. Pracuję z dziećmi w wieku przedszkolnym i szkolnym. Ważnym elementem mojej pracy są
+      również spotkania z rodzicami, którzy odgrywają kluczową rolę w prawidłowym rozwoju i wsparciu swoich dzieci. W
+      przypadku młodszych dzieci moja praca koncentruje się głównie na współpracy z rodzicami/opiekunami.
+    </p>
+
+    <div class="qualifications-section">
+      <h2 class="underline-title">Kwalifikacje</h2>
+      <h3 class="pt-2">Wykształcenie</h3>
+      <p>
+        Jestem psychologiem, ukończyłam 5-letnie studia magisterskie na Uniwersytecie im. Adama Mickiewicza w Poznaniu, gdzie specjalizowałam się w psychologii klinicznej oraz seksuologii. Ukończyłam również studia podyplomowe z zakresu przygotowania pedagogicznego. Obecnie kontynuuję kompleksowe szkolenie w Studium Psychoterapii Dzieci i Młodzieży organizowanym przez Instytut Edukacji i Terapii w Poznaniu.
       </p>
 
-      <h4 class="subtitle">Współczesne Wyzwania dla Dzieci i Młodzieży</h4>
-      <p class="about-text">
-        W dzisiejszym dynamicznym świecie nasze dzieci i młodzież, poza naturalnymi wyzwaniami rozwojowymi, często zmagają się z dodatkowymi trudnościami, które mogą wpływać na ich kondycję psychiczną. Jeśli cokolwiek niepokoi Was w funkcjonowaniu psychicznym Waszego dziecka lub nastolatka, zapraszam na konsultację w naszym centrum.
+      <h3 class="pt-2">Doświadczenie zawodowe</h3>
+      <p>
+        Doświadczenie zawodowe zdobywałam, pracując na oddziałach szpitalnych, gdzie zajmowałam się diagnozą funkcji poznawczych oraz wsparciem pacjentów, zwracając szczególną uwagę na relacje między ciałem a psychiką. Pracowałam również w instytucjach państwowych, gdzie pomagałam pacjentom w różnego rodzaju kryzysach psychologicznych.
       </p>
-
-      <h4 class="subtitle">Zakres Mojej Pracy</h4>
-      <p class="about-text">
-        Moja praca obejmuje udzielanie poradnictwa oraz wsparcia psychologicznego w formie spotkań terapeutycznych z dziećmi i nastolatkami. Pracuję z dziećmi w wieku przedszkolnym i szkolnym, a do gabinetu zapraszam również rodziców, którzy stanowią ważną bazę dla właściwego rozwoju i wsparcia dziecka. W przypadku młodszych dzieci moja praca opiera się głównie na spotkaniach z rodzicami/opiekunami.
+      <p>
+        Obecnie pracuję w szkole podstawowej, gdzie prowadzę zajęcia indywidualne wspierające rozwój emocjonalny i społeczny dzieci oraz organizuję warsztaty dla klas z zakresu profilaktyki zdrowia psychicznego.
       </p>
     </div>
   </div>
-
+</div>
 
 
 

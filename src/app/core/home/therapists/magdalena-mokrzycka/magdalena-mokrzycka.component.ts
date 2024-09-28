@@ -3,18 +3,17 @@ import {TherapistService} from "../../../../services/therapist.service";
 import {Therapist} from "../../../../interfaces/therpaists";
 
 @Component({
-  selector: 'app-karolina-okrasa-staszak',
-  templateUrl: './karolina-okrasa-staszak.component.html',
-  styleUrl: './karolina-okrasa-staszak.component.css'
+  selector: 'app-magdalena-mokrzycka',
+  templateUrl: './magdalena-mokrzycka.component.html',
+  styleUrl: './magdalena-mokrzycka.component.css'
 })
-export class KarolinaOkrasaStaszakComponent {
+export class MagdalenaMokrzyckaComponent {
 
   therapist: Therapist | null = null;
 
   constructor(private therapistService: TherapistService) {
     this.therapist = this.therapistService.getActiveTherapist();
   }
-
 
   nextTherapist() {
     this.therapistService.nextTherapist();

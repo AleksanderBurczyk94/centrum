@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import {TherapistService} from "../../../../services/therapist.service";
 import {Therapist} from "../../../../interfaces/therpaists";
+import {TherapistService} from "../../../../services/therapist.service";
 
 @Component({
-  selector: 'app-karolina-okrasa-staszak',
-  templateUrl: './karolina-okrasa-staszak.component.html',
-  styleUrl: './karolina-okrasa-staszak.component.css'
+  selector: 'app-sywia-szumska',
+  templateUrl: './sywia-szumska.component.html',
+  styleUrl: './sywia-szumska.component.css'
 })
-export class KarolinaOkrasaStaszakComponent {
-
+export class SywiaSzumskaComponent {
   therapist: Therapist | null = null;
 
   constructor(private therapistService: TherapistService) {
     this.therapist = this.therapistService.getActiveTherapist();
   }
-
 
   nextTherapist() {
     this.therapistService.nextTherapist();

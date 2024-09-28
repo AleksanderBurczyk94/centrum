@@ -131,17 +131,4 @@ p {
   width: 30px;
 }
 
-.qualifications-section {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-}
 
-.qualifications-section ul {
-  margin-bottom: 20px;
-}
-
-.qualifications-section li {
-  margin-bottom: 5px;
-  line-height: 1.6;
-}

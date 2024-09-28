@@ -1,12 +1,11 @@
 <div class="person-box">
   <div class="row d-flex justify-content-center align-items-center name-box">
     <div class="col-md text-center my-4">
-      <h2 class="card-title fw-bold mb-3 mx-2">Paulina Okrasa-Burczyk</h2>
-      <p class="role-title px-4">Założycielka Centrum Terapii i Wsparcia Rozwoju Równowaga, psycholog, terapeuta SI,
-        logopegda</p>
+      <h2 class="card-title fw-bold mb-3 mx-2">{{therapist?.name}}</h2>
+      <p class="role-title px-4">{{therapist?.role}}</p>
     </div>
     <div class="col-md p-0 img-container">
-      <img [src]="'assets/img/Paulina.jpg'" [alt]="'Zdjęcie Pauliny Okrasy-Burczyk'" class="">
+      <img [src]="therapist?.image" [alt]="'Zdjęcie lub awatar ' + therapist?.name" class="">
     </div>
     <div class="col-md assistance-box ">
       <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2"> Zakres wsparcia
@@ -22,10 +21,12 @@
       </ul>
     </div>
   </div>
-  <app-next-btn class="next-btn"><img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'"
-                                      class="arrow-btn">
-  </app-next-btn>
-  <app-back-btn class="back-btn"></app-back-btn>
+  <app-next-back-btn (click)="nextTherapist()" class="next-btn">
+    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
+  <app-next-back-btn (click)="prevTherapist()" class="back-btn">
+    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+  </app-next-back-btn>
 </div>
 
 
