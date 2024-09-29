@@ -123,7 +123,7 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Pisemny opis diagnozy INPP',
       price: '150 zł',
       time: '',
-      description: 'Diagnoza obejmuje: wywiad z rodzicem, kwestionariusz INPP, testy, ustne omówienie wyników, ćwiczenia do domu, kontakt z terapeutą w sprawie prawidłowo wykonywanych ćwiczeń w domu.'
+      description: 'Wydanie pisemnej opinii na temat funkcjonowania dziecka w ramach diagnozy INPP, która ocenia integrację odruchów pierwotnych i jej wpływ na rozwój.'
     },
     {
       name: 'Pisemna opinia',
