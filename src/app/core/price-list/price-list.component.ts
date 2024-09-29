@@ -50,40 +50,40 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Diagnoza integracji sensorycznej',
       price: '150 zł',
       time: '50 min (zazwyczaj 3x 50 min)',
-      description: 'Diagnoza obejmuje: wywiad z rodzicem, kwestionariusz sensomotoryczny, obserwacja kliniczna dziecka, testy, obserwacja spontanicznej zabawy, ustne omówienie diagnozy i zaleceń, plan ćwiczeń do domu.\n' +
-        'Diagnoza trwa w większości  150 minut i zazwyczaj jest podzielona na 2 spotkania: pierwsze trwa ok. 1h. 40 minut i obejmuje dokładną rozmowę z rodzicem i początek diagnozowania dziecka, drugie spotkanie to dokończenie diagnozy i omówienie jej z rodzicem. Można też rozdzielić diagnozę na 3 odrębne spotkania.\n' +
+      description: 'Diagnoza obejmuje: wywiad z rodzicem, kwestionariusz sensomotoryczny, obserwację kliniczna dziecka, testy, obserwację spontanicznej zabawy, ustne omówienie diagnozy i zaleceń, plan ćwiczeń do domu i dodatkowe zalecenia.\n' +
+        'Diagnoza trwa w większości  150 minut (3x50 min.) i zazwyczaj jest podzielona na 2 spotkania: pierwsze trwa ok. 1h. 40 minut (2x50 min.) i obejmuje dokładną rozmowę z rodzicem i początek diagnozowania dziecka, drugie spotkanie (1x50 min.) to dokończenie diagnozy i omówienie jej z rodzicem. Można też rozdzielić diagnozę na 3 odrębne spotkania. Koszt diagnozy związany jest z czasem jej przeprowadzenia. W przypadku, gdy rodzic posiada wcześniejsze diagnozy SI dziecka lub dziecko ma poniżej 4 lat bardzo możliwe, że czas diagnozy się skróci, a tym samym jej koszt będzie mniejszy. \n' +
         '\n' +
-        'Czas diagnozy może się wydłużyć do 200 minut (wszystko zależy od współpracy dziecka) jednak w zdecydowanej większości trwa założone 150 min.*'
+        'W wyjątkowych przypadkach czas diagnozy może się wydłużyć i będzie potrzebna dodatkowa godzina (trudności ze współpracą dziecka, potrzeba robienia dłuższych przerw po każdym teście), jednak w zdecydowanej większości trwa ona założone 150 min.* <br> Pisemny, obszerny opis diagnozy wydawany jest na prośbę rodzica, a jego koszt wynosi 150 zł'
     },
     {
       name: 'Terapia Integracji sensorycznej',
       price: '130 zł',
       time: '50 min',
-      description: 'Terapia integracji sensorycznej (SI) jest skierowana do dzieci, które mają trudności z przetwarzaniem bodźców sensorycznych, takich jak dźwięk, dotyk, równowaga, czy wzrok. Terapia pomaga dziecku lepiej integrować i reagować na bodźce z otoczenia poprzez wykonywanie specjalnie dobranych ćwiczeń na sali integracji sensorycznej. Zajęcia są dostosowane indywidualnie do potrzeb dziecka i mają na celu poprawę jego funkcjonowania w codziennych sytuacjach. Po zakończeniu sesji terapeuta omawia przebieg zajęć z rodzicem, udzielając zaleceń do pracy w domu, aby wspierać dalszy rozwój dziecka.'
+      description: 'Terapia SI trwa 50 min. obejmujące ćwiczenia i omówienie zajęć z rodzicem.  Polega na wykonywaniu przez dziecko specjalnie dobranych ćwiczeń i zabaw na sali integracji sensorycznej. Zajęcia przeprowadzane są indywidualnie dla każdego dziecka. '
     },
     {
       name: 'Terapia NeuroTaktylna MNRI',
       price: '130 zł',
       time: '50 min',
-      description: 'Terapia NeuroTaktylna MNRI (Metoda Neuro-Sensoryczno-Refleksyjna) jest przeznaczona dla dzieci, które mają trudności w regulacji napięcia mięśniowego, przetwarzaniu bodźców sensorycznych oraz integracji odruchów. Podczas zajęć dziecko pracuje nad poprawą funkcjonowania układu nerwowego poprzez specjalne ćwiczenia aktywujące i integrujące naturalne odruchy. Terapia wspiera poprawę koordynacji ruchowej, koncentracji oraz reakcji na bodźce zewnętrzne. Po zakończeniu sesji terapeuta omawia z rodzicem przebieg zajęć, udzielając wskazówek dotyczących dalszej pracy w domu, co pomaga utrwalić efekty terapii i wspiera rozwój dziecka w codziennych sytuacjach.'
+      description: 'Terapia NeuroTaktylna MNRI (Metoda Neuro-Sensoryczno-Refleksyjna) trwa 50 min. obejmujące stymulację taktylną i omówienie zajęć z rodzicem. Podczas zajęć dziecko leży, a terapeuta pracuje nad poprawą funkcjonowania układu nerwowego poprzez specjalne taktylne ruchy przypominające masaż.'
     },
     {
       name: 'Terapia ręki',
       price: '130 zł',
       time: '50 min',
-      description: 'Terapia ręki to specjalistyczne zajęcia skierowane do dzieci, które mają trudności z precyzyjnymi ruchami rąk, koordynacją, pisaniem lub codziennymi czynnościami wymagającymi sprawności manualnej. Podczas terapii dziecko pracuje na sali integracji sensorycznej (SI), gdzie wykonywane są ćwiczenia poprawiające motorykę małą, koordynację wzrokowo-ruchową oraz siłę i precyzję ruchów. Po zakończeniu sesji terapeuta omawia zajęcia z rodzicem, udzielając wskazówek do dalszej pracy w domu, co wspiera postępy w rozwoju dziecka.'
+      description: 'Terapia ręki trwa 50 min. obejmujące ćwiczenia i omówienie zajęć z rodzicem. Polega na wykonywaniu przez dziecko specjalnie dobranych ćwiczeń i zadań, które poza stymulacją czucia głębokiego oraz pracą nad mięśniami posturalnymi, obejmuje również ćwiczenia małej motoryki.'
     },
     {
       name: 'Terapia pedagogiczna',
       price: '130 zł',
       time: '50 min',
-      description: 'Terapia pedagogiczna skierowana jest do dzieci i młodzieży mających trudności w nauce, koncentracji, czytaniu, pisaniu lub liczeniu. Celem terapii jest wsparcie w rozwijaniu umiejętności szkolnych oraz poprawa zdolności poznawczych i emocjonalnych. Podczas zajęć terapeuta pedagogiczny indywidualnie pracuje nad usprawnieniem procesów uczenia się, budowaniem pewności siebie, a także poprawą motywacji do nauki. Terapia pedagogiczna jest szczególnie pomocna dla dzieci z trudnościami edukacyjnymi, dysleksją, dysgrafią, czy problemami z koncentracją uwagi.'
+      description: 'Terapia pedagogiczna trwa 50 min. obejmujące ćwiczenia i omówienie zajęć z rodzicem. Podczas zajęć terapeuta pedagogiczny indywidualnie pracuje nad usprawnieniem procesów uczenia się, budowaniem pewności siebie, a także poprawą motywacji do nauki. Skupia się nad trudnościami edukacyjnymi, dysleksją, dysgrafią, czy problemami z koncentracją uwagi.'
     },
     {
       name: 'Diagnoza neurorozwojowa odruchów INPP',
       price: '150 zł',
       time: '3x 50 min',
-      description: 'Diagnoza obejmuje: wywiad z rodzicem, kwestionariusz INPP, testy, ustne omówienie wyników, ćwiczenia do domu, kontakt z terapeutą w sprawie prawidłowo wykonywanych ćwiczeń w domu.'
+      description: 'Diagnoza obejmuje: wywiad z rodzicem, kwestionariusz INPP, testy, ustne omówienie wyników, ćwiczenia do domu, stały kontakt z terapeutą w sprawie prawidłowo wykonywanych ćwiczeń w domu.'
     },
     {
       name: 'Spotkania kontrolne INPP',
@@ -101,10 +101,10 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Terapia widzenia',
       price: '75zł/ 155zł',
       time: '30min/ 45min',
-      description: 'Terapia widzenia jest przeznaczona dla dzieci, które mają trudności z przetwarzaniem bodźców wzrokowych, koncentracją wzrokową, koordynacją wzrokowo-ruchową lub funkcjami wzroku, takimi jak śledzenie obiektów i skupienie. Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat sesje trwają 30 minut natomiast dla dzieci powyżej 6 roku życia 45min.'
+      description: ' Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut natomiast dla dzieci powyżej 6 roku życia 45min. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
     },
     {
-      name: 'Diagnoza funkcjonalna wzroku wraz z pisemną opinią 280 zł',
+      name: 'Diagnoza funkcjonalna wzroku wraz z pisemną opinią ',
       price: '280 zł',
       time: '45 min',
       description: 'Diagnoza obejmuje ocenę funkcji wzrokowych dziecka oraz przygotowanie pisemnej opinii.'
@@ -116,20 +116,20 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Pisemny opis diagnozy SI',
       price: '150 zł',
       time: '',
-      description: 'Wydanie pisemnego dokumentu zawierającego opis procesów przetwarzania sensorycznego dziecka na podstawie przeprowadzonej diagnozy.'
+      description: 'Wydanie pisemnego dokumentu na prośbę rodzica zawierającego opis procesów przetwarzania sensorycznego dziecka na podstawie przeprowadzonej diagnozy.'
     },
 
     {
       name: 'Pisemny opis diagnozy INPP',
       price: '150 zł',
       time: '',
-      description: 'Wydanie pisemnej opinii na temat funkcjonowania dziecka w ramach diagnozy INPP, która ocenia integrację odruchów pierwotnych i jej wpływ na rozwój.'
+      description: 'Wydanie pisemnej opinii na prośbę rodzica na temat funkcjonowania dziecka w ramach diagnozy INPP, która ocenia integrację odruchów pierwotnych i jej wpływ na rozwój.'
     },
     {
       name: 'Pisemna opinia',
       price: '50 zł',
       time: '50 min (zazwyczaj 3x 50 min)',
-      description: 'Wydanie pisemnej opinii na temat funkcjonowania dziecka na zajęciach/terapii/ postępów terapii do szkoły, przedszkola, Poradni Psychologiczno-Pedagogicznej itd.'
+      description: 'Wydanie pisemnej opinii na temat funkcjonowania dziecka na zajęciach/terapii/ postępów terapii do szkoły, przedszkola, poradni psychologiczno-pedagogicznej itd.'
     }
   ];
 

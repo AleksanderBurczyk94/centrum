@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AssistanceCard } from '../../../interfaces/assistanceCard';
+import {Component} from '@angular/core';
+import {AssistanceCard} from '../../../interfaces/assistanceCard';
 import {AppRoutes} from "../../../app-routing.module";
 
 @Component({
@@ -16,63 +16,63 @@ export class CardListComponent {
       imgSrc: 'assets/img/głowa_z_plusem.png',
       imgAlt: 'ikona głowy z plusem',
       title: 'Konsultacje psychologicze',
-      description: 'Wsparcie psychologiczne dla dzieci i dorosłych, terapia poznawczo-behawioralna, schematów, akceptacji i zaangażowania, mindfulness.',
+      description: 'Wsparcie psychologiczne dla dzieci, młodzieży i rodziców, pomoc <br> w radzeniu sobie z emocjami, <br> stresem, obniżoną samooceną, <br> trudnościami relacyjnymi. <br> Rozwijanie umiejętności społeczno-emocjonalnych, mindfullnes, ',
       path: AppRoutes.PSYCHOLOGICAL_CONSULTATIONS
     },
     {
       imgSrc: 'assets/img/huśtawka.png',
       imgAlt: 'ikona huśtawki',
       title: 'Terapia integracji sensorycznej',
-      description: 'Wsparcie dzieci z zaburzeniami sensorycznymi i ruchowymi. Diagnoza, terapia integracji zmysłów i koordynacji.',
+      description: 'Wsparcie dzieci z trudnościami ruchowymi i przetwarzania sensorycznego. Diagnoza i terapia integracji sensorycznej ',
       path: AppRoutes.SENSORY_INTEGRATION_THERAPY
     },
     {
       imgSrc: 'assets/img/mózg.png',
       imgAlt: 'ikona mózgu',
       title: 'Terapia neurorozwojowa odruchów INPP',
-      description: 'Stymulacja odruchów pierwotnych, wsparcie neurologiczne i rozwojowe, poprawa koordynacji i koncentracji.',
+      description: 'Stymulacja i wygaszanie odruchów pierwotnych, poprawa umiejętności szkolnych, wsparcie neurorozwojowe, eliminacja choroby lokomocyjnej.',
       path: AppRoutes.NEURODEVELOPMENTAL_REFLEX_THERAPY
     },
     {
       imgSrc: 'assets/img/masarz.png',
       imgAlt: 'ikona masarzu',
       title: 'Terapia NeuroTaktylna MNRI',
-      description: 'Praca nad rozwojem neurologicznym, wspieranie dzieci z problemami sensorycznymi i odruchowymi. Terapia oparta na stymulacji odruchów pierwotnych.',
+      description: 'Normalizacja pracy układu nerwowego, niwelowanie obronności dotykowej i niewystarczającej wrażliwość na bodźce sensoryczne.',
       path: AppRoutes.NEUROTACTILE_THERAPY
     },
     {
       imgSrc: 'assets/img/ucho.png',
       imgAlt: 'ikona ucha',
       title: 'Diagnoza i terapia przetwarzania słuchowego Johansena',
-      description: 'Terapia wspomagająca rozwój zdolności słuchowych i koncentracji. Pomaga w poprawie przetwarzania bodźców dźwiękowych i wspiera naukę.',
+      description: 'Wspomaganie rozwoju zdolności słuchowych i koncentracji, niwelowanie nadwrażliwości słuchowej, poprawa przetwarzania bodźców dźwiękowych.',
       path: AppRoutes.AUDITORY_PROCESSING_THERAPY
     },
     {
       imgSrc: 'assets/img/dłoń.png',
       imgAlt: 'ikona ręki',
       title: 'Diagnoza i terapia ręki',
-      description: 'Pomoc dzieciom z trudnościami w motoryce małej, poprawa koordynacji ruchowej i sprawności manualnej. Terapia wspiera samodzielność dziecka w codziennych czynnościach.',
+      description: 'Terapia motoryki małej, poprawa nieprawidłowego chwytu pisarskiego, poprawa koordynacji ruchowej, sprawności manualnej i precyzyjnej, wspieranie samodzielności dziecka <br> w codziennych czynnościach.',
       path: AppRoutes.HAND_THERAPY
     },
     {
       imgSrc: 'assets/img/puzzle.png',
       imgAlt: 'icona puzzli',
       title: 'Terapia pedagogiczna',
-      description: 'Wsparcie edukacyjne dzieci z trudnościami w nauce, rozwój umiejętności szkolnych i społecznych. Terapia dostosowana do indywidualnych potrzeb dziecka.',
+      description: 'Wsparcie edukacyjne dzieci <br> z trudnościami w nauce, rozwój umiejętności szkolnych i społecznych. Terapia dostosowana <br> do indywidualnych potrzeb dziecka.',
       path: AppRoutes.PEDAGOGICAL_THERAPY
     },
     {
       imgSrc: 'assets/img/vision.png',
       imgAlt: 'icona oka z długopisem i linijką na nim',
       title: 'Terapia widzenia',
-      description: 'Poprawa zdolności wzrokowych u dzieci z trudnościami w nauce i percepcji. Terapia wspomaga koncentrację i precyzję w zadaniach wymagających sprawności wzrokowej."',
+      description: 'Poprawa przetwarzania wzrokowego <br> u dzieci z trudnościami w nauce <br> i percepcji. Wspomaganie koncentracji <br> i precyzji w zadaniach wymagających sprawności wzrokowej."',
       path: AppRoutes.VISION_THERAPY
     },
     {
       imgSrc: 'assets/img/konsultacje.png',
       imgAlt: 'ikona kobiety za biurkiem',
       title: 'Konsultacje specjalistyczne',
-      description: 'Indywidualne konsultacje i diagnozy w zakresie przetwarzania sensorycznego, rozwoju neuropsychologicznego oraz wsparcie w trudnych sytuacjach życiowych.',
+      description: 'Indywidualne konsultacje dla rodziców w zakresie przetwarzania sensorycznego, rozwoju ruchowego <br> i społeczno-emocjonalnego dzieci,<br> w tym dzieci w spektrum autyzmu, ADHD, mutyzmu wybiórczego,<br> niepełnosprawności intelektualnej.',
       path: AppRoutes.SPECIALIST_CONSULTATIONS
     }
   ];

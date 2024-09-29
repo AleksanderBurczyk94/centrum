@@ -9,39 +9,39 @@ export class FaqComponent {
   faqs = [
     {
       question: 'Czy integracja sensoryczna jest na NFZ?',
-      answer: 'Nie, integracja sensoryczna nie jest finansowana przez NFZ, dlatego większość terapii odbywa się prywatnie.'
+      answer: 'Integracja sensoryczna zazwyczaj nie jest finansowana przez NFZ, dlatego większość terapii odbywa się prywatnie. Istnieją jednak sytuacje, kiedy rodzic może starać się o bezpłatne zajęcia SI dla dzieci posiadających orzeczenie, czy opinię, np. o potrzebie WWRD.'
     },
     {
       question: 'Czy terapia sensoryczna ma sens?',
-      answer: 'Tak, terapia sensoryczna może pomóc dzieciom z zaburzeniami integracji sensorycznej w poprawie ich codziennego funkcjonowania.'
+      answer: 'Tak, terapia sensoryczna może pomóc dzieciom z zaburzeniami integracji sensorycznej w poprawie ich codziennego funkcjonowania. Jako metoda została pierwotnie stworzona dla dzieci mających trudności w nauce.'
     },
     {
       question: 'Ile kosztuje 1h terapii?',
-      answer: 'Koszt terapii sensorycznej zależy od miejsca i terapeuty, ale zazwyczaj wynosi od 100 do 150 zł za godzinę.'
+      answer: 'Koszt terapii sensorycznej zależy od miejsca i terapeuty, ale zazwyczaj wynosi od 130 do 200 zł. za godzinę.'
     },
     {
       question: 'Do jakiego wieku terapia sensoryczna?',
-      answer: 'Terapia sensoryczna jest najbardziej efektywna w wieku przedszkolnym i wczesnoszkolnym, ale może być prowadzona również u starszych dzieci.'
+      answer: 'Terapia sensoryczna jest najbardziej efektywna w wieku przedszkolnym i wczesnoszkolnym, ale może być prowadzona również u starszych dzieci, w tym w szczególności dla dzieci w spektrum autyzmu i różnymi niepełnosprawnościami.'
     },
     {
       question: 'Po czym poznać, że dziecko ma zaburzenia sensoryczne?',
-      answer: 'Dzieci z zaburzeniami sensorycznymi mogą wykazywać nadwrażliwość na bodźce lub odwrotnie - potrzebę intensywniejszych doznań sensorycznych.'
+      answer: 'Dzieci z zaburzeniami sensorycznymi mogą wykazywać skrajne reakcje na bodźce np. nadwrażliwość lub odwrotnie - potrzebę intensywniejszych doznań sensorycznych. Uwidacznia się również w trudnościach z równowagą, koordynacją, planowaniem ruchu i nieprawidłowo pracującymi mięśniami posturalnymi.'
     },
     {
       question: 'Po jakim czasie widać efekty terapii SI?',
-      answer: 'Efekty terapii sensorycznej mogą być widoczne po kilku miesiącach regularnych zajęć, w zależności od stopnia nasilenia zaburzeń.'
+      answer: 'Efekty terapii sensorycznej mogą być widoczne po kilku miesiącach regularnych zajęć (minimum 6), w zależności od stopnia nasilenia zaburzeń. W przypadku dzieci z orzeczeniami, sukcesem w terapii może być chociażby brak regresu w funkcjonowaniu sensorycznym.'
     },
     {
       question: 'Czy zaburzenia integracji sensorycznej to autyzm?',
-      answer: 'Nie, zaburzenia integracji sensorycznej nie są równoznaczne z autyzmem, ale mogą współwystępować z tym zaburzeniem.'
+      answer: 'Nie, zaburzenia integracji sensorycznej absolutnie nie są równoznaczne z autyzmem, ale najczęściej współwystęują z tym zaburzeniem.'
     },
     {
       question: 'Jak wygląda diagnoza sensoryczna?',
-      answer: 'Diagnoza sensoryczna polega na obserwacji dziecka podczas zabawy i wypełnianiu kwestionariuszy przez rodziców.'
+      answer: 'Diagnoza sensoryczna polega na obserwacji dziecka podczas spontanicznej zabawy, przeprowadzeniu obserwacji klinicznej, testów, dokładnego wywiadu z rodzicem oraz  wypełnianieniem kwestionariusza sensorycznego.'
     },
     {
       question: 'Co daje dziecku integracja sensoryczna?',
-      answer: 'Terapia sensoryczna pomaga dziecku lepiej przetwarzać bodźce, co może poprawić jego funkcjonowanie w codziennych sytuacjach.'
+      answer: 'Terapia sensoryczna pomaga dziecku lepiej przetwarzać bodźce, co może poprawić jego funkcjonowanie w codziennych sytuacjach, a także wspierać rozwój umiejętności szkolnych.'
     },
     {
       question: 'Czy integracja sensoryczna to rehabilitacja?',
@@ -49,11 +49,11 @@ export class FaqComponent {
     },
     {
       question: 'Na czym polega dieta sensoryczna?',
-      answer: 'Dieta sensoryczna to plan aktywności i strategii dostosowanych do potrzeb sensorycznych dziecka, pomagający w regulacji jego zachowania.'
+      answer: 'Dieta sensoryczna to plan aktywności i strategii dostosowanych do potrzeb sensorycznych dziecka, które rodzic otrzymuje od terapeuty do realizacji w domu, pomagający w regulacji jego zachowania i funkcjonowania.'
     },
     {
       question: 'Kiedy dziecko potrzebuje terapii?',
-      answer: 'Dziecko może potrzebować terapii, jeśli ma trudności w codziennym funkcjonowaniu związane z nadwrażliwością lub niedowrażliwością na bodźce.'
+      answer: 'Dziecko może potrzebować terapii, jeśli ma trudności szkolne oraz w codziennym funkcjonowaniu związane z nadwrażliwością lub niedowrażliwością na bodźce, trudnościach z równowagą, koordynacją, planowaniem ruchu i nieprawidłowo pracującymi mięśniami posturalnymi'
     },
     {
       question: 'Skąd biorą się problemy z integracją sensoryczną?',
@@ -75,7 +75,7 @@ export class FaqComponent {
     },
     {
       question: 'Czy integracja sensoryczna pomaga dzieciom z ADHD?',
-      answer: 'Tak, terapia sensoryczna może pomóc dzieciom z ADHD lepiej przetwarzać bodźce, co może wpłynąć na poprawę koncentracji i zmniejszenie impulsywności.'
+      answer: 'Nie ma obecnie badań, które potwierdzałyby skuteczność terapii SI w przypadku dzieci z ADHD. Jednak terapia sensoryczna może pomóc dzieciom lepiej przetwarzać bodźce, co może wpłynąć na poprawę koncentracji i zmniejszenie impulsywności.'
     },
     {
       question: 'Czy mogę samodzielnie pracować nad integracją sensoryczną w domu?',
@@ -83,7 +83,7 @@ export class FaqComponent {
     },
     {
       question: 'Jakie zabawy sensoryczne można wykonywać w domu?',
-      answer: 'Zabawy sensoryczne, takie jak malowanie palcami, zabawy z piaskiem kinetycznym, czy używanie gier i materiałów sensorycznych, mogą wspierać rozwój sensoryczny dziecka.'
+      answer: 'Zabawy sensoryczne, takie jak malowanie palcami, zabawy z piaskiem kinetycznym, tory przeszkód, czworakowanie, skoki, turlanie, mogą wspierać rozwój sensoryczny dziecka.'
     },
     {
       question: 'Czy integracja sensoryczna jest potrzebna dorosłym?',
@@ -93,7 +93,7 @@ export class FaqComponent {
     // Nowe pytania:
     {
       question: 'Czy integracja sensoryczna jest bolesna dla dziecka?',
-      answer: 'Nie, terapia sensoryczna nie jest bolesna. Ćwiczenia są dostosowane do indywidualnych potrzeb dziecka i mają na celu poprawę jego komfortu.'
+      answer: 'Nie, terapia sensoryczna nie jest bolesna. Terapia jest świetną formą zabawy i dzieci zazwyczaj bardzo lubią na nią uczęszczać. Ćwiczenia są dostosowane do indywidualnych potrzeb dziecka i mają na celu poprawę jego komfortu.'
     },
     {
       question: 'Jak często powinny odbywać się sesje terapii sensorycznej?',
@@ -101,11 +101,11 @@ export class FaqComponent {
     },
     {
       question: 'Czy integracja sensoryczna pomaga w problemach z jedzeniem?',
-      answer: 'Tak, terapia sensoryczna może pomóc dzieciom z problemami związanymi z jedzeniem, np. nadwrażliwością na tekstury.'
+      answer: 'Tak, terapia sensoryczna może pomóc dzieciom z problemami związanymi z jedzeniem, jeśli wynikają one z zaburzeń sensorycznych np. nadwrażliwością na tekstury.'
     },
     {
       question: 'Jakie są długoterminowe efekty integracji sensorycznej?',
-      answer: 'Długoterminowe efekty mogą obejmować lepsze przetwarzanie bodźców, poprawę zachowania i funkcjonowania w codziennym życiu.'
+      answer: 'Długoterminowe efekty mogą obejmować lepsze przetwarzanie bodźców, poprawę zachowania, umiejętności szkolnych i funkcjonowania w codziennym życiu.'
     },
     {
       question: 'Czy terapia sensoryczna może pomóc w problemach z mówieniem?',
@@ -121,11 +121,11 @@ export class FaqComponent {
     },
     {
       question: 'Czy mogę uczestniczyć w sesjach terapii mojego dziecka?',
-      answer: 'Tak, wielu terapeutów zachęca rodziców do uczestnictwa w sesjach, aby lepiej zrozumieć potrzeby dziecka i kontynuować ćwiczenia w domu.'
+      answer: 'Tak, w szczególności, jeśli chodzi o diagnozę. Jednak często uczestnictwo rodzica w terapii powoduje rozproszenie uwagi dziecka. Jest to jednak kwestia bardzo indywidualna, ponieważ niektóre dzieci bardzo potrzebują poczucia bezpieczeństwa, które zapewnia im rodzic.'
     },
     {
       question: 'Jakie są koszty terapii sensorycznej w różnych regionach Polski?',
-      answer: 'Koszty terapii mogą się różnić w zależności od regionu, zazwyczaj wahają się od 100 do 200 zł za sesję.'
+      answer: 'Koszty terapii mogą się różnić w zależności od regionu, zazwyczaj wahają się od 130 do 200 zł za sesję.'
     },
     {
       question: 'Czy integracja sensoryczna jest skuteczna u dzieci z zespołem Downa?',
@@ -145,7 +145,7 @@ export class FaqComponent {
     },
     {
       question: 'Jakie są najczęstsze mity dotyczące integracji sensorycznej?',
-      answer: 'Niektóre mity obejmują przekonanie, że terapia sensoryczna jest bolesna lub że jest przeznaczona tylko dla dzieci z autyzmem.'
+      answer: 'Niektóre mity obejmują przekonanie, że terapia sensoryczna, że jest przeznaczona tylko dla dzieci z autyzmem.'
     },
     {
       question: 'Jakie są najnowsze badania dotyczące integracji sensorycznej?',

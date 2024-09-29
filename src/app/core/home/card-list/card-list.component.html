@@ -9,7 +9,7 @@
         <div class="card-body">
           <img [src]="card.imgSrc" [alt]="card.imgAlt">
           <h3 class="card-title fs-4">{{card.title}}</h3>
-          <p class="card-text fs-6">{{card.description}}</p>
+          <p class="card-text fs-6"[innerHTML]="card.description"></p>
         </div>
       </div>
     </div>
