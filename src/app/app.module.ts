@@ -45,9 +45,6 @@ import {
 } from './core/assistance/specialist-consultations/specialist-consultations.component';
 import {WrittenOpinionComponent} from './core/assistance/written-opinion/written-opinion.component';
 import {
-  SiDiagnosisDescriptionComponent
-} from './core/assistance/si-diagnosis-description/si-diagnosis-description.component';
-import {
   PaulinaOkrasaBurczykComponent
 } from './core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component';
 import {PedagogicalTherapyComponent} from './core/assistance/pedagogical-therapy/pedagogical-therapy.component';
@@ -63,6 +60,7 @@ import { VisionTherapyComponent } from './core/assistance/vision-therapy/vision-
 import { SywiaSzumskaComponent } from './core/home/therapists/sywia-szumska/sywia-szumska.component';
 import { MagdalenaMokrzyckaComponent } from './core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component';
 import { AgataMagdzickaBanachComponent } from './core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component';
+import { BackBtnComponent } from './shered/back-btn/back-btn.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +91,6 @@ import { AgataMagdzickaBanachComponent } from './core/home/therapists/agata-magd
     HandTherapyComponent,
     SpecialistConsultationsComponent,
     WrittenOpinionComponent,
-    SiDiagnosisDescriptionComponent,
     PaulinaOkrasaBurczykComponent,
     PedagogicalTherapyComponent,
     NextBackBtnComponent,
@@ -106,6 +103,7 @@ import { AgataMagdzickaBanachComponent } from './core/home/therapists/agata-magd
     SywiaSzumskaComponent,
     MagdalenaMokrzyckaComponent,
     AgataMagdzickaBanachComponent,
+    BackBtnComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

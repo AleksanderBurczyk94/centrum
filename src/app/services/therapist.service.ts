@@ -81,4 +81,8 @@ export class TherapistService {
     const therapist = this.therapists[index];
     this.router.navigate([therapist.path]);
   }
+
+  updateIndex(id: number): void {
+    this.activeTherapistIndex.next(id);
+  }
 }

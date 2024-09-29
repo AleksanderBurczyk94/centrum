@@ -11,18 +11,9 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class PaulinaOkrasaBurczykComponent {
   therapist: Therapist | null = null;
-  constructor(private therapistService: TherapistService, private route: ActivatedRoute) {}
 
-
-
-  ngOnInit(): void {
-    // Subskrypcja zmiany parametrów URL (np. id)
-    this.route.paramMap.subscribe(params => {
-      const id = Number(params.get('id'));
-      if (!isNaN(id)) {
-        this.therapist = this.therapistService.getTherapistById(id);
-      }
-    });
+  constructor(private therapistService: TherapistService) {
+    this.therapist = this.therapistService.getActiveTherapist();
   }
 
   nextTherapist() {
@@ -32,5 +23,4 @@ export class PaulinaOkrasaBurczykComponent {
   prevTherapist() {
     this.therapistService.prevTherapist();
   }
-
 }

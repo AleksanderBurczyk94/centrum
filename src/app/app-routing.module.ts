@@ -28,9 +28,6 @@ import {
 import {
   SpecialistConsultationsComponent
 } from "./core/assistance/specialist-consultations/specialist-consultations.component";
-import {
-  SiDiagnosisDescriptionComponent
-} from "./core/assistance/si-diagnosis-description/si-diagnosis-description.component";
 import {WrittenOpinionComponent} from "./core/assistance/written-opinion/written-opinion.component";
 import {
   PaulinaOkrasaBurczykComponent
@@ -141,11 +138,6 @@ const routes: Routes = [
         path: AppRoutes.VISION_THERAPY,
         component: VisionTherapyComponent,
         title: 'Terapia widzenia'
-      },
-      {
-        path: AppRoutes.SI_DIAGNOSIS_DESCRIPTION,
-        component: SiDiagnosisDescriptionComponent,
-        title: 'Pisemny opis diagnozy SI'
       },
       {
         path: AppRoutes.WRITTEN_OPINION,
