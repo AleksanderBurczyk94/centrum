@@ -55,10 +55,6 @@ export class TherapistService {
     return this.therapists[this.activeTherapistIndex.getValue()];
   }
 
-  getTherapistById(id: number): Therapist | null {
-    return this.therapists.find(therapist => therapist.id === id) || null;
-  }
-
   getTherapists(): Therapist[] {
     return this.therapists;
   }
@@ -82,7 +78,4 @@ export class TherapistService {
     this.router.navigate([therapist.path]);
   }
 
-  updateIndex(id: number): void {
-    this.activeTherapistIndex.next(id);
-  }
 }

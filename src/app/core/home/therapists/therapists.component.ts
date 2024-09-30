@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {Therapist} from "../../../interfaces/therpaists";
-import {AppRoutes} from "../../../app-routing.module";
 import {TherapistService} from "../../../services/therapist.service";
 import {ActivatedRoute} from "@angular/router";
 
@@ -16,8 +14,4 @@ export class TherapistsComponent {
 
   therapists = this.therapistService.getTherapists();
 
-
-  updateindex(id: number): void {
-      this.therapistService.updateIndex(id);
-  }
 }

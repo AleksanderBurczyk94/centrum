@@ -1,6 +1,6 @@
-<section class="bg-box text-dark">
+<section class="bg-box text-dark" id="team">
   <div class="container">
-    <div class="content-box d-flex flex-column">
+    <div class="content-box d-flex flex-column" >
       <h2 class='container-title'>Poznaj naszych specjalistów</h2>
       <p class="sm-text text-justify">
         Nasz zespół tworzą wykwalifikowani i doświadczeni specjaliści, którzy indywidualnie dostosowują metody pracy do potrzeb każdego dziecka, wpływając na jego rozwój i całościowy potencjał. W pracy kierujemy się podejściem holistycznym, wspierając zarówno dzieci, jak i ich rodziców w radzeniu sobie z wyzwaniami dnia codziennego.
@@ -9,13 +9,13 @@
     <div class="active-users p-5">
       <div class="row">
         <div *ngFor="let therapist of therapists;" class="col-12 col-sm-6 col-xl-4 d-flex mb-4 ">
-          <div class="card bg-transparent border-0" [routerLink]="[therapist.path]" (click)="updateindex(therapist.id)">
+          <div class="card bg-transparent border-0" [routerLink]="[therapist.path]">
             <div class="card-img">
               <img [src]="therapist.image" [alt]="'Zdjęcie terapeuty: ' + therapist.name" class="card-img-top">
             </div>
             <div class="card-body d-flex flex-column justify-content-start align-items-center text-center">
               <h4 class="card-title fw-bold">{{ therapist.name }}</h4>
-              <p class="role-title m-0">{{ therapist.role }}</p>
+              <p class="role-title m-0"[innerHTML]="therapist.role"></p>
             </div>
           </div>
         </div>

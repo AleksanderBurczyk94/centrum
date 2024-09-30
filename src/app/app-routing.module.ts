@@ -49,7 +49,7 @@ import {
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
   anchorScrolling: 'enabled',           // Włączenie przewijania do elementu z kotwicą
-  scrollOffset: [0, -100],              // Przesunięcie o 100px w górę
+  scrollOffset: [0, 100],              // Przesunięcie o 100px w górę
 };
 
 export const AppRoutes = {
