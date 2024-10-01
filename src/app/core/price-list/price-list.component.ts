@@ -56,7 +56,7 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
         'W wyjątkowych przypadkach czas diagnozy może się wydłużyć i będzie potrzebna dodatkowa godzina (trudności ze współpracą dziecka, potrzeba robienia dłuższych przerw po każdym teście), jednak w zdecydowanej większości trwa ona założone 150 min.* <br> Pisemny, obszerny opis diagnozy wydawany jest na prośbę rodzica, a jego koszt wynosi 150 zł'
     },
     {
-      name: 'Terapia Integracji sensorycznej',
+      name: 'Terapia integracji sensorycznej',
       price: '130 zł',
       time: '50 min',
       description: 'Terapia SI trwa 50 min. obejmujące ćwiczenia i omówienie zajęć z rodzicem.  Polega na wykonywaniu przez dziecko specjalnie dobranych ćwiczeń i zabaw na sali integracji sensorycznej. Zajęcia przeprowadzane są indywidualnie dla każdego dziecka. '
@@ -98,16 +98,28 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       description: 'Konsultacje ze specjalistą procesów przetwarzania sensorycznego, wzorców ruchowych dziecka, procesów neurorozwojowych  dla rodziców, którzy mają trudności w ustaleniu źródła trudności szkolnych i ruchowych w powiązaniu z rozwojem motoryczno-sensorycznym dziecka. Specjalistą pomoże dobrać odpowiednią formę terapii.'
     },
     {
+      name: 'Diagnoza funkcjonalna wzroku wraz z pisemną opinią ',
+      price: '280 zł',
+      time: '45 min',
+      description: 'Diagnoza obejmuje ocenę funkcji wzrokowych dziecka oraz przygotowanie pisemnej opinii.'
+    },
+    {
       name: 'Terapia widzenia',
       price: '75zł/ 155zł',
       time: '30min/ 45min',
       description: ' Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut natomiast dla dzieci powyżej 6 roku życia 45min. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
     },
     {
-      name: 'Diagnoza funkcjonalna wzroku wraz z pisemną opinią ',
-      price: '280 zł',
+      name: 'Terapia widzenia 10 spotkań płatnych z góry',
+      price: '700 zł',
+      time: '30 min',
+      description: ' Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
+    },
+    {
+      name: 'Terapia widzenia 10 spotkań płatnych z góry',
+      price: '1450 zł',
       time: '45 min',
-      description: 'Diagnoza obejmuje ocenę funkcji wzrokowych dziecka oraz przygotowanie pisemnej opinii.'
+      description: ' Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku powyżej 6 roku życia poleca się sesje trwające 45 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
     },
   ];
 

@@ -17,7 +17,7 @@ export class FaqComponent {
     },
     {
       question: 'Ile kosztuje 1h terapii?',
-      answer: 'Koszt terapii sensorycznej zależy od miejsca i terapeuty, ale zazwyczaj wynosi od 130 do 200 zł. za godzinę.'
+      answer: 'Koszt terapii sensorycznej zależy od miejsca i terapeuty, ale zazwyczaj wynosi od 120 do 200 zł. za godzinę.'
     },
     {
       question: 'Do jakiego wieku terapia sensoryczna?',
