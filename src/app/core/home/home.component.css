@@ -2,39 +2,35 @@
 
 .top-hero {
   position: relative;
-  width: 100%; /* Zapewnia, że kontener rozciąga się na całą szerokość */
+  width: 100%;
   z-index: 0;
 }
 
 .aboutus-hero {
-  width: 100%; /* 100% szerokości viewport */
-  height: 99vh; /* 100% wysokości viewport */
-  object-fit: cover; /* Zapewnia pokrycie całego kontenera, zachowując proporcje */
-  filter: brightness(0.7) /* 70% jasności - wideo będzie ciemniejsze */
+  width: 100%;
+  height: 99vh;
+  object-fit: cover;
+  filter: brightness(0.7)
 }
 
 .text-container {
-  position: absolute; /* Kluczowe zmiany tutaj, aby umieścić tekst na filmie */
-  top: 40%; /* Centruje tekst w pionie */
-  left: 50%; /* Centruje tekst w poziomie */
-  transform: translate(-50%, -50%); /* Precyzyjne centrowanie */
-  color: var(--white-color); /* Zapewnia, że tekst jest biały */
-  text-align: center; /* Opcjonalnie, centruje tekst w kontenerze */
-  max-width: 100%; /* Ogranicza szerokość tekstu do 80% szerokości kontenera */
-  z-index: 1; /* Zapewnia, że tekst znajduje się nad filmem */
-}
-
-.text-container {
-  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  text-align: center;
+  max-width: 100%;
+  z-index: 1;
 }
 
-.top-hero-text {
+.top-title {
   font-size: 40px;
 }
 
-.top-hero-text-sm {
+.under-title {
   font-size: 20px;
 }
 
@@ -105,10 +101,38 @@ app-transparent-btn {
 }
 
 .photo-box img {
-  object-fit: cover; width: 100%; height: 100%; object-position: center 70%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center 70%;
 }
 
-.review-box{
+.review-box {
   padding-top: 40px;
   background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+@media (max-width: 992px) {
+  .text-container {
+    /*padding: 0; !* Usuń wewnętrzne wcięcia *!*/
+    padding: 0 10px;
+    width: 100%; /* Zajmij całą szerokość */
+    max-width: 840px; /* Maksymalna szerokość kontenera dla małych ekranów */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .top-title {
+    font-size: 30px;
+  }
+
+  .under-title {
+    font-size: 18px;
+  }
 }
