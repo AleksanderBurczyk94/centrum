@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class TherapistsComponent {
 
-  constructor(private therapistService: TherapistService, private route: ActivatedRoute) {
+  constructor(private therapistService: TherapistService) {
   }
 
   therapists = this.therapistService.getTherapists();

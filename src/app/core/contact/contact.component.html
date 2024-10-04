@@ -1,6 +1,6 @@
 <app-banner title="Kontakt"></app-banner>
-<div class="white-container">
-  <h1 class="container-title text-center mx-5 smaller-text-sm">Masz pytania, chcesz umówić
+<div class="white-container ">
+  <h1 class="container-title text-center mx-xl-5 px-1 smaller-text-sm">Masz pytania, chcesz umówić
     się na wizytę? Skontaktuj się z nami!</h1>
   <div class="contact-box row row-cols-lg-4 row-cols-md-2">
     <div class="p-0 mt-5">
@@ -47,16 +47,15 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="info-box col-md-5 d-flex justify-content-center align-items-start mt-2">
+      <div class="info-box col-md-5 d-flex justify-content-center align-items-start mt-2 p-1">
         <ul class="mt-4">
-          <li><p>Wejście do budynku Centrum znajduje się za <strong>czarnym ogrodzeniem.</strong></p></li>
+          <li><p >Wejście do budynku Centrum znajduje się za <strong>czarnym ogrodzeniem.</strong></p></li>
           <li><p> Gabinet położony jest na <strong>parterze</strong> pomiędzy klatką nr 1 i nr 2. <br> Kod do domofonu: 1dzwonek47.
           </p></li>
           <li><p>W pobliżu lokalu dostępne są publiczne, <strong>bezpłatne parkingi.</strong></p></li>
         </ul>
       </div>
-      <div class="col-md-7 cold-flex justify-content-center">
-
+      <div class="col-md-7 cold-flex justify-content-center p-0">
         <form class="text-dark text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
 
           <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">

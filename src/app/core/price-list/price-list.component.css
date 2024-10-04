@@ -17,6 +17,7 @@ table{
 
 .padding-tab {
   padding-right: 160px;
+  padding-left: 40px;
 }
 
 @media (max-width: 400px) {
