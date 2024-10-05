@@ -17,7 +17,7 @@ export class TherapistService {
     {
       id: 0,
       name: 'Paulina Okrasa-Burczyk',
-      role: 'Założycielka Centrum Równowaga, <br> pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w spektrum autyzmu <br> i z niepełnosprawnością intelektualną, logopedka',
+      role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
       image: 'assets/img/Paulina.jpg',
       path: `${AppRoutes.PAULINA_OKRASA_BURCZYK}`
     },
@@ -45,7 +45,7 @@ export class TherapistService {
     {
       id: 4,
       name: 'Agata Magdzicka-Banach',
-      role: 'Pedagożka, terapeutka dzieci <br> z niepełnosprawnością intelektualną <br> oraz zaburzeniami ze spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
+      role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
       image: 'assets/img/awatar_damski.png',
       path: `${AppRoutes.AGATA_MAGDZICKA_BANACH}`
     }

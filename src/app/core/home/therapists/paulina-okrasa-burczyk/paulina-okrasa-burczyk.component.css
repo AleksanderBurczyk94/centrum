@@ -24,40 +24,6 @@
   transform: translateX(-50%);
 }
 
-@media (max-width: 1400px) {
-  .next-btn {
-    position: absolute;
-    top: 90%;
-    right: -31px;
-    transform: translateX(-50%);
-  }
-
-  .back-btn {
-    position: absolute;
-    top: 90%;
-    left: 30px;
-    transform: translateX(-50%);
-  }
-}
-
-
-@media (max-width: 767px) {
-  .next-btn {
-    position: absolute;
-    top: 45%;
-    right: -31px;
-    transform: translateX(-50%);
-    opacity: 0.8;
-  }
-
-  .back-btn {
-    position: absolute;
-    top: 45%;
-    left: 30px;
-    transform: translateX(-50%);
-    opacity: 0.8;
-  }
-}
 
 .arrow-btn {
   height: 30px;
@@ -131,4 +97,42 @@ p {
   width: 30px;
 }
 
+.znany-icon {
+  min-width: 188px;
+}
 
+
+@media (max-width: 1400px) {
+  .next-btn {
+    position: absolute;
+    top: 90%;
+    right: -31px;
+    transform: translateX(-50%);
+  }
+
+  .back-btn {
+    position: absolute;
+    top: 90%;
+    left: 30px;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .next-btn {
+    position: absolute;
+    top: 45%;
+    right: -31px;
+    transform: translateX(-50%);
+    opacity: 0.8;
+  }
+
+  .back-btn {
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    transform: translateX(-50%);
+    opacity: 0.8;
+  }
+}
