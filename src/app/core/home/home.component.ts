@@ -9,9 +9,6 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit, AfterViewInit{
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
 
-  ngAfterViewInit(): void {
-    this.videoElement.nativeElement.muted = true;
-  }
   constructor(private router: Router,
               private renderer: Renderer2) {
   }
@@ -23,5 +20,19 @@ export class HomeComponent implements OnInit, AfterViewInit{
     script.defer = true;
     this.renderer.appendChild(document.body, script);
   }
+  ngAfterViewInit(): void {
+    const video = this.videoElement.nativeElement;
 
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.error('Autoplay failed:', error);
+        // Opcjonalnie można obsłużyć błąd, np. przez wyświetlenie komunikatu dla użytkownika
+      });
+    }
+  }
 }
