@@ -6,8 +6,12 @@ import {Router} from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit{
+  @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
 
+  ngAfterViewInit(): void {
+    this.videoElement.nativeElement.muted = true;
+  }
   constructor(private router: Router,
               private renderer: Renderer2) {
   }
@@ -19,4 +23,5 @@ export class HomeComponent implements OnInit {
     script.defer = true;
     this.renderer.appendChild(document.body, script);
   }
+
 }

@@ -18,18 +18,18 @@
       </app-color-button>
     </div>
 
-    <div class="collapse navbar-collapse no-wrap" id="navbarNavAltMarkup" #navbarNavAltMarkup>
-      <ul class="navbar-nav ms-auto d-flex align-items-center">
+    <div class="collapse navbar-collapse no-wrap " id="navbarNavAltMarkup" #navbarNavAltMarkup>
+      <ul class="navbar-nav ms-auto d-flex align-items-center p-0">
         <li class="nav-item">
           <a class="text-nav-color nav-link " routerLink=""  (click)="setActive('start'); collapseNav()" [class.active]="activeLink === 'start'">Start</a>
         </li>
-        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown">
+        <li class="nav-item dropdown text-center " #rla="routerLinkActive" routerLinkActive="active-dropdown">
           <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
             Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
                                alt="strzałka dropdownu w dół">
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu px-1 py-0 " aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/psychologicalConsultations"
                    (click)="collapseNav(); resetActive()">Konsultacje
               psychologiczne</a></li>
@@ -69,7 +69,7 @@
             Dokumenty <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
                                alt="strzałka dropdownu w dół">
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu px-1 py-0" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.THERAPY_CONSENT]" (click)="collapseNav(); resetActive()">Zgoda na udział w terapii</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.IMAGE_CONSENT]"  (click)="collapseNav(); resetActive()">Zgoda na publikacje wizurunku</a></li>
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.MINORS_PROTECTION]"  (click)="collapseNav(); resetActive()">Standardy ochrony małoletnich</a></li>

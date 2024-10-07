@@ -10,7 +10,6 @@ footer {
 }
 
 
-
 .line {
   height: 1px;
   width: 97%;
@@ -19,11 +18,13 @@ footer {
   margin: 0 auto;
 }
 
-.footer-icon-text{
+.footer-icon-text {
   font-size: 18px;
 }
+
 img {
   width: 55px;
+  cursor: pointer;
 }
 
 .social-media-box img {
@@ -39,16 +40,27 @@ img {
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.1);
 }
 
+.phone-link {
+  color: var(--black-color);
+  text-decoration: none;
+
+}
+
+.email-link {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
 @media (max-width: 576px) {
-  .footer-icon-text{
+  .footer-icon-text {
     font-size: 16px;
   }
 
-  .contact-icon{
+  .contact-icon {
     width: 45px;
   }
 }
