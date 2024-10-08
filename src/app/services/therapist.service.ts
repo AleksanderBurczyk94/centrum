@@ -18,7 +18,7 @@ export class TherapistService {
       id: 0,
       name: 'Paulina Okrasa-Burczyk',
       role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
-      image: 'assets/img/Paulina.jpg',
+      image: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
       path: `${AppRoutes.PAULINA_OKRASA_BURCZYK}`
     },
     {
