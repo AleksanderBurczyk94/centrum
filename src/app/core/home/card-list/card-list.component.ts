@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AssistanceCard} from '../../../interfaces/assistanceCard';
 import {AppRoutes} from "../../../app-routing.module";
+import {NavbarService} from "../../../services/navbar.service";
 
 @Component({
   selector: 'app-assistance-scope',
@@ -10,7 +11,12 @@ import {AppRoutes} from "../../../app-routing.module";
 export class CardListComponent {
   public AppRoutes = AppRoutes;
 
+constructor(public navbarService: NavbarService) {
+}
 
+  resetActiveLink(){
+    this.navbarService.resetActiveLink()
+  }
   cards: AssistanceCard[] = [
     {
       imgSrc: 'assets/img/głowa_z_plusem.png',
