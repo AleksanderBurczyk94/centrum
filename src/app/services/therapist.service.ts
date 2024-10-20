@@ -25,28 +25,28 @@ export class TherapistService {
       id: 1,
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
-      image: 'assets/img/awatar_damski.png',
+      image: 'assets/img/awatar-damski.png',
       path: `${AppRoutes.KAROLINA_OKRASA_STASZAK}`
     },
     {
       id: 2,
       name: 'Sylwia Szumska',
       role: 'Pedagożka, terapeutka SI, terapeutka pedagogiczna',
-      image: 'assets/img/awatar_damski.png',
+      image: 'assets/img/awatar-damski.png',
       path: `${AppRoutes.SYLWIA_SZUMSKA}`
     },
     {
       id: 3,
       name: 'Magdalena Mokrzycka',
       role: 'Terapeutka SI',
-      image: 'assets/img/awatar_damski.png',
+      image: 'assets/img/awatar-damski.png',
       path: `${AppRoutes.MAGDALENA_MOKRZYCKA}`
     },
     {
       id: 4,
       name: 'Agata Magdzicka-Banach',
       role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
-      image: 'assets/img/awatar_damski.png',
+      image: 'assets/img/awatar-damski.png',
       path: `${AppRoutes.AGATA_MAGDZICKA_BANACH}`
     }
   ];
