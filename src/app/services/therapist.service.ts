@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Therapist } from "../interfaces/therpaists";
-import { AppRoutes } from "../app-routing.module";
 import { Router } from "@angular/router";
+import {AppPaths} from "../app-paths";
 
 @Injectable({
   providedIn: 'root'
@@ -19,35 +19,35 @@ export class TherapistService {
       name: 'Paulina Okrasa-Burczyk',
       role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
       image: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
-      path: `${AppRoutes.PAULINA_OKRASA_BURCZYK}`
+      path: `${AppPaths.PAULINA_OKRASA_BURCZYK}`
     },
     {
       id: 1,
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
       image: 'assets/img/awatar-damski.png',
-      path: `${AppRoutes.KAROLINA_OKRASA_STASZAK}`
+      path: `${AppPaths.KAROLINA_OKRASA_STASZAK}`
     },
     {
       id: 2,
       name: 'Sylwia Szumska',
       role: 'Pedagożka, terapeutka SI, terapeutka pedagogiczna',
       image: 'assets/img/awatar-damski.png',
-      path: `${AppRoutes.SYLWIA_SZUMSKA}`
+      path: `${AppPaths.SYLWIA_SZUMSKA}`
     },
     {
       id: 3,
       name: 'Magdalena Mokrzycka',
       role: 'Terapeutka SI',
       image: 'assets/img/awatar-damski.png',
-      path: `${AppRoutes.MAGDALENA_MOKRZYCKA}`
+      path: `${AppPaths.MAGDALENA_MOKRZYCKA}`
     },
     {
       id: 4,
       name: 'Agata Magdzicka-Banach',
       role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
       image: 'assets/img/awatar-damski.png',
-      path: `${AppRoutes.AGATA_MAGDZICKA_BANACH}`
+      path: `${AppPaths.AGATA_MAGDZICKA_BANACH}`
     }
   ];
 

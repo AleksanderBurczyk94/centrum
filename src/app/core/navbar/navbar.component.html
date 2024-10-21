@@ -70,9 +70,9 @@
                                alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu px-1 py-0" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.THERAPY_CONSENT]" (click)="collapseNav(); resetActiveLink()">Zgoda na udział w terapii</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.IMAGE_CONSENT]"  (click)="collapseNav(); resetActiveLink()">Zgoda na publikacje wizurunku</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[routes.DOCUMENTS, routes.MINORS_PROTECTION]"  (click)="collapseNav(); resetActiveLink()">Standardy ochrony małoletnich</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.THERAPY_CONSENT]" (click)="collapseNav(); resetActiveLink()">Zgoda na udział w terapii</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.IMAGE_CONSENT]"  (click)="collapseNav(); resetActiveLink()">Zgoda na publikacje wizurunku</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.MINORS_PROTECTION]"  (click)="collapseNav(); resetActiveLink()">Standardy ochrony małoletnich</a></li>
           </ul>
         </li>
         <li class="nav-item me-3 ">

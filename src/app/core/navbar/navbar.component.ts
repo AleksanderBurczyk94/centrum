@@ -1,6 +1,6 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild, HostListener, Output} from '@angular/core';
-import { AppRoutes } from "../../app-routing.module";
+import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {NavbarService} from "../../services/navbar.service";
+import {AppPaths} from "../../app-paths";
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,7 @@ import {NavbarService} from "../../services/navbar.service";
 })
 export class NavbarComponent implements OnInit {
   @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
-  routes = AppRoutes;
+  appPaths = AppPaths;
 
   constructor(private renderer: Renderer2, public navbarService: NavbarService) {}
 
