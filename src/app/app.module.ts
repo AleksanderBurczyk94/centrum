@@ -43,7 +43,6 @@ import {SharedModule} from "./shared/shared.module";
     FooterComponent,
     HomeComponent,
     PageNotFoundComponent,
-    ContactComponent,
     PriceListComponent,
     CardListComponent,
     TherapistsComponent,
@@ -64,7 +63,7 @@ import {SharedModule} from "./shared/shared.module";
     AppRoutingModule,
     FontAwesomeModule,
     MatIconModule,
-    ReactiveFormsModule, SharedModule
+    SharedModule
   ],
   exports: [
   ],

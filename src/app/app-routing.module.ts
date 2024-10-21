@@ -3,9 +3,6 @@ import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {PriceListComponent} from "./core/price-list/price-list.component";
-import {ContactComponent} from "./core/contact/contact.component";
-import {AssistanceComponent} from "./core/assistance/assistance.component";
-import {OurCenterComponent} from "./core/our-center/our-center.component";
 import {BlogComponent} from "./core/blog/blog.component";
 import {MinorsProtectionComponent} from "./core/documents/minors-protection/minors-protection.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
@@ -25,6 +22,7 @@ import {
   AgataMagdzickaBanachComponent
 } from "./core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component";
 import {AppPaths} from "./app-paths";
+import {ContactModule} from "./core/contact/contact.module";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -66,7 +64,7 @@ const routes: Routes = [
   },
   {
     path: AppPaths.CONTACT,
-    component: ContactComponent,
+    loadChildren: () => import('./core/contact/contact.module').then(m => m.ContactModule),
     title: 'Kontakt',
     canDeactivate: [contactFormUnsavedChangesGuard]
   },
@@ -95,7 +93,7 @@ const routes: Routes = [
     title: 'Agata Magdzicka-Banach'
   },
 
-  {path: AppPaths.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'}
+  {path: AppPaths.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'},
 ];
 
 @NgModule({

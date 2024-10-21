@@ -17,7 +17,6 @@ export class ContactComponent {
   constructor(private contactService: ContactService) {
   }
 
-
   get controls() {
     return this.contactForm.controls;
   }
@@ -43,7 +42,6 @@ export class ContactComponent {
       Validators.maxLength(500)
     ]),
   });
-
 
   getErrorMessage(control: FormControl): string {
     if (control.hasError('required') && control === this.controls.checkBox) {
