@@ -9,11 +9,11 @@ import {ContactComponent} from "../core/contact/contact.component";
 })
 export class contactFormUnsavedChangesGuard implements CanDeactivate<ContactComponent> {
   canDeactivate(component: ContactComponent): boolean {
-    if (component.submitted) {
+    if (component && component.submitted) {
       return true;
     }
-    if (component.contactForm.dirty) {
-      return confirm('Czy na pewno chcesz opuścić formularz bez wysłania?');
+    if (component && component.contactForm && component.contactForm.dirty) {
+      return confirm('Masz niezapisane zmiany. Czy na pewno chcesz opuścić tę stronę?');
     }
     return true;
   }
