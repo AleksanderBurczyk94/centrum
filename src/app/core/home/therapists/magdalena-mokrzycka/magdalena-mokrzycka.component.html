@@ -2,23 +2,104 @@
   <div class="row d-flex justify-content-center align-items-center name-box">
     <div class="col-md text-center my-4">
       <h2 class="card-title fw-bold mb-3 mx-2">Magdalena Mokrzycka</h2>
-      <p class="role-title px-4">Terapeutka SI</p>
+      <p class="role-title px-4">Pedagogożka, terapeutka integracji sensorycznej</p>
     </div>
     <div class="col-md p-0 img-container">
       <img src="assets/img/awatar-damski.png" [alt]="'Awatar'" class="">
     </div>
     <div class="col-md assistance-box">
-      <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2 me-4">Opis w przygotowaniu</h2>
+      <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2">Zakres wsparcia</h2>
+      <ul class="mx-2">
+        <li>Wsparcie w rozwijaniu umiejętności motorycznych i koordynacji ruchowej</li>
+        <li>Praca nad regulacją reakcji sensorycznych (nadwrażliwość, podwrażliwość)</li>
+        <li>Wsparcie w poprawie koncentracji i uwagi</li>
+        <li>Praca nad rozwijaniem umiejętności adaptacyjnych i samoregulacji</li>
+        <li>Pomoc w kształtowaniu prawidłowych odruchów i wzorców ruchowych</li>
+        <li>Konsultacje i instruktaż dla rodziców w zakresie wspierania dziecka w domu</li>
+        <li>Wsparcie w integracji zmysłów i poprawie codziennego funkcjonowania dziecka</li>
+      </ul>
+    </div>
+  </div>
+<app-next-back-btn (click)="nextTherapist()" class="next-btn">
+  <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+</app-next-back-btn>
+<app-next-back-btn (click)="prevTherapist()" class="back-btn">
+  <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+</app-next-back-btn>
+</div>
+
+<div class="about-me-section">
+  <div class="px-3">
+    <h2 class="title underline-title">O&nbsp;mnie</h2>
+    <p class="about-text">
+      Od&nbsp;zawsze chciałam pracować z&nbsp;dziećmi. Już&nbsp;w&nbsp;dzieciństwie moją ulubioną zabawą była właśnie
+      zabawa w&nbsp;szkołę. Lata nauki, studiów i&nbsp;praktyki potwierdziły moje dziecinne marzenia, a&nbsp;rok 2024
+      okazał się dla&nbsp;mnie przełomowy, ponieważ ukończyłam studia magisterskie z&nbsp;pedagogiki
+      opiekuńczo-wychowawczej oraz&nbsp;studia podyplomowe z&nbsp;terapii integracji sensorycznej. Czuję się w&nbsp;pełni
+      wykwalifikowaną osobą, aby&nbsp;pracować z&nbsp;dziećmi i&nbsp;zawsze dążyć do&nbsp;nich z&nbsp;pomocą, jeśli&nbsp;jej
+      wymagają.
+    </p>
+
+    <h4 class="subtitle">Każde dziecko jest wyjątkowe!</h4>
+    <p class="about-text">
+      Każde dziecko jest inne. Każde ma swoje problemy i&nbsp;obawy. Dla&nbsp;nas pedagogów ważne jest to, aby&nbsp;dotrzeć
+      do&nbsp;każdego z&nbsp;nich i&nbsp;pomóc w&nbsp;jak&nbsp;najlepszy sposób. Ważne jest, aby&nbsp;ciągle budować w&nbsp;dziecku
+      poczucie własnej wartości. Kluczem do&nbsp;sukcesu jest wypracowanie z&nbsp;dzieckiem indywidualnego sposobu
+      pracy, który&nbsp;pozwoli czerpać dziecku radość z&nbsp;pracy z&nbsp;pedagogiem.
+    </p>
+    <p class="about-text">
+      Każde dziecko jest inne!<br>
+      Każde dziecko jest wyjątkowe!<br>
+      Każde dziecko jest piękne!
+    </p>
+
+    <h4 class="subtitle">Wiara we&nbsp;własne możliwości</h4>
+    <p class="about-text">
+      W&nbsp;pedagogice nigdy nie&nbsp;można spocząć na&nbsp;laurach. W&nbsp;pracy z&nbsp;dziećmi ważny jest ciągły
+      rozwój – nie&nbsp;dla&nbsp;siebie, ale&nbsp;przede&nbsp;wszystkim dla&nbsp;nich, dla&nbsp;dzieci, z&nbsp;którymi
+      pracujemy. Wszystko to, co&nbsp;robimy dla&nbsp;nich, wraca do&nbsp;nas często z&nbsp;podwójną energią, dając nam
+      „kopa” na&nbsp;poszerzanie swoich kwalifikacji i&nbsp;ciągłe zdobywanie nowych doświadczeń.
+    </p>
+
+    <div class="private-section">
+      <h2 class="underline-title">Prywatnie</h2>
+      <p class="about-text">
+        W&nbsp;życiu prywatnym czas wolny spędzam z&nbsp;dobrą książką i&nbsp;herbatą. Bardzo lubię gotować i&nbsp;zaskakiwać
+        nowymi przepisami mojego męża oraz&nbsp;bliskich. Wraz z&nbsp;mężem lubimy wspólnie spędzać czas na&nbsp;wyjazdach
+        i&nbsp;podróżach po&nbsp;pięknej i&nbsp;malowniczej Polsce. Oboje kochamy zwierzęta! Od&nbsp;ponad półtora roku
+        w&nbsp;naszym życiu pojawił się kocurek rasy Ragdoll.
+      </p>
     </div>
 
+    <h4 class="subtitle">Doświadczenie zawodowe</h4>
+    <p class="about-text">
+      Od&nbsp;ponad dwóch lat pracuję na&nbsp;cały etat w&nbsp;kaliskiem Domu Dziecka. Praca ta&nbsp;utwierdziła mnie w&nbsp;przekonaniu,
+      że&nbsp;pomoc dzieciom to&nbsp;właśnie to, co&nbsp;chcę w&nbsp;życiu robić. Pomimo młodego wieku wciąż dążę do&nbsp;poszerzania
+      swojego dorobku zawodowego oraz&nbsp;edukacyjnego, aby&nbsp;w&nbsp;jeszcze bardziej wykwalifikowany sposób służyć
+      dzieciom radą i&nbsp;wsparciem. Przez&nbsp;ostatni rok prowadziłam również zajęcia z&nbsp;jogi dla&nbsp;najmłodszych.
+    </p>
   </div>
-  <app-next-back-btn (click)="nextTherapist()" class="next-btn">
-    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
-  </app-next-back-btn>
-  <app-next-back-btn (click)="prevTherapist()" class="back-btn">
-    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
-  </app-next-back-btn>
+
+  <div class="qualifications-section">
+    <h2 class="underline-title">Kwalifikacje</h2>
+    <h3 class="pt-2">Wykształcenie</h3>
+    <ul>
+      <li>Pedagogika opiekuńczo-wychowawcza z&nbsp;wychowaniem do&nbsp;życia w&nbsp;rodzinie, Uniwersytet Adama
+        Mickiewicza w&nbsp;Poznaniu, Wydział Artystyczno-Pedagogiczny w&nbsp;Kaliszu – studia licencjackie
+      </li>
+      <li>Pedagogika opiekuńczo-wychowawcza, Uniwersytet Adama Mickiewicza w&nbsp;Poznaniu, Wydział
+        Artystyczno-Pedagogiczny w&nbsp;Kaliszu – studia magisterskie
+      </li>
+      <li>Integracja sensoryczna – diagnoza i&nbsp;terapia dzieci, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu
+        – studia podyplomowe
+      </li>
+      <li>Oligofrenopedagogika z&nbsp;elementami arteterapii, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu –
+        studia podyplomowe (w&nbsp;trakcie)
+      </li>
+    </ul>
+  </div>
 </div>
+
 <app-back-btn></app-back-btn>
 
 

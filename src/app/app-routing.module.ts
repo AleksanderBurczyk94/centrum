@@ -22,7 +22,7 @@ import {
   AgataMagdzickaBanachComponent
 } from "./core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component";
 import {AppPaths} from "./app-paths";
-import {ContactModule} from "./core/contact/contact.module";
+import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -91,6 +91,11 @@ const routes: Routes = [
     path: AppPaths.AGATA_MAGDZICKA_BANACH,
     component: AgataMagdzickaBanachComponent,
     title: 'Agata Magdzicka-Banach'
+  },
+  {
+    path: AppPaths.MARTA_KESICKA,
+    component: MartaKesickaComponent,
+    title: 'Marta Kęsicka'
   },
 
   {path: AppPaths.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'},

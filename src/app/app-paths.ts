@@ -35,4 +35,5 @@ export const AppPaths = {
   SYLWIA_SZUMSKA: 'therapist/2',
   MAGDALENA_MOKRZYCKA: 'therapist/3',
   AGATA_MAGDZICKA_BANACH: 'therapist/4',
+  MARTA_KESICKA: 'therapist/5',
 }

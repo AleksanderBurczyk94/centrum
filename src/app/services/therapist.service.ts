@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { Therapist } from "../interfaces/therpaists";
-import { Router } from "@angular/router";
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {Therapist} from "../interfaces/therpaists";
+import {Router} from "@angular/router";
 import {AppPaths} from "../app-paths";
 
 @Injectable({
@@ -11,7 +11,8 @@ export class TherapistService {
 
   private activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   private therapists: Therapist[] = [
     {
@@ -48,6 +49,13 @@ export class TherapistService {
       role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
       image: 'assets/img/awatar-damski.png',
       path: `${AppPaths.AGATA_MAGDZICKA_BANACH}`
+    },
+    {
+      id: 5,
+      name: 'Marta Kęsicka',
+      role: 'Pedagogożka, terapeutka w zakresie rehabilitacji ruchowej, terapeutka SI, trenerka umiejętności społecznych, instruktorka pilates, trenerka personalny.',
+      image: 'assets/img/awatar-damski.png',
+      path: `${AppPaths.MARTA_KESICKA}`
     }
   ];
 
