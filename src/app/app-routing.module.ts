@@ -3,7 +3,6 @@ import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {PriceListComponent} from "./core/price-list/price-list.component";
-import {BlogComponent} from "./core/blog/blog.component";
 import {MinorsProtectionComponent} from "./core/documents/minors-protection/minors-protection.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {contactFormUnsavedChangesGuard} from "./guards/contact-form-unsaved-changes.guard";
@@ -23,6 +22,7 @@ import {
 } from "./core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component";
 import {AppPaths} from "./app-paths";
 import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
+import {BlogComponent} from "./core/blog/blog.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
@@ -43,7 +43,11 @@ const routes: Routes = [
     loadChildren: () => import('./core/our-center/our-center.module').then(m => m.OurCenterModule),
     title: 'Nasze Centrum'
   },
-  {path: AppPaths.BLOG, component: BlogComponent, title: 'Blog'},
+  {
+    path: AppPaths.BLOG,
+    loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
+    component: BlogComponent, title: 'Blog'
+  },
   {
     path: AppPaths.DOCUMENTS,
     component: DocumentsComponent,
@@ -68,7 +72,11 @@ const routes: Routes = [
     title: 'Kontakt',
     canDeactivate: [contactFormUnsavedChangesGuard]
   },
-  {path: AppPaths.RODO, component: RodoComponent, title: 'Rodo'},
+  {
+    path: AppPaths.RODO,
+    loadChildren: () => import('./core/footer/rodo/rodo.module').then(m => m.RodoModule),
+    component: RodoComponent, title: 'Rodo'
+  },
 
   {
     path: AppPaths.PAULINA_OKRASA_BURCZYK,
