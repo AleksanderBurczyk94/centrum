@@ -37,7 +37,11 @@ const routes: Routes = [
     loadChildren: () => import('./core/assistance/assistance.module').then(m => m.AssistanceModule),
     title: 'Zakres pomocy',
   },
-  {path: AppPaths.PRICE_LIST, component: PriceListComponent, title: 'Cennik'},
+  {
+    path: AppPaths.PRICE_LIST,
+    loadChildren: () => import('./core/price-list/price-list.module').then(m => m.PriceListModule),
+    title: 'Cennik'
+  },
   {
     path: AppPaths.OUR_CENTER,
     loadChildren: () => import('./core/our-center/our-center.module').then(m => m.OurCenterModule),
@@ -50,21 +54,8 @@ const routes: Routes = [
   },
   {
     path: AppPaths.DOCUMENTS,
-    component: DocumentsComponent,
+    loadChildren: () => import('./core/documents/dokuments.module').then(m => m.DokumentsModule),
     title: 'Dokumenty',
-    children: [
-      {path: AppPaths.THERAPY_CONSENT, component: TherapyConsentComponent, title: 'Zgoda na udział w terapii'},
-      {
-        path: AppPaths.IMAGE_CONSENT,
-        component: ImageConsentComponent,
-        title: 'Zgoda na publikacje wizerunku'
-      },
-      {
-        path: AppPaths.MINORS_PROTECTION,
-        component: MinorsProtectionComponent,
-        title: 'Standardy ochrony małoletnich'
-      },
-    ]
   },
   {
     path: AppPaths.CONTACT,

@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
@@ -34,6 +33,7 @@ import {
 } from './core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component';
 import {SharedModule} from "./shared/shared.module";
 import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -41,17 +41,11 @@ import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    PageNotFoundComponent,
-    PriceListComponent,
     CardListComponent,
     TherapistsComponent,
-    MinorsProtectionComponent,
     PaulinaOkrasaBurczykComponent,
     FaqComponent,
     KarolinaOkrasaStaszakComponent,
-    TherapyConsentComponent,
-    DocumentsComponent,
-    ImageConsentComponent,
     SywiaSzumskaComponent,
     MagdalenaMokrzyckaComponent,
     AgataMagdzickaBanachComponent,
