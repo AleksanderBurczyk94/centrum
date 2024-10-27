@@ -1,9 +1,6 @@
 import {NgModule} from '@angular/core';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
-import {PriceListComponent} from "./core/price-list/price-list.component";
-import {MinorsProtectionComponent} from "./core/documents/minors-protection/minors-protection.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {contactFormUnsavedChangesGuard} from "./guards/contact-form-unsaved-changes.guard";
 import {
@@ -12,9 +9,6 @@ import {
 import {
   KarolinaOkrasaStaszakComponent
 } from "./core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component";
-import {TherapyConsentComponent} from "./core/documents/therapy-consent/therapy-consent.component";
-import {DocumentsComponent} from "./core/documents/documents.component";
-import {ImageConsentComponent} from "./core/documents/image-consent/image-consent.component";
 import {SywiaSzumskaComponent} from "./core/home/therapists/sywia-szumska/sywia-szumska.component";
 import {MagdalenaMokrzyckaComponent} from "./core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component";
 import {
@@ -97,7 +91,11 @@ const routes: Routes = [
     title: 'Marta Kęsicka'
   },
 
-  {path: AppPaths.PAGE_NOT_FOUND, component: PageNotFoundComponent, title: 'Page not found'},
+  {
+    path: AppPaths.PAGE_NOT_FOUND,
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),
+    title: 'Page not found'
+  },
 ];
 
 @NgModule({
