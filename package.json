@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "prod": "ng build --configuration=production"
+    "prod": "ng build --configuration=production",
+    "serve:ssr:cetrum-terapii": "node dist/cetrum-terapii/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "@angular/material": "^18.0.3",
     "@angular/platform-browser": "^18.0.3",
     "@angular/platform-browser-dynamic": "^18.0.3",
+    "@angular/platform-server": "^18.0.3",
     "@angular/router": "^18.0.3",
+    "@angular/ssr": "^18.2.10",
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/angular-fontawesome": "^0.15.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -30,6 +33,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "emailjs-com": "^3.2.0",
+    "express": "^4.18.2",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -42,7 +46,9 @@
     "@angular-devkit/build-angular": "^18.0.4",
     "@angular/cli": "^18.0.4",
     "@angular/compiler-cli": "^18.0.3",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

@@ -1,37 +1,43 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildren} from '@angular/core';
-import {Service} from "../../interfaces/services";
+import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildren, Inject, PLATFORM_ID } from '@angular/core';
+import { Service } from "../../interfaces/services";
+import { isPlatformBrowser } from '@angular/common';
 
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-price-list',
   templateUrl: './price-list.component.html',
-  styleUrl: './price-list.component.css'
+  styleUrls: ['./price-list.component.css']
 })
 export class PriceListComponent implements AfterViewInit, OnDestroy {
 
   @ViewChildren('popoverElement') popoverElements!: QueryList<ElementRef>;
   popovers: any[] = [];
 
-  ngAfterViewInit(): void {
-    this.popoverElements.forEach((popoverElement) => {
-      const popover = new bootstrap.Popover(popoverElement.nativeElement, {
-        trigger: 'click',
-        placement: 'left',
-        content: popoverElement.nativeElement.getAttribute('data-content') || 'No description provided'
-      });
-      this.popovers.push(popover);
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-    });
-    document.addEventListener('click', this.closeAllPopovers.bind(this), true);
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.popoverElements.forEach((popoverElement) => {
+        const popover = new bootstrap.Popover(popoverElement.nativeElement, {
+          trigger: 'click',
+          placement: 'left',
+          content: popoverElement.nativeElement.getAttribute('data-content') || 'No description provided'
+        });
+        this.popovers.push(popover);
+      });
+      document.addEventListener('click', this.closeAllPopovers.bind(this), true);
+    }
   }
 
   ngOnDestroy(): void {
-    document.removeEventListener('click', this.closeAllPopovers.bind(this), true);
+    if (isPlatformBrowser(this.platformId)) {
+      document.removeEventListener('click', this.closeAllPopovers.bind(this), true);
+    }
   }
 
   closeAllPopovers(event: MouseEvent): void {
-    this.popovers.forEach(popover => {
+    this.popovers.forEach((popover: any) => {
       if (!popover._element.contains(event.target)) {
         popover.hide();
       }
@@ -112,13 +118,13 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Terapia widzenia 10 spotkań płatnych z góry',
       price: '700 zł',
       time: '30 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut.'
+      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
     },
     {
       name: 'Terapia widzenia 10 spotkań płatnych z góry',
       price: '1450 zł',
       time: '45 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci powyżej 6 roku życia poleca się sesje trwające 45 minut.'
+      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci powyżej 6 roku życia poleca się sesje trwające 45 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
     },
   ];
 

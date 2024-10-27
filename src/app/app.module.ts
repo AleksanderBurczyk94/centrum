@@ -12,7 +12,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {PriceListComponent} from './core/price-list/price-list.component';
 import {CardListComponent} from './core/home/card-list/card-list.component';
 import {TherapistsComponent} from './core/home/therapists/therapists.component';
-import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
+import {provideHttpClient, withFetch, withInterceptorsFromDi} from "@angular/common/http";
 import {BlogComponent} from './core/blog/blog.component';
 import {MinorsProtectionComponent} from './core/documents/minors-protection/minors-protection.component';
 import {RodoComponent} from './core/footer/rodo/rodo.component';
@@ -61,7 +61,7 @@ import {AppRoutingModule} from "./app-routing.module";
   ],
   providers: [
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withInterceptorsFromDi(), withFetch()), // Dodano `withFetch()`
     provideClientHydration()
   ]
 })
