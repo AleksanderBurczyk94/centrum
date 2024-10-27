@@ -112,13 +112,13 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       name: 'Terapia widzenia 10 spotkań płatnych z góry',
       price: '700 zł',
       time: '30 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
+      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut.'
     },
     {
       name: 'Terapia widzenia 10 spotkań płatnych z góry',
       price: '1450 zł',
       time: '45 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci powyżej 6 roku życia poleca się sesje trwające 45 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
+      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci powyżej 6 roku życia poleca się sesje trwające 45 minut.'
     },
   ];
 
