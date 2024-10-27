@@ -54,9 +54,7 @@ const routes: Routes = [
   {
     path: AppPaths.CONTACT,
     loadChildren: () => import('./core/contact/contact.module').then(m => m.ContactModule),
-    title: 'Kontakt',
-    canDeactivate: [contactFormUnsavedChangesGuard]
-  },
+    title: 'Kontakt'},
   {
     path: AppPaths.RODO,
     loadChildren: () => import('./core/footer/rodo/rodo.module').then(m => m.RodoModule),
