@@ -6,5 +6,4 @@ import {faYoutube} from '@fortawesome/free-brands-svg-icons'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'cetrum-terapii';
 }

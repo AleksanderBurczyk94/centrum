@@ -6,6 +6,7 @@ import {BannerComponent} from "./banner/banner.component";
 import {TransparentBtnComponent} from "./white-button/transparent-btn.component";
 import {NextBackBtnComponent} from "./next-back-btn/next-back-btn.component";
 import {ColorButtonComponent} from "./color-button/color-button.component";
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import {ColorButtonComponent} from "./color-button/color-button.component";
     NextBackBtnComponent,
     ColorButtonComponent
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        RouterLink
+    ],
   exports: [
     BackBtnComponent,
     WhiteContainerComponent,

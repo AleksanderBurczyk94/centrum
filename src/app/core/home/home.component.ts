@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
 
   constructor(
@@ -26,21 +26,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const video = this.videoElement.nativeElement;
-
-      video.muted = true;
-      video.playsInline = true;
-      video.autoplay = true;
-
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error('Autoplay failed:', error);
-          // Opcjonalnie można obsłużyć błąd, np. przez wyświetlenie komunikatu dla użytkownika
-        });
-      }
-    }
-  }
+  // ngAfterViewInit(): void {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     const video = this.videoElement.nativeElement;
+  //
+  //     video.muted = true;
+  //     video.playsInline = true;
+  //     video.autoplay = true;
+  //
+  //     const playPromise = video.play();
+  //     if (playPromise !== undefined) {
+  //       playPromise.catch(error => {
+  //         console.error('Autoplay failed:', error);
+  //         // Opcjonalnie można obsłużyć błąd, np. przez wyświetlenie komunikatu dla użytkownika
+  //       });
+  //     }
+  //   }
+  // }
 }
