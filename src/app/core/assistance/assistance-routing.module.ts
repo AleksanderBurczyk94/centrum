@@ -22,12 +22,12 @@ let routes: Routes = [
       {
         path: 'psychologicalConsultations',
         component: PsychologicalConsultationsComponent,
-        title: 'Konsultacje psychologiczne'
+        title: 'Konsultacje Psychologiczne - Równowaga Kalisz'
       },
       {
         path: 'handTherapy',
         component: HandTherapyComponent,
-        title: 'Diagnoza i terapia ręki'
+        title: 'Diagnoza i Terapia Ręki'
       },
       {
         path: 'neuroTactileTherapy',
@@ -37,32 +37,32 @@ let routes: Routes = [
       {
         path: 'neurodevelopmentalReflexTherapy',
         component: NeurodevelopmentalReflexTherapyComponent,
-        title: 'Diagnoza i terapia neurorozwojowa odruchów INPP'
+        title: 'Terapia Odruchów INPP - Neurorozwój'
       },
       {
         path: 'sensoryIntegrationTherapy',
         component: SensoryIntegrationTherapyComponent,
-        title: 'Diagnoza i terapia integracji sensorycznej'
+        title: 'Terapia Integracji Sensorycznej'
       },
       {
         path: 'auditoryProcessingTherapy',
         component: AuditoryProcessingTherapyComponent,
-        title: 'Diagnoza i terapia Joansena'
+        title: 'Diagnoza i Terapia Słuchowa Joansena'
       },
       {
         path: 'pedagogicalTherapy',
         component: PedagogicalTherapyComponent,
-        title: 'Terapia Pedagogiczna'
+        title: 'Terapia Pedagogiczna - Centrum Równowaga'
       },
       {
         path: 'specialistConsultations',
         component: SpecialistConsultationsComponent,
-        title: 'Konsultacje specjalistyczne'
+        title: 'Konsultacje Specjalistyczne'
       },
       {
         path: 'visionTherapy',
         component: VisionTherapyComponent,
-        title: 'Terapia widzenia'
+        title: 'Terapia Widzenia - Rozwój Dziecka'
       },
     ]
   }

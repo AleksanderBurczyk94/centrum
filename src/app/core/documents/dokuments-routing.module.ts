@@ -24,7 +24,7 @@ let routes: Routes = [
       {
         path: AppPaths.MINORS_PROTECTION,
         component: MinorsProtectionComponent,
-        title: 'Standardy ochrony małoletnich'
+        title: 'Ochrona małoletnich - Standardy'
       },
     ]
   }
