@@ -18,17 +18,17 @@ import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-
 import {BlogComponent} from "./core/blog/blog.component";
 
 const routerOptions: ExtraOptions = {
-  scrollPositionRestoration: 'enabled', // Ustawienia przywracania pozycji przewijania
-  anchorScrolling: 'enabled',           // Włączenie przewijania do elementu z kotwicą
-  scrollOffset: [0, 100],              // Przesunięcie o 100px w górę
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 100],
 };
 
 const routes: Routes = [
-  { path: AppPaths.HOME, component: HomeComponent, title: 'Centrum Równowaga - Start' },
+  { path: AppPaths.HOME, component: HomeComponent, title: 'Centrum Równowaga Kalisz- Start' },
   {
     path: AppPaths.ASSISTANCE,
     loadChildren: () => import('./core/assistance/assistance.module').then(m => m.AssistanceModule),
-    title: 'Zakres Pomocy - Centrum Równowaga'
+    title: 'Zakres Pomocy i Usługi - Centrum Równowaga '
   },
   {
     path: AppPaths.PRICE_LIST,
@@ -38,7 +38,7 @@ const routes: Routes = [
   {
     path: AppPaths.OUR_CENTER,
     loadChildren: () => import('./core/our-center/our-center.module').then(m => m.OurCenterModule),
-    title: 'Nasze Centrum Terapii - Równowaga'
+    title: 'Nasze Centrum Terapii - Równowaga Kalisz'
   },
   {
     path: AppPaths.BLOG,
@@ -54,7 +54,7 @@ const routes: Routes = [
   {
     path: AppPaths.CONTACT,
     loadChildren: () => import('./core/contact/contact.module').then(m => m.ContactModule),
-    title: 'Kontakt z Centrum Równowaga'
+    title: 'Kontakt z Centrum Równowaga - Adres, Telefon, Wizyta'
   },
   {
     path: AppPaths.RODO,

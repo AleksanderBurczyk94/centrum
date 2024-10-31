@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {TherapistService} from "../../../services/therapist.service";
-import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-therapists',

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xxl py-0 sticky-top ">
   <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand me-5" routerLink="">
+    <a class="navbar-brand me-5" [routerLink]="[appPaths.HOME]">
       <img class="logo" src="./assets/img/logo-centrum-terapii-i-wsparcia-rozwoju-rowowaga-w-kaliszu.png" alt="logo Centrum Terapii I Wsparcia Rozwoju w Kaliszu">
     </a>
     <div class="d-flex align-items-center">
@@ -9,9 +9,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <app-color-button class="color-btn d-none d-sm-block d-xxl-none " routerLink="contact"
+      <app-color-button class="color-btn d-none d-sm-block d-xxl-none" [routerLink]="[appPaths.CONTACT]"
                         (click)="collapseNav()">
-        <div class="d-flex justify-content-center align-items-center ">
+        <div class="d-flex justify-content-center align-items-center">
           <img src="./assets/img/calendar.png" alt="ikona kalendarza">
           <p class="m-0">Umów wizytę</p>
         </div>
@@ -21,64 +21,63 @@
     <div class="collapse navbar-collapse no-wrap pb-2" id="navbarNavAltMarkup" #navbarNavAltMarkup>
       <ul class="navbar-nav ms-auto d-flex align-items-center p-0">
         <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="" (click)="setActiveLink('start'); collapseNav()" [class.active]="(activeLink$ | async) === 'start'">Start</a>
+          <a class="text-nav-color nav-link" [routerLink]="[appPaths.HOME]" (click)="setActiveLink('start'); collapseNav()" [class.active]="(activeLink$ | async) === 'start'">Start</a>
         </li>
-        <li class="nav-item dropdown text-center " #rla="routerLinkActive" routerLinkActive="active-dropdown">
-          <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
+        <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown">
+          <a class="nav-link text-nav-color" id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
             Zakres Pomocy <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
                                alt="strzałka dropdownu w dół">
           </a>
-          <ul class="dropdown-menu px-1 py-0 " aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/psychologicalConsultations"
+          <ul class="dropdown-menu px-1 py-0" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.PSYCHOLOGICAL_CONSULTATIONS]"
                    (click)="collapseNav(); resetActiveLink()">Konsultacje
               psychologiczne</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/sensoryIntegrationTherapy"
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.SENSORY_INTEGRATION_THERAPY]"
                    (click)="collapseNav(); resetActiveLink()">Terapia integracji
               sensorycznej</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neurodevelopmentalReflexTherapy" (click)="collapseNav(); resetActiveLink()">Trapia
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.NEURODEVELOPMENTAL_REFLEX_THERAPY]" (click)="collapseNav(); resetActiveLink()">Terapia
               neurorozwojowa odruchów <br> INPP</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/neuroTactileTherapy" (click)="collapseNav(); resetActiveLink()">Terapia NeuroTaktylna MNRI</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/auditoryProcessingTherapy" (click)="collapseNav(); resetActiveLink()">Terapia
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.NEUROTACTILE_THERAPY]" (click)="collapseNav(); resetActiveLink()">Terapia NeuroTaktylna MNRI</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.AUDITORY_PROCESSING_THERAPY]" (click)="collapseNav(); resetActiveLink()">Terapia
               przetwarzania <br> słuchowego Johansena</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/handTherapy" (click)="collapseNav(); resetActiveLink()">Diagnoza i terapia ręki</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/pedagogicalTherapy" (click)="collapseNav(); resetActiveLink()">Terapia pedagogiczna</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" routerLink="assistance/visionTherapy" (click)="collapseNav(); resetActiveLink()">Terapia widzenia</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active"  routerLink="assistance/specialistConsultations" (click)="collapseNav(); resetActiveLink()">Konsultacje specjalistyczne</a>
-            </li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.HAND_THERAPY]" (click)="collapseNav(); resetActiveLink()">Diagnoza i terapia ręki</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.PEDAGOGICAL_THERAPY]" (click)="collapseNav(); resetActiveLink()">Terapia pedagogiczna</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.VISION_THERAPY]" (click)="collapseNav(); resetActiveLink()">Terapia widzenia</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.ASSISTANCE, appPaths.SPECIALIST_CONSULTATIONS]" (click)="collapseNav(); resetActiveLink()">Konsultacje specjalistyczne</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="text-nav-color nav-link" (click)="setActiveLink('team'); collapseNav()" [class.active]="(activeLink$ | async) === 'team'"
-             fragment="team" routerLink="">Zespół</a></li>
+             fragment="team" [routerLink]="[appPaths.HOME]">Zespół</a></li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="priceList" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Cennik</a>
+          <a class="text-nav-color nav-link" [routerLink]="[appPaths.PRICE_LIST]" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Cennik</a>
         </li>
         <li class="nav-item">
-          <a class="text-nav-color nav-link " routerLink="ourCenter" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Nasze
+          <a class="text-nav-color nav-link" [routerLink]="[appPaths.OUR_CENTER]" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Nasze
             Centrum</a>
         </li>
 
-<!--        <li class="nav-item">-->
-<!--          <a class="text-nav-color nav-link " routerLink="blog" routerLinkActive="active"-->
-<!--             (click)="collapseNav()">Blog</a>-->
-<!--        </li>-->
+        <!--        <li class="nav-item">-->
+        <!--          <a class="text-nav-color nav-link" [routerLink]="[appPaths.BLOG]" routerLinkActive="active"-->
+        <!--             (click)="collapseNav()">Blog</a>-->
+        <!--        </li>-->
         <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown">
-          <a class="nav-link text-nav-color " id="navbarDropdown" role="button"
+          <a class="nav-link text-nav-color" id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla2.isActive">
             Dokumenty <img class="arrow" src="./assets/img/arrow-down-sign-to-navigate.png"
-                               alt="strzałka dropdownu w dół">
+                           alt="strzałka dropdownu w dół">
           </a>
           <ul class="dropdown-menu px-1 py-0" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.THERAPY_CONSENT]" (click)="collapseNav(); resetActiveLink()">Zgoda na udział w terapii</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.IMAGE_CONSENT]"  (click)="collapseNav(); resetActiveLink()">Zgoda na publikacje wizurunku</a></li>
-            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.MINORS_PROTECTION]"  (click)="collapseNav(); resetActiveLink()">Standardy ochrony małoletnich</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.IMAGE_CONSENT]" (click)="collapseNav(); resetActiveLink()">Zgoda na publikację wizerunku</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="[appPaths.DOCUMENTS, appPaths.MINORS_PROTECTION]" (click)="collapseNav(); resetActiveLink()">Standardy ochrony małoletnich</a></li>
           </ul>
         </li>
-        <li class="nav-item me-3 ">
-          <a class="text-nav-color nav-link " routerLink="contact" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Kontakt</a>
+        <li class="nav-item me-3">
+          <a class="text-nav-color nav-link" [routerLink]="[appPaths.CONTACT]" routerLinkActive="active" (click)="collapseNav(); resetActiveLink()">Kontakt</a>
         </li>
-        <app-color-button class="color-btn  d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-2" routerLink="contact"
+        <app-color-button class="color-btn d-sm-none d-xxl-block no-wrap me-4 mt-2 mb-2" [routerLink]="[appPaths.CONTACT]"
                           (click)="collapseNav(); resetActiveLink()">
           <img src="./assets/img/calendar.png" alt="ikona kalendarza">
           Umów wizytę
