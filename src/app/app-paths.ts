@@ -1,6 +1,6 @@
 export const AppPaths = {
   HOME: '',
-  ASSISTANCE: 'zakres-wsparcia',
+  ASSISTANCE: 'zakres-pomocy',
   PRICE_LIST: 'cennik',
   OUR_CENTER: 'nasze-centrum',
   BLOG: 'blog',

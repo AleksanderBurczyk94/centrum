@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {ExtraOptions, RouterModule, Routes} from '@angular/router';
+import {ExtraOptions, NavigationEnd, Router, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {
@@ -16,6 +16,8 @@ import {
 import {AppPaths} from "./app-paths";
 import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 import {BlogComponent} from "./core/blog/blog.component";
+import {filter} from "rxjs";
+import {Meta, Title} from "@angular/platform-browser";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -24,11 +26,20 @@ const routerOptions: ExtraOptions = {
 };
 
 const routes: Routes = [
-  { path: AppPaths.HOME, component: HomeComponent, title: 'Centrum Równowaga Kalisz- Start' },
+  {
+    path: AppPaths.HOME,
+    component: HomeComponent,
+    title: 'Diagnoza i Terapia Integracji Sensorycznej - Równowaga Kalisz',
+    data: {
+      description: 'Profesjonalna diagnoza i terapia integracji sensorycznej w Kaliszu dla dzieci i dorosłych.'
+    }
+  },
   {
     path: AppPaths.ASSISTANCE,
     loadChildren: () => import('./core/assistance/assistance.module').then(m => m.AssistanceModule),
-    title: 'Zakres Pomocy i Usługi - Centrum Równowaga '
+    title: 'Zakres Pomocy– Psycholog dziecięcy, integracja sensoryczna (SI), INPP',  data: {
+      description: 'TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    }
   },
   {
     path: AppPaths.PRICE_LIST,
@@ -38,7 +49,7 @@ const routes: Routes = [
   {
     path: AppPaths.OUR_CENTER,
     loadChildren: () => import('./core/our-center/our-center.module').then(m => m.OurCenterModule),
-    title: 'Nasze Centrum Terapii - Równowaga Kalisz'
+    title: 'Galeria zdjęć- Równowaga Kalisz'
   },
   {
     path: AppPaths.BLOG,
@@ -65,7 +76,7 @@ const routes: Routes = [
   {
     path: AppPaths.PAULINA_OKRASA_BURCZYK,
     component: PaulinaOkrasaBurczykComponent,
-    title: 'Paulina Okrasa-Burczyk - Właścicielka Centrum Równowaga'
+    title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog'
   },
   {
     path: AppPaths.KAROLINA_OKRASA_STASZAK,
@@ -95,7 +106,7 @@ const routes: Routes = [
   {
     path: AppPaths.PAGE_NOT_FOUND,
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),
-    title: 'Błąd 404 - Strona Nie Znaleziona'
+    title: 'Błąd 404 - Strona Nie Znaleziona',
   }
 ];
 
@@ -104,4 +115,27 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
+  constructor(private router: Router, private titleService: Title, private metaService: Meta) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      const route = this.router.routerState.root;
+      this.updateMetaTags(route);
+    });
+  }
+
+  private updateMetaTags(route: any) {
+    let child = route.firstChild;
+    while (child) {
+      if (child.snapshot.data['title']) {
+        this.titleService.setTitle(child.snapshot.data['title']);
+      }
+
+      if (child.snapshot.data['description']) {
+        this.metaService.updateTag({ name: 'description', content: child.snapshot.data['description'] });
+      }
+
+      child = child.firstChild;
+    }
+  }
 }

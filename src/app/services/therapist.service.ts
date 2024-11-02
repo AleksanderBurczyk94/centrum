@@ -19,42 +19,48 @@ export class TherapistService {
       id: 0,
       name: 'Paulina Okrasa-Burczyk',
       role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
-      image: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
+      webpImg: 'assets/img/Paulina-Okrasa-Burczyk.webp',
+      alterImg: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
       path: `${AppPaths.PAULINA_OKRASA_BURCZYK}`
     },
     {
       id: 1,
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
-      image: 'assets/img/awatar-damski.png',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.KAROLINA_OKRASA_STASZAK}`
     },
     {
       id: 2,
       name: 'Sylwia Szumska',
       role: 'Pedagożka, terapeutka SI, terapeutka pedagogiczna',
-      image: 'assets/img/awatar-damski.png',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.SYLWIA_SZUMSKA}`
     },
     {
       id: 3,
       name: 'Magdalena Mokrzycka',
       role: 'Terapeutka SI',
-      image: 'assets/img/awatar-damski.png',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.MAGDALENA_MOKRZYCKA}`
     },
     {
       id: 4,
       name: 'Agata Magdzicka-Banach',
       role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
-      image: 'assets/img/awatar-damski.png',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.AGATA_MAGDZICKA_BANACH}`
     },
     {
       id: 5,
       name: 'Marta Kęsicka',
       role: 'Pedagogożka, terapeutka w zakresie rehabilitacji ruchowej, terapeutka SI, trenerka umiejętności społecznych, instruktorka pilates, trenerka personalny.',
-      image: 'assets/img/awatar-damski.png',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.MARTA_KESICKA}`
     }
   ];

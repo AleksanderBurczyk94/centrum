@@ -7,7 +7,10 @@
 
       <div class="card mb-sm-3 " *ngFor="let card of cards" [routerLink]="[appPaths.ASSISTANCE, card.path]" (click)="resetActiveLink()">
         <div class="card-body">
-          <img class="p-0 mb-sm-2" [src]="card.imgSrc" [alt]="card.imgAlt">
+          <picture>
+          <source class="p-0 mb-sm-2" [srcset]="card.webpImg" type="image/webp">
+          <img class="p-0 mb-sm-2" [src]="card.alt" [alt]="card.alt">
+          </picture>
           <h3 class="card-title fs-4">{{card.title}}</h3>
           <p class="card-text fs-6"[innerHTML]="card.description">{{card.description}}</p>
         </div>

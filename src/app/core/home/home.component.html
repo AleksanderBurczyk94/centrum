@@ -1,6 +1,6 @@
 <div>
   <section class='top-hero'>
-    <video #videoElement  class="aboutus-hero" [muted]="'muted'"  playsinline autoplay loop poster="../../../assets/img/usmiechniete-dzieci.jpg">
+    <video #videoElement class="aboutus-hero" [muted]="'muted'" playsinline autoplay loop [poster]="videoPoster">
       <source src="../../../assets/video/terapia-integracji-sensorycznej-w-centrum-terpaii-i-wsparcia-rozwoju-kalisz2.mp4" type="video/mp4">
       Twoja przeglądarka nie wspiera elementu video.
     </video>
@@ -23,19 +23,28 @@
           <p><b>Równowaga</b> to miejsce, w&nbsp;którym uzyskacie Państwo <b>całościowe wsparcie</b> w&nbsp;różnych wyzwaniach,  z&nbsp;którymi zmagają się wasze dzieci, a&nbsp;także Wy&nbsp;– jako rodzice.</p>
           <div class="row">
             <div class="section col-sm-12 col-md-4 mt-3">
-              <img src="assets/img/development.png" alt="ikona postaci wchodząca coraz wyżej po słupkach" class="card-img-top">
+              <picture>
+                <source srcset="assets/img/development.webp" type="image/webp">
+                <img src="assets/img/development.png" alt="ikona postaci wchodząca coraz wyżej po słupkach" class="card-img-top">
+              </picture>
               <h3>Rozwój</h3>
               <p>Pomagamy w&nbsp;prawidłowym rozwoju senso-motorycznym, neurorozwojowym, i&nbsp;społeczno-emocjonalnym.</p>
             </div>
 
             <div class="section col-sm-12 col-md-4 mt-3">
-              <img src="assets/img/social-justice.png" alt="ikona dłoni okalających trzy postacie" class="card-img-top">
+              <picture>
+                <source srcset="assets/img/social-justice.webp" type="image/webp">
+                <img src="assets/img/social-justice.png" alt="ikona dłoni okalających trzy postacie" class="card-img-top">
+              </picture>
               <h3>Wsparcie</h3>
               <p>Słuchamy Państwa obaw, analizujemy trudności i&nbsp;udzielamy kompleksowego wsparcia i&nbsp;opieki.</p>
             </div>
 
             <div class="section col-sm-12 col-md-4 mt-3">
-              <img src="assets/img/businessman.png" alt="ikona ukazująca człowieka ze&nbsp;znaczkiem oznaczającym profesjonalizm" class="card-img-top">
+              <picture>
+                <source srcset="assets/img/businessman.webp" type="image/webp">
+                <img src="assets/img/businessman.png" alt="ikona ukazująca człowieka ze&nbsp;znaczkiem oznaczającym profesjonalizm" class="card-img-top">
+              </picture>
               <h3>Profesjonalizm</h3>
               <p>Służymy profesjonalną pomocą, tak aby dzieci mogły każdego dnia rozwijać swój potencjał, czerpiąc przy tym nieograniczone korzyści z&nbsp;ruchu i&nbsp;zabawy.</p>
             </div>

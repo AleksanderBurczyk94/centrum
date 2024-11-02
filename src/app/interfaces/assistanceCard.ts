@@ -1,6 +1,7 @@
 export interface AssistanceCard {
-  imgSrc: string;
-  imgAlt: string;
+  webpImg: string;
+  alterImg: string;
+  alt: string;
   title: string;
   description: string;
   path: string;
