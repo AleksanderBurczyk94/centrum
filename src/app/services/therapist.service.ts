@@ -9,12 +9,12 @@ import {AppPaths} from "../app-paths";
 })
 export class TherapistService {
 
-  private activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  private readonly activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
-  constructor(private router: Router) {
+  constructor(private readonly router: Router) {
   }
 
-  private therapists: Therapist[] = [
+  private readonly therapists: Therapist[] = [
     {
       id: 0,
       name: 'Paulina Okrasa-Burczyk',

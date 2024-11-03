@@ -11,7 +11,7 @@ export class KarolinaOkrasaStaszakComponent {
 
   therapist: Therapist | null = null;
 
-  constructor(private therapistService: TherapistService) {
+  constructor(private readonly therapistService: TherapistService) {
     this.therapist = this.therapistService.getActiveTherapist();
   }
 

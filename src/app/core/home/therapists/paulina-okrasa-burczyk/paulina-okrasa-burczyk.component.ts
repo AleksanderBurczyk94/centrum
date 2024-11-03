@@ -1,8 +1,6 @@
 import {Component} from '@angular/core';
 import {Therapist} from "../../../../interfaces/therpaists";
 import {TherapistService} from "../../../../services/therapist.service";
-import {Subscription} from "rxjs";
-import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-paulina-okrasa-burczyk',
@@ -12,7 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 export class PaulinaOkrasaBurczykComponent {
   therapist: Therapist | null = null;
 
-  constructor(private therapistService: TherapistService) {
+  constructor(private readonly therapistService: TherapistService) {
     this.therapist = this.therapistService.getActiveTherapist();
   }
 

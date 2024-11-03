@@ -14,7 +14,7 @@ export class ContactComponent {
   showSuccessAlert = false;
   showFeilureAlert = false;
 
-  constructor(private contactService: ContactService) {
+  constructor(private readonly contactService: ContactService) {
   }
 
   get controls() {

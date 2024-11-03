@@ -5,8 +5,10 @@
       <p class="role-title px-4">Założycielka Centrum Równowaga, pedagożka, terapeutka SI, terapeutka neurorozwojowa metody INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka</p>
     </div>
     <div class="col-md p-0 img-container">
-      <img [src]="therapist?.webpImg" [alt]="'Zdjęcie lub awatar ' + therapist?.name" class="">
-    </div>
+      <picture>
+        <source [srcset]="therapist?.webpImg" type="image/webp">
+        <img [src]="therapist?.alterImg" [alt]="'Zdjęcie r ' + therapist?.name" class="">
+      </picture>    </div>
     <div class="col-md assistance-box ">
       <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2">Zakres wsparcia
       </h2>
@@ -21,10 +23,16 @@
     </div>
   </div>
   <app-next-back-btn (click)="nextTherapist()" class="next-btn">
-    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w&nbsp;prawo'" class="arrow-btn">
+    <picture>
+      <source srcset="assets/img/right-arrow.webp" type="image/webp">
+      <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+    </picture>
   </app-next-back-btn>
   <app-next-back-btn (click)="prevTherapist()" class="back-btn">
-    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w&nbsp;prawo'" class="arrow-btn">
+    <picture>
+      <source srcset="assets/img/left-arrow.webp" type="image/webp">
+      <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w lewo'" class="arrow-btn">
+    </picture>
   </app-next-back-btn>
 </div>
 
@@ -142,11 +150,22 @@
     </ul>
   </div>
   <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center ms-sm-4 text-center text-sm-start">
-    <h4 class="mb-0">Sprawdź opinie na&nbsp;mój temat<img class="ms-3 arrow d-sm-inline d-none" src="assets/img/next.png" alt="Ikona strzałki w prawo"></h4>
-    <img class="ms-3 arrow d-sm-none" src="assets/img/down-arrow.png" alt="Ikona strzałki w dół">
-    <div class=" mb-4 ms-3 ">
+    <h4 class="mb-0">Sprawdź opinie na&nbsp;mój temat
+      <picture>
+        <source srcset="assets/img/next.webp" type="image/webp">
+        <img class="ms-3 arrow d-sm-inline d-none" src="assets/img/next.png" alt="Ikona strzałki w prawo">
+      </picture>
+    </h4>
+    <picture>
+      <source srcset="assets/img/down-arrow.webp" type="image/webp">
+      <img class="ms-3 arrow d-sm-none" src="assets/img/down-arrow.png" alt="Ikona strzałki w dół">
+    </picture>
+    <div class="mb-4 ms-3">
       <a href="https://www.znanylekarz.pl/paulina-okrasa/logopeda/kalisz#profile-reviews" target="_blank" class="me-2">
-        <img class="znany-icon mt-3 w-75" src="assets/img/znanylekarz.jpg" alt="Ikona portalu Znanylekarz">
+        <picture>
+          <source srcset="assets/img/znanylekarz.webp" type="image/webp">
+          <img class="znany-icon mt-3 w-75" src="assets/img/znanylekarz.jpg" alt="Ikona portalu Znanylekarz">
+        </picture>
       </a>
     </div>
   </div>

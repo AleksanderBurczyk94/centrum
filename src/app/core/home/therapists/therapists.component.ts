@@ -8,7 +8,7 @@ import {TherapistService} from "../../../services/therapist.service";
 })
 export class TherapistsComponent {
 
-  constructor(private therapistService: TherapistService) {
+  constructor(private readonly therapistService: TherapistService) {
   }
 
   therapists = this.therapistService.getTherapists();

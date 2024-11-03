@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildre
 import { Service } from "../../interfaces/services";
 import { isPlatformBrowser } from '@angular/common';
 
-declare var bootstrap: any;
+declare let bootstrap: any;
 
 @Component({
   selector: 'app-price-list',
@@ -14,7 +14,7 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('popoverElement') popoverElements!: QueryList<ElementRef>;
   popovers: any[] = [];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {

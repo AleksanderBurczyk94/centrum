@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class FooterComponent {
 
-  constructor(private router: Router) {
+  constructor(private readonly router: Router) {
   }
   goToContact() {
   this.router.navigate(['/contact'])

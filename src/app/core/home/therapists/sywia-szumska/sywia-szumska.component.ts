@@ -10,7 +10,7 @@ import {TherapistService} from "../../../../services/therapist.service";
 export class SywiaSzumskaComponent {
   therapist: Therapist | null = null;
 
-  constructor(private therapistService: TherapistService) {
+  constructor(private readonly therapistService: TherapistService) {
     this.therapist = this.therapistService.getActiveTherapist();
   }
 

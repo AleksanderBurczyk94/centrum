@@ -115,7 +115,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  constructor(private router: Router, private titleService: Title, private metaService: Meta) {
+  constructor(private readonly router: Router, private readonly titleService: Title, private readonly metaService: Meta) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {

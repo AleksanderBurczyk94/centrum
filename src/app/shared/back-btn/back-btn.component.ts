@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class BackBtnComponent {
 
-  constructor(private router: Router) {
+  constructor(private readonly router: Router) {
   }
 
   navigateToStart(){

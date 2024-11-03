@@ -19,11 +19,6 @@
 }
 
 img {
-  width: 250px;
-  cursor: pointer;
-}
-
-img {
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -104,10 +99,6 @@ button:hover {
 .contact-map iframe {
   width: 100%;
   min-height: 400px;
-}
-
-.access-box {
-  background-color: var(--white-color);
 }
 
 i {

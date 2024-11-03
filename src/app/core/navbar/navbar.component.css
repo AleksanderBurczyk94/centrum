@@ -28,16 +28,8 @@ img {
   }
 }
 
-.nav-link {
-  color: var(--black-color);
-}
-
 .navbar-toggler {
   font-size: 30px;
-}
-
-.nav-link {
-  margin-right: 8px;
 }
 
 app-color-button {
@@ -45,6 +37,7 @@ app-color-button {
 }
 
 .nav-link {
+  margin-right: 8px;
   position: relative;
   color: inherit;
 }
@@ -122,10 +115,6 @@ app-color-button {
 
 .arrow {
   height: 10px
-}
-
-.visit-btn {
-  width: 500px;
 }
 
 .no-wrap {

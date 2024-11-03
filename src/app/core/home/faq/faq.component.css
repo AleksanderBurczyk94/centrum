@@ -24,16 +24,16 @@
 
 .accordion-button:focus {
   background-color: rgba(214, 243, 239, 0.89);
-  box-shadow: 1px 1px 1px 1px rgba(114, 252, 223, 0.66);;
+  box-shadow: 1px 1px 1px 1px rgba(114, 252, 223, 0.66);
 }
 
 .down-btn {
   padding: 10px;
-  transition: transform 0.3s ease; /* Płynne przejście dla animacji */
+  transition: transform 0.3s ease;
 }
 
 .down-btn:hover {
-  transform: translateY(8px) scale(1.1); /* Przesunięcie przycisku w dół i powiększenie */
+  transform: translateY(8px) scale(1.1);
 }
 
 .down-btn:active {

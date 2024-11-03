@@ -16,10 +16,16 @@
 
   </div>
   <app-next-back-btn (click)="nextTherapist()" class="next-btn">
-    <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+    <picture>
+      <source srcset="assets/img/right-arrow.webp" type="image/webp">
+      <img [src]="'assets/img/right-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+    </picture>
   </app-next-back-btn>
   <app-next-back-btn (click)="prevTherapist()" class="back-btn">
-    <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w prawo'" class="arrow-btn">
+    <picture>
+      <source srcset="assets/img/left-arrow.webp" type="image/webp">
+      <img [src]="'assets/img/left-arrow.png'" [alt]="'ikona strzałki w lewo'" class="arrow-btn">
+    </picture>
   </app-next-back-btn>
 </div>
 <app-back-btn></app-back-btn>

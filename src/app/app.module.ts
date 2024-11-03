@@ -26,7 +26,6 @@ import {
 import {SharedModule} from "./shared/shared.module";
 import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 import {AppRoutingModule} from "./app-routing.module";
-import {contactFormUnsavedChangesGuard} from "./guards/contact-form-unsaved-changes.guard";
 
 @NgModule({
   declarations: [

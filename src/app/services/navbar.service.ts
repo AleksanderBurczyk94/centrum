@@ -6,10 +6,10 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class NavbarService {
-  private activeLinkSource = new BehaviorSubject<string>('');
+  private readonly activeLinkSource = new BehaviorSubject<string>('');
   activeLink$ = this.activeLinkSource.asObservable();
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
 
   setActiveLink(link: string): void {
     this.activeLinkSource.next(link);

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {faYoutube} from '@fortawesome/free-brands-svg-icons'
+import {Component} from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -33,7 +33,7 @@
              [class.active]="(activeLink$ | async) === 'start'">Start</a>
         </li>
         <li class="nav-item dropdown text-center" #rla="routerLinkActive" routerLinkActive="active-dropdown">
-          <a class="nav-link text-nav-color" id="navbarDropdown" role="button"
+          <a class="nav-link text-nav-color" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla.isActive">
             Zakres Pomocy
             <picture>
@@ -88,11 +88,6 @@
              (click)="collapseNav(); resetActiveLink()">Nasze
             Centrum</a>
         </li>
-
-        <!--        <li class="nav-item">-->
-        <!--          <a class="text-nav-color nav-link" [routerLink]="[appPaths.BLOG]" routerLinkActive="active"-->
-        <!--             (click)="collapseNav()">Blog</a>-->
-        <!--        </li>-->
         <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown">
           <a class="nav-link text-nav-color" id="navbarDropdown" role="button"
              data-bs-toggle="dropdown" aria-expanded="false" [class.pink-underline]="rla2.isActive">
