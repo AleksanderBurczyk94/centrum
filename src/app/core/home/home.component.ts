@@ -46,15 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit{
     }
   }
 
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    const scrollPosition = window.scrollY;
-    const triggerPosition = 200; // Możesz dostosować tę wartość, aby dostosować moment ładowania sekcji
-
-    if (scrollPosition > triggerPosition) {
-      this.isSectionVisible = true;
-    }
-  }
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       const video = this.videoElement.nativeElement;
