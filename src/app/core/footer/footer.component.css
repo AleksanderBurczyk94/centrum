@@ -22,17 +22,21 @@ footer {
   font-size: 18px;
 }
 
-img {
+.contact-icon {
   width: 55px;
+  height: 55px;
   cursor: pointer;
 }
 
+
 .social-media-box img {
   width: 40px;
+  height: 40px;
 }
 
 .logo {
-  width: 170px;
+  max-width: 170px;
+  max-height: 117px;
   transition: transform 0.3s ease;
 }
 
@@ -62,6 +66,7 @@ img {
 
   .contact-icon {
     width: 45px;
+    height: 45px;
   }
 }
 

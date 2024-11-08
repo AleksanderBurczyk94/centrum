@@ -92,6 +92,8 @@ app-color-button {
 }
 
 .logo {
+  max-width: 146px;
+  max-height: 100px;
   transition: transform 0.3s ease;
 }
 
