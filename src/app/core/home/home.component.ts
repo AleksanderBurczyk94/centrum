@@ -20,7 +20,6 @@ import {isPlatformBrowser} from '@angular/common';
 export class HomeComponent implements OnInit, AfterViewInit{
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
-  isSectionVisible = false;
   windowWidth: number = 0;
   constructor(
     private router: Router,
