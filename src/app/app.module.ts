@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {MatIconModule} from "@angular/material/icon";
 import {NavbarComponent} from "./core/navbar/navbar.component";
@@ -45,7 +44,6 @@ import {AppRoutingModule} from "./app-routing.module";
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
     MatIconModule,
     SharedModule
   ],

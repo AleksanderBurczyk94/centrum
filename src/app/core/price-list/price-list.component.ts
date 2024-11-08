@@ -67,10 +67,10 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       description: 'Terapia SI trwa 50 min. obejmujące ćwiczenia i omówienie zajęć z rodzicem. Polega na wykonywaniu przez dziecko specjalnie dobranych ćwiczeń i zabaw na sali integracji sensorycznej. Zajęcia przeprowadzane są indywidualnie dla każdego dziecka.'
     },
     {
-      name: 'Terapia NeuroTaktylna MNRI',
+      name: 'Terapia NeuroTaktylna MNRI®',
       price: '130 zł',
       time: '50 min',
-      description: 'Terapia NeuroTaktylna MNRI (Metoda Neuro-Sensoryczno-Refleksyjna) trwa 50 min. obejmujące stymulację taktylną i omówienie zajęć z rodzicem. Podczas zajęć dziecko leży, a terapeuta pracuje nad poprawą funkcjonowania układu nerwowego poprzez specjalne taktylne ruchy przypominające masaż.'
+      description: 'Terapia NeuroTaktylna MNRI® (Metoda Neuro-Sensoryczno-Refleksyjna) trwa 50 min. obejmujące stymulację taktylną i omówienie zajęć z rodzicem. Podczas zajęć dziecko leży, a terapeuta pracuje nad poprawą funkcjonowania układu nerwowego poprzez specjalne taktylne ruchy przypominające masaż.'
     },
     {
       name: 'Terapia ręki',

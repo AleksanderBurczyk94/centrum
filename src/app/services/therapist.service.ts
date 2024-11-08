@@ -58,7 +58,7 @@ export class TherapistService {
     {
       id: 5,
       name: 'Marta Kęsicka',
-      role: 'Pedagogożka, terapeutka w zakresie rehabilitacji ruchowej, terapeutka SI, trenerka umiejętności społecznych, instruktorka pilates, trenerka personalny.',
+      role: 'Pedagogożka, terapeutka w zakresie rehabilitacji ruchowej, terapeutka SI, trenerka umiejętności społecznych, instruktorka pilates, trenerka personalna.',
       webpImg: 'assets/img/awatar-damski.webp',
       alterImg: 'assets/img/awatar-damski.png',
       path: `${AppPaths.MARTA_KESICKA}`

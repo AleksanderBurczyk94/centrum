@@ -30,7 +30,7 @@ let routes: Routes = [
       {
         path: AppPaths.NEUROTACTILE_THERAPY,
         component: NeuroTactileTherapyComponent,
-        title: 'Terapia NeuroTaktylna MNRI'
+        title: 'Terapia NeuroTaktylna MNRI®'
       },
       {
         path: AppPaths.NEURODEVELOPMENTAL_REFLEX_THERAPY,
