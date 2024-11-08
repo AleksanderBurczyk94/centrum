@@ -26,8 +26,8 @@ export class NavbarService {
       if (teamSection) {
         const teamRect = teamSection.getBoundingClientRect();
         const teamIsVisibleEnough =
-          teamRect.top <= window.innerHeight * 0.75 &&
-          teamRect.bottom > window.innerHeight * 0.25;
+          teamRect.top <= window.innerHeight * 0.85 &&
+          teamRect.bottom > window.innerHeight * 0.55;
 
         this.setActiveLink(teamIsVisibleEnough ? 'team' : 'start');
       }

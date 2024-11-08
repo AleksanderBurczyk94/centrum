@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit, AfterViewInit{
   ) {}
 
   ngOnInit(): void {
-
     if (isPlatformBrowser(this.platformId)) {
       const script = this.renderer.createElement('script');
       script.src = 'https://static.elfsight.com/platform/platform.js';
