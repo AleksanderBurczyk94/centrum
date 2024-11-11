@@ -14,18 +14,27 @@ let routes: Routes = [
       {
         path: AppPaths.THERAPY_CONSENT,
         component: TherapyConsentComponent,
-        title: 'Zgoda na udział w terapii'
+        title: 'Zgoda na udział w terapii',
+        data: {
+          description: 'Pobierz formularz zgody na udział w terapii w Centrum Równowaga w Kaliszu. Wypełnij i zapewnij sobie profesjonalne wsparcie terapeutyczne.'
+        }
       },
       {
         path: AppPaths.IMAGE_CONSENT,
         component: ImageConsentComponent,
-        title: 'Zgoda na publikacje wizerunku'
+        title: 'Zgoda na publikacje wizerunku',
+        data: {
+          description: 'Formularz zgody na publikację wizerunku w Centrum Równowaga w Kaliszu. Zapewniamy pełną ochronę danych zgodnie z RODO.'
+        }
       },
       {
         path: AppPaths.MINORS_PROTECTION,
         component: MinorsProtectionComponent,
-        title: 'Ochrona małoletnich - Standardy'
-      },
+        title: 'Ochrona małoletnich - Standardy',
+        data: {
+          description: 'Zapoznaj się z zasadami ochrony małoletnich w Centrum Równowaga w Kaliszu. Sprawdź nasze standardy bezpieczeństwa i politykę RODO.'
+        }
+      }
     ]
   }
 ];
