@@ -12,7 +12,6 @@ export class AgataMagdzickaBanachComponent {
   therapist: Therapist | null = null;
 
   constructor(private therapistService: TherapistService) {
-    this.therapist = this.therapistService.getActiveTherapist();
   }
 
 

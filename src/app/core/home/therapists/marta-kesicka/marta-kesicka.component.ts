@@ -12,7 +12,6 @@ export class MartaKesickaComponent {
   therapist: Therapist | null = null;
 
   constructor(private readonly therapistService: TherapistService) {
-    this.therapist = this.therapistService.getActiveTherapist();
   }
 
   nextTherapist() {

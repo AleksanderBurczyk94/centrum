@@ -25,6 +25,7 @@ import {
 import {SharedModule} from "./shared/shared.module";
 import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 import {AppRoutingModule} from "./app-routing.module";
+import { TherapistTemplateComponent } from './core/home/therapists/therapist-template/therapist-template.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {AppRoutingModule} from "./app-routing.module";
     MagdalenaMokrzyckaComponent,
     AgataMagdzickaBanachComponent,
     MartaKesickaComponent,
+    TherapistTemplateComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

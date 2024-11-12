@@ -1,6 +1,7 @@
 export const AppPaths = {
   HOME: '',
   ASSISTANCE: 'zakres-pomocy',
+  THERAPIST_TEMPLATE: 'terapeuta',
   PRICE_LIST: 'cennik',
   OUR_CENTER: 'nasze-centrum',
   BLOG: 'blog',
@@ -29,10 +30,10 @@ export const AppPaths = {
   IMAGE_CONSENT: 'zgoda-na-udostepnienie-wizerunku',
 
   // terapeuci
-  PAULINA_OKRASA_BURCZYK: 'terapeuta/0',
-  KAROLINA_OKRASA_STASZAK: 'terapeuta/1',
-  SYLWIA_SZUMSKA: 'terapeuta/2',
-  MAGDALENA_MOKRZYCKA: 'terapeuta/3',
-  AGATA_MAGDZICKA_BANACH: 'terapeuta/4',
-  MARTA_KESICKA: 'terapeuta/5',
+  // PAULINA_OKRASA_BURCZYK: 'terapeuta/0',
+  // KAROLINA_OKRASA_STASZAK: 'terapeuta/1',
+  // SYLWIA_SZUMSKA: 'terapeuta/2',
+  // MAGDALENA_MOKRZYCKA: 'terapeuta/3',
+  // AGATA_MAGDZICKA_BANACH: 'terapeuta/4',
+  // MARTA_KESICKA: 'terapeuta/5',
 };

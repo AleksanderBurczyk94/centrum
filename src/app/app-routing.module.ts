@@ -18,6 +18,7 @@ import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-
 import {BlogComponent} from "./core/blog/blog.component";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
+import {TherapistTemplateComponent} from "./core/home/therapists/therapist-template/therapist-template.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -94,53 +95,58 @@ const routes: Routes = [
     }
   },
   {
-    path: AppPaths.PAULINA_OKRASA_BURCZYK,
-    component: PaulinaOkrasaBurczykComponent,
-    title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog',
-    data: {
-      description: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
-    }
+    path: 'terapeuta/:id',
+    component: TherapistTemplateComponent,
+    title: 'Terapeuta - Centrum Równowaga!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
   },
-  {
-    path: AppPaths.KAROLINA_OKRASA_STASZAK,
-    component: KarolinaOkrasaStaszakComponent,
-    title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
-    data: {
-      description: 'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.'
-    }
-  },
-  {
-    path: AppPaths.SYLWIA_SZUMSKA,
-    component: SywiaSzumskaComponent,
-    title: 'Sylwia Szumska - Terapeuta Równowaga',
-    data: {
-      description: 'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.'
-    }
-  },
-  {
-    path: AppPaths.MAGDALENA_MOKRZYCKA,
-    component: MagdalenaMokrzyckaComponent,
-    title: 'Magdalena Mokrzycka - Specjalista Równowaga',
-    data: {
-      description: 'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.'
-    }
-  },
-  {
-    path: AppPaths.AGATA_MAGDZICKA_BANACH,
-    component: AgataMagdzickaBanachComponent,
-    title: 'Agata Magdzicka-Banach - Terapia Dzieci i Młodzieży',
-    data: {
-      description: 'Agata Magdzicka-Banach - pedagog, surdopedagog, tyflopedagog i terapeutka EEG Biofeedback w Centrum Równowaga. Wspiera dzieci w spektrum autyzmu i z trudnościami rozwojowymi.'
-    }
-  },
-  {
-    path: AppPaths.MARTA_KESICKA,
-    component: MartaKesickaComponent,
-    title: 'Marta Kęsicka - Terapia Gabinet Równowaga',
-    data: {
-      description: 'Marta Kęsicka - pedagog, terapeutka SI i instruktorka pilates w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.'
-    }
-  },
+  // {
+  //   path: AppPaths.PAULINA_OKRASA_BURCZYK,
+  //   component: PaulinaOkrasaBurczykComponent,
+  //   title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog',
+  //   data: {
+  //     description: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
+  //   }
+  // },
+  // {
+  //   path: AppPaths.KAROLINA_OKRASA_STASZAK,
+  //   component: KarolinaOkrasaStaszakComponent,
+  //   title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
+  //   data: {
+  //     description: 'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.'
+  //   }
+  // },
+  // {
+  //   path: AppPaths.SYLWIA_SZUMSKA,
+  //   component: SywiaSzumskaComponent,
+  //   title: 'Sylwia Szumska - Terapeuta Równowaga',
+  //   data: {
+  //     description: 'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.'
+  //   }
+  // },
+  // {
+  //   path: AppPaths.MAGDALENA_MOKRZYCKA,
+  //   component: MagdalenaMokrzyckaComponent,
+  //   title: 'Magdalena Mokrzycka - Specjalista Równowaga',
+  //   data: {
+  //     description: 'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.'
+  //   }
+  // },
+  // {
+  //   path: AppPaths.AGATA_MAGDZICKA_BANACH,
+  //   component: AgataMagdzickaBanachComponent,
+  //   title: 'Agata Magdzicka-Banach - Terapia Dzieci i Młodzieży',
+  //   data: {
+  //     description: 'Agata Magdzicka-Banach - pedagog, surdopedagog, tyflopedagog i terapeutka EEG Biofeedback w Centrum Równowaga. Wspiera dzieci w spektrum autyzmu i z trudnościami rozwojowymi.'
+  //   }
+  // },
+  // {
+  //   path: AppPaths.MARTA_KESICKA,
+  //   component: MartaKesickaComponent,
+  //   title: 'Marta Kęsicka - Terapia Gabinet Równowaga',
+  //   data: {
+  //     description: 'Marta Kęsicka - pedagog, terapeutka SI i instruktorka pilates w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.'
+  //   }
+  // },
   {
     path: AppPaths.PAGE_NOT_FOUND,
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),

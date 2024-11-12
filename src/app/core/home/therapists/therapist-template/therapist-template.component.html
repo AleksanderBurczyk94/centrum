@@ -1,0 +1,74 @@
+<div class="person-box">
+  <div class="row d-flex justify-content-center align-items-center name-box">
+    <div class="col-md text-center my-4">
+      <h2 class="card-title fw-bold mb-3 mx-2">{{ therapist?.name }}</h2>
+      <p class="role-title px-4" [innerHTML]="therapist?.role"></p>
+    </div>
+    <div class="col-md p-0 img-container">
+      <picture>
+        <source [srcset]="therapist?.webpImg" type="image/webp">
+        <img [src]="therapist?.alterImg" [alt]="'Zdjęcie ' + therapist?.name">
+      </picture>
+    </div>
+    <div class="col-md assistance-box">
+      <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2">Zakres wsparcia</h2>
+      <ul class="mx-2">
+        <li *ngFor="let item of therapist?.assistance" [innerHTML]="item"></li>
+      </ul>
+    </div>
+  </div>
+
+  <app-next-back-btn (click)="nextTherapist()" class="next-btn">
+    <picture>
+      <source srcset="assets/img/right-arrow.webp" type="image/webp">
+      <img src="assets/img/right-arrow.png" alt="Ikona strzałki w prawo" class="arrow-btn">
+    </picture>
+  </app-next-back-btn>
+  <app-next-back-btn (click)="prevTherapist()" class="back-btn">
+    <picture>
+      <source srcset="assets/img/left-arrow.webp" type="image/webp">
+      <img src="assets/img/left-arrow.png" alt="Ikona strzałki w lewo" class="arrow-btn">
+    </picture>
+  </app-next-back-btn>
+</div>
+
+<div class="about-me-section">
+  <div class="px-3">
+    <h2 class="title underline-title">O mnie</h2>
+    <p class="about-text" [innerHTML]="therapist?.aboutMe"></p>
+
+    <div *ngFor="let section of therapist?.sections">
+      <h3 class="subtitle" [innerHTML]="section.title"></h3>
+      <p class="about-text" [innerHTML]="section.content"></p>
+    </div>
+  </div>
+
+  <div class="qualifications-section">
+    <h2 class="underline-title">Kwalifikacje</h2>
+    <h3 class="pt-2">Wykształcenie</h3>
+    <ul>
+      <li *ngFor="let education of therapist?.qualifications?.education" [innerHTML]="education"></li>
+    </ul>
+    <div *ngIf="therapist?.qualifications?.certificates">
+      <h3>Certyfikaty</h3>
+      <ul>
+        <li *ngFor="let certificate of therapist?.qualifications?.certificates" [innerHTML]="certificate"></li>
+      </ul>
+    </div>
+    <div *ngIf="therapist?.qualifications?.specialistTrainings">
+      <h3>Szkolenia Specjalistyczne</h3>
+      <ul>
+        <li
+          *ngFor="let specialistTrainings of therapist?.qualifications?.specialistTrainings" [innerHTML]="specialistTrainings"></li>
+      </ul>
+    </div>
+    <div *ngIf="therapist?.qualifications?.sensoryIntegrationTrainings">
+      <h3>Szkolenia z Integracji Sensorycznej</h3>
+      <ul>
+        <li
+          *ngFor="let sensoryIntegrationTrainings of therapist?.qualifications?.sensoryIntegrationTrainings" [innerHTML]="sensoryIntegrationTrainings"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-back-btn></app-back-btn>
