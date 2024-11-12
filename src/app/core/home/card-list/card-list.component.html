@@ -5,11 +5,12 @@
   <div class="container d-flex justify-content-center align-items-stretch text-center ">
     <div class="card-container row row-cols-md-2 row-cols-lg-3 ">
 
-      <div class="card mb-sm-3 " *ngFor="let card of cards" [routerLink]="[appPaths.ASSISTANCE, card.path]" (click)="resetActiveLink()">
+      <div class="card mb-sm-3 " *ngFor="let card of cards" [routerLink]="[appPaths.ASSISTANCE, card.path]" (click)="resetActiveLink() ">
         <div class="card-body">
           <picture>
           <source class="p-0 mb-sm-2" [srcset]="card.webpImg" type="image/webp">
-          <img class="p-0 mb-sm-2" [src]="card.alt" [alt]="card.alt">
+          <img class="p-0 mb-sm-2" [src]="card.alt" [alt]="card.alt" width="150"
+               height="150">
           </picture>
           <h3 class="card-title fs-4">{{card.title}}</h3>
           <p class="card-text fs-6" [innerHTML]="card.description">{{card.description}}</p>

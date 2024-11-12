@@ -26,7 +26,6 @@ import {SharedModule} from "../../shared/shared.module";
     NeuroTactileTherapyComponent,
     AuditoryProcessingTherapyComponent,
     HandTherapyComponent,
-    SpecialistConsultationsComponent,
     PedagogicalTherapyComponent,
     SpecialistConsultationsComponent,
     VisionTherapyComponent,
