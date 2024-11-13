@@ -11,10 +11,15 @@ export class TherapistService implements OnDestroy {
   public appPaths = AppPaths;
   private activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private activeTherapistSubscription: Subscription;
+
   private readonly therapists: Therapist[] = [{
     id: 0,
+    seoData: {
+      title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog',
+      metaDescription: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
+    },
     name: 'Paulina Okrasa-Burczyk',
-    role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka&nbsp;SI, terapeutka neurorozwojowa metody&nbsp;INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
+    role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka integracji&nbsp;sensorycznej, terapeutka neurorozwojowa metody&nbsp;INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
     webpImg: 'assets/img/Paulina-Okrasa-Burczyk.webp',
     alterImg: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
     assistance: [
@@ -94,10 +99,102 @@ export class TherapistService implements OnDestroy {
         'Teoria poliwagalna i&nbsp;integracja sensoryczna w&nbsp;praktyce, badanie zależności w&nbsp;teorii i&nbsp;wskazania do&nbsp;terapii, szkolenie Fundacja Promyk Słońca, prowadząca Tracy Murnan Stackhouse',
       ],
     },
-
   },
     {
-      id: 1,
+    id: 1,
+      seoData: {
+        title: 'Sylwia Szumska - Terapeuta Równowaga',
+        metaDescription: 'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.'
+      },
+    name: 'Sylwia Szumska',
+    role: 'Pedagożka, terapeutka pedagogiczna, oligofrenopedagog, terapeutka dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, terapeutka integracji&nbsp;sensorycznejcji, terapeutka ręki I&nbsp;i&nbsp;II stopnia',
+    webpImg: 'assets/img/awatar-damski.webp',
+    alterImg: 'assets/img/awatar-damski.png',
+    assistance: [
+      'Terapia integracji sensorycznej (SI)',
+      'Terapia pedagogiczna dla dzieci z&nbsp;trudnościami w&nbsp;nauce',
+      'Wsparcie dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
+      'Terapia ręki I&nbsp;i&nbsp;II stopnia',
+      'Terapia dzieci z&nbsp;niepełnosprawnością intelektualną',
+      'Socjoterapia – wsparcie w&nbsp;rozwijaniu umiejętności społecznych i&nbsp;emocjonalnych',
+      'Zajęcia sensomotoryczne wspomagające koordynację ruchową i&nbsp;motorykę',
+      'Wspomaganie rozwoju dzieci z&nbsp;trudnościami szkolnymi (dysleksja, dysgrafia, dyskalkulia)',
+      'Konsultacje dla rodziców dotyczące rozwoju dziecka i&nbsp;metod wsparcia',
+      'Terapia zaburzeń emocjonalnych i&nbsp;społecznych u&nbsp;dzieci',
+    ],
+    aboutMe: `
+      Praca z&nbsp;dziećmi jest moim powołaniem i&nbsp;świadomym wyborem. Jestem pasjonatką pracy z&nbsp;dziećmi, która
+      daje mi&nbsp;wiele radości, bo&nbsp;mogę dzielić się wszystkim, co&nbsp;pomaga w&nbsp;ich funkcjonowaniu i&nbsp;co&nbsp;najważniejsze,
+      przynosi uśmiech. Uśmiechnięte dziecko, uśmiechnięty terapeuta to&nbsp;uśmiechnięty i&nbsp;lepszy świat. W&nbsp;swoich
+      działaniach kieruję się mottem zaczerpniętym od&nbsp;B.Cage, że „Nauczyciel widzi więcej niż tylko twarze dzieci – stara się zobaczyć ich dusze”.
+    `,
+    sections: [
+      {
+        title: 'Nieustanny rozwój zawodowy – zdobywanie nowych doświadczeń',
+        content: `
+          Pracując z&nbsp;dziećmi z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, nieustannie dbam o&nbsp;swój rozwój,
+          uczestnicząc w&nbsp;r&oacute;żnego rodzaju szkoleniach, seminariach, kursach, webinariach, projektach i&nbsp;wolontariatach.
+          <br><br>
+          Dodatkowo, wykorzystując swoją pasję do&nbsp;pracy z&nbsp;dziećmi, pracowałam jako:
+          <ul>
+            <li>Wolontariusz w&nbsp;ramach projektu hipoterapii „Ćwicz dla&nbsp;siebie. Nie&nbsp;przestawaj. Trenuj” realizowanego przez
+            Pleszewskie Stowarzyszenie na&nbsp;Rzecz Os&oacute;b Niepełnosprawnych „Razem w&nbsp;Przyszłość”</li>
+            <li>Opiekun zajęć organizowanych przez Miasto Kalisz w&nbsp;ramach „Ferii Zimowych w&nbsp;Mieście dla&nbsp;dzieci kl. I-IV” w&nbsp;Szkole Podstawowej nr&nbsp;1</li>
+            <li>Instruktor p&oacute;łkolonii letnich w&nbsp;Klubie Osiedlowym „Blaszak” Kaliskiej Sp&oacute;łdzielni Mieszkaniowej w&nbsp;Kaliszu</li>
+            <li>Instruktor p&oacute;łkolonii letnich w&nbsp;Klubie Osiedlowym XXV-lecia Kaliskiej Sp&oacute;łdzielni Mieszkaniowej w&nbsp;Kaliszu</li>
+          </ul>
+        `,
+      },
+      {
+        title: 'Doświadczenie&nbsp;zawodowe',
+        content: `
+          Doświadczenie w&nbsp;pracy z&nbsp;dziećmi z&nbsp;niepełnosprawnością intelektualną zdobyłam, praktykując w&nbsp;Zespole
+          Placówek Specjalnych w&nbsp;Pleszewie, a&nbsp;następnie rozpoczęłam pracę zawodową i&nbsp;terapeutyczną w&nbsp;szkołach
+          ogólnodostępnych jako nauczyciel wsp&oacute;łorganizujący kształcenie dzieci ze&nbsp;spektrum autyzmu, terapię
+          pedagogiczną oraz&nbsp;zajęcia integracji sensorycznej. Obecnie, poza&nbsp;pracą terapeuty integracji sensorycznej
+          w&nbsp;Centrum R&oacute;wnowaga, pracuję w&nbsp;Szkole Podstawowej nr&nbsp;18 z&nbsp;oddziałami dla&nbsp;Dzieci z&nbsp;Autyzmem,
+          gdzie&nbsp;pracuję jako nauczyciel wychowawca klasy 3 dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu.
+        `,
+      },
+      {
+        title: 'Prywatnie',
+        content: `
+          W&nbsp;życiu prywatnym czas wolny spędzam z&nbsp;rodziną, naszym domowym pupilem kr&oacute;likiem Hepikiem, przyjaciółmi
+          i&nbsp;muzyką. Kocham taniec – tańczę bachatę i&nbsp;salsę. Bardzo lubię prace handmade, dekorację wnętrz,
+          podr&oacute;że, długie spacery, prace w&nbsp;ogrodzie wśr&oacute;d kwiat&oacute;w oraz&nbsp;sport, jak&nbsp;wycieczki rowerowe i&nbsp;narty
+          bieg&oacute;wki.
+        `,
+      },
+    ],
+    qualifications: {
+      education: [
+        'Niepubliczny Ośrodek Doskonalenia Nauczycieli COGNITUS.PL – Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia',
+        'Uczelnia Nauk Społecznych w&nbsp;Łodzi – Studia Podyplomowe, Integracja Sensoryczna - diagnoza i&nbsp;terapia',
+        'Wyższa Szkoła Bankowa w&nbsp;Poznaniu – Studia Podyplomowe, Edukacja i&nbsp;terapia os&oacute;b z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
+        'Collegium Da Vinci Poznań – Studia Podyplomowe, Oligofrenopedagogika z&nbsp;elementami integracji sensorycznej',
+        'Gnieźnieńska Wyższa Szkoła Humanistyczno-Menedżerska „MILENIUM” – Studia Podyplomowe, Wychowanie wczesnoszkolne i&nbsp;przedszkolne',
+        'Politechnika Poznańska – Studia Uzupełniające Magisterskie, Inżynieria Komunikacji Interpersonalnej i&nbsp;Public Relations',
+      ],
+      specialistTrainings: [
+        'Webinar „Jak polepszyć sen u&nbsp;os&oacute;b ze&nbsp;spektrum autyzmu”, Terapia Zajęciowa Profesjonalnie',
+        'Webinar „Sprawozdanie pedagoga specjalnego”, Specjalni.pl Niepubliczny Ośrodek Doskonalenia Nauczycieli',
+        'Szkolenie PBP Książnica Pedagogiczna w&nbsp;Kaliszu „TIK-owy nauczyciel – Genial.ly - część II”',
+        'Seminarium ODN Kalisz: „Pomoc psychologiczno-pedagogiczna udzielana uczniom przez specjalist&oacute;w szkolnych”',
+        'Szkolenie „ABC pracy nauczyciela wsp&oacute;łorganizującego proces kształcenia uczni&oacute;w ze&nbsp;specjalnymi potrzebami edukacyjnymi”',
+      ],
+      certificates: [
+        'Integracja Sensoryczna – diagnoza i&nbsp;terapia, Uczelnia Nauk Społecznych w&nbsp;Łodzi',
+        'Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia, Cognitus Niepubliczny Ośrodek Doskonalenia Nauczycieli',
+        'Certyfikat OSEhero, Og&oacute;lnopolski Projekt Edukacyjny OSEhero w&nbsp;roku szkolnym 2023/2024',
+      ],
+    },
+  },
+    {
+      id: 2,
+      seoData: {
+        title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
+        metaDescription: 'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.'
+      },
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
       webpImg: 'assets/img/awatar-damski.webp',
@@ -117,7 +214,7 @@ export class TherapistService implements OnDestroy {
     Każdy etap życia, począwszy od narodzin, wiąże się z różnorodnymi wyzwaniami, które są kluczowe dla dalszego rozwoju.
     Te wyzwania pomagają w zdobywaniu nowych umiejętności, w tym w obszarze zdrowia psychicznego. Każde dziecko ma swoje
     unikalne predyspozycje, wynikające zarówno z jego indywidualnych cech, jak i z wpływu otoczenia. Wspieram dzieci i
-    młodzież w radzeniu sobie z tymi wyzwaniami, rozumiejąc, że każdy przypadek jest wyjątkowy.
+    młodzież w radzeniu sobie z tymi wyzwaniami, rozumiejąc, że każdy przypadek jest wyjątkowy.<br><br>
 
     W dzisiejszym, szybko zmieniającym się świecie, dzieci i młodzież mierzą się nie tylko z naturalnymi trudnościami
     rozwojowymi, ale także z wyzwaniami, które mogą wpływać na ich zdrowie psychiczne. Jeśli dostrzegasz niepokojące
@@ -138,6 +235,7 @@ export class TherapistService implements OnDestroy {
           title: 'Doświadczenie zawodowe',
           content: `
           Doświadczenie zawodowe zdobywałam, pracując na oddziałach szpitalnych, gdzie zajmowałam się diagnozą funkcji poznawczych oraz wsparciem pacjentów, zwracając szczególną uwagę na relacje między ciałem a psychiką. Pracowałam również w instytucjach państwowych, gdzie pomagałam pacjentom w różnego rodzaju kryzysach psychologicznych.
+          <br><br>
           Obecnie pracuję w szkole podstawowej, gdzie prowadzę zajęcia indywidualne wspierające rozwój emocjonalny i społeczny dzieci oraz organizuję warsztaty dla klas z zakresu profilaktyki zdrowia psychicznego.
       `,
         },
@@ -152,7 +250,11 @@ export class TherapistService implements OnDestroy {
       },
     },
     {
-      id: 2,
+      id: 3,
+      seoData: {
+        title: 'Magdalena Mokrzycka - Specjalista Równowaga',
+        metaDescription: 'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.'
+      },
       name: 'Magdalena Mokrzycka',
       role: 'Pedagożka, terapeutka integracji&nbsp;sensorycznej',
       webpImg: 'assets/img/awatar-damski.webp',
@@ -198,6 +300,13 @@ export class TherapistService implements OnDestroy {
       `
         },
         {
+          title: 'Prywatnie',
+          content: `W&nbsp;życiu prywatnym czas wolny spędzam z&nbsp;dobrą książką i&nbsp;herbatą.',
+           'Bardzo lubię gotować i&nbsp;zaskakiwać nowymi przepisami mojego męża oraz&nbsp;bliskich.',
+          'Wraz z&nbsp;mężem lubimy wspólnie spędzać czas na&nbsp;wyjazdach i&nbsp;podróżach po&nbsp;pięknej i&nbsp;malowniczej Polsce.',
+           'Oboje kochamy zwierzęta! Od&nbsp;ponad półtora roku w&nbsp;naszym życiu pojawił się kocurek rasy Ragdoll.`,
+        },
+        {
           title: 'Doświadczenie zawodowe',
           content: `
         Od&nbsp;ponad dwóch lat pracuję na&nbsp;cały etat w&nbsp;kaliskiem Domu Dziecka. Praca ta&nbsp;utwierdziła mnie w&nbsp;przekonaniu,
@@ -215,38 +324,86 @@ export class TherapistService implements OnDestroy {
           'Oligofrenopedagogika z&nbsp;elementami arteterapii, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu – studia podyplomowe (w&nbsp;trakcie)'
         ]
       }
-    }
-
-
-    // {
-    //   id: 2,
-    //   name: 'Sylwia Szumska',
-    //   role: 'Pedagożka, terapeutka SI, terapeutka pedagogiczna',
-    //   webpImg: 'assets/img/awatar-damski.webp',
-    //   alterImg: 'assets/img/awatar-damski.png',
-    // },
-    // {
-    //   id: 3,
-    //   name: 'Magdalena Mokrzycka',
-    //   role: 'Terapeutka SI',
-    //   webpImg: 'assets/img/awatar-damski.webp',
-    //   alterImg: 'assets/img/awatar-damski.png',
-    // },
-    // {
-    //   id: 4,
-    //   name: 'Agata Magdzicka-Banach',
-    //   role: 'Pedagożka, terapeutka dzieci z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, tyflopedagożka, surdopedagożka, terapeutka metody EEG Biofeedback',
-    //   webpImg: 'assets/img/awatar-damski.webp',
-    //   alterImg: 'assets/img/awatar-damski.png',
-    // },
-    // {
-    //   id: 5,
-    //   name: 'Marta Kęsicka',
-    //   role: 'Pedagogożka, terapeutka w zakresie rehabilitacji ruchowej, terapeutka SI, trenerka umiejętności społecznych, instruktorka pilates, trenerka personalna.',
-    //   webpImg: 'assets/img/awatar-damski.webp',
-    //   alterImg: 'assets/img/awatar-damski.png',
-    // }
-    // Add therapist data here
+    },
+    {
+      id: 4,
+      seoData: {
+        title: 'Marta Kęsicka - Terapia Gabinet Równowaga',
+        metaDescription: 'Marta Kęsicka - pedagog, terapeutka SI w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.'
+      },
+      name: 'Marta Kęsicka',
+      role: 'Pedagożka, terapeutka w&nbsp;zakresie rehabilitacji ruchowej, terapeutka integracji&nbsp;sensorycznej, trenerka umiejętności&nbsp;społecznych, instruktorka pilates, trenerka personalna.',
+      webpImg: './assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
+      assistance: [
+        'Terapia z&nbsp;zakresu stymulacji zmysłów i&nbsp;integracji sensorycznej',
+        'Terapia ruchem, kinezyterapia',
+        'Korekcja wad postawy',
+      ],
+      aboutMe: `
+      Każdy człowiek to&nbsp;unikalna jednostka posiadająca swój wyjątkowy zespół cech, umiejętności, predyspozycji zarówno psychicznych, jak&nbsp;i&nbsp;fizycznych. Dlatego w&nbsp;swojej pracy z&nbsp;dziećmi i&nbsp;dorosłymi staram się holistycznie patrzeć na&nbsp;drugiego człowieka. Do&nbsp;każdej osoby podchodzę indywidualnie, uwzględniając jej możliwości, potrzeby oraz&nbsp;trudności. W&nbsp;pracy terapeuty łączę elementy terapii SI, rehabilitacji i&nbsp;pilatesu. Ważna jest dla&nbsp;mnie równowaga psychiczna, dlatego stosuję również techniki oddechowe, które pomagają w&nbsp;relaksacji i&nbsp;obniżaniu napięcia. Kierując się filozofią TSR (terapii skoncentrowanej na&nbsp;rozwiązaniach), pracuję na&nbsp;zasobach zarówno psychicznych, jak&nbsp;i&nbsp;fizycznych, co&nbsp;pozytywnie wpływa na&nbsp;funkcjonowanie i&nbsp;rozwój drugiego człowieka.
+    `,
+      sections: [
+        {
+          title: 'Relacja z&nbsp;dzieckiem – klucz do&nbsp;sukcesu',
+          content: `
+          Ważnym aspektem pracy, zwłaszcza z&nbsp;dzieckiem, jest budowanie pozytywnych relacji opartych na&nbsp;życzliwości i&nbsp;empatii. Są&nbsp;one niezbędne, aby&nbsp;dziecko czuło się bezpiecznie i&nbsp;komfortowo, co&nbsp;przekłada się na&nbsp;efektywność terapii oraz&nbsp;chęć współpracy ze&nbsp;strony dzieci.
+        `,
+        },
+        {
+          title: 'Nieustanny rozwój zawodowy',
+          content: `
+          W&nbsp;życiu zawodowym i&nbsp;prywatnym kieruję się zasadą Kaizen: „ulepszania nie&nbsp;ma końca”. Dlatego też rozwój, doskonalenie swoich umiejętności oraz&nbsp;zdobywanie wiedzy są&nbsp;dla&nbsp;mnie niezwykle ważne, aby&nbsp;skutecznie pomagać naszym małym klientom.
+        `,
+        },
+        {
+          title: 'Doświadczenie zawodowe',
+          content: `
+          Obecnie pracuję w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej jako psycholog, prowadząc konsultacje, trening umiejętności społecznych oraz&nbsp;liczne warsztaty. Organizowałam także gimnastykę korekcyjną i&nbsp;zajęcia ruchowe dla&nbsp;dzieci. Od&nbsp;5 lat prowadzę zajęcia fitness, pilates oraz&nbsp;zdrowy kręgosłup. Mam doświadczenie w&nbsp;pracy z&nbsp;dziećmi, dorosłymi i&nbsp;seniorami, zarówno grupowo, jak&nbsp;i&nbsp;indywidualnie. W&nbsp;swojej pracy łączę aspekty fizyczne i&nbsp;psychiczne, ponieważ wierzę, że&nbsp;obie te&nbsp;sfery się przenikają. Moją ulubioną formą ruchu jest pilates (body&amp;mind). Uwielbiam pracować z&nbsp;dziećmi, gdyż&nbsp;praca ta&nbsp;wymaga dużej uważności, ale&nbsp;przynosi również wiele satysfakcji i&nbsp;radości.
+        `,
+        },
+        {
+          title: 'Prywatnie',
+          content: `
+          W&nbsp;życiu prywatnym jestem mamą – mam córkę i&nbsp;dwóch synów. Około 5 lat temu nasza rodzina powiększyła się o&nbsp;pieska, cudownego kundelka. Lubimy spędzać razem czas, grając w&nbsp;gry planszowe oraz&nbsp;chodząc na&nbsp;spacery. Uwielbiam spacerować po&nbsp;górach i&nbsp;lesie.
+        `,
+        },
+      ],
+      qualifications: {
+        education: [
+          'Pedagogika opiekuńczo-wychowawcza z&nbsp;promocją zdrowia, Wyższa Szkoła Informatyki – licencjat',
+          'Pedagogika terapeutyczna z&nbsp;rehabilitacją ruchową, Akademia Humanistyczno-Ekonomiczna w&nbsp;Łodzi – studia magisterskie',
+          'Stymulacja zmysłów i&nbsp;integracja sensoryczna, WSB-NLU w&nbsp;Nowym Sączu – studia podyplomowe',
+          'Psychologia, WSB-NLU w&nbsp;Nowym Sączu – studia magisterskie (w&nbsp;trakcie)',
+          'Psychologia transportu, WSB-NLU w&nbsp;Nowym Sączu – studia podyplomowe (w&nbsp;trakcie)',
+        ],
+        certificates: [
+          'Trener Umiejętności Społecznych i&nbsp;Życiowych – Centrum Szkoleniowo-Terapeutyczne SENS',
+          'Pilates instruktor – Polskie Centrum Fitness',
+          'Szkoła skoncentrowana na&nbsp;dobrostanie – Edulabor',
+          'Pilates Mat 1 – Open Mind Pilates School',
+          'Pilates Intermediate – Open Mind Pilates School',
+          'Pilates Body Ball – Open Mind Pilates School',
+          'Pilates dla&nbsp;Ciężarnych i&nbsp;Osób starszych – Open Mind Pilates School',
+          'Zdrowy Kręgosłup Tour – Open Mind Pilates School',
+          'Pilates Rollers – Open Mind Pilates School',
+          'Metody i&nbsp;Techniki Treningu Online – Online Coaching, Personal Training Academy PTA',
+          'Certified Gym Instructor – Personal Training Academy PTA',
+          'Certified Personal Trainer – Personal Training Academy PTA',
+          'Specjalista masażu klasycznego i&nbsp;odnowy biologicznej',
+        ],
+        specialistTrainings: [
+          'Terapia skoncentrowana na&nbsp;rozwiązaniach – poziom podstawowy, Centrum TSR',
+          'Trening zastępowania agresji – Niepubliczny Ośrodek Doskonalenia Nauczycieli Cognitus',
+          '„Uczeń z&nbsp;ASD i&nbsp;nadpobudliwością psychoruchową w&nbsp;klasie. Zasady pracy i&nbsp;praktyczne wskazania.” – Promade Sp. z&nbsp;o.o.',
+          'Mediacje w&nbsp;szkole jako forma rozwiązywania konfliktów – ODN w&nbsp;Kaliszu',
+          '„Rozwijanie kompetencji społecznych uczniów – współczesne wyzwania nauczycieli.” – Promade Sp. z&nbsp;o.o.',
+          'Seminarium #Dusza#Ciało – jak&nbsp;dbać o&nbsp;swoje zdrowie psychiczne – Uniwersytet Kaliski',
+          '„Są więzy i&nbsp;więzi. O&nbsp;neuronalnych węzłach miłości.” – Fundacja Dbam o&nbsp;mój zasięg',
+          'Samoakceptacja jako determinant przyszłych zachowań – Uniwersytet Kaliski',
+        ],
+      },
+    },
   ];
 
   constructor(private readonly router: Router) {

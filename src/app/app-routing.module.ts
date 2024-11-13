@@ -2,19 +2,7 @@ import {NgModule} from '@angular/core';
 import {ExtraOptions, NavigationEnd, Router, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
-import {
-  PaulinaOkrasaBurczykComponent
-} from "./core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component";
-import {
-  KarolinaOkrasaStaszakComponent
-} from "./core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component";
-import {SywiaSzumskaComponent} from "./core/home/therapists/sywia-szumska/sywia-szumska.component";
-import {MagdalenaMokrzyckaComponent} from "./core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component";
-import {
-  AgataMagdzickaBanachComponent
-} from "./core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component";
 import {AppPaths} from "./app-paths";
-import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 import {BlogComponent} from "./core/blog/blog.component";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
@@ -97,56 +85,7 @@ const routes: Routes = [
   {
     path: 'terapeuta/:id',
     component: TherapistTemplateComponent,
-    title: 'Terapeuta - Centrum Równowaga!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
   },
-  // {
-  //   path: AppPaths.PAULINA_OKRASA_BURCZYK,
-  //   component: PaulinaOkrasaBurczykComponent,
-  //   title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog',
-  //   data: {
-  //     description: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
-  //   }
-  // },
-  // {
-  //   path: AppPaths.KAROLINA_OKRASA_STASZAK,
-  //   component: KarolinaOkrasaStaszakComponent,
-  //   title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
-  //   data: {
-  //     description: 'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.'
-  //   }
-  // },
-  // {
-  //   path: AppPaths.SYLWIA_SZUMSKA,
-  //   component: SywiaSzumskaComponent,
-  //   title: 'Sylwia Szumska - Terapeuta Równowaga',
-  //   data: {
-  //     description: 'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.'
-  //   }
-  // },
-  // {
-  //   path: AppPaths.MAGDALENA_MOKRZYCKA,
-  //   component: MagdalenaMokrzyckaComponent,
-  //   title: 'Magdalena Mokrzycka - Specjalista Równowaga',
-  //   data: {
-  //     description: 'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.'
-  //   }
-  // },
-  // {
-  //   path: AppPaths.AGATA_MAGDZICKA_BANACH,
-  //   component: AgataMagdzickaBanachComponent,
-  //   title: 'Agata Magdzicka-Banach - Terapia Dzieci i Młodzieży',
-  //   data: {
-  //     description: 'Agata Magdzicka-Banach - pedagog, surdopedagog, tyflopedagog i terapeutka EEG Biofeedback w Centrum Równowaga. Wspiera dzieci w spektrum autyzmu i z trudnościami rozwojowymi.'
-  //   }
-  // },
-  // {
-  //   path: AppPaths.MARTA_KESICKA,
-  //   component: MartaKesickaComponent,
-  //   title: 'Marta Kęsicka - Terapia Gabinet Równowaga',
-  //   data: {
-  //     description: 'Marta Kęsicka - pedagog, terapeutka SI i instruktorka pilates w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.'
-  //   }
-  // },
   {
     path: AppPaths.PAGE_NOT_FOUND,
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),

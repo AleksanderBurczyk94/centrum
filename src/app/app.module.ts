@@ -10,22 +10,10 @@ import {HomeComponent} from './core/home/home.component';
 import {CardListComponent} from './core/home/card-list/card-list.component';
 import {TherapistsComponent} from './core/home/therapists/therapists.component';
 import {provideHttpClient, withFetch, withInterceptorsFromDi} from "@angular/common/http";
-import {
-  PaulinaOkrasaBurczykComponent
-} from './core/home/therapists/paulina-okrasa-burczyk/paulina-okrasa-burczyk.component';
 import {FaqComponent} from './core/home/faq/faq.component';
-import {
-  KarolinaOkrasaStaszakComponent
-} from './core/home/therapists/karolina-okrasa-staszak/karolina-okrasa-staszak.component';
-import {SywiaSzumskaComponent} from './core/home/therapists/sywia-szumska/sywia-szumska.component';
-import {MagdalenaMokrzyckaComponent} from './core/home/therapists/magdalena-mokrzycka/magdalena-mokrzycka.component';
-import {
-  AgataMagdzickaBanachComponent
-} from './core/home/therapists/agata-magdzicka-banach/agata-magdzicka-banach.component';
 import {SharedModule} from "./shared/shared.module";
-import {MartaKesickaComponent} from "./core/home/therapists/marta-kesicka/marta-kesicka.component";
 import {AppRoutingModule} from "./app-routing.module";
-import { TherapistTemplateComponent } from './core/home/therapists/therapist-template/therapist-template.component';
+import {TherapistTemplateComponent} from './core/home/therapists/therapist-template/therapist-template.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +23,7 @@ import { TherapistTemplateComponent } from './core/home/therapists/therapist-tem
     HomeComponent,
     CardListComponent,
     TherapistsComponent,
-    PaulinaOkrasaBurczykComponent,
     FaqComponent,
-    KarolinaOkrasaStaszakComponent,
-    SywiaSzumskaComponent,
-    MagdalenaMokrzyckaComponent,
-    AgataMagdzickaBanachComponent,
-    MartaKesickaComponent,
     TherapistTemplateComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,

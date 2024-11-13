@@ -1,5 +1,6 @@
 export interface Therapist {
   id: number;
+  seoData: seoData;
   name: string;
   role: string;
   webpImg: string;
@@ -20,4 +21,9 @@ export interface Qualifications {
   certificates?: string[];
   specialistTrainings?: string[];
   sensoryIntegrationTrainings?: string[];
+}
+
+export interface seoData {
+  title: string;
+  metaDescription: string;
 }
