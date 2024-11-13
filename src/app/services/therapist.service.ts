@@ -15,7 +15,7 @@ export class TherapistService implements OnDestroy {
   private readonly therapists: Therapist[] = [{
     id: 0,
     seoData: {
-      title: 'Paulina Okrasa-Burczyk - Dobry terapeuta, psycholog',
+      title: 'Paulina Okrasa-Burczyk - Terapeuta integracji seonsorycznej',
       metaDescription: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
     },
     name: 'Paulina Okrasa-Burczyk',
