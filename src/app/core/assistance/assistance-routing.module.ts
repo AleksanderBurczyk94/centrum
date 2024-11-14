@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AssistanceComponent } from './assistance.component';
-import { PsychologicalConsultationsComponent } from './psychological-consultations/psychological-consultations.component';
-import { HandTherapyComponent } from './hand-therapy/hand-therapy.component';
-import { NeuroTactileTherapyComponent } from './neuro-tactile-therapy/neuro-tactile-therapy.component';
-import { NeurodevelopmentalReflexTherapyComponent } from './neurodevelopmental-reflex-therapy/neurodevelopmental-reflex-therapy.component';
-import { SensoryIntegrationTherapyComponent } from './sensory-integration-therapy/sensory-integration-therapy.component';
-import { AuditoryProcessingTherapyComponent } from './auditory-processing-therapy/auditory-processing-therapy.component';
-import { PedagogicalTherapyComponent } from './pedagogical-therapy/pedagogical-therapy.component';
-import { SpecialistConsultationsComponent } from './specialist-consultations/specialist-consultations.component';
-import { VisionTherapyComponent } from './vision-therapy/vision-therapy.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AssistanceComponent} from './assistance.component';
+import {PsychologicalConsultationsComponent} from './psychological-consultations/psychological-consultations.component';
+import {HandTherapyComponent} from './hand-therapy/hand-therapy.component';
+import {NeuroTactileTherapyComponent} from './neuro-tactile-therapy/neuro-tactile-therapy.component';
+import {
+  NeurodevelopmentalReflexTherapyComponent
+} from './neurodevelopmental-reflex-therapy/neurodevelopmental-reflex-therapy.component';
+import {SensoryIntegrationTherapyComponent} from './sensory-integration-therapy/sensory-integration-therapy.component';
+import {AuditoryProcessingTherapyComponent} from './auditory-processing-therapy/auditory-processing-therapy.component';
+import {PedagogicalTherapyComponent} from './pedagogical-therapy/pedagogical-therapy.component';
+import {SpecialistConsultationsComponent} from './specialist-consultations/specialist-consultations.component';
 import {AppPaths} from "../../app-paths";
 
 let routes: Routes = [
@@ -79,14 +80,6 @@ let routes: Routes = [
         title: 'Konsultacje Specjalistyczne',
         data: {
           description: 'Skorzystaj z konsultacji specjalistycznych w Kaliszu. Centrum Równowaga oferuje wsparcie w diagnozowaniu trudności szkolnych, sensorycznych i neurorozwojowych.'
-        }
-      },
-      {
-        path: AppPaths.VISION_THERAPY,
-        component: VisionTherapyComponent,
-        title: 'Terapia Widzenia - Rozwój Dziecka',
-        data: {
-          description: 'Terapia widzenia w Kaliszu – wspieramy rozwój zdolności wzrokowych u dzieci. Centrum Równowaga oferuje indywidualne zajęcia poprawiające koordynację i percepcję wzrokową.'
         }
       }
     ]

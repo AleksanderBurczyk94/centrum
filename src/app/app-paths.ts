@@ -22,7 +22,6 @@ export const AppPaths = {
   SI_DIAGNOSIS_DESCRIPTION: 'diagnoza-integracji-sensorycznej',
   PEDAGOGICAL_THERAPY: 'terapia-pedagogiczna',
   WRITTEN_OPINION: 'pisemna-opinia',
-  VISION_THERAPY: 'terapia-widzenia',
 
   //dokumenty
   MINORS_PROTECTION: 'standardy-ochrona-nieletnich',

@@ -13,7 +13,6 @@ import {AuditoryProcessingTherapyComponent} from "./auditory-processing-therapy/
 import {HandTherapyComponent} from "./hand-therapy/hand-therapy.component";
 import {SpecialistConsultationsComponent} from "./specialist-consultations/specialist-consultations.component";
 import {PedagogicalTherapyComponent} from "./pedagogical-therapy/pedagogical-therapy.component";
-import {VisionTherapyComponent} from "./vision-therapy/vision-therapy.component";
 import {SharedModule} from "../../shared/shared.module";
 
 
@@ -28,7 +27,6 @@ import {SharedModule} from "../../shared/shared.module";
     HandTherapyComponent,
     PedagogicalTherapyComponent,
     SpecialistConsultationsComponent,
-    VisionTherapyComponent,
   ],
   imports: [
     CommonModule,

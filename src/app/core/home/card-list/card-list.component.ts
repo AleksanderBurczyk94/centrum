@@ -79,14 +79,6 @@ export class CardListComponent {
       path: this.appPaths.PEDAGOGICAL_THERAPY
     },
     {
-      webpImg: 'assets/img/vision.webp',
-      alterImg: 'assets/img/vision.png',
-      alt: 'ikona oka z długopisem i linijką na nim sybol terapii widzenia',
-      title: 'Terapia widzenia',
-      description: 'Poprawa przetwarzania wzrokowego u&nbsp;dzieci z&nbsp;trudnościami w&nbsp;nauce i&nbsp;percepcji. Wspomaganie koncentracji i&nbsp;precyzji w&nbsp;zadaniach wymagających sprawności wzrokowej.',
-      path: this.appPaths.VISION_THERAPY
-    },
-    {
       webpImg: 'assets/img/konsultacje.webp',
       alterImg: 'assets/img/konsultacje.png',
       alt: 'ikona kobiety za biurkiem symbolizujaca konsultacje specjalistyczne',
