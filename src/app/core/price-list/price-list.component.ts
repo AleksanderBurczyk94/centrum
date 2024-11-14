@@ -102,30 +102,6 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
       time: '50 min',
       description: 'Konsultacje ze specjalistą procesów przetwarzania sensorycznego, wzorców ruchowych dziecka, procesów neurorozwojowych dla rodziców, którzy mają trudności w ustaleniu źródła trudności szkolnych i ruchowych w powiązaniu z rozwojem motoryczno-sensorycznym dziecka. Specjalista pomoże dobrać odpowiednią formę terapii.'
     },
-    {
-      name: 'Diagnoza funkcjonalna wzroku wraz z pisemną opinią',
-      price: '280 zł',
-      time: '45 min',
-      description: 'Diagnoza obejmuje ocenę funkcji wzrokowych dziecka oraz przygotowanie pisemnej opinii.'
-    },
-    {
-      name: 'Terapia widzenia',
-      price: '75 zł / 155 zł',
-      time: '30 min / 45 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut, natomiast dla dzieci powyżej 6 roku życia 45 min. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
-    },
-    {
-      name: 'Terapia widzenia 10 spotkań płatnych z góry',
-      price: '700 zł',
-      time: '30 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci w wieku 1-6 lat poleca się sesje trwające 30 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
-    },
-    {
-      name: 'Terapia widzenia 10 spotkań płatnych z góry',
-      price: '1450 zł',
-      time: '45 min',
-      description: 'Podczas terapii dziecko wykonuje specjalne ćwiczenia wzmacniające zdolności widzenia i przetwarzania informacji wzrokowych. Terapia ma na celu poprawę umiejętności związanych z nauką, pisaniem, czytaniem oraz ogólną koordynacją. Po zakończeniu zajęć terapeuta omawia postępy z rodzicem, udzielając wskazówek dotyczących dalszych ćwiczeń w domu, aby wspierać rozwój umiejętności wzrokowych dziecka. Dla dzieci powyżej 6 roku życia poleca się sesje trwające 45 minut. Ostatecznie jednak długość terapii ustala rodzic z terapeutą.'
-    },
   ];
 
   documents = [

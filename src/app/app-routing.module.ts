@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => import('./core/assistance/assistance.module').then(m => m.AssistanceModule),
     title: 'Zakres Pomocy– Psycholog dziecięcy, integracja sensoryczna (SI), INPP',
     data: {
-      description: 'Zakres pomocy Centrum Równowaga w Kaliszu: integracja sensoryczna, psycholog dziecięcy, INPP, terapia widzenia i inne usługi wspierające rozwój dzieci!'
+      description: 'Zakres pomocy Centrum Równowaga w Kaliszu: integracja sensoryczna, psycholog dziecięcy, INPP, i inne usługi wspierające rozwój dzieci!'
     }
   },
   {
