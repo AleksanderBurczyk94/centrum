@@ -85,8 +85,11 @@
         </li>
         <li class="nav-item">
           <a class="text-nav-color nav-link" [routerLink]="[appPaths.OUR_CENTER]" routerLinkActive="active"
-             (click)="collapseNav(); resetActiveLink()">Nasze
-            Centrum</a>
+             (click)="collapseNav(); resetActiveLink()">Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nav-color nav-link " [routerLink]="[appPaths.BLOG]" routerLinkActive="active"
+             (click)="collapseNav(); resetActiveLink()">Blog</a>
         </li>
         <li class="nav-item dropdown text-center" #rla2="routerLinkActive" routerLinkActive="active-dropdown">
           <a class="nav-link text-nav-color" id="navbarDropdown" role="button"

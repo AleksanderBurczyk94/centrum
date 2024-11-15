@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {WhiteContainerComponent} from "./white-container/white-container.component";
 import {BackBtnComponent} from "./back-btn/back-btn.component";
 import {BannerComponent} from "./banner/banner.component";

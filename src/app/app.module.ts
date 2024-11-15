@@ -29,7 +29,7 @@ import {TherapistTemplateComponent} from './core/home/therapists/therapist-templ
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [
   ],
