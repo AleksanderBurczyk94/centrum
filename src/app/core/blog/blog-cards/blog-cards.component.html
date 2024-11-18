@@ -1,0 +1,38 @@
+  <app-banner title="Blog"></app-banner>
+  <app-white-container >
+    <div class=" mx-4 d-flex flex-column justify-content-center align-items-center my-5">
+      <div *ngFor="let card of paginatedCards">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 picture-container" (click)="navigateToBlog(card.id)">
+              <div class="overlay"></div>
+              <picture >
+                <source [srcset]="card.webpImg" type="image/webp">
+                <img [src]="card.alterImg" [alt]="card.alt" class="img-fluid">
+              </picture>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title">{{ card.title }}</h2>
+                <p><small class="text-muted">Opublikowano: {{ card.date }}</small></p>
+                <p class="card-text mb-4">{{ card.shortDescription | truncate: 242 }}</p>
+                <app-color-button (click)="navigateToBlog(card.id)" >Czytaj
+                  <picture class="blog-img">
+                    <source srcset="assets/img/next.webp" type="image/webp">
+                    <img class="ms-2 arrow d-sm-inline d-none" src="assets/img/next.png"
+                         width="22" height="22"
+                         alt="Ikona strzałki w prawo">
+                  </picture>
+                </app-color-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-paginator class="pgn" [length]="numberOfCards" [pageSize]="pageSize" [pageSizeOptions]="[5, 10]"
+                   (page)="onPageChange($event)" >
+    </mat-paginator>
+  </app-white-container>
+  <app-back-btn></app-back-btn>
+
