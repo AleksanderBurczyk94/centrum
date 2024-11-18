@@ -3,7 +3,6 @@ import {ExtraOptions, NavigationEnd, Router, RouterModule, Routes} from '@angula
 import {HomeComponent} from "./core/home/home.component";
 import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {AppPaths} from "./app-paths";
-import {BlogComponent} from "./core/blog/blog.component";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
 import {TherapistTemplateComponent} from "./core/home/therapists/therapist-template/therapist-template.component";
@@ -11,7 +10,7 @@ import {TherapistTemplateComponent} from "./core/home/therapists/therapist-templ
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 100],
+  scrollOffset: [0, 125],
 };
 
 const routes: Routes = [
@@ -51,7 +50,6 @@ const routes: Routes = [
   {
     path: AppPaths.BLOG,
     loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
-    component: BlogComponent,
     title: 'Blog Terapeutyczny - Centrum Równowaga',
     data: {
       description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
@@ -83,7 +81,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'terapeuta/:id',
+    path: AppPaths.THERAPIST_TEMPLATE  + '/:id',
     component: TherapistTemplateComponent,
   },
   {

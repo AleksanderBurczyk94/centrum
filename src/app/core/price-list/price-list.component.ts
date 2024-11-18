@@ -1,6 +1,15 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildren, Inject, PLATFORM_ID } from '@angular/core';
-import { Service } from "../../interfaces/services";
-import { isPlatformBrowser } from '@angular/common';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  OnDestroy,
+  PLATFORM_ID,
+  QueryList,
+  ViewChildren
+} from '@angular/core';
+import {PriceCard} from "../../interfaces/priceCard";
+import {isPlatformBrowser} from '@angular/common';
 
 declare let bootstrap: any;
 
@@ -44,7 +53,7 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  services: Service[] = [
+  services: PriceCard[] = [
     {
       name: 'Konsultacje psychologiczne',
       price: '170 zł',

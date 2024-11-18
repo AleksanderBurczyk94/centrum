@@ -14,6 +14,8 @@ import {FaqComponent} from './core/home/faq/faq.component';
 import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {TherapistTemplateComponent} from './core/home/therapists/therapist-template/therapist-template.component';
+import {BlogTemplateComponent} from "./core/blog/blog-template/blog-template.component";
+import {BlogModule} from "./core/blog/blog.module";
 
 @NgModule({
   declarations: [
@@ -23,13 +25,13 @@ import {TherapistTemplateComponent} from './core/home/therapists/therapist-templ
     HomeComponent,
     CardListComponent,
     TherapistsComponent,
-    FaqComponent,
     TherapistTemplateComponent,
+    FaqComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    SharedModule,
+    SharedModule, BlogModule,
   ],
   exports: [
   ],

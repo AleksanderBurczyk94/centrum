@@ -5,12 +5,22 @@ import {BlogRoutingModule} from './blog-routing.module';
 import {BlogComponent} from './blog.component';
 import {SharedModule} from "../../shared/shared.module";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {AppModule} from "../../app.module";
+import {TruncatePipe} from "../../pipes/truncate.pipe";
+import {BannerBlogComponent} from './blog-template/banner-blog/banner-blog.component';
+import {BlogTemplateComponent} from "./blog-template/blog-template.component";
+import { BlogCardsComponent } from './blog-cards/blog-cards.component';
 
 
 @NgModule({
   declarations: [
-    BlogComponent
+    BlogComponent,
+    TruncatePipe,
+    BannerBlogComponent,
+    BlogTemplateComponent,
+    BlogCardsComponent
+  ],
+  exports: [
+    BannerBlogComponent
   ],
   imports: [
     CommonModule,

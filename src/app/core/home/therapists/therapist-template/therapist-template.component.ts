@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewEncapsulation} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Therapist } from '../../../../interfaces/therpaists';
 import { TherapistService } from '../../../../services/therapist.service';
@@ -9,6 +9,8 @@ import { Meta, Title } from "@angular/platform-browser";
   selector: 'app-therapist-template',
   templateUrl: './therapist-template.component.html',
   styleUrls: ['./therapist-template.component.css'],
+  // encapsulation: ViewEncapsulation.None
+
 })
 export class TherapistTemplateComponent implements OnInit, OnDestroy {
   therapist: Therapist | null = null;

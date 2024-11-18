@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId && this.windowWidth < 575)) {
       const video = this.videoElement.nativeElement;
 
       video.muted = true;

@@ -27,12 +27,13 @@
   width: 30px;
 }
 
-li {
-  font-size: 16px;
-}
 
 p {
-  font-size: 16px;
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
 }
 
 .about-me-section {
@@ -99,6 +100,13 @@ p {
 }
 
 
+.about-me-section p,
+.qualifications-section ul li,
+.qualifications-section ul li * {
+  font-size: 18px;
+   line-height: 1.7;
+}
+
 @media (max-width: 1400px) {
   .next-btn {
     position: absolute;
@@ -133,3 +141,5 @@ p {
     opacity: 0.8;
   }
 }
+
+

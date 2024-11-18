@@ -1,6 +1,7 @@
 import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {NavbarService} from "../../services/navbar.service";
 import {AppPaths} from "../../app-paths";
+import {BlogService} from "../../services/blog.service";
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
   appPaths = AppPaths;
 
-  constructor(private readonly renderer: Renderer2, public navbarService: NavbarService) {}
+  constructor(private readonly renderer: Renderer2, public navbarService: NavbarService, private readonly blogService: BlogService) {}
 
   ngOnInit(): void {
     this.navbarService.updateActiveLinkOnScroll();  // Sprawdzanie stanu na początku
@@ -40,4 +41,5 @@ export class NavbarComponent implements OnInit {
       this.renderer.removeClass(navbarCollapse, 'show');
     }
   }
+
 }
