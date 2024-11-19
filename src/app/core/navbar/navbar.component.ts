@@ -2,6 +2,7 @@ import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from 
 import {NavbarService} from "../../services/navbar.service";
 import {AppPaths} from "../../app-paths";
 import {BlogService} from "../../services/blog.service";
+import { environment } from "../../../environments"
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,7 @@ import {BlogService} from "../../services/blog.service";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  environment = environment;
   @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
   appPaths = AppPaths;
 
