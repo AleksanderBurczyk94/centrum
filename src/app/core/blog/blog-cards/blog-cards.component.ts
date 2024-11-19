@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AppPaths} from "../../../app-paths";
 import {MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
 import {BlogService} from "../../../services/blog.service";
-import {ActivatedRoute} from "@angular/router";
 import {blogCard} from "../../../interfaces/blogCard";
 
 @Component({

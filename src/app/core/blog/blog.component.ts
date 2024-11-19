@@ -1,8 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
-import {AppPaths} from "../../app-paths";
-import {BlogService} from "../../services/blog.service";
-import {ActivatedRoute, Params} from "@angular/router";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-blog',

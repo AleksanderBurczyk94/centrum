@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {ExtraOptions, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {BlogTemplateComponent} from "./blog-template/blog-template.component";
 import {BlogCardsComponent} from "./blog-cards/blog-cards.component";
 

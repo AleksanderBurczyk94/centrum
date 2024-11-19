@@ -6,7 +6,6 @@ import {AppPaths} from "./app-paths";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
 import {TherapistTemplateComponent} from "./core/home/therapists/therapist-template/therapist-template.component";
-import {environment} from "../environments/environments";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',

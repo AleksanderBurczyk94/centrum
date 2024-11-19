@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AppPaths} from "../app-paths";
-import {MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
+import {PageEvent} from "@angular/material/paginator";
 import {ActivatedRoute, Router} from "@angular/router";
 import {blogCard} from "../interfaces/blogCard";
 
@@ -175,7 +175,7 @@ export class BlogService {
 
   private pageSize = 5;        // Rozmiar strony
   private currentPage = 0;     // Bieżąca strona
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private readonly router: Router) {
   }
 
   getCards() {
@@ -205,7 +205,4 @@ export class BlogService {
     return this.pageSize;
   }
 
-  get getCurrentPage(): number {
-    return this.currentPage;
-  }
 }

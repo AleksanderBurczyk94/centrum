@@ -1,9 +1,9 @@
-import {Component, OnInit, OnDestroy, ViewEncapsulation} from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Therapist } from '../../../../interfaces/therpaists';
-import { TherapistService } from '../../../../services/therapist.service';
-import { ActivatedRoute } from "@angular/router";
-import { Meta, Title } from "@angular/platform-browser";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {Therapist} from '../../../../interfaces/therpaists';
+import {TherapistService} from '../../../../services/therapist.service';
+import {ActivatedRoute} from "@angular/router";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-therapist-template',

@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
   appPaths = AppPaths;
 
-  constructor(private readonly renderer: Renderer2, public navbarService: NavbarService, private readonly blogService: BlogService) {}
+  constructor(private readonly renderer: Renderer2, public navbarService: NavbarService) {}
 
   ngOnInit(): void {
     this.navbarService.updateActiveLinkOnScroll();  // Sprawdzanie stanu na początku

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {BlogService} from "../../../services/blog.service";
-import {MatPaginatorIntl} from "@angular/material/paginator";
 import {blogCard} from "../../../interfaces/blogCard";
 import {Meta, Title} from "@angular/platform-browser";
 

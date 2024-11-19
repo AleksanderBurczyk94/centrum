@@ -10,7 +10,7 @@ import {AppPaths} from "../app-paths";
 export class TherapistService implements OnDestroy {
   public appPaths = AppPaths;
   private activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
-  private activeTherapistSubscription: Subscription;
+  private readonly activeTherapistSubscription: Subscription;
 
   private readonly therapists: Therapist[] = [{
     id: 0,
