@@ -9,6 +9,7 @@ export interface Therapist {
   aboutMe: string;
   sections: Section[];
   qualifications: Qualifications;
+  znanyLekarz?: string;
 }
 
 export interface Section {

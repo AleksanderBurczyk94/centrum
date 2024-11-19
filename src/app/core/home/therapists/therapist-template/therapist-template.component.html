@@ -21,7 +21,7 @@
   <app-next-back-btn (click)="nextTherapist()" class="next-btn">
     <picture>
       <source srcset="assets/img/right-arrow.webp" type="image/webp">
-      <img src="assets/img/right-arrow.png" alt="Ikona strzałki w prawo" class="arrow-btn">
+      <img src="assets/img/right-arrow.png" alt="Ikona strzałki w prawo"  width="32" height="32" class="arrow-btn">
     </picture>
   </app-next-back-btn>
   <app-next-back-btn (click)="prevTherapist()" class="back-btn">
@@ -68,6 +68,15 @@
         <li
           *ngFor="let sensoryIntegrationTrainings of therapist?.qualifications?.sensoryIntegrationTrainings" [innerHTML]="sensoryIntegrationTrainings"></li>
       </ul>
+    </div>
+  </div>
+  <div *ngIf="therapist?.znanyLekarz" class="d-flex flex-column flex-sm-row justify-content-center align-items-center ms-sm-4 text-center text-sm-start">
+    <h4 class="mb-0">Sprawdź opinie na&nbsp;mój temat<img class="ms-3 arrow d-sm-inline d-none" src="assets/img/next.png" alt="Ikona strzałki w prawo"></h4>
+    <img class="ms-3 arrow d-sm-none" src="assets/img/down-arrow.png" alt="Ikona strzałki w dół">
+    <div class=" mb-4 ms-3 ">
+      <a [href]="therapist?.znanyLekarz" target="_blank" class="me-2">
+        <img class="znany-icon mt-3 w-75" src="assets/img/znanylekarz.jpg" alt="Ikona portalu Znanylekarz">
+      </a>
     </div>
   </div>
 </div>

@@ -99,6 +99,7 @@ export class TherapistService implements OnDestroy {
         'Teoria poliwagalna i&nbsp;integracja sensoryczna w&nbsp;praktyce, badanie zależności w&nbsp;teorii i&nbsp;wskazania do&nbsp;terapii, szkolenie Fundacja Promyk Słońca, prowadząca Tracy Murnan Stackhouse',
       ],
     },
+    znanyLekarz: 'https://www.znanylekarz.pl/paulina-okrasa/logopeda/kalisz#profile-reviews',
   },
     {
     id: 1,
