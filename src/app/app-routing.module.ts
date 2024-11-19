@@ -6,7 +6,7 @@ import {AppPaths} from "./app-paths";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
 import {TherapistTemplateComponent} from "./core/home/therapists/therapist-template/therapist-template.component";
-import {environment} from "../environments";
+import {environment} from "../environments/environments";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -47,15 +47,15 @@ const routes: Routes = [
       description: 'Zobacz galerię zdjęć Centrum Terapii i Wsparcia Rozwoju w Kaliszu. Poznaj nasze przestrzenie terapeutyczne i zobacz, jak pomagamy dzieciom i ich rodzicom.'
     }
   },
-  // {
-  //   path: AppPaths.BLOG,
-  //   loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
-  //   title: 'Blog Terapeutyczny - Centrum Równowaga',
-  //   data: {
-  //     description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
-  //   },
-  //   canActivate: [() => environment.enableBlog],
-  // },
+  {
+    path: AppPaths.BLOG,
+    loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
+    title: 'Blog Terapeutyczny - Centrum Równowaga',
+    data: {
+      description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
+    },
+    canActivate: [() => environment.enableBlog],
+  },
   {
     path: AppPaths.DOCUMENTS,
     loadChildren: () => import('./core/documents/dokuments.module').then(m => m.DokumentsModule),

@@ -2,7 +2,7 @@ import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from 
 import {NavbarService} from "../../services/navbar.service";
 import {AppPaths} from "../../app-paths";
 import {BlogService} from "../../services/blog.service";
-import { environment } from "../../../environments"
+import { environment } from "../../../environments/environments"
 
 @Component({
   selector: 'app-navbar',

@@ -1,18 +1,18 @@
 <div>
   <section class='top-hero'>
     <ng-container *ngIf="windowWidth < 575; else largeVideo">
-      <video #videoElement class="aboutus-hero" [muted]="'muted'" playsinline autoplay loop
+      <video #videoElement class="aboutus-hero" [muted]="'muted'" aria-hidden="true" playsinline autoplay loop
              poster="assets/img/usmiechniete-dzieci.webp">
         <source
-          src="../../../assets/video/terapia-integracji-sensorycznej-w-centrum-terpaii-i-wsparcia-rozwoju-kalisz2.mp4"
+          src="assets/video/terapia-integracji-sensorycznej-w-centrum-terpaii-i-wsparcia-rozwoju-kalisz2.mp4"
           type="video/mp4">
         Twoja przeglądarka nie wspiera elementu video.
       </video>
     </ng-container>
     <ng-template #largeVideo>
-      <video class="aboutus-hero" [muted]="'muted'" playsinline autoplay loop poster="assets/img/usmiechniete-dzieci.webp">
+      <video class="aboutus-hero" [muted]="'muted'" aria-hidden="true" playsinline autoplay loop poster="assets/img/usmiechniete-dzieci.webp">
         <source
-          src="../../../assets/video/terapia-integracji-sensorycznej-w-centrum-terpaii-i-wsparcia-rozwoju-kalisz2.mp4"
+          src="assets/video/terapia-integracji-sensorycznej-w-centrum-terpaii-i-wsparcia-rozwoju-kalisz2.mp4"
           type="video/mp4">
         Twoja przeglądarka nie wspiera elementu video.
       </video>
