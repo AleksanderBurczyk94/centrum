@@ -34,10 +34,6 @@
   font-size: 20px;
 }
 
-.arrow {
-  font-size: 29px;
-}
-
 app-transparent-btn {
   display: flex;
   align-items: center;

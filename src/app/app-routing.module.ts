@@ -54,7 +54,7 @@ const routes: Routes = [
     data: {
       description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
     },
-    canActivate: [() => environment.enableBlog],
+    // canActivate: [() => environment.enableBlog],
   },
   {
     path: AppPaths.DOCUMENTS,

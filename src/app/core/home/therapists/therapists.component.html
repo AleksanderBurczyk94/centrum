@@ -14,6 +14,7 @@
               <picture>
                 <source [srcset]="therapist.webpImg" type="image/webp" class="card-img-top">
                 <img
+                  loading="lazy"
                   class="card-img-top"
                   [src]="therapist.alterImg"
                   [alt]="'Zdjęcie terapeuty: ' + therapist.name">

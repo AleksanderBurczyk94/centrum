@@ -13,7 +13,11 @@
   margin-bottom: 40px;
   font-weight: lighter;
   line-height: 1.1;
+}
 
+.arrow-btn{
+  width: 30px;
+  height: 30px;
 }
 
 .accordion-button {

@@ -9,7 +9,7 @@
         <div class="card-body">
           <picture>
           <source class="p-0 mb-sm-2" [srcset]="card.webpImg" type="image/webp">
-          <img class="p-0 mb-sm-2" [src]="card.alt" [alt]="card.alt" width="150"
+          <img loading="lazy" class="p-0 mb-sm-2" [src]="card.alt" [alt]="card.alt" width="150"
                height="150">
           </picture>
           <h3 class="card-title fs-4">{{card.title}}</h3>
