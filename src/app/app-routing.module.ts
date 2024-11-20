@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: AppPaths.HOME,
     component: HomeComponent,
-    title: 'Diagnoza i Terapia Integracji Sensorycznej - Równowaga Kalisz',
+    title: 'Diagnoza i Terapia Integracji Sensorycznej Równowaga Kalisz',
     data: {
       description: 'Centrum Równowaga w Kaliszu oferuje terapię psychologiczną, integrację sensoryczną, terapię INPP, wsparcie dla dzieci i dorosłych. Sprawdź naszą ofertę!'
     },
@@ -46,15 +46,15 @@ const routes: Routes = [
       description: 'Zobacz galerię zdjęć Centrum Terapii i Wsparcia Rozwoju w Kaliszu. Poznaj nasze przestrzenie terapeutyczne i zobacz, jak pomagamy dzieciom i ich rodzicom.'
     }
   },
-  {
-    path: AppPaths.BLOG,
-    loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
-    title: 'Blog Terapeutyczny - Centrum Równowaga',
-    data: {
-      description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
-    },
+  // {
+  //   path: AppPaths.BLOG,
+  //   loadChildren: () => import('./core/blog/blog.module').then(m => m.BlogModule),
+  //   title: 'Blog Terapeutyczny - Centrum Równowaga',
+  //   data: {
+  //     description: 'Blog Centrum Równowaga w Kaliszu: artykuły o psychologii, terapii, integracji sensorycznej i wsparciu rozwoju dzieci. Odkryj wartościowe porady i inspiracje!'
+  //   },
     // canActivate: [() => environment.enableBlog],
-  },
+  // },
   {
     path: AppPaths.DOCUMENTS,
     loadChildren: () => import('./core/documents/dokuments.module').then(m => m.DokumentsModule),

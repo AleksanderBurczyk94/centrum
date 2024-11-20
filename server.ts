@@ -1,12 +1,12 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
-import express, { Request, Response, NextFunction } from 'express';
-import compression from 'compression'; // Dodanie kompresji
+import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
+import compression from "compression";
 
-// Funkcja tworząca aplikację Express
+// The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -21,17 +21,16 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Przykład API REST (opcjonalny)
+  // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
-
-  // Serwowanie plików statycznych z katalogu przeglądarki
-  server.use(express.static(browserDistFolder, {
-    maxAge: '1y', // Cache na 1 rok
-    index: false, // Wyłącz domyślne renderowanie index.html
+  // Serve static files from /browser
+  server.get('**', express.static(browserDistFolder, {
+    maxAge: '1y',
+    index: 'index.html',
   }));
 
-  // Obsługa routingu dla aplikacji Angular
-  server.get('**', (req: Request, res: Response, next: NextFunction) => {
+  // All regular routes use the Angular engine
+  server.get('**', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
     commonEngine
@@ -43,33 +42,20 @@ export function app(): express.Express {
         providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
       })
       .then((html) => res.send(html))
-      .catch((err) => {
-        console.error('Error rendering Angular application:', err);
-        res.status(500).send('Internal Server Error');
-      });
-  });
-
-  // Middleware obsługujący błędy
-  server.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    console.error('Server Error:', err.message);
-    res.status(500).send('Internal Server Error');
+      .catch((err) => next(err));
   });
 
   return server;
 }
 
-// Funkcja uruchamiająca serwer
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
-  // Start Node.js server
+  // Start up the Node server
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
 
-// Uruchamianie serwera, jeśli jest to główny moduł
-if (require.main === module) {
-  run();
-}
+run();
