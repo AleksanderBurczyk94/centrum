@@ -9,6 +9,7 @@ export const AppPaths = {
   APPOINTMENT: 'umow-wizyte',
   DOCUMENTS: 'dokumenty',
   RODO: 'rodo',
+  JOB: 'kariera',
   PAGE_NOT_FOUND: '**',
 
   //zakre wsparcie

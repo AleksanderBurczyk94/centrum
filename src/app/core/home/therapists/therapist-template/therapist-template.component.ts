@@ -9,7 +9,6 @@ import {Meta, Title} from "@angular/platform-browser";
   selector: 'app-therapist-template',
   templateUrl: './therapist-template.component.html',
   styleUrls: ['./therapist-template.component.css'],
-  // encapsulation: ViewEncapsulation.None
 
 })
 export class TherapistTemplateComponent implements OnInit, OnDestroy {

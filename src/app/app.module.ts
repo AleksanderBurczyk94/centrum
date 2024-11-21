@@ -13,8 +13,8 @@ import {provideHttpClient, withFetch, withInterceptorsFromDi} from "@angular/com
 import {FaqComponent} from './core/home/faq/faq.component';
 import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
-import {TherapistTemplateComponent} from './core/home/therapists/therapist-template/therapist-template.component';
 import {BlogModule} from "./core/blog/blog.module";
+import { JobComponent } from './core/job/job.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import {BlogModule} from "./core/blog/blog.module";
     HomeComponent,
     CardListComponent,
     TherapistsComponent,
-    TherapistTemplateComponent,
     FaqComponent,
+    JobComponent,
   ],
   bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,

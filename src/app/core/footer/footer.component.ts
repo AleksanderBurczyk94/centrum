@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {AppPaths} from "../../app-paths";
 
 @Component({
   selector: 'app-footer',
@@ -8,14 +9,19 @@ import {Router} from "@angular/router";
 })
 export class FooterComponent {
 
+  appPath = AppPaths;
+
   constructor(private readonly router: Router) {
   }
   goToContact() {
-  this.router.navigate(['/contact'])
+  this.router.navigate([this.appPath.CONTACT])
   }
 
   goToRodo() {
-    this.router.navigate(['/rodo'])
+    this.router.navigate([this.appPath.RODO])
   }
 
+  goToJob() {
+    this.router.navigate([this.appPath.JOB])
+  }
 }

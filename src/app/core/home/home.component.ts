@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import {Router} from '@angular/router';
 import {isPlatformBrowser} from '@angular/common';
+import {AppPaths} from "../../app-paths";
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
   windowWidth: number = 0;
+  appPaths = AppPaths;
   constructor(
     private router: Router,
     private renderer: Renderer2,

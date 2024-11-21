@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {ExtraOptions, NavigationEnd, Router, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./core/home/home.component";
-import {RodoComponent} from "./core/footer/rodo/rodo.component";
 import {AppPaths} from "./app-paths";
 import {filter} from "rxjs";
 import {Meta, Title} from "@angular/platform-browser";
@@ -72,17 +71,27 @@ const routes: Routes = [
     }
   },
   {
+    path: AppPaths.THERAPIST_TEMPLATE,
+    loadChildren: () =>
+      import('./core/home/therapists/therapist-template/therapist-template.module').then(
+        (m) => m.TherapistTemplateModule
+      ),
+  },
+  {
     path: AppPaths.RODO,
     loadChildren: () => import('./core/footer/rodo/rodo.module').then(m => m.RodoModule),
-    component: RodoComponent,
     title: 'RODO - Polityka Prywatności',
     data: {
       description: 'Zapoznaj się z polityką prywatności Centrum Równowaga w Kaliszu. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.'
     }
   },
   {
-    path: AppPaths.THERAPIST_TEMPLATE  + '/:id',
-    component: TherapistTemplateComponent,
+    path: AppPaths.JOB,
+    loadChildren: () => import('./core/job/job.module').then(m => m.JobModule),
+    title: 'Praca w Centrum Równowaga – Oferty pracy dla terapeutów w Kaliszu',
+    data: {
+      description: 'Dołącz do zespołu Centrum Terapii i Wsparcia Rozwoju Równowaga w Kaliszu. Sprawdź aktualne oferty pracy dla terapeutów i innych specjalistów.'
+    }
   },
   {
     path: AppPaths.PAGE_NOT_FOUND,
