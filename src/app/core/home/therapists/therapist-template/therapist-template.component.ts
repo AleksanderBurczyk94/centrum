@@ -25,7 +25,7 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Pobierz `id` terapeuty z parametrów URL
     this.route.params.subscribe((params) => {
-      const id = +params['id']; // Zakładając, że masz parametr `id` w URL
+      const id = +params['id'];
       this.therapistService.setActiveTherapistId(id);
     });
 
@@ -34,7 +34,7 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
       .getActiveTherapistObservable()
       .subscribe((therapist) => {
         this.therapist = therapist;
-        this.setTitleAndMeta(); // Wywołaj po przypisaniu terapeuty
+        this.setTitleAndMeta();
       });
   }
 

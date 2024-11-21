@@ -1,0 +1,16 @@
+.info-bar {
+  display: none;
+  background-color: rgba(247, 183, 51, 0.87);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.info-bar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+

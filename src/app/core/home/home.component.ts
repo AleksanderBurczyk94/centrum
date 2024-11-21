@@ -1,14 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  Renderer2,
-  ViewChild,
-  ElementRef,
-  Inject,
-  PLATFORM_ID,
-  HostListener
-} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {isPlatformBrowser} from '@angular/common';
 import {AppPaths} from "../../app-paths";
@@ -18,11 +8,11 @@ import {AppPaths} from "../../app-paths";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit{
+export class HomeComponent implements OnInit{
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
-  windowWidth: number = 0;
   appPaths = AppPaths;
+  isInfoBarVisible: boolean = true;
   constructor(
     private router: Router,
     private renderer: Renderer2,
@@ -36,31 +26,10 @@ export class HomeComponent implements OnInit, AfterViewInit{
       script.setAttribute('data-use-service-core', '');
       script.defer = true;
       this.renderer.appendChild(document.body, script);
-      this.windowWidth = window.innerWidth;
     }
   }
 
-  @HostListener('window:resize', [])
-  onResize() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.windowWidth = window.innerWidth;
-    }
-  }
 
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId && this.windowWidth < 575)) {
-      const video = this.videoElement.nativeElement;
 
-      video.muted = true;
-      video.playsInline = true;
-      video.autoplay = true;
 
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error('Autoplay failed:', error);
-        });
-      }
-    }
-  }
 }

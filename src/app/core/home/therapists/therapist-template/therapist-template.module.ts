@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TherapistTemplateRoutingModule } from './therapist-template-routing.module';
 import {TherapistTemplateComponent} from "./therapist-template.component";
 import {SharedModule} from "../../../../shared/shared.module";
+import { PersonCarouselComponent } from './person-carousel/person-carousel.component';
 
 @NgModule({
   declarations: [
-    TherapistTemplateComponent
+    TherapistTemplateComponent,
+    PersonCarouselComponent
   ],
   imports: [
     CommonModule,

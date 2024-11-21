@@ -7,14 +7,11 @@ import {MatIconModule} from "@angular/material/icon";
 import {NavbarComponent} from "./core/navbar/navbar.component";
 import {FooterComponent} from './core/footer/footer.component';
 import {HomeComponent} from './core/home/home.component';
-import {CardListComponent} from './core/home/card-list/card-list.component';
-import {TherapistsComponent} from './core/home/therapists/therapists.component';
 import {provideHttpClient, withFetch, withInterceptorsFromDi} from "@angular/common/http";
-import {FaqComponent} from './core/home/faq/faq.component';
 import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {BlogModule} from "./core/blog/blog.module";
-import { JobComponent } from './core/job/job.component';
+import {HomeModule} from "./core/home/home.module";
 
 @NgModule({
   declarations: [
@@ -22,15 +19,14 @@ import { JobComponent } from './core/job/job.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    CardListComponent,
-    TherapistsComponent,
-    FaqComponent,
-    JobComponent,
   ],
-  bootstrap: [AppComponent], imports: [BrowserModule,
+  bootstrap: [AppComponent],
+  imports: [BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    SharedModule, BlogModule,
+    SharedModule,
+    BlogModule,
+    HomeModule,
   ],
   exports: [
   ],
