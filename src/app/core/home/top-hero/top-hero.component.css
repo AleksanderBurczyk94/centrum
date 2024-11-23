@@ -1,3 +1,4 @@
+/* GŁÓWNE KOMPONENTY */
 .top-hero {
   position: relative;
   width: 100%;
@@ -8,18 +9,19 @@
   width: 100%;
   height: 99vh;
   object-fit: cover;
-  filter: brightness(0.7)
+  filter: brightness(0.7);
 }
 
+/* TEKST I KONTEKST */
 .text-container {
   position: absolute;
   top: 40%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
-  transform: translate(-50%, -50%);
   color: var(--white-color);
-  text-align: center;
   max-width: 100%;
   z-index: 1;
 }
@@ -32,17 +34,19 @@
   font-size: 20px;
 }
 
+/* PRZYCISKI */
 app-transparent-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 992px) {
   .text-container {
     padding: 0 10px;
-    width: 100%; /* Zajmij całą szerokość */
-    max-width: 840px; /* Maksymalna szerokość kontenera dla małych ekranów */
+    width: 100%;
+    max-width: 840px;
   }
 }
 

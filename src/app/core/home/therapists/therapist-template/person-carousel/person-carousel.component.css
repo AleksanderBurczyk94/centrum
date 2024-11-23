@@ -1,10 +1,18 @@
+p {
+  font-size: 16px;
+}
+
+li {
+  font-size: 16px;
+}
+
 .person-carousel {
   position: relative;
   max-width: 1200px;
   height: auto;
   background-color: rgba(214, 243, 239, 0.89);
   border-radius: 15px;
-  margin: 40px auto;
+  margin: 40px auto 100px;
 }
 
 .next-btn {
@@ -46,44 +54,28 @@
   width: 30px;
 }
 
-p {
-  font-size: 16px;
-}
-
-li {
-  font-size: 16px;
-}
-
 @media (max-width: 1400px) {
   .next-btn {
-    position: absolute;
     top: 90%;
     right: -31px;
-    transform: translateX(-50%);
   }
 
   .back-btn {
-    position: absolute;
     top: 90%;
     left: 30px;
-    transform: translateX(-50%);
   }
 }
 
 @media (max-width: 767px) {
   .next-btn {
-    position: absolute;
     top: 45%;
     right: -31px;
-    transform: translateX(-50%);
     opacity: 0.8;
   }
 
   .back-btn {
-    position: absolute;
     top: 45%;
     left: 30px;
-    transform: translateX(-50%);
     opacity: 0.8;
   }
 }

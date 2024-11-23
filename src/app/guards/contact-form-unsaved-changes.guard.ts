@@ -1,13 +1,14 @@
 import {CanDeactivate} from '@angular/router';
 import {Injectable} from "@angular/core";
 import {ContactComponent} from "../core/contact/contact.component";
+import {FormBoxComponent} from "../core/contact/form-box/form-box.component";
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class contactFormUnsavedChangesGuard implements CanDeactivate<ContactComponent> {
-  canDeactivate(component: ContactComponent): boolean {
+export class contactFormUnsavedChangesGuard implements CanDeactivate<FormBoxComponent> {
+  canDeactivate(component: FormBoxComponent): boolean {
 
     if (!component) {
       return true;

@@ -1,0 +1,28 @@
+img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+a{
+  font-size: 20px;
+  margin: 0;
+}
+
+.no-pointer {
+  cursor: default;
+}
+.phone-link, .email-link, .maps-link {
+  color: black;
+  text-decoration: none;
+}

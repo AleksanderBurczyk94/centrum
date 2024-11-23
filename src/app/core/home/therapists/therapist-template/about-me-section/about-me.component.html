@@ -1,0 +1,45 @@
+<app-white-container>
+  <div class="about-me-section">
+    <div class="px-3">
+      <h2 class="title underline-title">O mnie</h2>
+      <p class="about-text" [innerHTML]="therapist?.aboutMe"></p>
+
+      <div *ngFor="let section of therapist?.sections">
+        <h3 class="subtitle" [innerHTML]="section.title"></h3>
+        <p class="about-text" [innerHTML]="section.content"></p>
+      </div>
+    </div>
+
+    <div class="qualifications-section">
+      <h2 class="underline-title">Kwalifikacje</h2>
+      <h3 class="pt-2">Wykształcenie</h3>
+      <ul>
+        <li *ngFor="let education of therapist?.qualifications?.education" [innerHTML]="education"></li>
+      </ul>
+      <div *ngIf="therapist?.qualifications?.certificates">
+        <h3>Certyfikaty</h3>
+        <ul>
+          <li *ngFor="let certificate of therapist?.qualifications?.certificates" [innerHTML]="certificate"></li>
+        </ul>
+      </div>
+      <div *ngIf="therapist?.qualifications?.specialistTrainings">
+        <h3>Szkolenia Specjalistyczne</h3>
+        <ul>
+          <li
+            *ngFor="let specialistTrainings of therapist?.qualifications?.specialistTrainings"
+            [innerHTML]="specialistTrainings"></li>
+        </ul>
+      </div>
+      <div *ngIf="therapist?.qualifications?.sensoryIntegrationTrainings">
+        <h3>Szkolenia z Integracji Sensorycznej</h3>
+        <ul>
+          <li
+            *ngFor="let sensoryIntegrationTrainings of therapist?.qualifications?.sensoryIntegrationTrainings"
+            [innerHTML]="sensoryIntegrationTrainings"></li>
+        </ul>
+      </div>
+    </div>
+    <app-znany-lekarz *ngIf="therapist?.znanyLekarz" [therapist]="therapist" ></app-znany-lekarz>
+  </div>
+</app-white-container>
+

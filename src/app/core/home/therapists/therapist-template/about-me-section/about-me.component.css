@@ -1,0 +1,48 @@
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.underline-title {
+  display: inline-block;
+  border-bottom: 3px solid var(--pink-color);
+  padding-bottom: 5px;
+}
+
+.qualifications-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.qualifications-section ul {
+  margin-bottom: 20px;
+}
+
+.qualifications-section li {
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+.arrow {
+  width: 30px;
+}
+
+.znany-icon {
+  min-width: 188px;
+}
+
+
+.about-me p,
+.qualifications-section ul li,
+.qualifications-section ul li * {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+
