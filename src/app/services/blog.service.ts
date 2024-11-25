@@ -179,7 +179,7 @@ export class BlogService {
           ],
         },
         {
-          id: 5,
+          id: 105,
           title: 'Podsumowanie',
           contentArray: [`Rola rodziców w terapii integracji sensorycznej jest niezastąpiona. To rodzice tworzą codzienne środowisko, które wspiera dziecko w radzeniu sobie z wyzwaniami sensorycznymi. Kluczem jest zrozumienie potrzeb dziecka, regularna współpraca z terapeutą i cierpliwość. Dzięki temu terapia będzie nie tylko skuteczna, ale także okaże się wspaniałą zabawą.`,
             'Jeśli chcesz dowiedzieć się więcej o tym, jak wspierać swoje dziecko, zapraszamy do <strong>Centrum Terapii i Wsparcia Rozwoju "Równowaga"</strong>. Nasz zespół pomoże Ci i Twojemu dziecku osiągnąć harmonię i równowagę w codziennym życiu.'],
