@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {BlogService} from "../../../services/blog.service";
 import {blogCard} from "../../../interfaces/blogCard";
 import {Meta, Title} from "@angular/platform-browser";
+import {TherapistService} from "../../../services/therapist.service";
+import {AppPaths} from "../../../app-paths";
 
 @Component({
   selector: 'app-blog-template',
@@ -11,7 +13,8 @@ import {Meta, Title} from "@angular/platform-browser";
 })
 export class BlogTemplateComponent implements OnInit {
 
-  card!: blogCard;
+
+  blog!: blogCard;
 
   id!: number;
 
@@ -19,27 +22,36 @@ export class BlogTemplateComponent implements OnInit {
     private route: ActivatedRoute,
     private blogService: BlogService,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private readonly therapistService: TherapistService,
+
   ) {
   }
+  therapists = this.therapistService.getTherapists();
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.id = +params['id'];
-      this.card = this.blogService.getCard(this.id)
-      this.setTitleAndMeta();
-    })
+      const card = this.blogService.getCard(this.id);
+      if (card) {
+        this.blog = card;
+        this.setTitleAndMeta();
+      } else {
+        console.error(`Blog o ID ${this.id} nie istnieje.`);
+      }
+    });
   }
 
+
   setTitleAndMeta(): void {
-    if (this.card) {
-      this.titleService.setTitle(this.card.seoData.title);
-      console.log("this.card.seoData.metaDescription!!!!!" + this.card.seoData.metaDescription)
-      this.metaService.updateTag({ name: 'description', content: this.card.seoData.metaDescription });
+    if (this.blog) {
+      this.titleService.setTitle(this.blog.seoData.title);
+      this.metaService.updateTag({ name: 'description', content: this.blog.seoData.metaDescription });
     } else {
       console.warn("setTitleAndMeta: Brak terapeuty!");
     }
   }
+
 
 
 }

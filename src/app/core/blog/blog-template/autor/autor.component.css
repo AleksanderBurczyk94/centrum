@@ -1,0 +1,39 @@
+.autor-header {
+  font-size: 18px;
+}
+
+.card-body h3 {
+  font-size: 18px;
+}
+
+.no-justify {
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover; /* Dopasowanie obrazu do kontenera */
+  object-position: 20% 20%; /* Podobne do background-position */
+}
+
+.card-details {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  transition: color 0.2s, text-decoration 0.2s;
+  cursor: pointer;
+}
+
+.card-details:hover {
+  text-decoration: none;
+  color: rgb(23, 23, 23);
+}
+
+@media (min-width: 576px) {
+  .card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    object-position: 20% 20%; /* Podobne do background-position */
+  }
+}

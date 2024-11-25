@@ -1,0 +1,34 @@
+<div *ngFor="let subsection of section?.subsections;">
+  <div *ngIf="subsection">
+    <h3 id="{{i +subsection.title}}" class="subtitleH3">
+      {{subsection.title }}
+    </h3>
+    <div *ngFor="let content of subsection.contentArray">
+      <div *ngIf="content">
+        <p class="about-text" [innerHTML]="content"></p>
+      </div>
+    </div>
+
+    <!-- Lista punktowana -->
+    <div *ngFor="let subList of subsection.lists">
+      <ul *ngIf="subList.type === 'unordered'">
+        <li *ngFor="let item of subList.items" [innerHTML]="item"></li>
+      </ul>
+
+      <!-- Lista numerowana -->
+      <ol *ngIf="subList.type === 'ordered'">
+        <li *ngFor="let item of subList.items" [innerHTML]="item"></li>
+      </ol>
+    </div>
+  </div>
+  <div class="illustration d-flex align-items-center justify-content-center" *ngIf="subsection.illustration">
+    <picture>
+      <source [srcset]="subsection.illustration.webpImg" type="image/webp" class="card-img-top">
+      <img
+        loading="lazy"
+        class="img-fluid"
+        [src]="subsection.illustration.alterImg"
+        [alt]="subsection.illustration.alt">
+    </picture>
+  </div>
+</div>

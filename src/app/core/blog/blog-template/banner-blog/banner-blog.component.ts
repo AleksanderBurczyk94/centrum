@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {AppPaths} from "../../../../app-paths";
+import {blogCard} from "../../../../interfaces/blogCard";
 
 @Component({
   selector: 'app-banner-blog',
@@ -8,6 +9,5 @@ import {AppPaths} from "../../../../app-paths";
 })
 export class BannerBlogComponent {
   appPaths = AppPaths;
-  @Input() title: string = '';
-  @Input() addedDate: string = "";
+  @Input() blog!: blogCard;
 }

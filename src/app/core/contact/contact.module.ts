@@ -11,17 +11,20 @@ import { FormBoxComponent } from './form-box/form-box.component';
 
 
 @NgModule({
-  declarations: [
-    ContactComponent,
-    MapComponent,
-    ContactBoxComponent,
-    FormBoxComponent
-  ],
-  imports: [
-    CommonModule,
-    ContactRoutingModule,
-    SharedModule,
-    ReactiveFormsModule,
-  ]
+    declarations: [
+        ContactComponent,
+        MapComponent,
+        ContactBoxComponent,
+        FormBoxComponent
+    ],
+    exports: [
+        ContactComponent
+    ],
+    imports: [
+        CommonModule,
+        ContactRoutingModule,
+        SharedModule,
+        ReactiveFormsModule,
+    ]
 })
 export class ContactModule { }

@@ -1,29 +1,79 @@
 .banner-container {
-  height: 300px;
-  background-color: var(--mint-color);
+  position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 38px
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
 }
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Dopasowanie obrazu do kontenera */
+  object-position: 0 70%; /* Podobne do background-position */
+}
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
 
 .banner-content {
-  padding-top: 70px;
+  display: flex;
+ height: 80%;
+  color: var(--white-color);
+  z-index: 1;
+}
+
+
+
+h1 {
+  font-size: 28px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+  color: #e3e1e1;
+}
+
+.breadcrumb li {
+  color: #e3e1e1;
 }
 
 a {
-  color: rgba(0, 0, 0, 0.66);
+  color: #e3e1e1;
   transition: text-decoration 0.3s;
 }
 
 a:hover {
-  color: black;
+  color: var(--white-color);
   text-decoration: none;
+  font-weight: bold;
 }
-
-
 
 .date {
   font-size: 16px;
-  color: #6c757d;
+  color: #e3e1e1;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
 }

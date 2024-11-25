@@ -1,0 +1,29 @@
+<div *ngFor="let section of blog?.sections; let i = index" class=" mb-4">
+  <div *ngIf="section.title">
+    <h2 id="{{section.title}}" class="subtitleH2">{{i + 1 + ". " + section.title}}</h2>
+  </div>
+  <div *ngFor="let content of section.contentArray">
+    <p *ngIf="content" class="about-text" [innerHTML]="content"></p>
+  </div>
+  <!-- Lista punktowana -->
+  <div *ngFor="let list of section.lists">
+    <ul *ngIf="list.type === 'unordered'">
+      <li *ngFor="let item of list.items" [innerHTML]="item"></li>
+    </ul>
+    <!-- Lista numerowana -->
+    <ol *ngIf="list.type === 'ordered'">
+      <li *ngFor="let item of list.items" [innerHTML]="item"></li>
+    </ol>
+  </div>
+  <div class="illustration d-flex align-items-center justify-content-center" *ngIf="section.illustration">
+    <picture>
+      <source [srcset]="section.illustration.webpImg" type="image/webp" class="card-img-top">
+      <img
+        loading="lazy"
+        class="img-fluid"
+        [src]="section.illustration.alterImg"
+        [alt]="section.illustration.alt">
+    </picture>
+  </div>
+  <app-subsections [section]="section" [i]="i"></app-subsections>
+</div>

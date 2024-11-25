@@ -15,7 +15,7 @@
               <div class="card-body">
                 <h2 class="card-title">{{ card.title }}</h2>
                 <p><small class="text-muted">Opublikowano: {{ card.date }}</small></p>
-                <p class="card-text mb-4">{{ card.shortDescription | truncate: 242 }}</p>
+                <strong><p class="card-text mb-4">{{ card.shortDescription | truncate: 242 }}</p></strong>
                 <app-color-button (click)="navigateToBlog(card.id)" >Czytaj
                   <picture class="blog-img">
                     <source srcset="assets/img/next.webp" type="image/webp">

@@ -9,6 +9,11 @@ import {TruncatePipe} from "../../pipes/truncate.pipe";
 import {BannerBlogComponent} from './blog-template/banner-blog/banner-blog.component';
 import {BlogTemplateComponent} from "./blog-template/blog-template.component";
 import { BlogCardsComponent } from './blog-cards/blog-cards.component';
+import { ContentsComponent } from './blog-template/contents/contents.component';
+import {ContactModule} from "../contact/contact.module";
+import { SectionsComponent } from './blog-template/section/sections.component';
+import { SubsectionsComponent } from './blog-template/section/subsections/subsections.component';
+import { AutorComponent } from './blog-template/autor/autor.component';
 
 
 @NgModule({
@@ -17,17 +22,22 @@ import { BlogCardsComponent } from './blog-cards/blog-cards.component';
     TruncatePipe,
     BannerBlogComponent,
     BlogTemplateComponent,
-    BlogCardsComponent
+    BlogCardsComponent,
+    ContentsComponent,
+    SectionsComponent,
+    SubsectionsComponent,
+    AutorComponent,
   ],
   exports: [
     BannerBlogComponent
   ],
-  imports: [
-    CommonModule,
-    BlogRoutingModule,
-    SharedModule,
-    MatPaginatorModule,
-  ]
+    imports: [
+        CommonModule,
+        BlogRoutingModule,
+        SharedModule,
+        MatPaginatorModule,
+        ContactModule,
+    ]
 })
 export class BlogModule {
 

@@ -1,0 +1,40 @@
+ol li a {
+  text-decoration: none;
+  color: var(--black-color);
+  transition: color 0.3s;
+}
+
+ol li a:hover {
+  color: var(--black-color);
+  text-decoration: underline;
+}
+
+li {
+  margin: 8px 0;
+}
+
+.accordion-button {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+.accordion-button:focus {
+  background-color: rgba(214, 243, 239, 0.89);
+  box-shadow: 1px 1px 1px 1px rgb(189, 225, 219);
+  color: var(--black-color); /* Zmiana koloru na ciemniejszy */
+}
+
+.down-btn:active {
+  border-color: var(--white-color);
+}
+
+.accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--white-color);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
