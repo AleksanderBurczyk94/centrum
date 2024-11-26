@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {BlogService} from "../../../../services/blog.service";
-import {Meta, Title} from "@angular/platform-browser";
+import {Router} from "@angular/router";
 import {TherapistService} from "../../../../services/therapist.service";
 import {AppPaths} from "../../../../app-paths";
 

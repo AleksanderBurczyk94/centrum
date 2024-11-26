@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ContactService} from "../../services/contact.service";
 
 @Component({
   selector: 'app-contact',

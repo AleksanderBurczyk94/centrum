@@ -9,7 +9,7 @@ export class NavbarService {
   private readonly activeLinkSource = new BehaviorSubject<string>('');
   activeLink$ = this.activeLinkSource.asObservable();
 
-  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: object) {}
 
   setActiveLink(link: string): void {
     this.activeLinkSource.next(link);

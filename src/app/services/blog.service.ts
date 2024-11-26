@@ -118,7 +118,7 @@ export class BlogService {
                 alt: 'Grafika przedstawiająca wagę balansującą potrzeby sensoryczne u dzieci. Po lewej stronie opisane jako Unika intensywnych bodźców i Nadwrażliwość sensoryczna, a po prawej Poszukuje intensywnych bodźców i Podwrażliwość sensoryczna. Pod wagą napis: Balansowanie potrzeb sensorycznych u dzieci.'
               },
             }, {
-              title: 'Pro tip:',
+              title: 'Pro tip',
               lists: [
                 {
                   type: 'unordered',

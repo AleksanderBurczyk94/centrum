@@ -13,7 +13,7 @@ import {PedagogicalTherapyComponent} from './pedagogical-therapy/pedagogical-the
 import {SpecialistConsultationsComponent} from './specialist-consultations/specialist-consultations.component';
 import {AppPaths} from "../../app-paths";
 
-let routes: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: AssistanceComponent,

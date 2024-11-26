@@ -23,7 +23,7 @@ export class PriceListComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('popoverElement') popoverElements!: QueryList<ElementRef>;
   popovers: any[] = [];
 
-  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: object) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {

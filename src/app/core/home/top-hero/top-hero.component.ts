@@ -19,11 +19,11 @@ import {isPlatformBrowser} from '@angular/common';
 export class TopHeroComponent implements OnInit, AfterViewInit {
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
-  windowWidth: number = 0;
+  windowWidth = 0;
 
   constructor(
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
   ngOnInit(): void {

@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prod": "ng build --configuration=production",
-    "serve:ssr:cetrum-terapii": "node dist/cetrum-terapii/server/server.mjs"
+    "serve:ssr:cetrum-terapii": "node dist/cetrum-terapii/server/server.mjs",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,10 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.4",
+    "@angular-eslint/builder": "^18.0.0",
+    "@angular-eslint/eslint-plugin": "^18.0.0",
+    "@angular-eslint/eslint-plugin-template": "^18.0.0",
+    "@angular-eslint/template-parser": "^18.0.0",
     "@angular/cli": "^18.0.4",
     "@angular/compiler-cli": "^18.0.3",
     "@fullhuman/postcss-purgecss": "^6.0.0",
@@ -46,7 +51,11 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "angular-eslint": "^18.0.0",
     "brotli-webpack-plugin": "^1.1.0",
+    "eslint": "^8.57.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {AppPaths} from "../../app-paths";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-job',

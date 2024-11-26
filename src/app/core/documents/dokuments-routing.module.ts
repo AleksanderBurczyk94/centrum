@@ -6,7 +6,7 @@ import {ImageConsentComponent} from "./image-consent/image-consent.component";
 import {MinorsProtectionComponent} from "./minors-protection/minors-protection.component";
 import {DocumentsComponent} from "./documents.component";
 
-let routes: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: DocumentsComponent,

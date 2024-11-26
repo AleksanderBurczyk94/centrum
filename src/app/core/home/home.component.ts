@@ -12,11 +12,11 @@ export class HomeComponent implements OnInit{
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
   appPaths = AppPaths;
-  isInfoBarVisible: boolean = true;
+  isInfoBarVisible = true;
   constructor(
     private router: Router,
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
   ngOnInit(): void {
