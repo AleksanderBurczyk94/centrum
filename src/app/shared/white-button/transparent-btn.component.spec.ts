@@ -8,9 +8,8 @@ describe('WhiteButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TransparentBtnComponent ]
-    })
-    .compileComponents();
+      declarations: [TransparentBtnComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TransparentBtnComponent);
     component = fixture.componentInstance;

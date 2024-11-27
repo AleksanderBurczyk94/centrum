@@ -1,10 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-job',
   templateUrl: './job.component.html',
-  styleUrl: './job.component.css'
+  styleUrl: './job.component.css',
 })
-export class JobComponent {
-
-}
+export class JobComponent {}

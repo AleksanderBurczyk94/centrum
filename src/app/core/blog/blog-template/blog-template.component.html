@@ -1,25 +1,34 @@
 <app-banner-blog class="text-center" [blog]="blog"></app-banner-blog>
 <app-white-container>
-
   <div class="row mx-1 mt-4 justify-text">
-    <div class="col-md-9 ">
-      <strong><p class="short-description " [innerHTML]="blog.shortDescription"></p></strong>
+    <div class="col-md-9">
+      <strong
+        ><p class="short-description" [innerHTML]="blog.shortDescription"></p
+      ></strong>
 
       <app-contents [blog]="blog"></app-contents>
-      <div class="illustration d-flex align-items-center justify-content-center" *ngIf="blog.illustration">
+      <div
+        class="illustration d-flex align-items-center justify-content-center"
+        *ngIf="blog.illustration"
+      >
         <picture>
-          <source [srcset]="blog.illustration.webpImg" type="image/webp" class="card-img-top">
+          <source
+            [srcset]="blog.illustration.webpImg"
+            type="image/webp"
+            class="card-img-top"
+          />
           <img
             loading="lazy"
             class="img-fluid"
             [src]="blog.illustration.alterImg"
-            [alt]="blog.illustration.alt">
+            [alt]="blog.illustration.alt"
+          />
         </picture>
       </div>
       <app-sections [blog]="blog"></app-sections>
     </div>
     <div class="col-md-3 mb-4">
-    <app-autor></app-autor>
+      <app-autor></app-autor>
     </div>
   </div>
 </app-white-container>

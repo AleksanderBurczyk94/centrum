@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NavbarService {
   private readonly activeLinkSource = new BehaviorSubject<string>('');

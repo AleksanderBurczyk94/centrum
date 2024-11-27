@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
-import {ContactService} from "../../../services/contact.service";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { ContactService } from '../../../services/contact.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-box',
   templateUrl: './form-box.component.html',
-  styleUrl: './form-box.component.css'
+  styleUrl: './form-box.component.css',
 })
 export class FormBoxComponent {
-
   submitted = false;
 
   showSuccessAlert = false;
   showFeilureAlert = false;
 
-  constructor(private readonly contactService: ContactService) {
-  }
+  constructor(private readonly contactService: ContactService) {}
 
   get controls() {
     return this.contactForm.controls;
@@ -25,21 +23,18 @@ export class FormBoxComponent {
     firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(1),
-      Validators.maxLength(70)
+      Validators.maxLength(70),
     ]),
     lastName: new FormControl('', [
       Validators.minLength(1),
-      Validators.maxLength(70)
+      Validators.maxLength(70),
     ]),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.email
-    ]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     checkBox: new FormControl(false, [Validators.requiredTrue]),
     textMessage: new FormControl('', [
       Validators.required,
       Validators.minLength(2),
-      Validators.maxLength(500)
+      Validators.maxLength(500),
     ]),
   });
 
@@ -65,10 +60,14 @@ export class FormBoxComponent {
     if (this.contactForm.valid) {
       this.contactService.sendEmail(this.contactForm.value).then(
         (response) => {
-          console.log('Wiadomość została wysłana:', response.status, response.text);
+          console.log(
+            'Wiadomość została wysłana:',
+            response.status,
+            response.text
+          );
 
           this.showSuccessAlert = true;
-          setTimeout(() => this.showSuccessAlert = false, 3000);
+          setTimeout(() => (this.showSuccessAlert = false), 3000);
 
           this.contactForm.reset();
           this.submitted = false;
@@ -76,11 +75,9 @@ export class FormBoxComponent {
         (error) => {
           console.error('Błąd wysyłania wiadomości:', error);
           this.showFeilureAlert = true;
-          setTimeout(() => this.showFeilureAlert = false, 3000);
+          setTimeout(() => (this.showFeilureAlert = false), 3000);
         }
       );
     }
   }
-
-
 }

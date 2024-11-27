@@ -7,12 +7,10 @@ module.exports = {
       preset: 'default',
     }),
     require('@fullhuman/postcss-purgecss')({
-      content: [
-        './src/**/*.html',
-        './src/**/*.ts',
-      ],
+      content: ['./src/**/*.html', './src/**/*.ts'],
       safelist: [/^some-important-class$/], // Dodaj klasy, których nie chcesz usuwać
-      defaultExtractor: (content: string) => content.match(/[\w-/:]+(?<!:)/g) || [],
+      defaultExtractor: (content: string) =>
+        content.match(/[\w-/:]+(?<!:)/g) || [],
     }),
   ],
 };

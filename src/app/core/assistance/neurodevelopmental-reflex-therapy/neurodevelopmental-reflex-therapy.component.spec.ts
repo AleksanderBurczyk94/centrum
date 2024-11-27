@@ -8,9 +8,8 @@ describe('NeurodevelopmentalReflexTherapyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NeurodevelopmentalReflexTherapyComponent]
-    })
-    .compileComponents();
+      declarations: [NeurodevelopmentalReflexTherapyComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NeurodevelopmentalReflexTherapyComponent);
     component = fixture.componentInstance;

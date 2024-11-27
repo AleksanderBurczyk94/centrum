@@ -14,32 +14,48 @@
       <h2 class="underline-title">Kwalifikacje</h2>
       <h3 class="pt-2">Wykształcenie</h3>
       <ul>
-        <li *ngFor="let education of therapist?.qualifications?.education" [innerHTML]="education"></li>
+        <li
+          *ngFor="let education of therapist?.qualifications?.education"
+          [innerHTML]="education"
+        ></li>
       </ul>
       <div *ngIf="therapist?.qualifications?.certificates">
         <h3>Certyfikaty</h3>
         <ul>
-          <li *ngFor="let certificate of therapist?.qualifications?.certificates" [innerHTML]="certificate"></li>
+          <li
+            *ngFor="let certificate of therapist?.qualifications?.certificates"
+            [innerHTML]="certificate"
+          ></li>
         </ul>
       </div>
       <div *ngIf="therapist?.qualifications?.specialistTrainings">
         <h3>Szkolenia Specjalistyczne</h3>
         <ul>
           <li
-            *ngFor="let specialistTrainings of therapist?.qualifications?.specialistTrainings"
-            [innerHTML]="specialistTrainings"></li>
+            *ngFor="
+              let specialistTrainings of therapist?.qualifications
+                ?.specialistTrainings
+            "
+            [innerHTML]="specialistTrainings"
+          ></li>
         </ul>
       </div>
       <div *ngIf="therapist?.qualifications?.sensoryIntegrationTrainings">
         <h3>Szkolenia z Integracji Sensorycznej</h3>
         <ul>
           <li
-            *ngFor="let sensoryIntegrationTrainings of therapist?.qualifications?.sensoryIntegrationTrainings"
-            [innerHTML]="sensoryIntegrationTrainings"></li>
+            *ngFor="
+              let sensoryIntegrationTrainings of therapist?.qualifications
+                ?.sensoryIntegrationTrainings
+            "
+            [innerHTML]="sensoryIntegrationTrainings"
+          ></li>
         </ul>
       </div>
     </div>
-    <app-znany-lekarz *ngIf="therapist?.znanyLekarz" [therapist]="therapist" ></app-znany-lekarz>
+    <app-znany-lekarz
+      *ngIf="therapist?.znanyLekarz"
+      [therapist]="therapist"
+    ></app-znany-lekarz>
   </div>
 </app-white-container>
-

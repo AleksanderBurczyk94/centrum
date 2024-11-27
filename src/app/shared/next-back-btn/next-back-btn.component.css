@@ -4,7 +4,9 @@ button {
   background-color: var(--light-pink-color);
   border-radius: 15%;
   border: none;
-  transition: background-color, transform 0.3s;
+  transition:
+    background-color,
+    transform 0.3s;
 }
 
 img {
@@ -16,6 +18,3 @@ button:hover {
   background-color: var(--pink-color);
   transform: scale(1.05);
 }
-
-
-

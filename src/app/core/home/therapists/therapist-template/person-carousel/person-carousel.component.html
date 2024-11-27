@@ -6,33 +6,45 @@
     </div>
     <div class="col-md p-0 img-container">
       <picture>
-        <source [srcset]="therapist?.webpImg" type="image/webp">
-        <img [src]="therapist?.alterImg" [alt]="'Zdjęcie ' + therapist?.name">
+        <source [srcset]="therapist?.webpImg" type="image/webp" />
+        <img [src]="therapist?.alterImg" [alt]="'Zdjęcie ' + therapist?.name" />
       </picture>
     </div>
     <div class="col-md assistance-box">
-      <h2 class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2">Zakres wsparcia</h2>
+      <h2
+        class="card-title fw-bold mb-2 mt-4 ms-1 text-center text-lg-start no-wrap ps-md-3 mx-2"
+      >
+        Zakres wsparcia
+      </h2>
       <ul class="mx-2">
         <li *ngFor="let item of therapist?.assistance" [innerHTML]="item"></li>
       </ul>
     </div>
   </div>
 
-  <app-next-back-btn
-    (click)="onNextTherapist()"
-    class="next-btn">
+  <app-next-back-btn (click)="onNextTherapist()" class="next-btn">
     <picture>
-      <source srcset="assets/img/right-arrow.webp" type="image/webp">
-      <img src="assets/img/right-arrow.png" alt="Ikona strzałki w prawo" width="30" height="30" class="arrow-btn">
+      <source srcset="assets/img/right-arrow.webp" type="image/webp" />
+      <img
+        src="assets/img/right-arrow.png"
+        alt="Ikona strzałki w prawo"
+        width="30"
+        height="30"
+        class="arrow-btn"
+      />
     </picture>
   </app-next-back-btn>
 
-  <app-next-back-btn
-    (click)="onPrevTherapist()"
-    class="back-btn">
+  <app-next-back-btn (click)="onPrevTherapist()" class="back-btn">
     <picture>
-      <source srcset="assets/img/left-arrow.webp" type="image/webp">
-      <img src="assets/img/left-arrow.png" alt="Ikona strzałki w lewo" class="arrow-btn" width="30" height="30">
+      <source srcset="assets/img/left-arrow.webp" type="image/webp" />
+      <img
+        src="assets/img/left-arrow.png"
+        alt="Ikona strzałki w lewo"
+        class="arrow-btn"
+        width="30"
+        height="30"
+      />
     </picture>
   </app-next-back-btn>
 </div>

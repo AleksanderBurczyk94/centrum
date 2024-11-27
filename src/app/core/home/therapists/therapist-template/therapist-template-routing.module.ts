@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {TherapistTemplateComponent} from "./therapist-template.component";
-
+import { TherapistTemplateComponent } from './therapist-template.component';
 
 const routes: Routes = [
   {

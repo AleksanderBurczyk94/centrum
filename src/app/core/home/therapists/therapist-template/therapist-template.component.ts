@@ -1,15 +1,14 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs';
-import {Therapist} from '../../../../interfaces/therpaists';
-import {TherapistService} from '../../../../services/therapist.service';
-import {ActivatedRoute} from "@angular/router";
-import {Meta, Title} from "@angular/platform-browser";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Therapist } from '../../../../interfaces/therpaists';
+import { TherapistService } from '../../../../services/therapist.service';
+import { ActivatedRoute } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-therapist-template',
   templateUrl: './therapist-template.component.html',
   styleUrls: ['./therapist-template.component.css'],
-
 })
 export class TherapistTemplateComponent implements OnInit, OnDestroy {
   therapist: Therapist | null = null;
@@ -49,9 +48,12 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
   setTitleAndMeta(): void {
     if (this.therapist) {
       this.titleService.setTitle(this.therapist.seoData.title);
-      this.metaService.updateTag({ name: 'description', content: this.therapist.seoData.metaDescription });
+      this.metaService.updateTag({
+        name: 'description',
+        content: this.therapist.seoData.metaDescription,
+      });
     } else {
-      console.warn("setTitleAndMeta: Brak terapeuty!");
+      console.warn('setTitleAndMeta: Brak terapeuty!');
     }
   }
 

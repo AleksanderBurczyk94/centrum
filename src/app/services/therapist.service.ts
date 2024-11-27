@@ -1,138 +1,143 @@
-import {Injectable, OnDestroy} from '@angular/core';
-import {BehaviorSubject, map, Observable, Subscription} from 'rxjs';
-import {Therapist} from "../interfaces/therpaists";
-import {Router} from "@angular/router";
-import {AppPaths} from "../app-paths";
+import { Injectable, OnDestroy } from '@angular/core';
+import { BehaviorSubject, map, Observable, Subscription } from 'rxjs';
+import { Therapist } from '../interfaces/therpaists';
+import { Router } from '@angular/router';
+import { AppPaths } from '../app-paths';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TherapistService implements OnDestroy {
   public appPaths = AppPaths;
-  private activeTherapistIndex: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  private activeTherapistIndex: BehaviorSubject<number> =
+    new BehaviorSubject<number>(0);
   private readonly activeTherapistSubscription: Subscription;
 
-  private readonly therapists: Therapist[] = [{
-    id: 0,
-    seoData: {
-      title: 'Paulina Okrasa-Burczyk - Terapeuta integracji seonsorycznej',
-      metaDescription: 'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.'
-    },
-    name: 'Paulina Okrasa-Burczyk',
-    role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka integracji&nbsp;sensorycznej, terapeutka neurorozwojowa metody&nbsp;INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
-    webpImg: 'assets/img/Paulina-Okrasa-Burczyk.webp',
-    alterImg: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
-    assistance: [
-      'Diagnoza i&nbsp;terapia integracji sensorycznej',
-      'Diagnoza i&nbsp;terapia neurorozwojowa odruchów&nbsp;INPP',
-      'Diagnoza i&nbsp;terapia ręki',
-      'Diagnoza i&nbsp;terapia przetwarzania słuchowego Johansena',
-      'Terapia NeuroTaktylna&nbsp;MNRI®',
-      'Konsultacje sensomotoryczne i&nbsp;neurorozwojowe dla&nbsp;rodziców',
-    ],
+  private readonly therapists: Therapist[] = [
+    {
+      id: 0,
+      seoData: {
+        title: 'Paulina Okrasa-Burczyk - Terapeuta integracji seonsorycznej',
+        metaDescription:
+          'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.',
+      },
+      name: 'Paulina Okrasa-Burczyk',
+      role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka integracji&nbsp;sensorycznej, terapeutka neurorozwojowa metody&nbsp;INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
+      webpImg: 'assets/img/Paulina-Okrasa-Burczyk.webp',
+      alterImg: 'assets/img/Paulina-Okrasa-Burczyk.jpg',
+      assistance: [
+        'Diagnoza i&nbsp;terapia integracji sensorycznej',
+        'Diagnoza i&nbsp;terapia neurorozwojowa odruchów&nbsp;INPP',
+        'Diagnoza i&nbsp;terapia ręki',
+        'Diagnoza i&nbsp;terapia przetwarzania słuchowego Johansena',
+        'Terapia NeuroTaktylna&nbsp;MNRI®',
+        'Konsultacje sensomotoryczne i&nbsp;neurorozwojowe dla&nbsp;rodziców',
+      ],
 
-    aboutMe: `
+      aboutMe: `
     Na&nbsp;co&nbsp;dzień wspieram dzieci w&nbsp;prawidłowym rozwoju sensomotorycznym i&nbsp;neuropsychologicznym. Podczas
     przeprowadzania diagnoz i&nbsp;terapii staram się patrzeć na&nbsp;dziecko i&nbsp;jego najbliższe otoczenie w&nbsp;holistyczny
     i&nbsp;całościowy sposób, co&nbsp;umożliwia mi&nbsp;wybór najlepszych form i&nbsp;metod wsparcia dla&nbsp;konkretnych trudności i&nbsp;wyzwań,
     z&nbsp;którymi zmagają się dzieci i&nbsp;ich rodzice.
     `,
-    sections: [
-      {
-        title: 'Holistyczne podejście do&nbsp;terapii',
-        content: `Moje podejście obejmuje całościowe spojrzenie na&nbsp;dziecko i&nbsp;jego otoczenie. W&nbsp;razie potrzeby kieruję dzieci na&nbsp;pogłębioną diagnostykę z&nbsp;zakresu neurologopedii, fizjoterapii, osteopatii, konsultacji psychologicznych, psychoterapii czy&nbsp;psychodietetyki.`,
-      },
-      {
-        title: 'Relacja z&nbsp;dzieckiem – klucz do&nbsp;sukcesu',
-        content: `Najważniejszym elementem terapii jest dla&nbsp;mnie nawiązanie relacji z&nbsp;dzieckiem, aby&nbsp;czuło się komfortowo i&nbsp;bezpiecznie. Tylko w&nbsp;taki sposób terapia może przynosić oczekiwane efekty.`,
-      },
-      {
-        title: 'Nieustanny rozwój zawodowy',
-        content: `Cenię rozwój i&nbsp;stale podnoszę swoje kwalifikacje, aby&nbsp;móc jak&nbsp;najskuteczniej pomagać naszym małym klientom. Pracuję także z&nbsp;dziećmi z&nbsp;r&oacute;żnego rodzaju niepełnosprawnościami oraz&nbsp;w&nbsp;spektrum autyzmu.`,
-      },
-      {
-        title: 'Doświadczenie zawodowe',
-        content: `Doświadczenie w&nbsp;pracy z&nbsp;dziećmi zdobywałam pracując kilka lat w&nbsp;specjalnym ośrodku wychowawczym dla&nbsp;chłopców z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;w&nbsp;szkole ogólnodostępnej jako nauczyciel wspomagający dzieci w&nbsp;spektrum autyzmu oraz&nbsp;jako polonistka. Obecnie poza&nbsp;działalnością w&nbsp;Centrum Równowaga jestem także nauczycielem w&nbsp;szkole specjalnej, gdzie&nbsp;pracuję z&nbsp;dziećmi z&nbsp;wszelkiego rodzaju niepełnosprawnościami. Prowadzę także terapię w&nbsp;zakresie Wczesnego Wspomagania Dziecka.`,
-      },
-      {
-        title: 'Zainteresowania naukowe',
-        content: `Interesuję się psychologią, szczególnie w&nbsp;kontekście traumy rozwojowej, neuropsychologii, psychoterapii sensomotorycznej oraz&nbsp;Teorii poliwagalnej Stephena Porgesa. Uważam, że&nbsp;umysł i&nbsp;ciało to&nbsp;jedność, którą należy traktować z&nbsp;pełnym zrozumieniem i&nbsp;nigdy nie&nbsp;zapominać, że&nbsp;cały czas na&nbsp;siebie wzajemnie oddziałują.`,
-      },
-      {
-        title: 'Prywatnie',
-        content: `W&nbsp;życiu prywatnym jestem właścicielką trzech kundelków – adopciaków, które&nbsp;każdego dnia dostarczają mi&nbsp;wsparcia w&nbsp;postaci dogoterapii. Gorąco polecam adopcję – Nie&nbsp;kupuj, adoptuj! :)`,
-      },
-    ],
-    qualifications: {
-      education: [
-        'Filologia polska z&nbsp;pedagogiką – studia magisterskie, Uniwersytet Wrocławski',
-        'Logopedia ogólna – studia podyplomowe, Uniwersytet Wrocławski',
-        'Oligofrenopedagogika – studia podyplomowe',
-        'Resocjalizacja i&nbsp;socjoterapia – studia podyplomowe',
-        'Wspieranie rozwoju i&nbsp;edukacja osób ze&nbsp;spektrum autyzmu – studia podyplomowe',
-        'Integracja sensoryczna – studia podyplomowe, Wyższa Szkoła Edukacja w&nbsp;Sporcie, Instytut Sportu i&nbsp;Rekreacji w&nbsp;Warszawie',
-        'Psychologia – studia magisterskie (w&nbsp;trakcie), Akademia Ekonomiczno-Humanistyczna w&nbsp;Warszawie',
+      sections: [
+        {
+          title: 'Holistyczne podejście do&nbsp;terapii',
+          content: `Moje podejście obejmuje całościowe spojrzenie na&nbsp;dziecko i&nbsp;jego otoczenie. W&nbsp;razie potrzeby kieruję dzieci na&nbsp;pogłębioną diagnostykę z&nbsp;zakresu neurologopedii, fizjoterapii, osteopatii, konsultacji psychologicznych, psychoterapii czy&nbsp;psychodietetyki.`,
+        },
+        {
+          title: 'Relacja z&nbsp;dzieckiem – klucz do&nbsp;sukcesu',
+          content: `Najważniejszym elementem terapii jest dla&nbsp;mnie nawiązanie relacji z&nbsp;dzieckiem, aby&nbsp;czuło się komfortowo i&nbsp;bezpiecznie. Tylko w&nbsp;taki sposób terapia może przynosić oczekiwane efekty.`,
+        },
+        {
+          title: 'Nieustanny rozwój zawodowy',
+          content: `Cenię rozwój i&nbsp;stale podnoszę swoje kwalifikacje, aby&nbsp;móc jak&nbsp;najskuteczniej pomagać naszym małym klientom. Pracuję także z&nbsp;dziećmi z&nbsp;r&oacute;żnego rodzaju niepełnosprawnościami oraz&nbsp;w&nbsp;spektrum autyzmu.`,
+        },
+        {
+          title: 'Doświadczenie zawodowe',
+          content: `Doświadczenie w&nbsp;pracy z&nbsp;dziećmi zdobywałam pracując kilka lat w&nbsp;specjalnym ośrodku wychowawczym dla&nbsp;chłopców z&nbsp;niepełnosprawnością intelektualną oraz&nbsp;w&nbsp;szkole ogólnodostępnej jako nauczyciel wspomagający dzieci w&nbsp;spektrum autyzmu oraz&nbsp;jako polonistka. Obecnie poza&nbsp;działalnością w&nbsp;Centrum Równowaga jestem także nauczycielem w&nbsp;szkole specjalnej, gdzie&nbsp;pracuję z&nbsp;dziećmi z&nbsp;wszelkiego rodzaju niepełnosprawnościami. Prowadzę także terapię w&nbsp;zakresie Wczesnego Wspomagania Dziecka.`,
+        },
+        {
+          title: 'Zainteresowania naukowe',
+          content: `Interesuję się psychologią, szczególnie w&nbsp;kontekście traumy rozwojowej, neuropsychologii, psychoterapii sensomotorycznej oraz&nbsp;Teorii poliwagalnej Stephena Porgesa. Uważam, że&nbsp;umysł i&nbsp;ciało to&nbsp;jedność, którą należy traktować z&nbsp;pełnym zrozumieniem i&nbsp;nigdy nie&nbsp;zapominać, że&nbsp;cały czas na&nbsp;siebie wzajemnie oddziałują.`,
+        },
+        {
+          title: 'Prywatnie',
+          content: `W&nbsp;życiu prywatnym jestem właścicielką trzech kundelków – adopciaków, które&nbsp;każdego dnia dostarczają mi&nbsp;wsparcia w&nbsp;postaci dogoterapii. Gorąco polecam adopcję – Nie&nbsp;kupuj, adoptuj! :)`,
+        },
       ],
-      certificates: [
-        'Klinika Integracji Sensorycznej – certyfikat terapeuty i&nbsp;diagnosty integracji sensorycznej, Centrum Integracji Sensorycznej w&nbsp;Warszawie',
-        'Johansen Indywidualna Stymulacja Słuchu – indywidualny program treningu słuchowego, certyfikacja jako Provider JIAS, K.&nbsp;Rychetsky, R.&nbsp;Borowiecka, Wrocław',
-      ],
-      specialistTrainings: [
-        'Terapia ręki i&nbsp;zaburzeń motoryki małej I&nbsp;i&nbsp;II&nbsp;stopnia, diagnoza – terapia – masaż, Ośrodek ProCentrum, Wrocław',
-        'Apteczka Pierwszej Pomocy Emocjonalnej – kurs w&nbsp;zakresie psychologii pozytywnej, ODN w&nbsp;Kaliszu',
-        'Trening Umiejętności Społecznych TUS, terapia grupowa dzieci ze&nbsp;spektrum autyzmu, Fundacja Pomoc Autyzm, Warszawa',
-        'Integracja NeuroTaktylna MNRI® – Svetlana Masgutowa Educational Institute, szkolenie w&nbsp;Ośrodku ASTO, Wrocław',
-        'Szkolenie Bazowe Pozytywnej Dyscypliny dla&nbsp;Edukacji, ODN Kalisz',
-        'Diagnoza i&nbsp;terapia opóźnienia neurorozwojowego – roczne szkolenie programu indywidualnego The Institute for Neuro-Psychological Psychology, Chester (filia: INPP Polska, Warszawa)',
-      ],
-      sensoryIntegrationTrainings: [
-        'Wspomaganie rozwoju dzieci ze&nbsp;specyficznymi trudnościami w&nbsp;nauce – Szkolny Program Interwencyjny Sally Goddard Blythe, Instytut Psychologii Neurofizjologicznej INPP Polska, Maria Matuszkiewicz',
-        'Nadreaktywność i&nbsp;Podreaktywność sensoryczna w&nbsp;terapii SI, szkolenie Małgorzata Karga',
-        'Integracja Sensoryczna a&nbsp;ADHD, szkolenie Z.&nbsp;Przyrowski',
-        'Chodzenie na&nbsp;palcach u&nbsp;dzieci: kiedy norma a&nbsp;kiedy zaburzenie, szkolenie W.&nbsp;Kozłowski, B.&nbsp;Witkowska',
-        'Sensoplastyka, szkolenie Inkubator Inspiracji',
-        'Diagnoza Procesów Integracji Sensorycznej, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
-        'Diagnoza i&nbsp;terapia SI małego dziecka, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
-        'Plany terapii w&nbsp;SI, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
-        'Obserwacja Kliniczna SI w&nbsp;aspekcie fizjoterapeutycznym, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
-        'Ocena napięcia mięśniowego i&nbsp;postawy dziecka w&nbsp;korelacji z&nbsp;zaburzeniami sensorycznymi, szkolenie Fundacja Promyk Słońca, prowadzący W.&nbsp;Kozłowski',
-        'Teoria poliwagalna i&nbsp;integracja sensoryczna w&nbsp;praktyce, badanie zależności w&nbsp;teorii i&nbsp;wskazania do&nbsp;terapii, szkolenie Fundacja Promyk Słońca, prowadząca Tracy Murnan Stackhouse',
-      ],
+      qualifications: {
+        education: [
+          'Filologia polska z&nbsp;pedagogiką – studia magisterskie, Uniwersytet Wrocławski',
+          'Logopedia ogólna – studia podyplomowe, Uniwersytet Wrocławski',
+          'Oligofrenopedagogika – studia podyplomowe',
+          'Resocjalizacja i&nbsp;socjoterapia – studia podyplomowe',
+          'Wspieranie rozwoju i&nbsp;edukacja osób ze&nbsp;spektrum autyzmu – studia podyplomowe',
+          'Integracja sensoryczna – studia podyplomowe, Wyższa Szkoła Edukacja w&nbsp;Sporcie, Instytut Sportu i&nbsp;Rekreacji w&nbsp;Warszawie',
+          'Psychologia – studia magisterskie (w&nbsp;trakcie), Akademia Ekonomiczno-Humanistyczna w&nbsp;Warszawie',
+        ],
+        certificates: [
+          'Klinika Integracji Sensorycznej – certyfikat terapeuty i&nbsp;diagnosty integracji sensorycznej, Centrum Integracji Sensorycznej w&nbsp;Warszawie',
+          'Johansen Indywidualna Stymulacja Słuchu – indywidualny program treningu słuchowego, certyfikacja jako Provider JIAS, K.&nbsp;Rychetsky, R.&nbsp;Borowiecka, Wrocław',
+        ],
+        specialistTrainings: [
+          'Terapia ręki i&nbsp;zaburzeń motoryki małej I&nbsp;i&nbsp;II&nbsp;stopnia, diagnoza – terapia – masaż, Ośrodek ProCentrum, Wrocław',
+          'Apteczka Pierwszej Pomocy Emocjonalnej – kurs w&nbsp;zakresie psychologii pozytywnej, ODN w&nbsp;Kaliszu',
+          'Trening Umiejętności Społecznych TUS, terapia grupowa dzieci ze&nbsp;spektrum autyzmu, Fundacja Pomoc Autyzm, Warszawa',
+          'Integracja NeuroTaktylna MNRI® – Svetlana Masgutowa Educational Institute, szkolenie w&nbsp;Ośrodku ASTO, Wrocław',
+          'Szkolenie Bazowe Pozytywnej Dyscypliny dla&nbsp;Edukacji, ODN Kalisz',
+          'Diagnoza i&nbsp;terapia opóźnienia neurorozwojowego – roczne szkolenie programu indywidualnego The Institute for Neuro-Psychological Psychology, Chester (filia: INPP Polska, Warszawa)',
+        ],
+        sensoryIntegrationTrainings: [
+          'Wspomaganie rozwoju dzieci ze&nbsp;specyficznymi trudnościami w&nbsp;nauce – Szkolny Program Interwencyjny Sally Goddard Blythe, Instytut Psychologii Neurofizjologicznej INPP Polska, Maria Matuszkiewicz',
+          'Nadreaktywność i&nbsp;Podreaktywność sensoryczna w&nbsp;terapii SI, szkolenie Małgorzata Karga',
+          'Integracja Sensoryczna a&nbsp;ADHD, szkolenie Z.&nbsp;Przyrowski',
+          'Chodzenie na&nbsp;palcach u&nbsp;dzieci: kiedy norma a&nbsp;kiedy zaburzenie, szkolenie W.&nbsp;Kozłowski, B.&nbsp;Witkowska',
+          'Sensoplastyka, szkolenie Inkubator Inspiracji',
+          'Diagnoza Procesów Integracji Sensorycznej, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
+          'Diagnoza i&nbsp;terapia SI małego dziecka, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
+          'Plany terapii w&nbsp;SI, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
+          'Obserwacja Kliniczna SI w&nbsp;aspekcie fizjoterapeutycznym, Fundacja na&nbsp;Rzecz Rodzin Dzieci z&nbsp;Autyzmem i&nbsp;Innymi Dysfunkcjami Okno',
+          'Ocena napięcia mięśniowego i&nbsp;postawy dziecka w&nbsp;korelacji z&nbsp;zaburzeniami sensorycznymi, szkolenie Fundacja Promyk Słońca, prowadzący W.&nbsp;Kozłowski',
+          'Teoria poliwagalna i&nbsp;integracja sensoryczna w&nbsp;praktyce, badanie zależności w&nbsp;teorii i&nbsp;wskazania do&nbsp;terapii, szkolenie Fundacja Promyk Słońca, prowadząca Tracy Murnan Stackhouse',
+        ],
+      },
+      znanyLekarz:
+        'https://www.znanylekarz.pl/paulina-okrasa/logopeda/kalisz#profile-reviews',
     },
-    znanyLekarz: 'https://www.znanylekarz.pl/paulina-okrasa/logopeda/kalisz#profile-reviews',
-  },
     {
-    id: 1,
+      id: 1,
       seoData: {
         title: 'Sylwia Szumska - Terapeuta Równowaga',
-        metaDescription: 'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.'
+        metaDescription:
+          'Sylwia Szumska - pedagog, terapeutka SI i specjalistka terapii pedagogicznej w Centrum Równowaga w Kaliszu. Pomaga dzieciom z trudnościami w nauce i rozwoju.',
       },
-    name: 'Sylwia Szumska',
-    role: 'Pedagożka, terapeutka pedagogiczna, oligofrenopedagog, terapeutka dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, terapeutka integracji&nbsp;sensorycznejcji, terapeutka ręki I&nbsp;i&nbsp;II stopnia',
-    webpImg: 'assets/img/awatar-damski.webp',
-    alterImg: 'assets/img/awatar-damski.png',
-    assistance: [
-      'Terapia integracji sensorycznej (SI)',
-      'Terapia pedagogiczna dla dzieci z&nbsp;trudnościami w&nbsp;nauce',
-      'Wsparcie dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
-      'Terapia ręki I&nbsp;i&nbsp;II stopnia',
-      'Terapia dzieci z&nbsp;niepełnosprawnością intelektualną',
-      'Socjoterapia – wsparcie w&nbsp;rozwijaniu umiejętności społecznych i&nbsp;emocjonalnych',
-      'Zajęcia sensomotoryczne wspomagające koordynację ruchową i&nbsp;motorykę',
-      'Wspomaganie rozwoju dzieci z&nbsp;trudnościami szkolnymi (dysleksja, dysgrafia, dyskalkulia)',
-      'Konsultacje dla rodziców dotyczące rozwoju dziecka i&nbsp;metod wsparcia',
-      'Terapia zaburzeń emocjonalnych i&nbsp;społecznych u&nbsp;dzieci',
-    ],
-    aboutMe: `
+      name: 'Sylwia Szumska',
+      role: 'Pedagożka, terapeutka pedagogiczna, oligofrenopedagog, terapeutka dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, terapeutka integracji&nbsp;sensorycznejcji, terapeutka ręki I&nbsp;i&nbsp;II stopnia',
+      webpImg: 'assets/img/awatar-damski.webp',
+      alterImg: 'assets/img/awatar-damski.png',
+      assistance: [
+        'Terapia integracji sensorycznej (SI)',
+        'Terapia pedagogiczna dla dzieci z&nbsp;trudnościami w&nbsp;nauce',
+        'Wsparcie dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
+        'Terapia ręki I&nbsp;i&nbsp;II stopnia',
+        'Terapia dzieci z&nbsp;niepełnosprawnością intelektualną',
+        'Socjoterapia – wsparcie w&nbsp;rozwijaniu umiejętności społecznych i&nbsp;emocjonalnych',
+        'Zajęcia sensomotoryczne wspomagające koordynację ruchową i&nbsp;motorykę',
+        'Wspomaganie rozwoju dzieci z&nbsp;trudnościami szkolnymi (dysleksja, dysgrafia, dyskalkulia)',
+        'Konsultacje dla rodziców dotyczące rozwoju dziecka i&nbsp;metod wsparcia',
+        'Terapia zaburzeń emocjonalnych i&nbsp;społecznych u&nbsp;dzieci',
+      ],
+      aboutMe: `
       Praca z&nbsp;dziećmi jest moim powołaniem i&nbsp;świadomym wyborem. Jestem pasjonatką pracy z&nbsp;dziećmi, która
       daje mi&nbsp;wiele radości, bo&nbsp;mogę dzielić się wszystkim, co&nbsp;pomaga w&nbsp;ich funkcjonowaniu i&nbsp;co&nbsp;najważniejsze,
       przynosi uśmiech. Uśmiechnięte dziecko, uśmiechnięty terapeuta to&nbsp;uśmiechnięty i&nbsp;lepszy świat. W&nbsp;swoich
       działaniach kieruję się mottem zaczerpniętym od&nbsp;B.Cage, że „Nauczyciel widzi więcej niż tylko twarze dzieci – stara się zobaczyć ich dusze”.
     `,
-    sections: [
-      {
-        title: 'Nieustanny rozwój zawodowy – zdobywanie nowych doświadczeń',
-        content: `
+      sections: [
+        {
+          title: 'Nieustanny rozwój zawodowy – zdobywanie nowych doświadczeń',
+          content: `
           Pracując z&nbsp;dziećmi z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, nieustannie dbam o&nbsp;swój rozwój,
           uczestnicząc w&nbsp;r&oacute;żnego rodzaju szkoleniach, seminariach, kursach, webinariach, projektach i&nbsp;wolontariatach.
           <br><br>
@@ -145,10 +150,10 @@ export class TherapistService implements OnDestroy {
             <li>Instruktor p&oacute;łkolonii letnich w&nbsp;Klubie Osiedlowym XXV-lecia Kaliskiej Sp&oacute;łdzielni Mieszkaniowej w&nbsp;Kaliszu</li>
           </ul>
         `,
-      },
-      {
-        title: 'Doświadczenie&nbsp;zawodowe',
-        content: `
+        },
+        {
+          title: 'Doświadczenie&nbsp;zawodowe',
+          content: `
           Doświadczenie w&nbsp;pracy z&nbsp;dziećmi z&nbsp;niepełnosprawnością intelektualną zdobyłam, praktykując w&nbsp;Zespole
           Placówek Specjalnych w&nbsp;Pleszewie, a&nbsp;następnie rozpoczęłam pracę zawodową i&nbsp;terapeutyczną w&nbsp;szkołach
           ogólnodostępnych jako nauczyciel wsp&oacute;łorganizujący kształcenie dzieci ze&nbsp;spektrum autyzmu, terapię
@@ -156,45 +161,46 @@ export class TherapistService implements OnDestroy {
           w&nbsp;Centrum R&oacute;wnowaga, pracuję w&nbsp;Szkole Podstawowej nr&nbsp;18 z&nbsp;oddziałami dla&nbsp;Dzieci z&nbsp;Autyzmem,
           gdzie&nbsp;pracuję jako nauczyciel wychowawca klasy 3 dzieci z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu.
         `,
-      },
-      {
-        title: 'Prywatnie',
-        content: `
+        },
+        {
+          title: 'Prywatnie',
+          content: `
           W&nbsp;życiu prywatnym czas wolny spędzam z&nbsp;rodziną, naszym domowym pupilem kr&oacute;likiem Hepikiem, przyjaciółmi
           i&nbsp;muzyką. Kocham taniec – tańczę bachatę i&nbsp;salsę. Bardzo lubię prace handmade, dekorację wnętrz,
           podr&oacute;że, długie spacery, prace w&nbsp;ogrodzie wśr&oacute;d kwiat&oacute;w oraz&nbsp;sport, jak&nbsp;wycieczki rowerowe i&nbsp;narty
           bieg&oacute;wki.
         `,
+        },
+      ],
+      qualifications: {
+        education: [
+          'Niepubliczny Ośrodek Doskonalenia Nauczycieli COGNITUS.PL – Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia',
+          'Uczelnia Nauk Społecznych w&nbsp;Łodzi – Studia Podyplomowe, Integracja Sensoryczna - diagnoza i&nbsp;terapia',
+          'Wyższa Szkoła Bankowa w&nbsp;Poznaniu – Studia Podyplomowe, Edukacja i&nbsp;terapia os&oacute;b z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
+          'Collegium Da Vinci Poznań – Studia Podyplomowe, Oligofrenopedagogika z&nbsp;elementami integracji sensorycznej',
+          'Gnieźnieńska Wyższa Szkoła Humanistyczno-Menedżerska „MILENIUM” – Studia Podyplomowe, Wychowanie wczesnoszkolne i&nbsp;przedszkolne',
+          'Politechnika Poznańska – Studia Uzupełniające Magisterskie, Inżynieria Komunikacji Interpersonalnej i&nbsp;Public Relations',
+        ],
+        specialistTrainings: [
+          'Webinar „Jak polepszyć sen u&nbsp;os&oacute;b ze&nbsp;spektrum autyzmu”, Terapia Zajęciowa Profesjonalnie',
+          'Webinar „Sprawozdanie pedagoga specjalnego”, Specjalni.pl Niepubliczny Ośrodek Doskonalenia Nauczycieli',
+          'Szkolenie PBP Książnica Pedagogiczna w&nbsp;Kaliszu „TIK-owy nauczyciel – Genial.ly - część II”',
+          'Seminarium ODN Kalisz: „Pomoc psychologiczno-pedagogiczna udzielana uczniom przez specjalist&oacute;w szkolnych”',
+          'Szkolenie „ABC pracy nauczyciela wsp&oacute;łorganizującego proces kształcenia uczni&oacute;w ze&nbsp;specjalnymi potrzebami edukacyjnymi”',
+        ],
+        certificates: [
+          'Integracja Sensoryczna – diagnoza i&nbsp;terapia, Uczelnia Nauk Społecznych w&nbsp;Łodzi',
+          'Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia, Cognitus Niepubliczny Ośrodek Doskonalenia Nauczycieli',
+          'Certyfikat OSEhero, Og&oacute;lnopolski Projekt Edukacyjny OSEhero w&nbsp;roku szkolnym 2023/2024',
+        ],
       },
-    ],
-    qualifications: {
-      education: [
-        'Niepubliczny Ośrodek Doskonalenia Nauczycieli COGNITUS.PL – Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia',
-        'Uczelnia Nauk Społecznych w&nbsp;Łodzi – Studia Podyplomowe, Integracja Sensoryczna - diagnoza i&nbsp;terapia',
-        'Wyższa Szkoła Bankowa w&nbsp;Poznaniu – Studia Podyplomowe, Edukacja i&nbsp;terapia os&oacute;b z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu',
-        'Collegium Da Vinci Poznań – Studia Podyplomowe, Oligofrenopedagogika z&nbsp;elementami integracji sensorycznej',
-        'Gnieźnieńska Wyższa Szkoła Humanistyczno-Menedżerska „MILENIUM” – Studia Podyplomowe, Wychowanie wczesnoszkolne i&nbsp;przedszkolne',
-        'Politechnika Poznańska – Studia Uzupełniające Magisterskie, Inżynieria Komunikacji Interpersonalnej i&nbsp;Public Relations',
-      ],
-      specialistTrainings: [
-        'Webinar „Jak polepszyć sen u&nbsp;os&oacute;b ze&nbsp;spektrum autyzmu”, Terapia Zajęciowa Profesjonalnie',
-        'Webinar „Sprawozdanie pedagoga specjalnego”, Specjalni.pl Niepubliczny Ośrodek Doskonalenia Nauczycieli',
-        'Szkolenie PBP Książnica Pedagogiczna w&nbsp;Kaliszu „TIK-owy nauczyciel – Genial.ly - część II”',
-        'Seminarium ODN Kalisz: „Pomoc psychologiczno-pedagogiczna udzielana uczniom przez specjalist&oacute;w szkolnych”',
-        'Szkolenie „ABC pracy nauczyciela wsp&oacute;łorganizującego proces kształcenia uczni&oacute;w ze&nbsp;specjalnymi potrzebami edukacyjnymi”',
-      ],
-      certificates: [
-        'Integracja Sensoryczna – diagnoza i&nbsp;terapia, Uczelnia Nauk Społecznych w&nbsp;Łodzi',
-        'Terapia ręki i&nbsp;stopy I oraz&nbsp;II stopnia, Cognitus Niepubliczny Ośrodek Doskonalenia Nauczycieli',
-        'Certyfikat OSEhero, Og&oacute;lnopolski Projekt Edukacyjny OSEhero w&nbsp;roku szkolnym 2023/2024',
-      ],
     },
-  },
     {
       id: 2,
       seoData: {
         title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
-        metaDescription: 'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.'
+        metaDescription:
+          'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.',
       },
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
@@ -247,14 +253,14 @@ export class TherapistService implements OnDestroy {
           'Przygotowanie pedagogiczne - studia podyplomowe w Wyższej Szkole Kształcenia Zawodowego we Wrocławiu',
           'Studium Psychoterapii Dzieci i Młodzieży - dwuletnie szkolenie w Instytucie Edukacji i Terapii w Poznaniu',
         ],
-
       },
     },
     {
       id: 3,
       seoData: {
         title: 'Magdalena Mokrzycka - Specjalista Równowaga',
-        metaDescription: 'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.'
+        metaDescription:
+          'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.',
       },
       name: 'Magdalena Mokrzycka',
       role: 'Pedagożka, terapeutka integracji&nbsp;sensorycznej',
@@ -267,7 +273,7 @@ export class TherapistService implements OnDestroy {
         'Praca nad rozwijaniem umiejętności adaptacyjnych i&nbsp;samoregulacji',
         'Pomoc w&nbsp;kształtowaniu prawidłowych odruchów i&nbsp;wzorców ruchowych',
         'Konsultacje i&nbsp;instruktaż dla rodziców w&nbsp;zakresie wspierania dziecka w&nbsp;domu',
-        'Wsparcie w&nbsp;integracji zmysłów i&nbsp;poprawie codziennego funkcjonowania dziecka'
+        'Wsparcie w&nbsp;integracji zmysłów i&nbsp;poprawie codziennego funkcjonowania dziecka',
       ],
       aboutMe: `
     Od&nbsp;zawsze chciałam pracować z&nbsp;dziećmi. Już w&nbsp;dzieciństwie moją ulubioną zabawą była właśnie
@@ -289,7 +295,7 @@ export class TherapistService implements OnDestroy {
         Każde dziecko jest inne!<br>
         Każde dziecko jest wyjątkowe!<br>
         Każde dziecko jest piękne!
-      `
+      `,
         },
         {
           title: 'Stałe doskonalenie umiejętności',
@@ -298,7 +304,7 @@ export class TherapistService implements OnDestroy {
         rozwój – nie&nbsp;dla siebie, ale przede wszystkim dla&nbsp;nich, dla&nbsp;dzieci, z&nbsp;którymi
         pracujemy. Wszystko to, co robimy dla&nbsp;nich, wraca do&nbsp;nas często z&nbsp;podwójną energią, dając nam
         „kopa” na&nbsp;poszerzanie swoich kwalifikacji i&nbsp;ciągłe zdobywanie nowych doświadczeń.
-      `
+      `,
         },
         {
           title: 'Prywatnie',
@@ -314,23 +320,24 @@ export class TherapistService implements OnDestroy {
         że&nbsp;pomoc dzieciom to właśnie to, co chcę w&nbsp;życiu robić. Pomimo młodego wieku wciąż dążę do&nbsp;poszerzania
         swojego dorobku zawodowego oraz edukacyjnego, aby w&nbsp;jeszcze bardziej wykwalifikowany sposób służyć
         dzieciom radą i&nbsp;wsparciem. Przez ostatni rok prowadziłam również zajęcia z&nbsp;jogi dla&nbsp;najmłodszych.
-      `
-        }
+      `,
+        },
       ],
       qualifications: {
         education: [
           'Pedagogika opiekuńczo-wychowawcza z&nbsp;wychowaniem do&nbsp;życia w&nbsp;rodzinie, Uniwersytet Adama Mickiewicza w&nbsp;Poznaniu, Wydział Artystyczno-Pedagogiczny w&nbsp;Kaliszu – studia licencjackie',
           'Pedagogika opiekuńczo-wychowawcza, Uniwersytet Adama Mickiewicza w&nbsp;Poznaniu, Wydział Artystyczno-Pedagogiczny w&nbsp;Kaliszu – studia magisterskie',
           'Integracja sensoryczna – diagnoza i&nbsp;terapia dzieci, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu – studia podyplomowe',
-          'Oligofrenopedagogika z&nbsp;elementami arteterapii, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu – studia podyplomowe (w&nbsp;trakcie)'
-        ]
-      }
+          'Oligofrenopedagogika z&nbsp;elementami arteterapii, Wyższa Szkoła Kształcenia Zawodowego we&nbsp;Wrocławiu – studia podyplomowe (w&nbsp;trakcie)',
+        ],
+      },
     },
     {
       id: 4,
       seoData: {
         title: 'Marta Kęsicka - Terapia Gabinet Równowaga',
-        metaDescription: 'Marta Kęsicka - pedagog, terapeutka SI w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.'
+        metaDescription:
+          'Marta Kęsicka - pedagog, terapeutka SI w Centrum Równowaga. Specjalizuje się w terapii ruchowej i wsparciu umiejętności społecznych dzieci.',
       },
       name: 'Marta Kęsicka',
       role: 'Pedagożka, terapeutka w&nbsp;zakresie rehabilitacji ruchowej, terapeutka integracji&nbsp;sensorycznej, trenerka umiejętności&nbsp;społecznych, instruktorka pilates, trenerka personalna.',
@@ -420,9 +427,9 @@ export class TherapistService implements OnDestroy {
   }
 
   getActiveTherapistObservable(): Observable<Therapist> {
-    return this.activeTherapistIndex.asObservable().pipe(
-      map((index) => this.therapists[index])
-    );
+    return this.activeTherapistIndex
+      .asObservable()
+      .pipe(map((index) => this.therapists[index]));
   }
 
   getTherapists(): Therapist[] {
@@ -438,7 +445,8 @@ export class TherapistService implements OnDestroy {
 
   prevTherapist(): void {
     const currentIndex = this.activeTherapistIndex.getValue();
-    const prevIndex = (currentIndex - 1 + this.therapists.length) % this.therapists.length;
+    const prevIndex =
+      (currentIndex - 1 + this.therapists.length) % this.therapists.length;
     this.activeTherapistIndex.next(prevIndex);
     this.goToActiveTherapist(prevIndex);
   }

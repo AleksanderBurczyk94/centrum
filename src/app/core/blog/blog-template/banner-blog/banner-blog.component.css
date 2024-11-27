@@ -29,21 +29,18 @@
   z-index: -1;
 }
 
-
 .banner-content {
   display: flex;
- height: 80%;
+  height: 80%;
   color: var(--white-color);
   z-index: 1;
 }
-
-
 
 h1 {
   font-size: 28px;
 }
 
-.breadcrumb-item + .breadcrumb-item::before{
+.breadcrumb-item + .breadcrumb-item::before {
   color: #e3e1e1;
 }
 

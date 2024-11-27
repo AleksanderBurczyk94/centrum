@@ -1,27 +1,24 @@
-import {Component} from '@angular/core';
-import {AppPaths} from "../../../app-paths";
-import {MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
-import {BlogService} from "../../../services/blog.service";
-import {blogCard} from "../../../interfaces/blogCard";
+import { Component } from '@angular/core';
+import { AppPaths } from '../../../app-paths';
+import { MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
+import { BlogService } from '../../../services/blog.service';
+import { blogCard } from '../../../interfaces/blogCard';
 
 @Component({
   selector: 'app-blog-cards',
   templateUrl: './blog-cards.component.html',
-  styleUrl: './blog-cards.component.css'
+  styleUrl: './blog-cards.component.css',
 })
 export class BlogCardsComponent {
-
   appPaths = AppPaths;
   cards: blogCard[];
   constructor(
     private paginatorIntl: MatPaginatorIntl,
-    private blogService: BlogService,
-
+    private blogService: BlogService
   ) {
     this.customizePaginator(); // Dostosowanie paginatora
     this.cards = this.blogService.getCards(); // Pobranie kart z serwisu
   }
-
 
   // Metoda do dostosowania etykiet paginatora
   customizePaginator() {
@@ -31,7 +28,9 @@ export class BlogCardsComponent {
     this.paginatorIntl.getRangeLabel = (page, pageSize, length) => {
       const startIndex = page * pageSize;
       const endIndex = Math.min(startIndex + pageSize, length);
-      return length === 0 ? `0 z ${length}` : `${startIndex + 1} – ${endIndex} z ${length}`;
+      return length === 0
+        ? `0 z ${length}`
+        : `${startIndex + 1} – ${endIndex} z ${length}`;
     };
   }
 

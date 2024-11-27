@@ -9,7 +9,8 @@
     "test": "ng test",
     "prod": "ng build --configuration=production",
     "serve:ssr:cetrum-terapii": "node dist/cetrum-terapii/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "format": "prettier --write ."
   },
   "private": true,
   "dependencies": {
@@ -30,7 +31,10 @@
     "bootstrap": "^5.3.3",
     "compression": "^1.7.5",
     "emailjs-com": "^3.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "express": "^4.18.2",
+    "prettier-eslint": "^16.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "undici": "^6.19.7",

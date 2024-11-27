@@ -8,9 +8,8 @@ describe('MinorsProtectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MinorsProtectionComponent]
-    })
-    .compileComponents();
+      declarations: [MinorsProtectionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MinorsProtectionComponent);
     component = fixture.componentInstance;

@@ -8,9 +8,8 @@ describe('RodoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RodoComponent]
-    })
-    .compileComponents();
+      declarations: [RodoComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RodoComponent);
     component = fixture.componentInstance;

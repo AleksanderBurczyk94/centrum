@@ -1,31 +1,34 @@
-import {Injectable} from '@angular/core';
-import {AppPaths} from "../app-paths";
-import {PageEvent} from "@angular/material/paginator";
-import {Router} from "@angular/router";
-import {blogCard} from "../interfaces/blogCard";
+import { Injectable } from '@angular/core';
+import { AppPaths } from '../app-paths';
+import { PageEvent } from '@angular/material/paginator';
+import { Router } from '@angular/router';
+import { blogCard } from '../interfaces/blogCard';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlogService {
-
-  private cards: blogCard[] = [
+  private readonly cards: blogCard[] = [
     {
       id: 0,
       seoData: {
-        title: 'Rola rodziców w terapii integracji sensorycznej – jak budować wspierające środowisko?',
+        title:
+          'Rola rodziców w terapii integracji sensorycznej – jak budować wspierające środowisko?',
         metaDescription:
           'Dowiedz się, jak rodzice mogą wspierać terapię integracji sensorycznej swojego dziecka, tworząc odpowiednie środowisko w domu i współpracując z terapeutami.',
       },
       webpImg: 'assets/img/blog/rodzice-trzymajacy-dziecko-za-rece.webp',
       alterImg: 'assets/img/blog/rodzice-trzymajacy-dziecko-za-rece.jpg',
       alt: 'Integracja sensoryczna',
-      title: 'Rola rodziców w terapii integracji sensorycznej – jak budować wspierające środowisko?',
+      title:
+        'Rola rodziców w terapii integracji sensorycznej – jak budować wspierające środowisko?',
       date: '2024-11-21',
       illustration: {
-        webpImg: 'assets/img/blog/droga-do-efektywnej-integracji-sensorycznej.webp',
-        alterImg: 'assets/img/blog/droga-do-efektywnej-integracji-sensorycznej.png',
-        alt: 'Lupa skupiająca narzędzia terapeutyczne, zangażowanie rodziców, wpierające środowkisko co daje skuteczną integracje sensoryczną '
+        webpImg:
+          'assets/img/blog/droga-do-efektywnej-integracji-sensorycznej.webp',
+        alterImg:
+          'assets/img/blog/droga-do-efektywnej-integracji-sensorycznej.png',
+        alt: 'Lupa skupiająca narzędzia terapeutyczne, zangażowanie rodziców, wpierające środowkisko co daje skuteczną integracje sensoryczną ',
       },
       shortDescription:
         'Integracja sensoryczna to kluczowy proces, który pozwala dziecku odbierać i prawidłowo przetwarzać bodźce. Kiedy jest on zaburzony, dziecko może mieć trudności z koncentracją, motoryką, regulacją emocji, umiejętnościami szkolnymi. Terapia integracji sensorycznej daje dziecku narzędzia do radzenia sobie z tymi wyzwaniami, ale jej sukces zależy nie tylko od pracy specjalistów – ogromną rolę odgrywają rodzice. To oni tworzą codzienne środowisko dziecka, które powinno wspierać proces terapeutyczny, a także czuwają nad realizacją zaleceń, które otrzymali od terapeuty SI w przypadku ewentualnych trudności. Jak możesz pomóc swojemu dziecku? Oto szczegółowe wskazówki.',
@@ -33,7 +36,9 @@ export class BlogService {
         {
           id: 100,
           title: 'Zrozumienie potrzeb dziecka',
-          contentArray: [`Każde dziecko jest inne, dlatego pierwszym krokiem w budowaniu wspierającego środowiska jest zrozumienie, jakie bodźce sensoryczne wpływają na Twoje dziecko.`],
+          contentArray: [
+            `Każde dziecko jest inne, dlatego pierwszym krokiem w budowaniu wspierającego środowiska jest zrozumienie, jakie bodźce sensoryczne wpływają na Twoje dziecko.`,
+          ],
           lists: [
             {
               type: 'unordered',
@@ -62,7 +67,9 @@ export class BlogService {
         {
           id: 101,
           title: 'Stymulacja sensoryczna w domu',
-          contentArray: ['Dom jest idealnym miejscem do wspierania terapii sensorycznej poprzez zabawy i ćwiczenia dostosowane do potrzeb dziecka.'],
+          contentArray: [
+            'Dom jest idealnym miejscem do wspierania terapii sensorycznej poprzez zabawy i ćwiczenia dostosowane do potrzeb dziecka.',
+          ],
           subsections: [
             {
               title: 'Przykłady aktywności sensorycznych:',
@@ -78,11 +85,14 @@ export class BlogService {
                 },
               ],
               illustration: {
-                webpImg: 'assets/img/blog/Jaką-aktywność-sensoryczną-warto-wdrożyć-w-domu.webp',
-                alterImg: 'assets/img/blog/Jaką-aktywność-sensoryczną-warto-wdrożyć-w-domu.png',
-                alt: 'Schemat pokazujace różne aktywnośći które można wykonać w domu, masa plastyczna, ścieżka sensoryczna, huśtawka, eksperymenty z dźwiękiem'
+                webpImg:
+                  'assets/img/blog/Jaką-aktywność-sensoryczną-warto-wdrożyć-w-domu.webp',
+                alterImg:
+                  'assets/img/blog/Jaką-aktywność-sensoryczną-warto-wdrożyć-w-domu.png',
+                alt: 'Schemat pokazujace różne aktywnośći które można wykonać w domu, masa plastyczna, ścieżka sensoryczna, huśtawka, eksperymenty z dźwiękiem',
               },
-            }, {
+            },
+            {
               title: 'Rada dla rodziców:',
               lists: [
                 {
@@ -98,7 +108,9 @@ export class BlogService {
         {
           id: 102,
           title: 'Wspierające środowisko w domu',
-          contentArray: [`Tworzenie środowiska przyjaznego dla dziecka to kluczowy element terapii. Dom powinien być miejscem, gdzie dziecko czuje się bezpieczne i ma dostęp do narzędzi wspierających integrację sensoryczną.`],
+          contentArray: [
+            `Tworzenie środowiska przyjaznego dla dziecka to kluczowy element terapii. Dom powinien być miejscem, gdzie dziecko czuje się bezpieczne i ma dostęp do narzędzi wspierających integrację sensoryczną.`,
+          ],
           subsections: [
             {
               title: 'Co możesz zrobić?',
@@ -113,11 +125,14 @@ export class BlogService {
                 },
               ],
               illustration: {
-                webpImg: 'assets/img/blog/balasnowanie-potrzeb-sensorycznych-u-dzieci.webp',
-                alterImg: 'assets/img/blog/balasnowanie-potrzeb-sensorycznych-u-dzieci.png',
-                alt: 'Grafika przedstawiająca wagę balansującą potrzeby sensoryczne u dzieci. Po lewej stronie opisane jako Unika intensywnych bodźców i Nadwrażliwość sensoryczna, a po prawej Poszukuje intensywnych bodźców i Podwrażliwość sensoryczna. Pod wagą napis: Balansowanie potrzeb sensorycznych u dzieci.'
+                webpImg:
+                  'assets/img/blog/balasnowanie-potrzeb-sensorycznych-u-dzieci.webp',
+                alterImg:
+                  'assets/img/blog/balasnowanie-potrzeb-sensorycznych-u-dzieci.png',
+                alt: 'Grafika przedstawiająca wagę balansującą potrzeby sensoryczne u dzieci. Po lewej stronie opisane jako Unika intensywnych bodźców i Nadwrażliwość sensoryczna, a po prawej Poszukuje intensywnych bodźców i Podwrażliwość sensoryczna. Pod wagą napis: Balansowanie potrzeb sensorycznych u dzieci.',
               },
-            }, {
+            },
+            {
               title: 'Pro tip',
               lists: [
                 {
@@ -133,7 +148,9 @@ export class BlogService {
         {
           id: 103,
           title: 'Współpraca z terapeutą',
-          contentArray: [`Rodzice i terapeuci powinni działać jako zespół, którego celem jest dobro dziecka.`],
+          contentArray: [
+            `Rodzice i terapeuci powinni działać jako zespół, którego celem jest dobro dziecka.`,
+          ],
           lists: [
             {
               type: 'unordered',
@@ -161,7 +178,9 @@ export class BlogService {
         {
           id: 104,
           title: 'Cierpliwość i zrozumienie',
-          contentArray: [`Terapia integracji sensorycznej to proces, który wymaga czasu. Rodzice często chcą natychmiastowych rezultatów, jednak ważne jest, aby pamiętać, że każde dziecko rozwija się w swoim tempie.`],
+          contentArray: [
+            `Terapia integracji sensorycznej to proces, który wymaga czasu. Rodzice często chcą natychmiastowych rezultatów, jednak ważne jest, aby pamiętać, że każde dziecko rozwija się w swoim tempie.`,
+          ],
           subsections: [
             {
               title: 'Jak być wsparciem?',
@@ -181,24 +200,25 @@ export class BlogService {
         {
           id: 105,
           title: 'Podsumowanie',
-          contentArray: [`Rola rodziców w terapii integracji sensorycznej jest niezastąpiona. To rodzice tworzą codzienne środowisko, które wspiera dziecko w radzeniu sobie z wyzwaniami sensorycznymi. Kluczem jest zrozumienie potrzeb dziecka, regularna współpraca z terapeutą i cierpliwość. Dzięki temu terapia będzie nie tylko skuteczna, ale także okaże się wspaniałą zabawą.`,
-            'Jeśli chcesz dowiedzieć się więcej o tym, jak wspierać swoje dziecko, zapraszamy do <strong>Centrum Terapii i Wsparcia Rozwoju "Równowaga"</strong>. Nasz zespół pomoże Ci i Twojemu dziecku osiągnąć harmonię i równowagę w codziennym życiu.'],
+          contentArray: [
+            `Rola rodziców w terapii integracji sensorycznej jest niezastąpiona. To rodzice tworzą codzienne środowisko, które wspiera dziecko w radzeniu sobie z wyzwaniami sensorycznymi. Kluczem jest zrozumienie potrzeb dziecka, regularna współpraca z terapeutą i cierpliwość. Dzięki temu terapia będzie nie tylko skuteczna, ale także okaże się wspaniałą zabawą.`,
+            'Jeśli chcesz dowiedzieć się więcej o tym, jak wspierać swoje dziecko, zapraszamy do <strong>Centrum Terapii i Wsparcia Rozwoju "Równowaga"</strong>. Nasz zespół pomoże Ci i Twojemu dziecku osiągnąć harmonię i równowagę w codziennym życiu.',
+          ],
         },
       ],
     },
   ];
 
-  private pageSize = 5;        // Rozmiar strony
-  private currentPage = 0;     // Bieżąca strona
-  constructor(private readonly router: Router) {
-  }
+  private pageSize = 5; // Rozmiar strony
+  private currentPage = 0; // Bieżąca strona
+  constructor(private readonly router: Router) {}
 
   getCards() {
     return this.cards;
   }
 
   getCard(id: number): blogCard | undefined {
-    return this.cards.find(card => card.id === id);
+    return this.cards.find((card) => card.id === id);
   }
 
   getPaginatedCards() {
@@ -207,8 +227,8 @@ export class BlogService {
   }
 
   updatePagination(event: PageEvent) {
-    this.pageSize = event.pageSize
-    this.currentPage = event.pageIndex
+    this.pageSize = event.pageSize;
+    this.currentPage = event.pageIndex;
   }
 
   navigateToBlog(appPaths: typeof AppPaths, id: number): void {
@@ -218,5 +238,4 @@ export class BlogService {
   get getPageSize(): number {
     return this.pageSize;
   }
-
 }

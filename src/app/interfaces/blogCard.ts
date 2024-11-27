@@ -1,4 +1,3 @@
-
 export interface blogCard {
   id: number;
   seoData: seoData;
@@ -21,10 +20,9 @@ export interface Sections {
   id: number;
   title: string;
   contentArray?: string[];
-  subsections?: Subsections[]
+  subsections?: Subsections[];
   lists?: ListItem[];
   illustration?: Illustration;
-
 }
 export interface Subsections {
   title: string;

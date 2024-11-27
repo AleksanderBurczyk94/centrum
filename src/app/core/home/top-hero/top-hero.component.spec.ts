@@ -8,9 +8,8 @@ describe('TopHeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TopHeroComponent]
-    })
-    .compileComponents();
+      declarations: [TopHeroComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TopHeroComponent);
     component = fixture.componentInstance;

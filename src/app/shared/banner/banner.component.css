@@ -1,16 +1,16 @@
-.banner-container{
+.banner-container {
   height: 300px;
   background-color: var(--mint-color);
 }
-h2{
-  font-size: 38px
+h2 {
+  font-size: 38px;
 }
 
 .banner-content {
   padding-top: 70px;
 }
 
-a{
+a {
   color: rgba(1, 2, 1, 0.65);
   transition: text-decoration 0.3s;
 }

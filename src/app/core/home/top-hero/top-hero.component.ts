@@ -7,17 +7,16 @@ import {
   OnInit,
   PLATFORM_ID,
   Renderer2,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import {isPlatformBrowser} from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-top-hero',
   templateUrl: './top-hero.component.html',
-  styleUrls: ['./top-hero.component.css']
+  styleUrls: ['./top-hero.component.css'],
 })
 export class TopHeroComponent implements OnInit, AfterViewInit {
-
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
   windowWidth = 0;
 
@@ -49,7 +48,7 @@ export class TopHeroComponent implements OnInit, AfterViewInit {
 
       const playPromise = video.play();
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
+        playPromise.catch((error) => {
           console.error('Autoplay failed:', error);
         });
       }

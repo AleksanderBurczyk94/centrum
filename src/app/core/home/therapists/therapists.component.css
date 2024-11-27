@@ -1,4 +1,6 @@
-body, p, h3 {
+body,
+p,
+h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -73,7 +75,8 @@ body, p, h3 {
   transition: background-color 0.3s;
 }
 
-.card h3, .card p {
+.card h3,
+.card p {
   transition: transform 0.3s;
 }
 

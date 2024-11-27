@@ -1,14 +1,14 @@
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Comfortaa", sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   background-color: var(--white-color);
-
 }
 
 :root {
@@ -18,7 +18,7 @@ body {
   --black-color: #0e0e0e;
   --mint-color: rgba(179, 222, 215, 0.86);
   --color-to-icon1: #0df0cf;
-  --color-to-icon2: #fbd3d2
+  --color-to-icon2: #fbd3d2;
 }
 
 /*overided styl for poopover i price-list*/
@@ -29,7 +29,9 @@ body {
 }
 
 /*paginator blog*/
-.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(
+    .mat-mdc-option-multiple
+  ) {
   background-color: rgba(179, 222, 215, 0.86) !important;
 }
 

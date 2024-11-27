@@ -8,10 +8,9 @@ describe('WhiteContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WhiteContainerComponent]
-    })
-    .compileComponents();
-    
+      declarations: [WhiteContainerComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(WhiteContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

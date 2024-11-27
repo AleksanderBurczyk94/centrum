@@ -1,26 +1,44 @@
 <section class="bg-box text-dark" id="team">
-  <div class="container ">
-    <div class="content-box d-flex flex-column" >
-      <h2 class='contact-title'>Poznaj naszych specjalistów</h2>
+  <div class="container">
+    <div class="content-box d-flex flex-column">
+      <h2 class="contact-title">Poznaj naszych specjalistów</h2>
       <p class="sm-text text-justify">
-        Nasz zespół tworzą wykwalifikowani i&nbsp;doświadczeni specjaliści, którzy indywidualnie dostosowują metody pracy do&nbsp;potrzeb każdego dziecka, wpływając na&nbsp;jego rozwój i&nbsp;całościowy potencjał. W&nbsp;pracy kierujemy się podejściem holistycznym, wspierając zarówno dzieci, jak&nbsp;i&nbsp;ich rodziców w&nbsp;radzeniu sobie z&nbsp;wyzwaniami dnia codziennego.
+        Nasz zespół tworzą wykwalifikowani i&nbsp;doświadczeni specjaliści,
+        którzy indywidualnie dostosowują metody pracy do&nbsp;potrzeb każdego
+        dziecka, wpływając na&nbsp;jego rozwój i&nbsp;całościowy potencjał.
+        W&nbsp;pracy kierujemy się podejściem holistycznym, wspierając zarówno
+        dzieci, jak&nbsp;i&nbsp;ich rodziców w&nbsp;radzeniu sobie
+        z&nbsp;wyzwaniami dnia codziennego.
       </p>
     </div>
     <div class="active-users p-xxl-5">
       <div class="row">
-        <div *ngFor="let therapist of therapists;" class="col-12 col-sm-6 col-xl-4 d-flex mb-4 ">
-          <div class="card bg-transparent border-0" (click)="goToTherapist(therapist.id)">
+        <div
+          *ngFor="let therapist of therapists"
+          class="col-12 col-sm-6 col-xl-4 d-flex mb-4"
+        >
+          <div
+            class="card bg-transparent border-0"
+            (click)="goToTherapist(therapist.id)"
+          >
             <div class="card-img">
               <picture>
-                <source [srcset]="therapist.webpImg" type="image/webp" class="card-img-top">
+                <source
+                  [srcset]="therapist.webpImg"
+                  type="image/webp"
+                  class="card-img-top"
+                />
                 <img
                   loading="lazy"
                   class="card-img-top"
                   [src]="therapist.alterImg"
-                  [alt]="'Zdjęcie terapeuty: ' + therapist.name">
+                  [alt]="'Zdjęcie terapeuty: ' + therapist.name"
+                />
               </picture>
             </div>
-            <div class="card-body d-flex flex-column justify-content-start align-items-center text-center">
+            <div
+              class="card-body d-flex flex-column justify-content-start align-items-center text-center"
+            >
               <h3 class="card-title fw-bold">{{ therapist.name }}</h3>
               <p class="role-title m-0" [innerHTML]="therapist.role"></p>
             </div>

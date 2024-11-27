@@ -1,21 +1,40 @@
 <div class="container">
   <div class="row">
-    <div class="info-box col-md-5 d-flex justify-content-center align-items-start mt-2 p-1">
+    <div
+      class="info-box col-md-5 d-flex justify-content-center align-items-start mt-2 p-1"
+    >
       <ul class="mt-4">
-        <li><p>Wejście do budynku Centrum znajduje się za <strong>czarnym ogrodzeniem.</strong></p></li>
-        <li><p> Gabinet położony jest na <strong>parterze</strong> pomiędzy klatką nr 1 i nr 2. <br> Kod do domofonu:
-          1dzwonek47.
-        </p></li>
-        <li><p>W pobliżu lokalu dostępne są publiczne, <strong>bezpłatne parkingi.</strong></p></li>
+        <li>
+          <p>
+            Wejście do budynku Centrum znajduje się za
+            <strong>czarnym ogrodzeniem.</strong>
+          </p>
+        </li>
+        <li>
+          <p>
+            Gabinet położony jest na <strong>parterze</strong> pomiędzy klatką
+            nr 1 i nr 2. <br />
+            Kod do domofonu: 1dzwonek47.
+          </p>
+        </li>
+        <li>
+          <p>
+            W pobliżu lokalu dostępne są publiczne,
+            <strong>bezpłatne parkingi.</strong>
+          </p>
+        </li>
       </ul>
     </div>
     <div class="col-md-7 cold-flex justify-content-center p-0">
-      <form class="text-dark text-center" [formGroup]="contactForm" (ngSubmit)="submitForm()">
-
+      <form
+        class="text-dark text-center"
+        [formGroup]="contactForm"
+        (ngSubmit)="submitForm()"
+      >
         <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">
           <picture>
-            <source srcset="assets/img/happy.webp" type="image/webp">
-            <img class="me-2" src="assets/img/happy.png" alt="Wesoła minka">
+            <source srcset="assets/img/happy.webp" type="image/webp" />
+            <img class="me-2" src="assets/img/happy.png" alt="Wesoła minka" />
           </picture>
           <h4 class="alert-heading">Dobra robota!</h4>
           <p>Wiadomosć poprawnie wysłana</p>
@@ -23,8 +42,8 @@
 
         <div *ngIf="showFeilureAlert" class="alert alert-failed" role="alert">
           <picture>
-            <source srcset="assets/img/sad.webp" type="image/webp">
-            <img class="me-2" src="assets/img/sad.png" alt="Smutna minka">
+            <source srcset="assets/img/sad.webp" type="image/webp" />
+            <img class="me-2" src="assets/img/sad.png" alt="Smutna minka" />
           </picture>
           <h4 class="alert-heading">Bardzo nam przykro.</h4>
           <p>Niestety, wiadomości nie udało się wysłać.</p>
@@ -32,47 +51,97 @@
 
         <div class="row">
           <div class="mb-3 col-lg-6">
-            <input type="text" class="m-0 form-control" placeholder="Imię" formControlName="firstName"
-                   [ngClass]="{ 'redBorder': submitted && controls.firstName.invalid }">
-            <div *ngIf="submitted && controls.firstName.invalid" class="text-attention">
+            <input
+              type="text"
+              class="m-0 form-control"
+              placeholder="Imię"
+              formControlName="firstName"
+              [ngClass]="{ redBorder: submitted && controls.firstName.invalid }"
+            />
+            <div
+              *ngIf="submitted && controls.firstName.invalid"
+              class="text-attention"
+            >
               {{ getErrorMessage(controls.firstName) }}
             </div>
           </div>
           <div class="mb-3 col-lg-6">
-            <input type="text" class="form-control" placeholder="Nazwisko" formControlName="lastName"
-                   [ngClass]="{ 'redBorder': submitted && controls.lastName.invalid }">
-            <div *ngIf="submitted && controls.lastName.invalid" class="text-attention ">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nazwisko"
+              formControlName="lastName"
+              [ngClass]="{ redBorder: submitted && controls.lastName.invalid }"
+            />
+            <div
+              *ngIf="submitted && controls.lastName.invalid"
+              class="text-attention"
+            >
               {{ getErrorMessage(controls.lastName) }}
             </div>
           </div>
           <div class="mb-3 col-lg-12">
-            <input type="email" class="form-control" placeholder="E-mail" formControlName="email"
-                   [ngClass]="{ 'redBorder': submitted && controls.email.invalid }">
-            <div *ngIf="submitted && controls.email.invalid" class="text-attention">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="E-mail"
+              formControlName="email"
+              [ngClass]="{ redBorder: submitted && controls.email.invalid }"
+            />
+            <div
+              *ngIf="submitted && controls.email.invalid"
+              class="text-attention"
+            >
               {{ getErrorMessage(controls.email) }}
             </div>
           </div>
         </div>
-        <div class="input-group" [ngClass]="{ 'redBorder': submitted && controls.textMessage.invalid }">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Wiadomość"
-                      formControlName="textMessage"></textarea>
+        <div
+          class="input-group"
+          [ngClass]="{ redBorder: submitted && controls.textMessage.invalid }"
+        >
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            placeholder="Wiadomość"
+            formControlName="textMessage"
+          ></textarea>
         </div>
-        <div *ngIf="submitted && controls.textMessage.invalid" class="text-attention">
+        <div
+          *ngIf="submitted && controls.textMessage.invalid"
+          class="text-attention"
+        >
           {{ getErrorMessage(controls.textMessage) }}
         </div>
         <div class="me-0 mt-3 form-check d-flex text-start">
-          <input type="checkbox" class="me-3 form-check-input" id="exampleCheck1" formControlName="checkBox"
-                 [ngClass]="{ 'redBorderColor': submitted && controls.checkBox.invalid }">
-          <label class="form-check-label text-justify" for="exampleCheck1">Wyrażam zgodę na przetwarzanie moich
-            danych osobowych zgodnie z polityką prywatności.</label>
+          <input
+            type="checkbox"
+            class="me-3 form-check-input"
+            id="exampleCheck1"
+            formControlName="checkBox"
+            [ngClass]="{
+              redBorderColor: submitted && controls.checkBox.invalid,
+            }"
+          />
+          <label class="form-check-label text-justify" for="exampleCheck1"
+            >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
+            polityką prywatności.</label
+          >
         </div>
-        <div *ngIf="submitted && controls.checkBox.invalid" class="text-attention ms-4 ps-2">
-          {{ getErrorMessage(controls.checkBox)}}
+        <div
+          *ngIf="submitted && controls.checkBox.invalid"
+          class="text-attention ms-4 ps-2"
+        >
+          {{ getErrorMessage(controls.checkBox) }}
         </div>
         <button type="submit" class="btn mt-3">
           <picture>
-            <source srcset="assets/img/send.webp" type="image/webp">
-            <img src="assets/img/send.png" alt="Ikona wysyłania" class="me-2 mt-0 ">
+            <source srcset="assets/img/send.webp" type="image/webp" />
+            <img
+              src="assets/img/send.png"
+              alt="Ikona wysyłania"
+              class="me-2 mt-0"
+            />
           </picture>
           <span>Wyślij</span>
         </button>

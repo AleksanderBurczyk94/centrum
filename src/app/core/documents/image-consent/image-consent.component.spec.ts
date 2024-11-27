@@ -8,9 +8,8 @@ describe('ImageConsentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ImageConsentComponent]
-    })
-    .compileComponents();
+      declarations: [ImageConsentComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ImageConsentComponent);
     component = fixture.componentInstance;

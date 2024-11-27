@@ -8,9 +8,8 @@ describe('HandTherapyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HandTherapyComponent]
-    })
-    .compileComponents();
+      declarations: [HandTherapyComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HandTherapyComponent);
     component = fixture.componentInstance;

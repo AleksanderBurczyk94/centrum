@@ -1,39 +1,50 @@
-import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {NavbarService} from "../../services/navbar.service";
-import {AppPaths} from "../../app-paths";
-import {BlogService} from "../../services/blog.service";
-import { environment } from "../../../environments/environments"
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+import { NavbarService } from '../../services/navbar.service';
+import { AppPaths } from '../../app-paths';
+import { BlogService } from '../../services/blog.service';
+import { environment } from '../../../environments/environments';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
   environment = environment;
-  @ViewChild('navbarNavAltMarkup', { static: true }) navbarNavAltMarkup!: ElementRef;
+  @ViewChild('navbarNavAltMarkup', { static: true })
+  navbarNavAltMarkup!: ElementRef;
   appPaths = AppPaths;
 
-  constructor(private readonly renderer: Renderer2, public navbarService: NavbarService) {}
+  constructor(
+    private readonly renderer: Renderer2,
+    public navbarService: NavbarService
+  ) {}
 
   ngOnInit(): void {
-    this.navbarService.updateActiveLinkOnScroll();  // Sprawdzanie stanu na początku
+    this.navbarService.updateActiveLinkOnScroll(); // Sprawdzanie stanu na początku
   }
 
   get activeLink$() {
     return this.navbarService.activeLink$;
   }
-  setActiveLink(link: string){
-    this.navbarService.setActiveLink(link)
+  setActiveLink(link: string) {
+    this.navbarService.setActiveLink(link);
   }
-  resetActiveLink(){
-    this.navbarService.resetActiveLink()
+  resetActiveLink() {
+    this.navbarService.resetActiveLink();
   }
 
   // Monitorowanie zdarzenia przewijania
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.navbarService.updateActiveLinkOnScroll();  // Delegujemy logikę scrollowania do serwisu
+    this.navbarService.updateActiveLinkOnScroll(); // Delegujemy logikę scrollowania do serwisu
   }
 
   // Zamykanie nawigacji mobilnej
@@ -43,5 +54,4 @@ export class NavbarComponent implements OnInit {
       this.renderer.removeClass(navbarCollapse, 'show');
     }
   }
-
 }

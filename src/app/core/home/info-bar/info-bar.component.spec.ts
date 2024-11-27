@@ -8,9 +8,8 @@ describe('InfoBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InfoBarComponent]
-    })
-    .compileComponents();
+      declarations: [InfoBarComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(InfoBarComponent);
     component = fixture.componentInstance;

@@ -5,14 +5,18 @@
   <div class="container mb-5">
     <table class="table table-striped table-hover mb-5">
       <thead>
-      <tr>
-        <th>Usługa</th>
-        <th>Cena</th>
-        <th>Czas</th>
-      </tr>
+        <tr>
+          <th>Usługa</th>
+          <th>Cena</th>
+          <th>Czas</th>
+        </tr>
       </thead>
       <tbody>
-    <tr *ngFor="let service of services" #popoverElement [attr.data-content]="service.description">
+        <tr
+          *ngFor="let service of services"
+          #popoverElement
+          [attr.data-content]="service.description"
+        >
           <td>{{ service.name }}</td>
           <td class="">{{ service.price }}</td>
           <td class="">{{ service.time }}</td>
@@ -21,13 +25,18 @@
     </table>
     <table class="table table-striped table-hover">
       <thead>
-      <tr>
-        <th>Dokument</th>
-        <th class="padding-tab" >Cena</th>
+        <tr>
+          <th>Dokument</th>
+          <th class="padding-tab">Cena</th>
+        </tr>
       </thead>
+      <tbody></tbody>
       <tbody>
-      <tbody>
-        <tr *ngFor="let document of documents" #popoverElement [attr.data-content]="document.description">
+        <tr
+          *ngFor="let document of documents"
+          #popoverElement
+          [attr.data-content]="document.description"
+        >
           <td>{{ document.name }}</td>
           <td class="padding-tab">{{ document.price }}</td>
         </tr>

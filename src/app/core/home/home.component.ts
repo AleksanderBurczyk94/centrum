@@ -1,15 +1,22 @@
-import {Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
-import {Router} from '@angular/router';
-import {isPlatformBrowser} from '@angular/common';
-import {AppPaths} from "../../app-paths";
+import {
+  Component,
+  ElementRef,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { AppPaths } from '../../app-paths';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit{
-
+export class HomeComponent implements OnInit {
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
   appPaths = AppPaths;
   isInfoBarVisible = true;
@@ -28,8 +35,4 @@ export class HomeComponent implements OnInit{
       this.renderer.appendChild(document.body, script);
     }
   }
-
-
-
-
 }

@@ -1,20 +1,31 @@
-<h2 class="autor-header d-flex justify-content-center align-items-center mb-0 py-2">AUTOR</h2>
-<div class="card bg-transparent ">
+<h2
+  class="autor-header d-flex justify-content-center align-items-center mb-0 py-2"
+>
+  AUTOR
+</h2>
+<div class="card bg-transparent">
   <div class="d-flex flex-column flex-sm-row flex-md-column g-0 card-box">
-    <div class="img-box  col-12 col-sm-4 col-md-12">
+    <div class="img-box col-12 col-sm-4 col-md-12">
       <picture>
-        <source [srcset]="therapists[0].webpImg" type="image/webp" class="card-img-top">
+        <source
+          [srcset]="therapists[0].webpImg"
+          type="image/webp"
+          class="card-img-top"
+        />
         <img
           loading="lazy"
           class="card-img-top"
           [src]="therapists[0].alterImg"
-          [alt]="'Zdjęcie terapeuty: ' + therapists[0].name">
+          [alt]="'Zdjęcie terapeuty: ' + therapists[0].name"
+        />
       </picture>
     </div>
     <div class="col-12 col-sm-8 col-md-12">
       <div class="card-body">
         <h3 class="card-title no-justify">{{ therapists[0].name }}</h3>
-        <a class="card-details  pt-2 m-0" (click)="goToTherapist(0)">Więcej o mnie...</a>
+        <a class="card-details pt-2 m-0" (click)="goToTherapist(0)"
+          >Więcej o mnie...</a
+        >
       </div>
     </div>
   </div>

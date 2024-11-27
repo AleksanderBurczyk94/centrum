@@ -14,7 +14,7 @@ p {
   margin: 0;
 }
 
-a{
+a {
   font-size: 20px;
   margin: 0;
 }
@@ -22,7 +22,9 @@ a{
 .no-pointer {
   cursor: default;
 }
-.phone-link, .email-link, .maps-link {
+.phone-link,
+.email-link,
+.maps-link {
   color: black;
   text-decoration: none;
 }

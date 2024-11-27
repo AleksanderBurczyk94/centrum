@@ -1,13 +1,12 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Therapist} from "../../../../../interfaces/therpaists";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Therapist } from '../../../../../interfaces/therpaists';
 
 @Component({
   selector: 'app-person-carousel',
   templateUrl: './person-carousel.component.html',
-  styleUrl: './person-carousel.component.css'
+  styleUrl: './person-carousel.component.css',
 })
 export class PersonCarouselComponent {
-
   @Input()
   therapist: Therapist | null = null;
 

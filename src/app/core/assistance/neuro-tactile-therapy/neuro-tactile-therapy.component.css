@@ -1,12 +1,13 @@
-p, li {
+p,
+li {
   font-size: 18px;
-   line-height: 1.7;}
+  line-height: 1.7;
+}
 
 img {
   min-width: 350px;
   border-radius: 15px;
 }
-
 
 h1 {
   font-size: 32px;

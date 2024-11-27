@@ -8,9 +8,8 @@ describe('OrangeButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ColorButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [ColorButtonComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ColorButtonComponent);
     component = fixture.componentInstance;

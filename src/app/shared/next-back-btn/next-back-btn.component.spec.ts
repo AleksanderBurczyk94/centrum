@@ -8,9 +8,8 @@ describe('NextBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NextBackBtnComponent]
-    })
-    .compileComponents();
+      declarations: [NextBackBtnComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NextBackBtnComponent);
     component = fixture.componentInstance;

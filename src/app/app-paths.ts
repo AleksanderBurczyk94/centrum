@@ -28,5 +28,4 @@ export const AppPaths = {
   MINORS_PROTECTION: 'standardy-ochrona-nieletnich',
   THERAPY_CONSENT: 'zgoda-na-terapie',
   IMAGE_CONSENT: 'zgoda-na-udostepnienie-wizerunku',
-
 };

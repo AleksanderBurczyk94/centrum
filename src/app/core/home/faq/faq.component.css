@@ -58,5 +58,5 @@
 }
 
 .accordion-button[_ngcontent-ng-c3284114475]:not(.collapsed) {
-  color: var(--black-color)
+  color: var(--black-color);
 }
