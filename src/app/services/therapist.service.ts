@@ -17,9 +17,9 @@ export class TherapistService implements OnDestroy {
     {
       id: 0,
       seoData: {
-        title: 'Paulina Okrasa-Burczyk - Terapeuta integracji seonsorycznej',
+        title: 'Terapeuta integracji sensorycznej Kalisz - pomoc dzieciom',
         metaDescription:
-          'Paulina Okrasa-Burczyk - założycielka Centrum Równowaga w Kaliszu, psycholog, pedagog, terapeutka SI i INPP, specjalistka w pracy z dziećmi w spektrum autyzmu.',
+          'Paulina Okrasa-Burczyk, założycielka Centrum Równowaga w Kaliszu, oferuje terapię integracji sensorycznej, terapię ręki i wsparcie dzieci w spektrum autyzmu. Skontaktuj się z nami, aby uzyskać pomoc.',
       },
       name: 'Paulina Okrasa-Burczyk',
       role: 'Założycielka Centrum Równowaga, pedagożka, terapeutka integracji&nbsp;sensorycznej, terapeutka neurorozwojowa metody&nbsp;INPP i&nbsp;przetwarzania słuchowego, socjoterapeutka, terapeutka dzieci w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;niepełnosprawnością intelektualną, logopedka',
@@ -198,9 +198,10 @@ export class TherapistService implements OnDestroy {
     {
       id: 2,
       seoData: {
-        title: 'Karolina Okrasa-Staszak - Psycholog Centrum Równowaga',
+        title:
+          'Psycholog dziecięcy w Kaliszu - terapia i wsparcie dla dzieci i młodzieży',
         metaDescription:
-          'Karolina Okrasa-Staszak - psycholog w Centrum Równowaga w Kaliszu. Specjalizuje się w wsparciu emocjonalnym i terapeutycznym dzieci i młodzieży.',
+          'Centrum Równowaga w Kaliszu oferuje profesjonalne wsparcie emocjonalne i terapię dla dzieci i młodzieży. Sprawdź, jak możemy pomóc Twojemu dziecku.',
       },
       name: 'Karolina Okrasa-Staszak',
       role: 'Psycholog',
@@ -218,22 +219,16 @@ export class TherapistService implements OnDestroy {
         'Dobór odpowiedniej metody pomocy, z możliwością skierowania do innych specjalistów',
       ],
       aboutMe: `
-    Każdy etap życia, począwszy od narodzin, wiąże się z różnorodnymi wyzwaniami, które są kluczowe dla dalszego rozwoju.
-    Te wyzwania pomagają w zdobywaniu nowych umiejętności, w tym w obszarze zdrowia psychicznego. Każde dziecko ma swoje
-    unikalne predyspozycje, wynikające zarówno z jego indywidualnych cech, jak i z wpływu otoczenia. Wspieram dzieci i
-    młodzież w radzeniu sobie z tymi wyzwaniami, rozumiejąc, że każdy przypadek jest wyjątkowy.<br><br>
+Każdy etap życia, począwszy od narodzin, niesie różnorodne wyzwania kluczowe dla zdrowia psychicznego i rozwoju dziecka. W Centrum Równowaga w Kaliszu oferuję wsparcie psychologiczne i konsultacje psychologiczne dla dzieci, młodzieży i rodziców, uwzględniając indywidualne predyspozycje dziecka oraz wpływ otoczenia. Moim celem jest pomoc w radzeniu sobie z trudnościami, takimi jak problemy emocjonalne czy wyzwania społeczne, które mogą wpływać na zdrowie psychiczne.<br><br>
 
-    W dzisiejszym, szybko zmieniającym się świecie, dzieci i młodzież mierzą się nie tylko z naturalnymi trudnościami
-    rozwojowymi, ale także z wyzwaniami, które mogą wpływać na ich zdrowie psychiczne. Jeśli dostrzegasz niepokojące
-    objawy w funkcjonowaniu psychicznym swojego dziecka lub nastolatka, serdecznie zapraszam na konsultację w naszym
-    centrum.
+W dzisiejszym, szybko zmieniającym się świecie, dzieci i młodzież mierzą się nie tylko z naturalnymi trudnościami rozwojowymi, ale także z wyzwaniami, które mogą wpływać na ich zdrowie psychiczne. Jeśli dostrzegasz niepokojące objawy w funkcjonowaniu psychicznym swojego dziecka lub nastolatka, serdecznie zapraszam na konsultację w naszym centrum.
   `,
       sections: [
         {
           title: 'Zakres pracy',
           content: `
-        Moja praca obejmuje poradnictwo psychologiczne oraz wsparcie psychologiczne w formie spotkań terapeutycznych z
-        dziećmi i nastolatkami. Pracuję z dziećmi w wieku przedszkolnym i szkolnym. Ważnym elementem mojej pracy są
+          Moja praca obejmuje poradnictwo psychologiczne dla rodziców oraz spotkania terapeutyczne z dziećmi i młodzieżą.
+          Specjalizuję się w pracy z dziećmi w wieku przedszkolnym i szkolnym, a także nastolatkami. Ważnym elementem mojej pracy są
         również spotkania z rodzicami, którzy odgrywają kluczową rolę w prawidłowym rozwoju i wsparciu swoich dzieci. W
         przypadku młodszych dzieci moja praca koncentruje się głównie na współpracy z rodzicami/opiekunami.
       `,
@@ -241,9 +236,9 @@ export class TherapistService implements OnDestroy {
         {
           title: 'Doświadczenie zawodowe',
           content: `
-          Doświadczenie zawodowe zdobywałam, pracując na oddziałach szpitalnych, gdzie zajmowałam się diagnozą funkcji poznawczych oraz wsparciem pacjentów, zwracając szczególną uwagę na relacje między ciałem a psychiką. Pracowałam również w instytucjach państwowych, gdzie pomagałam pacjentom w różnego rodzaju kryzysach psychologicznych.
+Doświadczenie zdobywałam, pracując na oddziałach szpitalnych, gdzie zajmowałam się diagnozą funkcji poznawczych oraz wsparciem psychologicznym pacjentów w różnych kryzysach. Pracowałam również w instytucjach państwowych, pomagając dzieciom, młodzieży i ich rodzinom w trudnych momentach.
           <br><br>
-          Obecnie pracuję w szkole podstawowej, gdzie prowadzę zajęcia indywidualne wspierające rozwój emocjonalny i społeczny dzieci oraz organizuję warsztaty dla klas z zakresu profilaktyki zdrowia psychicznego.
+ Obecnie jako psycholog w szkole podstawowej w Kaliszu prowadzę zajęcia indywidualne oraz warsztaty profilaktyczne z zakresu zdrowia psychicznego.
       `,
         },
       ],
@@ -258,7 +253,7 @@ export class TherapistService implements OnDestroy {
     {
       id: 3,
       seoData: {
-        title: 'Magdalena Mokrzycka - Specjalista Równowaga',
+        title: 'Terapeuta integracji sensorycznej Kalisz- Magdalena Mokrzycka',
         metaDescription:
           'Magdalena Mokrzycka - terapeutka SI w Centrum Równowaga. Specjalizuje się w integracji sensorycznej i wsparciu rozwoju dzieci w Kaliszu.',
       },

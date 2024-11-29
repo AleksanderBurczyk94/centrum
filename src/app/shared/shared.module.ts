@@ -17,7 +17,6 @@ import { RouterLink } from '@angular/router';
     NextBackBtnComponent,
     ColorButtonComponent,
   ],
-  imports: [CommonModule, RouterLink],
   exports: [
     BackBtnComponent,
     WhiteContainerComponent,

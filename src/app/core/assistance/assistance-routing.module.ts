@@ -19,16 +19,16 @@ const routes: Routes = [
       {
         path: AppPaths.PSYCHOLOGICAL_CONSULTATIONS,
         component: PsychologicalConsultationsComponent,
-        title: 'Konsultacje Psychologiczne - Równowaga Kalisz',
+        title: 'Konsultacje psychologiczne dla dzieci i młodzieży w Kaliszu',
         data: {
           description:
-            'Umów się na konsultacje psychologiczne w Centrum Równowaga w Kaliszu. Profesjonalna pomoc w radzeniu sobie z emocjami, stresem, lękami i problemami w relacjach.',
+            'Umów się na konsultacje z psychologiem dziecięcym w Centrum Równowaga w Kaliszu. Wsparcie psychologiczne dla dzieci i młodzieży w regulacji emocji, lęku i stresu.',
         },
       },
       {
         path: AppPaths.HAND_THERAPY,
         component: HandTherapyComponent,
-        title: 'Diagnoza i Terapia Ręki',
+        title: 'Diagnoza i Terapia Ręki w Kaliszu',
         data: {
           description:
             'Odkryj skuteczną diagnozę i terapię ręki w Centrum Równowaga w Kaliszu. Pomagamy w rozwijaniu motoryki małej, czucia głębokiego i precyzyjnych ruchów u dzieci.',
@@ -37,7 +37,7 @@ const routes: Routes = [
       {
         path: AppPaths.NEUROTACTILE_THERAPY,
         component: NeuroTactileTherapyComponent,
-        title: 'Terapia NeuroTaktylna MNRI®',
+        title: 'Terapia NeuroTaktylna MNRI® w Kaliszu',
         data: {
           description:
             'Terapia NeuroTaktylna MNRI® w Kaliszu – popraw funkcjonowanie układu nerwowego dziecka. Skuteczne wsparcie rozwoju sensoryczno-ruchowego w Centrum Równowaga.',
@@ -46,7 +46,7 @@ const routes: Routes = [
       {
         path: AppPaths.NEURODEVELOPMENTAL_REFLEX_THERAPY,
         component: NeurodevelopmentalReflexTherapyComponent,
-        title: 'Terapia Odruchów INPP - Neurorozwój',
+        title: 'Terapia Odruchów INPP w Kaliszu',
         data: {
           description:
             'Terapia odruchów INPP w Centrum Równowaga w Kaliszu. Pomagamy dzieciom rozwijać wzorce ruchowe i neurorozwój poprzez ćwiczenia i wsparcie dla rodziców.',
@@ -55,25 +55,25 @@ const routes: Routes = [
       {
         path: AppPaths.SENSORY_INTEGRATION_THERAPY,
         component: SensoryIntegrationTherapyComponent,
-        title: 'Terapia Integracji Sensorycznej',
+        title: 'Diagnoza integracji sensorycznej w Kaliszu - Równowaga',
         data: {
           description:
-            'Zapisz dziecko na terapię integracji sensorycznej w Kaliszu. Centrum Równowaga wspiera dzieci z trudnościami w przetwarzaniu bodźców i poprawia ich rozwój.',
+            'Integracja sensoryczna Kalisz. Pomagamy dzieciom lepiej przetwarzać bodźce i poprawić codzienne funkcjonowanie. Zapisz dziecko już dziś!',
         },
       },
       {
         path: AppPaths.AUDITORY_PROCESSING_THERAPY,
         component: AuditoryProcessingTherapyComponent,
-        title: 'Diagnoza i Terapia Słuchowa Joansena',
+        title: 'Diagnoza i Terapia Słuchowa Joansena Kalisz',
         data: {
           description:
-            'Diagnoza i terapia słuchowa Johansena w Kaliszu. Pomóż dziecku poprawić koncentrację, zdolności słuchowe i przetwarzanie dźwięków w Centrum Równowaga.',
+            'Diagnoza i terapia słuchowa Johansena Kalisz. Pomóż dziecku poprawić koncentrację, zdolności słuchowe i przetwarzanie dźwięków w Centrum Równowaga.',
         },
       },
       {
         path: AppPaths.PEDAGOGICAL_THERAPY,
         component: PedagogicalTherapyComponent,
-        title: 'Terapia Pedagogiczna - Centrum Równowaga',
+        title: 'Terapia Pedagogiczna - Centrum Równowaga w Kaliszu',
         data: {
           description:
             'Indywidualna terapia pedagogiczna w Centrum Równowaga w Kaliszu. Wspieramy dzieci z trudnościami w nauce, koncentracji i motywacji do edukacji.',
@@ -82,10 +82,10 @@ const routes: Routes = [
       {
         path: AppPaths.SPECIALIST_CONSULTATIONS,
         component: SpecialistConsultationsComponent,
-        title: 'Konsultacje Specjalistyczne',
+        title: 'Konsultacje Specjalistyczne w Kaliszu',
         data: {
           description:
-            'Skorzystaj z konsultacji specjalistycznych w Kaliszu. Centrum Równowaga oferuje wsparcie w diagnozowaniu trudności szkolnych, sensorycznych i neurorozwojowych.',
+            'Centrum Równowaga w Kaliszu oferuje wsparcie w diagnozie trudności szkolnych, sensorycznych i neurorozwojowych. Umów się na konsultację!',
         },
       },
     ],

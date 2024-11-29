@@ -22,10 +22,10 @@ const routes: Routes = [
   {
     path: AppPaths.HOME,
     component: HomeComponent,
-    title: 'Diagnoza i Terapia Integracji Sensorycznej Równowaga Kalisz',
+    title: 'Diagnoza i Terapia Integracji Sensorycznej Kalisz - Równowaga',
     data: {
       description:
-        'Centrum Równowaga w Kaliszu oferuje terapię psychologiczną, integrację sensoryczną, terapię INPP, wsparcie dla dzieci i dorosłych. Sprawdź naszą ofertę!',
+        'Centrum Równowaga w Kaliszu oferuje integrację sensoryczną, konsultacje z psychologiem, terapię INPP, wsparcie dla dzieci i młodzieży. Sprawdź naszą ofertę!',
     },
   },
   {
