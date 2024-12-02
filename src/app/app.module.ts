@@ -28,7 +28,6 @@ import { HomeModule } from './core/home/home.module';
     AppRoutingModule,
     MatIconModule,
     SharedModule,
-    BlogModule,
     HomeModule,
   ],
   exports: [],

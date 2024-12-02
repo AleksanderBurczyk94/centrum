@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import {
   ExtraOptions,
   NavigationEnd,
+  PreloadAllModules,
   Router,
   RouterModule,
   Routes,
 } from '@angular/router';
-import { HomeComponent } from './core/home/home.component';
 import { AppPaths } from './app-paths';
 import { filter } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
@@ -21,7 +21,8 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   {
     path: AppPaths.HOME,
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./core/home/home.module').then((m) => m.HomeModule),
     title: 'Diagnoza i Terapia Integracji Sensorycznej Kalisz - Równowaga',
     data: {
       description:
@@ -140,7 +141,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      ...routerOptions, // przekazanie twoich opcji routingu
+      preloadingStrategy: PreloadAllModules, // opcja preładowania
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
