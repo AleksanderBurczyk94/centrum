@@ -10,7 +10,8 @@
     "prod": "ng build --configuration=production",
     "serve:ssr:cetrum-terapii": "node dist/cetrum-terapii/server/server.mjs",
     "lint": "ng lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +37,7 @@
     "express": "^4.18.2",
     "prettier-eslint": "^16.3.0",
     "rxjs": "~7.8.0",
+    "sitemap": "^8.0.0",
     "tslib": "^2.3.0",
     "undici": "^6.19.7",
     "vite": "^5.3.1",
