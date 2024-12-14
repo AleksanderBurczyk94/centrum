@@ -5,11 +5,13 @@ import { TherapyConsentComponent } from './therapy-consent/therapy-consent.compo
 import { ImageConsentComponent } from './image-consent/image-consent.component';
 import { MinorsProtectionComponent } from './minors-protection/minors-protection.component';
 import { DocumentsComponent } from './documents.component';
+import { BlockRootGuard } from '../../guards/block-root.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: DocumentsComponent,
+    canActivate: [BlockRootGuard],
     children: [
       {
         path: AppPaths.THERAPY_CONSENT,

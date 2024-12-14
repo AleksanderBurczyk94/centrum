@@ -448,7 +448,7 @@ Doświadczenie zdobywałam, pracując na oddziałach szpitalnych, gdzie zajmowa�
 
   goToActiveTherapist(index: number): void {
     const therapist = this.therapists[index];
-    this.router.navigate([this.appPaths.THERAPIST_TEMPLATE, therapist.id]);
+    this.router.navigate([this.appPaths.THERAPIST, therapist.id]);
   }
 
   ngOnDestroy(): void {

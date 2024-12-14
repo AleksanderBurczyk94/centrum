@@ -21,6 +21,6 @@ export class AutorComponent {
 
   goToTherapist(id: number): void {
     this.therapistService.setActiveTherapistId(id);
-    this.router.navigate([this.appPaths.THERAPIST_TEMPLATE, id]);
+    this.router.navigate([this.appPaths.THERAPIST, id]);
   }
 }

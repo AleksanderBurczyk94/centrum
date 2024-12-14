@@ -1,9 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Therapist } from '../../../../interfaces/therpaists';
 import { TherapistService } from '../../../../services/therapist.service';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-therapist-template',
@@ -18,7 +19,8 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
     private readonly therapistService: TherapistService,
     private readonly route: ActivatedRoute,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
       .subscribe((therapist) => {
         this.therapist = therapist;
         this.setTitleAndMeta();
+        this.setCanonicalLink(); // Dodanie lub aktualizacja linku kanonicznego
       });
   }
 
@@ -54,6 +57,30 @@ export class TherapistTemplateComponent implements OnInit, OnDestroy {
       });
     } else {
       console.warn('setTitleAndMeta: Brak terapeuty!');
+    }
+  }
+
+  setCanonicalLink(): void {
+    if (this.therapist) {
+      // Tworzenie dynamicznego URL kanonicznego
+      const canonicalUrl = `https://rownowagacentrum.pl/terapeuta/${this.therapist.id}`;
+
+      // Znajdź istniejący link kanoniczny w <head>
+      let link: HTMLLinkElement | null = this.document.querySelector(
+        "link[rel='canonical']"
+      );
+
+      if (!link) {
+        // Jeśli link kanoniczny nie istnieje, utwórz go
+        link = this.document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        this.document.head.appendChild(link);
+      }
+
+      // Zaktualizuj lub ustaw atrybut `href` dla linku kanonicznego
+      link.setAttribute('href', canonicalUrl);
+    } else {
+      console.warn('setCanonicalLink: Brak terapeuty!');
     }
   }
 

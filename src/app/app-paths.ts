@@ -1,7 +1,7 @@
 export const AppPaths = {
   HOME: '',
   ASSISTANCE: 'zakres-pomocy',
-  THERAPIST_TEMPLATE: 'terapeuta',
+  THERAPIST: 'terapeuta',
   PRICE_LIST: 'cennik',
   OUR_CENTER: 'nasze-centrum',
   BLOG: 'blog',

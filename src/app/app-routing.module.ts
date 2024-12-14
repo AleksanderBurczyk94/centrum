@@ -11,6 +11,7 @@ import { AppPaths } from './app-paths';
 import { filter } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { environment } from '../environments/environments';
+import { BlockRootGuard } from './guards/block-root.guard';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -35,12 +36,6 @@ const routes: Routes = [
       import('./core/assistance/assistance.module').then(
         (m) => m.AssistanceModule
       ),
-    title:
-      'Zakres Pomocy– Psycholog dziecięcy, integracja sensoryczna (SI), INPP',
-    data: {
-      description:
-        'Zakres pomocy Centrum Równowaga w Kaliszu: integracja sensoryczna, psycholog dziecięcy, INPP, i inne usługi wspierające rozwój dzieci!',
-    },
   },
   {
     path: AppPaths.PRICE_LIST,
@@ -100,11 +95,12 @@ const routes: Routes = [
     },
   },
   {
-    path: AppPaths.THERAPIST_TEMPLATE,
+    path: AppPaths.THERAPIST,
     loadChildren: () =>
       import(
         './core/home/therapists/therapist-template/therapist-template.module'
       ).then((m) => m.TherapistTemplateModule),
+    canActivate: [BlockRootGuard],
   },
   {
     path: AppPaths.RODO,

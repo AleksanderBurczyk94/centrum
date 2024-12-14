@@ -10,11 +10,13 @@ import { AuditoryProcessingTherapyComponent } from './auditory-processing-therap
 import { PedagogicalTherapyComponent } from './pedagogical-therapy/pedagogical-therapy.component';
 import { SpecialistConsultationsComponent } from './specialist-consultations/specialist-consultations.component';
 import { AppPaths } from '../../app-paths';
+import { BlockRootGuard } from '../../guards/block-root.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: AssistanceComponent,
+    canActivate: [BlockRootGuard], // Guard sprawdza, czy dostęp do '/' (zakres-pomocy) ma być zablokowany
     children: [
       {
         path: AppPaths.PSYCHOLOGICAL_CONSULTATIONS,
